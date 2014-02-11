@@ -1,0 +1,129 @@
+<!DOCTYPE html>
+<head>
+	<meta charset="utf-8">
+	<base href="<?php echo $BASE; ?>/" />
+	<title>Nabu</title>
+	<meta name="description" content="">
+	<meta name="viewport" content="width=device-width">
+
+	<link rel="stylesheet" type="text/css" href="../../../public/stylesheet/style.css">
+	<link rel="stylesheet" type="text/css" href="../../../public/stylesheet/simplegrid.css" />
+	
+</head>
+
+<body>
+	
+
+<div class="grid grid-pad">
+    <div class="col-3-12" id="logo">
+      	<h1><a href="#"><img src="../../../public/img/logo.png" alt="Nabu"></a></h1>
+    </div>
+    <div class="col-6-12" id="search">
+      	<input type="text" name="search" placeholder="Rechercher..."><img src="../../../public/img/search_icon.png" alt="Rechercher">
+      	<div><ul class="users-result"></ul></div>
+    </div>
+	<div class="col-3-12" id="menu">
+		<p><a href="#"><img src="../../../public/img/menu_icon.png" alt="Menu"></a></p>
+	</div>
+
+</div>
+
+<div class="grid grid-pad">
+    <div class="col-3-12">
+       <div class="content">
+       	<h2>Suggestions</h2>
+       	<p>Articles / Personnes</p>
+       	<div>
+       		<a href="#">
+	       		<img src="../../../public/img/PP_1.png" alt="">
+	       		Prénom Nom<br>
+	       		Badge
+	       	</a>
+       	</div>
+       	<div>
+       		<a href="#">
+	       		<img src="../../../public/img/PP_2.png" alt="">
+	       		Prénom Nom<br>
+	       		Badge
+	       	</a>
+       	</div>
+       </div>
+       <div class="content">
+       	<h2>Devenez Gamewatcher <a href="#"><img src="../../../public/img/refresh_icon.png" alt="Refresh"></a></h2>
+       	<img src="../../../public/img/badge.png" alt="Badge description">
+       	<p>3 personnes ont relevé ce défi</p>
+       	<a href="#">Démarrer</a>
+       </div>
+       <div class="content">
+       	<h2>Objectifs proposés</h2>
+       </div>
+    </div>
+    <div class="col-6-12">
+       <div class="content">
+       	<div>
+	       	<h2>Poster un article</h2>
+	       	<form name="post-article" action="#" method="get">
+		       	<input type="text" name="url" placeholder="Adresse du lien"><br>
+		       	<input type="text" name="descr" placeholder="Description"><br>
+		       	<select name="category">
+					<option value="volvo">Volvo</option>
+					<option value="saab">Saab</option>
+					<option value="fiat">Fiat</option>
+					<option value="audi">Audi</option>
+				</select>
+		       	<input type="submit" value="Valider">
+		    </form>
+		 </div>
+		 <div class="post-feed">
+       		<p><a href="#">
+	       		<img src="../../../public/img/PP_2.png" alt="">
+	       		Prénom Nom </a>- il y a 2 minutes<br>
+	       		Pourquoi Facebook Paper est-il dangereux pour vos mains? bit.ly/3lymOp  
+	       	</p>
+       	</div>
+       	<div class="post-feed">
+       		<p><a href="#">
+	       		<img src="../../../public/img/PP_1.png" alt="">
+	       		Prénom Nom </a>- il y a 3 minutes<br>
+	       		Pourquoi Facebook Paper est-il dangereux pour vos mains? bit.ly/3lymOp  
+	       	</p>
+       	</div>
+       	<div class="post-feed">
+       		<p><a href="#">
+	       		<img src="../../../public/img/PP_2.png" alt="">
+	       		Prénom Nom </a>- il y a 4 minutes<br>
+	       		Pourquoi Facebook Paper est-il dangereux pour vos mains? bit.ly/3lymOp  
+	       	</p>
+       	</div>
+       	<div class="post-feed">
+       		<p><a href="#">
+	       		<img src="../../../public/img/PP_1.png" alt="">
+	       		Prénom Nom </a>- il y a 5 minutes<br>
+	       		Pourquoi Facebook Paper est-il dangereux pour vos mains? bit.ly/3lymOp  
+	       	</p>
+       	</div>
+		<div>
+
+		</div>
+       </div>
+    </div>
+    <div class="col-3-12">
+       <div class="content">
+       	<img src="../../../public/img/settings_icon.png" alt=""><br>
+       	<img src="../../../public/img/PP.png" alt=""><br>
+       	<span class="user-name">Prénom Nom</span>
+       	<div><span class="follow-number">000</span> followers</div>
+       	<div><span class="follow-number">000</span> following</div>
+       </div>
+       <div class="content">
+       	<h2>Statistiques</h2>
+       	<img src="../../../public/img/circular_bar.png" alt="">
+       </div>
+    </div>
+</div>
+
+	<script src="http://code.jquery.com/jquery-1.10.2.min.js"></script>
+	<script type="text/javascript" src="../../../public/js/wtfay.js"></script>
+
+</body>
+</html>
