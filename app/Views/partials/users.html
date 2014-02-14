@@ -1,9 +1,0 @@
-<?php 
-if(isset($users)):
-foreach($users as $user): 
-?>
-<li><a href="user/<?php echo $user->id; ?>"><?php echo $user->login; ?></a><i class="icon-star"></i></li>
-<?php 
-endforeach; 
-endif;
-?>
