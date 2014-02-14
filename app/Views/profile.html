@@ -1,0 +1,110 @@
+<!DOCTYPE html>
+<head>
+	<meta charset="utf-8">
+	<base href="<?php echo $BASE; ?>/" />
+	<title>Nabu</title>
+	<meta name="description" content="">
+	<meta name="viewport" content="width=device-width">
+
+	<link rel="stylesheet" type="text/css" href="public/stylesheet/style.css">
+	<link rel="stylesheet" type="text/css" href="public/stylesheet/simplegrid.css" />
+	
+</head>
+
+<body>
+	
+
+<div class="grid grid-pad">
+    <div class="col-3-12" id="logo">
+      	<h1><a href="#"><img src="public/img/logo.png" alt="Nabu"></a></h1>
+    </div>
+    <div class="col-6-12" id="search">
+     <form action="users/search" method="post">
+      	<input type="text" name="name" class="searchbar" placeholder="Rechercher..."><img src="public/img/search_icon.png" alt="Rechercher">
+        </form>
+      	<div><ul class="users-result">
+       			 <?php require('partials/users.html'); ?>
+        	</ul>
+        </div>
+    </div>
+	<div class="col-3-12" id="menu">
+		<p><a href="#"><img src="public/img/menu_icon.png" alt="Menu"></a></p>
+	</div>
+
+</div>
+
+<div class="grid grid-pad">
+    <div class="col-3-12">
+       <div class="content">
+       	<h2>Suggestions</h2>
+       	<p>Articles / Personnes</p>
+       	<div>
+       		<a href="#">
+	       		<img src="public/img/PP_1.png" alt="">
+	       		Prénom Nom<br>
+	       		Badge
+	       	</a>
+       	</div>
+       	<div>
+       		<a href="#">
+	       		<img src="public/img/PP_2.png" alt="">
+	       		Prénom Nom<br>
+	       		Badge
+	       	</a>
+       	</div>
+       </div>
+       <div class="content">
+       	<h2>Devenez Gamewatcher <a href="#"><img src="public/img/refresh_icon.png" alt="Refresh"></a></h2>
+       	<img src="public/img/badge.png" alt="Badge description">
+       	<p>3 personnes ont relevé ce défi</p>
+       	<a href="#">Démarrer</a>
+       </div>
+       <div class="content">
+       	<h2>Objectifs proposés</h2>
+       </div>
+    </div>
+    <div class="col-6-12">
+       <div class="content">
+       	<div>
+	       	<h2>Poster un article</h2>
+	       	<form id="post_feed" action="#" method="post">
+		       	<input type="text" id="url" name="url" placeholder="Adresse du lien" autofocus /><br>
+		       	<input type="text" name="descr" placeholder="Description"><br>
+		       	<select name="category">
+					<option value="volvo">Volvo</option>
+					<option value="saab">Saab</option>
+					<option value="fiat">Fiat</option>
+					<option value="audi">Audi</option>
+				</select>
+		       	<input type="submit" value="Envoyer">
+		    </form>
+		 </div>
+		<section id="zone_chat">
+        	<?php require('partials/feed_old.html'); ?>
+        </section>
+		<div>
+
+		</div>
+       </div>
+    </div>
+    <div class="col-3-12">
+       <div class="content">
+       	<img src="public/img/settings_icon.png" alt=""><br>
+       	<img src="public/img/PP.png" alt=""><br>
+       	<span class="user-name"><?php echo $_SESSION['login']; ?></span>
+       	<div><span class="follow-number">000</span> followers</div>
+       	<div><span class="follow-number">000</span> following</div>
+       </div>
+       <div class="content">
+       	<h2>Statistiques</h2>
+       	<img src="public/img/circular_bar.png" alt="">
+       </div>
+    </div>
+</div>
+	<script src="http://localhost:8080/socket.io/socket.io.js"></script>
+	<script src="http://code.jquery.com/jquery-1.10.2.min.js"></script>
+	<script type="text/javascript" src="public/js/nabu.js"></script>
+    <script type="text/javascript" src="public/js/nabu_feed.js"></script>
+
+</body>
+</html>

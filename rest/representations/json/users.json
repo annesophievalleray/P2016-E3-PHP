@@ -1,0 +1,14 @@
+{
+"header":[],
+"body":[
+<?php foreach($users as $user):?>
+{
+	"firstname":"<?php echo $user->firstname;?>",
+	"lastname":"<?php echo $user->lastname;?>",
+	"id":"<?php echo $user->id;?>",
+	"url":"<?php echo 'http://localhost/Nabu/nabu/api/users'.$user->id;?>"
+}
+<?php endforeach;?>
+]
+
+}

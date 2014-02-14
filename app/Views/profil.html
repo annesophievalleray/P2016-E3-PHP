@@ -1,0 +1,77 @@
+<!doctype html>
+<html>
+<head>
+<meta charset="utf-8">
+  <base href="<?php echo $BASE; ?>/" />
+<title>FEED</title>
+</head>
+
+<body>
+ <h1>FEED</h1>
+     <form action="users/search" method="post">
+      <input type="text" name="name" placeholder="Recherche" autocomplete="off"/>
+    </form>
+   <ul class="users">
+    <?php require('partials/users.html'); ?>
+  </ul>
+
+        <form action="/" method="post" id="formulaire_chat">
+            <input type="text" name="message" id="message" placeholder="Votre message..." size="50" autofocus />
+            <input type="submit" id="envoi_message" value="Envoyer" />
+        </form>
+
+        <section id="zone_chat">
+           <ul class="feed">
+            <?php require('partials/feed_old.html'); ?>
+          </ul>
+            
+        </section>
+
+		<script src="http://localhost:8080/socket.io/socket.io.js"></script>
+        <script src="http://code.jquery.com/jquery-1.10.2.min.js"></script>
+	<script type="text/javascript" src="public/js/nabu.js"></script>
+        <script>
+
+            // Connexion à socket.io
+            var socket = io.connect('http://localhost:8080');
+
+            // On demande le pseudo, on l'envoie au serveur et on l'affiche dans le titre
+            var pseudo = prompt('Quel est votre pseudo ?');
+            socket.emit('nouveau_client', pseudo);
+            document.title = pseudo + ' - ' + document.title;
+			
+
+			function pub(publications) {
+ 				$('#zone_chat').append(publications+'</br>');
+            }
+
+            // Quand on reçoit un message, on l'insère dans la page
+            socket.on('message', function(data) {
+                insereMessage(data.pseudo, data.message)
+            })
+
+            // Quand un nouveau client se connecte, on affiche l'information
+            socket.on('nouveau_client', function(pseudo) {
+                $('#zone_chat').prepend('<p><em>' + pseudo + ' a rejoint le Chat !</em></p>');
+            })
+
+            // Lorsqu'on envoie le formulaire, on transmet le message et on l'affiche sur la page
+            $('#formulaire_chat').submit(function () {
+                var message = $('#message').val();
+                socket.emit('message', message); // Transmet le message aux autres
+                insereMessage(pseudo, message); // Affiche le message aussi sur notre page
+                $('#message').val('').focus(); // Vide la zone de Chat et remet le focus dessus
+                return false; // Permet de bloquer l'envoi "classique" du formulaire
+            });
+            
+            // Ajoute un message dans la page
+            function insereMessage(pseudo, message) {
+				apercu='<a href="http://'+message+'"><img src="//www.apercite.fr/api/apercite/120x90/yes/http://'+message+'" alt="Miniature par Apercite.fr" width="120" height="90" /></a>';
+				
+                $('#zone_chat').prepend(pseudo+" : "+apercu+"</br>");
+            }
+        </script>
+  
+
+</body>
+</html>

@@ -1,0 +1,129 @@
+<!doctype html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8" />
+    <base href="<?php echo $BASE; ?>/" />
+    
+	<meta http-equiv="X-UA-Compatible" content="IE=edge" />
+	<title>Nabu - The Social Web History Culture</title>
+	<meta name="viewport" content="width=device-width,initial-scale=1" />
+	<style>
+		* {margin: 0; padding:0;}
+		ul {list-style: none;}
+		html,body {margin:0; height:100%; background: oldlace; box-sizing: border-box; font: normal 14px/1.3 Helvetica, sans-serif; color:darkturquoise }
+		body {padding:20px;}
+		header {width: 100%; height:70px; background: antiquewhite; margin-bottom: 20px;}
+			header h1 {display:inline-block; width:50px; height: 50px; font-size:0; color: transparent; border-radius: 50px; background:darkturquoise; margin: 10px; vertical-align: top;}
+			header .searchbar {display:inline-block; width: 200px; border-radius: 10px; border: solid 1px darkturquoise; height: 30px; margin:20px;}
+			header nav {display:inline-block; height: 20px; margin: 25px 10px; float:right;}
+				header nav li {display:inline-block; margin:0 8px; height: 20px; line-height: 20px; font-size:20px; color: darkturquoise;}
+		.wrapper {height: 80%; width: 100%; font-size:0;}
+			.profile 	{display:inline-block; height: 100%; width: 20%; font-size:14px; vertical-align: top;}
+				.profile .user { height:65%; margin-bottom: 5%; width: 100%; background:antiquewhite; }
+				.profile .stats { height:30%; width: 100%; background:antiquewhite; }
+			.feed {display:inline-block; background:antiquewhite; height: 100%; width: 50%; font-size:14px; margin: 0 5%; vertical-align: top;}
+			.isuser .feed { width:50%; margin: 0 2% 0 10%; }
+			.isuser .profile { width:26%; margin: 0 10% 0 2%; }
+				.isuser .profile .user { height:45%; margin-bottom: 5%; }
+				.isuser .profile .stats { height:25%; margin-bottom: 5%; }
+				.isuser .profile .achievements { height:20%; width: 100%; background:antiquewhite;}
+	</style>
+</head>
+<body>
+	<header>
+		<h1>Nabu</h1>
+        <form action="users/search" method="post">
+		<input type="text" class="searchbar" name="name" placeholder="Search..."/>
+        </form>
+        
+         <form action="/" method="post" id="formulaire_chat">
+            <input type="text" name="message" id="message" placeholder="Votre message..." size="50" autofocus />
+            <input type="submit" id="envoi_message" value="Envoyer" />
+        </form>
+
+		<nav>
+         <ul class="users">
+        	<?php require('partials/users.html'); ?>
+         </ul>
+		</nav>
+	</header>
+	<section class="wrapper isuser">
+		<section class="feed"><h2><?php echo $login;?></h2>
+               <section id="zone_chat">
+                   <ul class="feed_old">
+                    <?php require('partials/feed_old.html'); ?>
+                  </ul>
+                
+            </section>
+        </section>
+		<section class="profile">
+        <?php 
+            if(isset($signIn)):
+            foreach($signIn as $user): 
+            ?>
+            <article class="user">Bienvenue <?php echo $user->login;?></article>
+            <?php 
+            endforeach; 
+            endif;
+            ?>
+            
+            <?php 
+            if(isset($getProfil)):
+            foreach($getProfil as $user): 
+            ?>
+            <article class="user">Profil de <?php echo $user->login ?></article>
+            <?php 
+            endforeach; 
+            endif;
+            ?>
+			<article class="stats">Stats</article>
+			<article class="achievements">Objectifs</article>
+		</section>
+	</section>
+
+	<script src="http://localhost:8080/socket.io/socket.io.js"></script>
+	<script src="http://code.jquery.com/jquery-1.10.2.min.js"></script>
+	<script type="text/javascript" src="public/js/nabu.js"></script>
+    <script>
+
+            // Connexion à socket.io
+            var socket = io.connect('http://localhost:8080');
+
+            // On demande le pseudo, on l'envoie au serveur et on l'affiche dans le titre
+            var pseudo = prompt('Quel est votre pseudo ?');
+            socket.emit('nouveau_client', pseudo);
+            document.title = pseudo + ' - ' + document.title;
+			
+
+			function pub(publications) {
+ 				$('#zone_chat').append(publications+'</br>');
+            }
+
+            // Quand on reçoit un message, on l'insère dans la page
+            socket.on('message', function(data) {
+                insereMessage(data.pseudo, data.message)
+            })
+
+            // Quand un nouveau client se connecte, on affiche l'information
+            socket.on('nouveau_client', function(pseudo) {
+                $('#zone_chat').prepend('<p><em>' + pseudo + ' a rejoint le Chat !</em></p>');
+            })
+
+            // Lorsqu'on envoie le formulaire, on transmet le message et on l'affiche sur la page
+            $('#formulaire_chat').submit(function () {
+                var message = $('#message').val();
+                socket.emit('message', message); // Transmet le message aux autres
+                insereMessage(pseudo, message); // Affiche le message aussi sur notre page
+                $('#message').val('').focus(); // Vide la zone de Chat et remet le focus dessus
+                return false; // Permet de bloquer l'envoi "classique" du formulaire
+            });
+            
+            // Ajoute un message dans la page
+            function insereMessage(pseudo, message) {
+				apercu='<a href="http://'+message+'"><img src="//www.apercite.fr/api/apercite/120x90/yes/http://'+message+'" alt="Miniature par Apercite.fr" width="120" height="90" /></a>';
+				
+                $('#zone_chat').prepend(pseudo+" : "+apercu+"</br>");
+            }
+        </script>
+</body>  
+</html>
