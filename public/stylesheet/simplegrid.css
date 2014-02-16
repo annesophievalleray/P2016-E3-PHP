@@ -40,7 +40,7 @@ body {
 }
 
 .grid-pad {
-	padding: 20px 0 0px 20px;
+	padding: 0px 0 0px 20px;
 }
 
 .grid-pad > [class*='col-']:last-of-type {

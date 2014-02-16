@@ -1,0 +1,8 @@
+@font-face {
+    font-family: 'BentonSansMedium';
+    src: url('bentonsans-medium.eot');
+    src: url('bentonsans-medium.eot') format('embedded-opentype'),
+         url('bentonsans-medium.woff') format('woff'),
+         url('bentonsans-medium.ttf') format('truetype'),
+         url('bentonsans-medium.svg#BentonSansMedium') format('svg');
+}
