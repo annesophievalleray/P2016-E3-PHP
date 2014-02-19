@@ -55,4 +55,4 @@ $('input[name="name"]').on('keyup',function(e){
 		$('.users-result').html(data);
 		console.log(data);
 	})
-})
+});
