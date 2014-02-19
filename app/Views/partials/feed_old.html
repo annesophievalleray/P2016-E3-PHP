@@ -2,11 +2,16 @@
 if(isset($getFeed)):
 foreach($getFeed as $publi): 
 ?>
-<div class="post-feed"><p><a href="http://<?php echo $publi->url_feed; ?>"><img src="public/img/PP_2.png" alt=""><?php echo $publi->author_feed; ?></a><?php echo $publi->date_feed; ?><br /><img src="//www.apercite.fr/api/apercite/120x90/yes/http://<?php echo $publi->url_feed; ?>" alt="Miniature par Apercite.fr" width="120" height="90" /></p></div>
+<div class="post-feed clearfix"><div class="tag"></div>
+<p>
+<a href="<?php echo $publi->post_url; ?>"><img src="public/img/PP_large.png" class="avatar-50" alt=""><?php echo $publi->post_user_id; ?></a><?php echo $publi->post_date; ?><br/>
+<?php echo $publi->post_desc; ?></br>
+<a href="<?php echo $publi->post_url; ?>" class="post-link"><?php echo $publi->post_url; ?></a></p></div>
 <?php 
 endforeach; 
 endif;
 ?>
+
 
 
 <?php 

@@ -32,7 +32,7 @@ class Home_controller extends Controller{
 				'login'=>$auth->login);
 			$f3->set('SESSION',$user);
 			$id=$f3->get('SESSION.id');
-			$f3->reroute('/user/'.$id);
+			$f3->reroute('/dashboard/'.$id);
 			
 			
 		/*session_start();
@@ -47,6 +47,12 @@ class Home_controller extends Controller{
 		
 		}	  
   }
+  
+  public function signOut($f3){
+	    session_destroy();
+	    //$f3->reroute('/');
+	  }
+
   
   //test
   

@@ -12,6 +12,10 @@
 </head>
 
 <body>
+<a href="user/signout">Deco</a>
+<div class="ami">
+	<?php require('partials/demande_follow.html'); ?>
+</div>
 	
 
 <div class="grid grid-pad">
@@ -92,6 +96,8 @@
        	<img src="public/img/settings_icon.png" alt=""><br>
        	<img src="public/img/PP.png" alt=""><br>
        	<span class="user-name"><?php echo $_SESSION['login']; ?></span>
+             <a href="user/follow/3/<?php echo $_SESSION['id']; ?>">demande
+        </a>
        	<div><span class="follow-number">000</span> followers</div>
        	<div><span class="follow-number">000</span> following</div>
        </div>

@@ -6,6 +6,11 @@ class Profile_model extends Model{
     parent::__construct();
   }
   
+   function getUserData($params){
+    return $this->getMapper('user')->load(array('user_id = ?',$params['id']));
+	
+  }
+  
   function getProfil($params){
     return $this->getMapper('user')->find(array('user_id = ?',$params['id']));
 	
@@ -26,8 +31,43 @@ class Profile_model extends Model{
 		
 		
 	}
-  	function follow($f3){
-	return $db->exec(array('INSERT INTO follow (id_demandeur, id_accepteur) VALUES (?,?)',$params['id_demandeur'], $params['id_accepteur']));
+  	function follow($params){
+		$follower_id=$params['follower_id'];
+		$following_id=$params['following_id'];
+	//return $db->exec(array('INSERT INTO follow (follower_id, following_id) VALUES (?,?)',$params['follower_id'], $params['following_id']));
+	
+	  	$followed=$this->getMapper('follow');
+	$result=$followed->load(array('follower_id = ? AND following_id=?',$follower_id, $following_id));
+	if(!$result){
+		$result=$followed->load();
+		$result->follower_id=$follower_id;
+		$result->following_id=$following_id;
+  		$result->insert();
+	}
+	else{
+		$result->state=4;
+		$result->update();
+		
+		}
+		
+		
+	}
+	 function unfollow($f3){
+	return $db->exec(array('DELETE FROM follow WHERE following_id=? AND follower_id=?',$params['follower_id'], $params['following_id']));
+		
+	}
+	
+	function dmd_follow($params){
+		//return $db->exec(array('SELECT * FROM user INNER JOIN follow ON user_id=follower_id WHERE following_id=? AND state=0',$params['user_id']));
+		
+		return $this->getMapper('follow_view')->find(array('following_id = ? AND state=0',$params['user_id']));
+	
+		}
+	function back_follow($params){
+		$follow=$this->getMapper('follow');
+		$resultload=$follow->load(array('id = ?',$params['follow_id']));
+		$resultload->state=$params['state'];
+		$resultload->update();
 		
 	}
 	

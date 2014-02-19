@@ -1,0 +1,14 @@
+<?php 
+if($getUserData):
+?>
+{ "user_id": "<?php echo $getUserData->user_id ?>", 
+ "user_login":"<?php echo $getUserData->login ?>",
+ "user_email":"<?php echo $getUserData->email ?>",
+ "user_avatar":"<?php echo $getUserData->avatar ?>",
+ "user_location":"<?php echo $getUserData->location ?>",
+ "user_birth":"<?php echo $getUserData->date_birth ?>",
+ "user_badges":"<?php echo $getUserData->bdg_id ?>"
+}
+<?php  
+endif;
+?>

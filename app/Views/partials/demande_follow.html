@@ -1,0 +1,9 @@
+<?php 
+if(isset($dmd_follow)):
+foreach($dmd_follow as $demande): 
+?>
+<?php echo $demande->follower_id.' '.$demande->login; ?><a href="user/back_follow/1/<?php echo $demande->id; ?>">Accepter</a><a href="user/back_follow/2/<?php echo $demande->id; ?>">Refuser</a>
+<?php 
+endforeach; 
+endif;
+?>

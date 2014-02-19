@@ -9,8 +9,12 @@ class Dashboard_model extends Model{
     parent::__construct();
   }
    function getFeed(){
-    return $this->getMapper('feed')->find(array());
+   return $this->getMapper('posts')->find(array(),array('order'=>'post_date DESC'));
   } 
+  
+  function searchUsers($params){
+    return $this->getMapper('user')->find('login like "%'.$params['keywords'].'%"');
+  }
 
 }
 

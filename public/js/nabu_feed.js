@@ -1,15 +1,18 @@
 // JavaScript Document
 login="lol";
 				$.ajax({
-					url:"user/getLogin",
+					url:"user/getUserData",
 					method:"get",
 
 				})
 				.success(function(data){
-					console.log(data);
-					login=data;
+					dataUser=JSON.parse(data);
+					console.log(dataUser);
+					login=dataUser.user_login;
+					id=dataUser.user_id;
 					
 					socket.emit('pseudo', login);
+					socket.emit('id_user', id);
 
 			
 				})
@@ -45,7 +48,9 @@ login="lol";
             function insereMessage(url) {
 				//apercu='<a href="http://'+message+'"><img src="//www.apercite.fr/api/apercite/120x90/yes/http://'+message+'" alt="Miniature par Apercite.fr" width="120" height="90" /></a>';
 				
-				apercu='<div class="post-feed"><p><a href="http://'+url+'"><img src="public/img/PP_2.png" alt="">'+login+'</a><br /><img src="//www.apercite.fr/api/apercite/120x90/yes/http://'+url+'" alt="Miniature par Apercite.fr" width="120" height="90" /></p></div>';
+				//apercu='<div class="post-feed"><p><a href="http://'+url+'"><img src="public/img/PP_2.png" alt="">'+login+'</a><br /><img src="//www.apercite.fr/api/apercite/120x90/yes/http://'+url+'" alt="Miniature par Apercite.fr" width="120" height="90" /></p></div>';
 				
-                $('#zone_chat').prepend(apercu);
+				apercu='<div class="post-feed clearfix"><div class="tag"></div><p><a href="'+url+'"><img src="public/img/PP_large.png" class="avatar-50" alt="">'+login+'</a>date<br/>description</br><a href="'+url+'" class="post-link">"'+url+'"</a></p></div>';
+				
+                $('#zone_post').prepend(apercu);
             }

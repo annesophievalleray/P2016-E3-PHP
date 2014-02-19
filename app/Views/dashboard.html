@@ -1,129 +1,142 @@
 <!DOCTYPE html>
 <head>
 	<meta charset="utf-8">
-
+	<base href="<?php echo $BASE; ?>/" />
 	<title>Nabu</title>
 	<meta name="description" content="">
 	<meta name="viewport" content="width=device-width">
 
-	<link rel="stylesheet" type="text/css" href="../../public/stylesheet/style.css">
-	<link rel="stylesheet" type="text/css" href="../../public/stylesheet/simplegrid.css" />
+	<link rel="stylesheet" type="text/css" href="public/stylesheet/style.css">
+	<link rel="stylesheet" type="text/css" href="public/stylesheet/simplegrid.css" />
 	
 </head>
 
 <body>
-	
 
-<div class="grid grid-pad">
-    <div class="col-3-12" id="logo">
-      	<h1><a href="#"><img src="../../public/img/logo.png" alt="Nabu"></a></h1>
-    </div>
-    <div class="col-6-12" id="search">
-      	<input type="text" name="search" placeholder="Rechercher..."><img src="../../public/img/search_icon.png" alt="Rechercher">
-      	<div><ul class="users-result"></ul></div>
+<div id="wrapper">	
+
+<div id="left">
+<div id="sidebar">
+  <div id="sidebar-cover"></div>
+  <div id="sidebar-content">
+       <div class="content">
+        <img src="public/img/PP_large_2.png" alt="ICI NOM PRENOM"><br>
+        <span class="user-name"><?php echo $_SESSION['login']; ?></span>
+        <div><span class="follow-number">000</span> followers</div>
+        <div><span class="follow-number">000</span> following</div>
+       </div>
+       <div class="content">
+        <h3>Derniers badges</h3>
+        <img src="public/img/badge.png" class="badges" alt="Badge description">
+        <img src="public/img/badge.png" class="badges" alt="Badge description">
+        <img src="public/img/badge.png" class="badges" alt="Badge description">
+        <p><a href="#"> >> Voir tous mes badges</a></p>
+       </div>
+       <div class="content">
+        <h2>Mon activité</h2>
+        <span>Janvier 2014</span>
+        <div><span class="follow-number">000</span> pages bookées</div>
+        <div id="graph"><img src="public/img/fictive_diagram.png" alt=""></div>
+       </div>
+    </div></div>
+</div>
+
+<div id="right">
+<div class="grid grid-pad" id="top-content">
+    <div class="col-7-12" id="logo">
+      	<h1><a href="#"><img src="public/img/temporary_logo.png" alt="Nabu"></a></h1>
+      	<div id="search">
+        <form action="users/search" method="post">
+          <input type="text" name="name" placeholder="Rechercher un ami"><div><img src="public/img/icons/loupe.svg"  class="icon-search" alt="Rechercher"></div>
+         </form>
+        	<div><ul class="users-result">
+            		<?php require('partials/users.html'); ?>
+                 </ul></div>
+        </div>
     </div>
 	<div class="col-3-12" id="menu">
-		<p><a href="#"><img src="../../public/img/menu_icon.png" alt="Menu"></a></p>
+		<p><a href="#"><img src="public/img/icons/user.svg" class="icon-menu" alt="Profil"></a> <a href="#"><img src="public/img/icons/settings.svg" class="icon-menu" alt="Paramètres"></a><a href="user/signout"><img src="public/img/icons/power.svg" class="icon-menu" alt="Déconnexion"></a></p>
 	</div>
 
 </div>
 
-<div class="grid grid-pad">
-    <div class="col-3-12">
-       <div class="content">
-       	<h2>Suggestions</h2>
-       	<p>Articles / Personnes</p>
-       	<div>
-       		<a href="#">
-	       		<img src="../../public/img/PP_1.png" alt="">
-	       		Prénom Nom<br>
-	       		Badge
-	       	</a>
-       	</div>
-       	<div>
-       		<a href="#">
-	       		<img src="../../public/img/PP_2.png" alt="">
-	       		Prénom Nom<br>
-	       		Badge
-	       	</a>
-       	</div>
-       </div>
-       <div class="content">
-       	<h2>Devenez Gamewatcher <a href="#"><img src="../../public/img/refresh_icon.png" alt="Refresh"></a></h2>
-       	<img src="../../public/img/badge.png" alt="Badge description">
-       	<p>3 personnes ont relevé ce défi</p>
-       	<a href="#">Démarrer</a>
-       </div>
-       <div class="content">
-       	<h2>Objectifs proposés</h2>
-       </div>
-    </div>
-    <div class="col-6-12">
-       <div class="content">
-       	<div>
-	       	<h2>Poster un article</h2>
-	       	<form name="post-article" action="#" method="get">
-		       	<input type="text" name="url" placeholder="Adresse du lien"><br>
-		       	<input type="text" name="descr" placeholder="Description"><br>
-		       	<select name="category">
-					<option value="volvo">Volvo</option>
-					<option value="saab">Saab</option>
-					<option value="fiat">Fiat</option>
-					<option value="audi">Audi</option>
-				</select>
-		       	<input type="submit" value="Valider">
+
+  <div class="grid grid-pad">
+    <div class="col-7-12">
+       <div class="content" id="new-post">
+	       	<img src="public/img/PP_large_2.png" class="avatar-50" alt="">
+	       	<div>
+            <form name="post-article" action="#" id="post_feed" method="post">
+		       	<input type="text" name="url" id="url" placeholder="Insérez une URL pour ajouter un contenu"><br>
+		       	<input type="text" name="descr" placeholder="Message accompagnant le contenu"><br>
+		       	<div class="styled-select">
+              <select name="category">
+                <option value="catergory">Catégorie</option><!-- faire une boucle php avec les catégroies-->
+      					<option value="volvo">Volvo</option>
+      					<option value="saab">Saab</option>
+      					<option value="fiat">Fiat</option>
+      					<option value="audi">Audi</option>
+      				</select>
+            </div>
+		       	<input type="submit" value="Publier">
 		    </form>
 		 </div>
-		 <div class="post-feed">
-       		<p><a href="#">
-	       		<img src="../../public/img/PP_2.png" alt="">
-	       		Prénom Nom </a>- il y a 2 minutes<br>
-	       		Pourquoi Facebook Paper est-il dangereux pour vos mains? bit.ly/3lymOp  
-	       	</p>
-       	</div>
-       	<div class="post-feed">
-       		<p><a href="#">
-	       		<img src="../../public/img/PP_1.png" alt="">
-	       		Prénom Nom </a>- il y a 3 minutes<br>
-	       		Pourquoi Facebook Paper est-il dangereux pour vos mains? bit.ly/3lymOp  
-	       	</p>
-       	</div>
-       	<div class="post-feed">
-       		<p><a href="#">
-	       		<img src="../../public/img/PP_2.png" alt="">
-	       		Prénom Nom </a>- il y a 4 minutes<br>
-	       		Pourquoi Facebook Paper est-il dangereux pour vos mains? bit.ly/3lymOp  
-	       	</p>
-       	</div>
-       	<div class="post-feed">
-       		<p><a href="#">
-	       		<img src="../../public/img/PP_1.png" alt="">
-	       		Prénom Nom </a>- il y a 5 minutes<br>
-	       		Pourquoi Facebook Paper est-il dangereux pour vos mains? bit.ly/3lymOp  
-	       	</p>
-       	</div>
+     </div>
+     <div class="content">
+     	<section id="zone_post">
+        	<?php require('partials/feed_old.html'); ?>
+        </section>
 		<div>
 
 		</div>
        </div>
     </div>
     <div class="col-3-12">
-       <div class="content">
-       	<img src="../../public/img/settings_icon.png" alt=""><br>
-       	<img src="../../public/img/PP.png" alt=""><br>
-       	<span class="user-name">Prénom Nom</span>
-       	<div><span class="follow-number">000</span> followers</div>
-       	<div><span class="follow-number">000</span> following</div>
+      <div class="content">
+        <h2>Suggestions</h2>
+        <h3><img src="public/img/icons/users_suggestions.svg" class="icon-titles" alt="">Utilisateurs</h3>
+        <a href="#"><img src="public/img/icons/sync.svg" class="icon-sync" alt=""></a>
+        <div>
+          <a href="#" class="name">
+            <img src="public/img/PP_large.png" class="avatar-45" alt="">
+            Prénom Nom</a><br>
+            Badge
+            <a href="#" class="follow-button">Suivre</a>
+        </div>
+        <div>
+          <a href="#" class="name">
+            <img src="public/img/PP_large_2.png" class="avatar-45" alt="">
+            Prénom Nom</a><br>
+            Badge
+            <a href="#" class="follow-button">Suivre</a>
+        </div>
+        
+        <h3><img src="public/img/articles.png" class="icon-titles" alt="">Articles</h3>
+        <a href="#"><img src="public/img/icons/sync.svg" class="icon-sync" alt=""></a>
+        <div>         
+            Pourquoi Facebook Paper est-il dangereux pour vos mains? <a href="#" class="post-link">bit.ly/3lymOp</a>
+        </div>
+        <div>         
+            Pourquoi Facebook Paper est-il dangereux pour vos mains? <a href="#" class="post-link">bit.ly/3lymOp</a>
+        </div>
        </div>
        <div class="content">
-       	<h2>Statistiques</h2>
-       	<img src="../../public/img/circular_bar.png" alt="">
+        <h2>Objectifs<a href="#"><img src="public/img/icons/sync.svg" class="icon-sync" alt=""></a></h2>
+        <div class="obj-progress"><img src="public/img/PP_large.png" class="avatar-35" alt=""> barre progression <img src="public/img/badge.png" class="icon-35" alt="Badge description"></div>
+        <p>Machin a relevé le défi :<br>
+        <a href="#">Devenir Gamewatcher</a></p>
        </div>
+       
     </div>
 </div>
 
+</div>
+
+</div>
+	<script src="http://localhost:8080/socket.io/socket.io.js"></script>
 	<script src="http://code.jquery.com/jquery-1.10.2.min.js"></script>
-	<script type="text/javascript" src="../../public/js/wtfay.js"></script>
+	<script type="text/javascript" src="public/js/nabu.js"></script>
+    <script type="text/javascript" src="public/js/nabu_feed.js"></script>
 
 </body>
 </html>

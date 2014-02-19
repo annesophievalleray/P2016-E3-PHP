@@ -12,12 +12,15 @@ class Profile_controller extends Controller{
 
 	$this->_getFeed($f3);
 	$this->_displayBadges($f3);
+	$this->_dmd_follow($f3);
 	$this->tpl['async']='profile.html';
   }
   
-  function getUserLogin($f3){
+  function getUserData($f3){
+	      $f3->set('getUserData',$this->model->getUserData(array('id'=>$f3->get('SESSION.id'))));
 	  //$this->redirection=true;
 		//echo $f3->get('SESSION.login');
+		$this->tpl['async']='json/dataUser.json';
 	  
   }
   
@@ -31,9 +34,34 @@ class Profile_controller extends Controller{
   	function editProfil($f3){
 		
 	}
-  	function follow($f3){
+	function _dmd_follow($f3){
+		$dmd_follow_=$f3->set('dmd_follow',$this->model->dmd_follow(array('user_id'=>$f3->get('SESSION.id'))));
+		
+		//echo $dmd_follow_;
 		
 	}
+  	function follow($f3){
+		$follow_=$f3->set('follow',$this->model->follow(array('follower_id'=>$f3->get('PARAMS.follower'),'following_id'=>$f3->get('PARAMS.following'))));
+		
+		
+		$this->tpl['async']='partials/users.html';
+		
+	}
+	
+  	function unfollow($f3){
+		$unfollow_=$f3->set('unfollow',$this->model->unfollow(array('follower_id'=>$f3->get('PARAMS.follower'),'following_id'=>$f3->get('PARAMS.following'))));
+		
+		
+		$this->tpl['async']='partials/users.html';
+		
+	}
+
+//SERT A RIEN	
+	function back_follow($f3){
+		$back_follow_=$f3->set('back_follow',$this->model->back_follow(array('state'=>$f3->get('PARAMS.state'),'follow_id'=>$f3->get('PARAMS.follow_id'))));
+		
+	}
+//___________
 	
 	 function _getFeed($f3){
 		 	$f3->set('getFeedUser',$this->model->getFeedUser());
