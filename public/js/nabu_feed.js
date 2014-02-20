@@ -10,6 +10,11 @@ login="lol";
 					console.log(dataUser);
 					login=dataUser.user_login;
 					id=dataUser.user_id;
+					nb_fle=dataUser.nb_followers;
+					nb_fli=dataUser.nb_following;
+					
+					$('#nb_followe').html(nb_fle);
+					$('#nb_followi').html(nb_fli);
 					
 					socket.emit('pseudo', login);
 					socket.emit('id_user', id);
@@ -27,7 +32,7 @@ login="lol";
 
             // Quand on reçoit un message, on l'insère dans la page
             socket.on('url', function(data) {
-                insereMessage(data.url);
+                insereMessage(data.url,data.login);
             })
 
             // Quand un nouveau client se connecte, on affiche l'information
@@ -36,7 +41,7 @@ login="lol";
             })*/
 
             // Lorsqu'on envoie le formulaire, on transmet le message et on l'affiche sur la page
-            $('#post_feed').submit(function () {
+            $('#post_article').submit(function () {
                 var url = $('#url').val();
                 socket.emit('url', url); // Transmet le message aux autres
                 insereMessage(url); // Affiche le message aussi sur notre page
@@ -45,7 +50,7 @@ login="lol";
             });
             
             // Ajoute un message dans la page
-            function insereMessage(url) {
+            function insereMessage(url,login) {
 				//apercu='<a href="http://'+message+'"><img src="//www.apercite.fr/api/apercite/120x90/yes/http://'+message+'" alt="Miniature par Apercite.fr" width="120" height="90" /></a>';
 				
 				//apercu='<div class="post-feed"><p><a href="http://'+url+'"><img src="public/img/PP_2.png" alt="">'+login+'</a><br /><img src="//www.apercite.fr/api/apercite/120x90/yes/http://'+url+'" alt="Miniature par Apercite.fr" width="120" height="90" /></p></div>';

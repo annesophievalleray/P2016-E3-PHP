@@ -11,6 +11,11 @@ class Home_controller extends Controller{
   }
   
   function signIn($f3){
+	 switch($f3->get('VERB')){
+	  case 'GET':
+         $this->tpl['sync']='main.html';
+      break;
+      case 'POST':
     $auth=$f3->set('signIn',$this->model->signIn(array('login'=>$f3->get('POST.login'),'password'=>$f3->get('POST.password'))));
 	
 	if(!$auth){
@@ -43,14 +48,16 @@ class Home_controller extends Controller{
 		//header("Location: /$id");
 		 //$f3->reroute('/user/'.$id, true);
 
-
+	}
+		break;
 		
-		}	  
+	 }
+			  
   }
   
   public function signOut($f3){
 	    session_destroy();
-	    //$f3->reroute('/');
+	    $f3->reroute('/');
 	  }
 
   

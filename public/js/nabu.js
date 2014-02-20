@@ -43,6 +43,35 @@
 	})
 });*/
 
+$.ajax({
+		url:"user/badges",
+		method:"get",
+	})
+	.success(function(data){
+		$('#badges').append(data);
+		//console.log(data);
+	})
+
+$.ajax({
+					url:"user/getUserData",
+					method:"get",
+
+				})
+				.success(function(data){
+					dataUser=JSON.parse(data);
+					//console.log(dataUser);
+					
+					nb_fle=dataUser.nb_followers;
+					nb_fli=dataUser.nb_following;
+					nb_posts=dataUser.nb_posts;
+					console.log(nb_posts);
+					
+					$('#nb_followers').html(nb_fle);
+					$('#nb_following').html(nb_fli);
+					$('#nb_posts').html(nb_posts);
+								
+});
+
 $('input[name="name"]').on('keyup',function(e){
 	var $parent=$(this).parent('form');
 	//console.log($parent.serialize());
@@ -55,4 +84,4 @@ $('input[name="name"]').on('keyup',function(e){
 		$('.users-result').html(data);
 		console.log(data);
 	})
-});
+})

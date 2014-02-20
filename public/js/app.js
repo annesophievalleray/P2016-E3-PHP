@@ -32,21 +32,21 @@ io.sockets.on('connection', function (socket, url) {
         socket.broadcast.emit('pseudo', login);
     });
 	
-   socket.on('id_user', function(id) {
+   /*socket.on('id_user', function(id) {
         id = ent.encode(id);
         socket.set('id', id);
         socket.broadcast.emit('id_user', id);
-    });
+    });*/
 
     // Dès qu'on reçoit un message, on récupère le pseudo de son auteur et on le transmet aux autres personnes
     socket.on('url', function (url) {
-        socket.get('id', function (error, id) {
+        socket.get('login', function (error, login) {
             url = ent.encode(url);
-			id=socket.get('id_user');
-			login=ent.encode(login);
+			//id=socket.get('id_user');
+			//login=ent.encode(login);
 			//console.log(id);
             socket.broadcast.emit('url', {url: url, login: login});
-			db.query("INSERT INTO posts (post_user_id, post_url) VALUES('"+id+"', '"+url+"')");
+			//db.query("INSERT INTO posts (post_user_id, post_url) VALUES('"+id+"', '"+url+"')");
         });
     }); 
 });

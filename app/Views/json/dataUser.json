@@ -7,7 +7,10 @@ if($getUserData):
  "user_avatar":"<?php echo $getUserData->avatar ?>",
  "user_location":"<?php echo $getUserData->location ?>",
  "user_birth":"<?php echo $getUserData->date_birth ?>",
- "user_badges":"<?php echo $getUserData->bdg_id ?>"
+ "user_badges":"<?php echo $getUserData->bdg_id ?>",
+ "nb_followers":"<?php echo $getUserData->nb_followers ?>",
+ "nb_following":"<?php echo $getUserData->nb_following ?>",
+ "nb_posts":"<?php echo $getUserData->nb_posts ?>"
 }
 <?php  
 endif;

@@ -1,0 +1,10 @@
+<?php 
+if(isset($displayBadges)):
+//echo $nb_badges;
+for($i=count($badges_array)-2; $i>=(count($badges_array)-$nb_badges-1); $i--){
+?>
+<img src="public/img/badges/<?php echo $badges_array[$i];?>.png" class="badges" alt="<?php //echo $badge_name[$i];?>">
+<?php 
+} 
+endif;
+?>

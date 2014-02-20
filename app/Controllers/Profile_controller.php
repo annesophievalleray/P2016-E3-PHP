@@ -15,7 +15,7 @@ class Profile_controller extends Controller{
 	$this->_dmd_follow($f3);
 	$this->tpl['async']='profile.html';
   }
-  
+//------UserDatas----
   function getUserData($f3){
 	      $f3->set('getUserData',$this->model->getUserData(array('id'=>$f3->get('SESSION.id'))));
 	  //$this->redirection=true;
@@ -23,17 +23,23 @@ class Profile_controller extends Controller{
 		$this->tpl['async']='json/dataUser.json';
 	  
   }
+ //------FEED----   
+  	 function _getFeed($f3){
+		 	$f3->set('getFeedUser',$this->model->getFeedUser());
+		
+	}
   
-    function searchUsers($f3){
+    /*function searchUsers($f3){
 		 //$this->redirection=false;
     $f3->set('users',$this->model->searchUsers(array('keywords'=>$f3->get('POST.name'))));
 	//echo $f3->get('users');
 	$this->tpl['async']='partials/users.html';
-  }
-  
+  }*/
+ //-----Profil----- 
   	function editProfil($f3){
 		
 	}
+//----Follow----
 	function _dmd_follow($f3){
 		$dmd_follow_=$f3->set('dmd_follow',$this->model->dmd_follow(array('user_id'=>$f3->get('SESSION.id'))));
 		
@@ -56,6 +62,15 @@ class Profile_controller extends Controller{
 		
 	}
 
+  	function followSuggest($f3){
+		$followSuggest_=$f3->set('followSuggest',$this->model->followSuggest(array('user_id'=>$f3->get('SESSION.id'))));
+		echo $followSuggest_->count();
+		
+		
+		//$this->tpl['async']='partials/suggestions.json';
+		
+	}
+
 //SERT A RIEN	
 	function back_follow($f3){
 		$back_follow_=$f3->set('back_follow',$this->model->back_follow(array('state'=>$f3->get('PARAMS.state'),'follow_id'=>$f3->get('PARAMS.follow_id'))));
@@ -63,23 +78,20 @@ class Profile_controller extends Controller{
 	}
 //___________
 	
-	 function _getFeed($f3){
-		 	$f3->set('getFeedUser',$this->model->getFeedUser());
-		
-	}
+//----Articles----
   	function addArticle($f3){
 		
 	}
 	
+
+//-----BADGES----
 	
-	//BADGES
-	
-function _displayBadges($f3){
+function displayBadges($f3){
     $displayBadges_=$f3->set('displayBadges',$this->model->displayBadges(array('id'=>$f3->get('SESSION.id'))));
 	
     if($displayBadges_) {
 
-      echo 'Chaine des badges : '.$bdg_str=$displayBadges_->bdg_id.'<br>';
+      /*echo 'Chaine des badges : '.$bdg_str=$displayBadges_->bdg_id.'<br>';
 
       $nb_badges=substr_count($bdg_str, ',');
       echo 'Nb de badges : '.$nb_badges.'<br>';
@@ -92,11 +104,29 @@ function _displayBadges($f3){
         
         
         echo $this->getBadgesName($badges_array[$i],$f3);
+      }*/
+	 $bdg_str=$displayBadges_->bdg_id;
+	  
+	if(substr_count($bdg_str, ',')<=2)
+	  	$f3->set('nb_badges',(substr_count($bdg_str, ',')));
+	else
+		$f3->set('nb_badges',3);
+		
+	  $f3->set('badges_array',explode(',',$bdg_str));
+	  $badges_array=$f3->get('badges_array');
+	  
+	  /*for ($i=count($f3->get('badges_array')); $i>=count(($f3->get('badges_array'))-3); $i++) { 
+       		$badges_name[$i]=$this->getBadgesName($badges_array[$i],$f3);
       }
+	  $f3->set('badges_name',$badge_name);*/
+	  
+	  //echo"daccc!!";
+	  
+	   $this->tpl['async']='partials/apercuBadges.html';
 
     }
 
-  //$this->tpl['async']='partials/users.html';
+ 
   }
 
   function getBadgesName($badge_id,$f3){

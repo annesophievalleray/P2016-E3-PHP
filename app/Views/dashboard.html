@@ -21,20 +21,18 @@
          <div class="content">
           <img src="public/img/PP_large_2.png" class="avatar-main" alt="ICI NOM PRENOM"><br>
           <span class="user-name"><?php echo $_SESSION['login']; ?></span>
-          <div><span class="follow-number">000</span> followers</div>
-          <div><span class="follow-number">000</span> following</div>
+          <div><span class="follow-number" id="nb_followers">0</span> followers</div>
+          <div><span class="follow-number" id="nb_following">0</span> following</div>
          </div>
-         <div class="content">
+         <div class="content" id="badges">
           <h3>Derniers badges</h3>
-          <img src="public/img/badge.png" class="badges" alt="Badge description">
-          <img src="public/img/badge.png" class="badges" alt="Badge description">
-          <img src="public/img/badge.png" class="badges" alt="Badge description">
+          
           <p><a href="#"> >> Voir tous mes badges</a></p>
          </div>
          <div class="content">
           <h2>Mon activité</h2>
           <span>Janvier 2014</span>
-          <div><span class="follow-number">000</span> pages bookées</div>
+          <div><span class="follow-number" id="nb_posts">0</span> pages bookées</div>
           <div id="graph"><img src="public/img/fictive_diagram.png" alt=""></div>
           <a href="#" class="view-profile">Consulter le profil complet</a>
          </div>
@@ -63,8 +61,8 @@
          <div class="content" id="new-post"><!-- NEW POST -->
             <img src="public/img/PP_large_2.png" class="avatar-50" alt="">
             <div>
-              <form name="post-article" action="#" method="get">
-              <input type="text" name="url" placeholder="Insérez une URL pour ajouter un contenu"><br>
+              <form name="post-article" id="post_article">
+              <input type="text" name="url" id="url" placeholder="Insérez une URL pour ajouter un contenu"><br>
               <input type="text" name="descr" placeholder="Message accompagnant le contenu"><br>
               <div class="styled-select">
                 <select name="category">

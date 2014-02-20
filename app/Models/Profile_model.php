@@ -71,6 +71,12 @@ class Profile_model extends Model{
 		
 	}
 	
+	function followSuggest($f3){
+		
+		return $this->getMapper('follow')->find(array('follower_id = ? AND state=1',$params['user_id']));
+		
+	}
+	
 	 function getFeed($f3){
 		
 	}

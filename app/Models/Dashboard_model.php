@@ -15,6 +15,12 @@ class Dashboard_model extends Model{
   function searchUsers($params){
     return $this->getMapper('user')->find('login like "%'.$params['keywords'].'%"');
   }
+  
+  	function followSuggest($params){
+		
+		return $this->getMapper('follow')->find(array('follower_id = ? AND state=1',$params['user_id']));
+		
+	}
 
 }
 
