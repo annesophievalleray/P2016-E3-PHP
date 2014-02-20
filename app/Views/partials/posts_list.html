@@ -1,0 +1,14 @@
+<?php 
+if(isset($getFeed)):
+foreach($getFeed as $publi): 
+?>
+<div class="post-item">
+<p><a href="<?php echo $publi->url_feed; ?>"><img src="//www.apercite.fr/api/apercite/120x90/yes/<?php echo $publi->url_feed; ?>" alt="" width="120" height="90" class="apercu"></a>
+  Pourquoi Facebook Paper est-il dangereux pour vos mains? <br>
+  <a href="<?php echo $publi->url_feed; ?>" class="post-link"><?php echo $publi->url_feed; ?></a>
+</p>
+</div>
+<?php 
+endforeach; 
+endif;
+?>

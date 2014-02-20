@@ -1,129 +1,164 @@
 <!DOCTYPE html>
 <head>
-	<meta charset="utf-8">
-	<base href="<?php echo $BASE; ?>/" />
-	<title>Nabu</title>
-	<meta name="description" content="">
-	<meta name="viewport" content="width=device-width">
+  <meta charset="utf-8">
 
-	<link rel="stylesheet" type="text/css" href="../../../public/stylesheet/style.css">
-	<link rel="stylesheet" type="text/css" href="../../../public/stylesheet/simplegrid.css" />
-	
+  <title>Nabu</title>
+  <meta name="description" content="">
+  <meta name="viewport" content="width=device-width">
+
+  <link rel="stylesheet" type="text/css" href="../../../public/stylesheet/style.css">
+  <link rel="stylesheet" type="text/css" href="../../../public/stylesheet/simplegrid.css" />
+  
 </head>
 
 <body>
-	
 
-<div class="grid grid-pad">
-    <div class="col-3-12" id="logo">
-      	<h1><a href="#"><img src="../../../public/img/logo.png" alt="Nabu"></a></h1>
-    </div>
-    <div class="col-6-12" id="search">
-      	<input type="text" name="search" placeholder="Rechercher..."><img src="../../../public/img/search_icon.png" alt="Rechercher">
-      	<div><ul class="users-result"></ul></div>
-    </div>
-	<div class="col-3-12" id="menu">
-		<p><a href="#"><img src="../../../public/img/menu_icon.png" alt="Menu"></a></p>
-	</div>
+<div id="wrapper">  
+
+  <div id="left"><!-- LEFT PART -->
+    <div id="sidebar"><!-- SIDEBAR -->
+      <div id="sidebar-cover"></div>
+      <div id="sidebar-content">
+         <div class="content">
+          <img src="../../../public/img/PP_large_2.png" class="avatar-main" alt="ICI NOM PRENOM"><br>
+          <span class="user-name">Prénom Nom</span>
+          <div><span class="follow-number">000</span> followers</div>
+          <div><span class="follow-number">000</span> following</div>
+         </div>
+         <div class="content">
+          <h3>Badges débloqués</h3>
+          <img src="../../../public/img/badge.png" class="badges" alt="Badge description">
+          <img src="../../../public/img/badge.png" class="badges" alt="Badge description">
+          <img src="../../../public/img/badge.png" class="badges" alt="Badge description">
+          <img src="../../../public/img/badge.png" class="badges" alt="Badge description">
+          <img src="../../../public/img/badge.png" class="badges" alt="Badge description">
+          <img src="../../../public/img/badge.png" class="badges" alt="Badge description">
+         </div>
+         <div class="content list-follow">
+          <h3>Vos followers</h3>
+          <ul>
+            <li><img src="../../../public/img/PP_large_2.png" class="avatar-30" alt=""> Nom prénom</li>
+          </ul>
+         </div>
+         <div class="content list-follow">
+          <h3>Vos followings</h3>
+         </div>
+      </div>
+    </div><!-- END SIDEBAR -->
+  </div><!-- END LEFT PART -->
+
+  <div id="right"><!-- RIGHT PART -->
+    <div class="grid grid-pad" id="top-content"><!-- GRID LOGO/SEARCH/MENU -->
+      <div class="col-7-12" id="logo"><!-- LOGO AND SEARCHBAR -->
+          <h1><a href="#"><img src="../../../public/img/temporary_logo.png" alt="Nabu"></a></h1>
+          <div id="search">
+            <input type="text" name="search" placeholder="Rechercher un ami"><div><img src="../../../public/img/icons/loupe.svg"  class="icon-search" alt="Rechercher"></div>
+            <div><ul class="users-result"></ul></div>
+          </div>
+      </div><!-- END LOGO AND SEARCHBAR -->
+      <div class="col-3-12" id="menu"><!-- MENU -->
+        <p><a href="#"><img src="../../../public/img/icons/user.svg" class="icon-menu" alt="Profil"></a> <a href="#"><img src="../../../public/img/icons/settings.svg" class="icon-menu" alt="Paramètres"></a><a href="#"><img src="../../../public/img/icons/power.svg" class="icon-menu" alt="Déconnexion"></a></p>
+      </div><!-- END MENU -->
+    </div><!-- END GRID LOGO/SEARCH/MENU -->
+
+
+    <div class="grid grid-pad"><!-- GRID CONTENT -->
+      <div class="col-6-12"><!-- CENTRAL COLUMN -->
+            <div><!-- NUMBERS -->
+                <div class="stats-wrapper">
+                  <div class="content"><span class="follow-number">000</span> pages bookées</div>
+                </div>
+                <div class="stats-wrapper">
+                  <div class="content"><span class="follow-number">000</span> pages bookées</div>
+                </div>
+                <div class="stats-wrapper">
+                  <div class="content"><span class="follow-number">000</span> pages bookées</div>
+                </div>
+            </div><!-- END NUMBERS -->
+        <div class="content" id="graph-wrapper"><!-- GRAPH -->
+          <div>
+            <h2>Votre navigation</h2>
+            <img src="../../../public/img/graph_example.png" width="100%" alt=""></div>
+         </div><!-- END GRAPH -->
+      </div><!-- END CENTRAL COLUMN -->
+
+      <div class="col-4-12"><!--  RIGHT COLUMN -->
+        <div class="content" id="top-right">
+            <div>
+              Vous avez consulté <b>5</b> sites de vente
+            </div>
+         </div> 
+
+         <div class="content" id="obj-list"><!-- CONTENT OBJECTIVES -->
+            <h2>Vos objectifs en cours</h2>
+            <div><p>Booker 10 articles de cuisine cette semaine<br>
+              <img src="../../../public/img/progress_bar.png" alt="" width="100%"></p>
+            </div>
+         </div><!-- END CONTENT OBJECTIVES -->
+         
+      </div><!-- END RIGHT COLUMN -->
+
+    </div><!-- END GRID CONTENT -->
+
+     <div class="grid grid-pad"><!-- GRID CONTENT BOTTOM -->
+      <div class="col-10-12">
+        <div class="content" id="bdg-list">
+          <h2>Badges obtenus</h2>
+          
+        </div>
+      </div>
+    </div><!-- END BOTTOM BLOCK -->
+
+    <div class="grid grid-pad"><!-- GRID CONTENT BOTTOM -->
+      <div class="col-10-12">
+        <div class="content" id="posts-list">
+          <h2>Pages bookées</h2>
+          <div class="post-item">
+            <p><a href="#"><img src="../../../public/img/site_thumbnail.png" atl="" class="apercu"></a>
+              Pourquoi Facebook Paper est-il dangereux pour vos mains? <br>
+              <a href="#" class="post-link">bit.ly/3lymOp</a>
+            </p>
+          </div>
+          <div class="post-item">
+            <p><a href="#"><img src="../../../public/img/site_thumbnail.png" atl="" class="apercu"></a>
+              Pourquoi Facebook Paper est-il dangereux pour vos mains? <br>
+              <a href="#" class="post-link">bit.ly/3lymOp</a>
+            </p>
+          </div>
+          <div class="post-item">
+            <p><a href="#"><img src="../../../public/img/site_thumbnail.png" atl="" class="apercu"></a>
+              Pourquoi Facebook Paper est-il dangereux pour vos mains? <br>
+              <a href="#" class="post-link">bit.ly/3lymOp</a>
+            </p>
+          </div>
+          <div class="post-item">
+            <p><a href="#"><img src="../../../public/img/site_thumbnail.png" atl="" class="apercu"></a>
+              Pourquoi Facebook Paper est-il dangereux pour vos mains? <br>
+              <a href="#" class="post-link">bit.ly/3lymOp</a>
+            </p>
+          </div>
+          <div class="post-item">
+            <p><a href="#"><img src="../../../public/img/site_thumbnail.png" atl="" class="apercu"></a>
+              Pourquoi Facebook Paper est-il dangereux pour vos mains? <br>
+              <a href="#" class="post-link">bit.ly/3lymOp</a>
+            </p>
+          </div>
+          <div class="post-item">
+            <p><a href="#"><img src="../../../public/img/site_thumbnail.png" atl="" class="apercu"></a>
+              Pourquoi Facebook Paper est-il dangereux pour vos mains? <br>
+              <a href="#" class="post-link">bit.ly/3lymOp</a>
+            </p>
+          </div>
+        </div>
+      </div>
+    </div><!-- END BOTTOM BLOCK -->
+
+  </div><!-- END RIGHT PART -->
 
 </div>
 
-<div class="grid grid-pad">
-    <div class="col-3-12">
-       <div class="content">
-       	<h2>Suggestions</h2>
-       	<p>Articles / Personnes</p>
-       	<div>
-       		<a href="#">
-	       		<img src="../../../public/img/PP_1.png" alt="">
-	       		Prénom Nom<br>
-	       		Badge
-	       	</a>
-       	</div>
-       	<div>
-       		<a href="#">
-	       		<img src="../../../public/img/PP_2.png" alt="">
-	       		Prénom Nom<br>
-	       		Badge
-	       	</a>
-       	</div>
-       </div>
-       <div class="content">
-       	<h2>Devenez Gamewatcher <a href="#"><img src="../../../public/img/refresh_icon.png" alt="Refresh"></a></h2>
-       	<img src="../../../public/img/badge.png" alt="Badge description">
-       	<p>3 personnes ont relevé ce défi</p>
-       	<a href="#">Démarrer</a>
-       </div>
-       <div class="content">
-       	<h2>Objectifs proposés</h2>
-       </div>
-    </div>
-    <div class="col-6-12">
-       <div class="content">
-       	<div>
-	       	<h2>Poster un article</h2>
-	       	<form name="post-article" action="#" method="get">
-		       	<input type="text" name="url" placeholder="Adresse du lien"><br>
-		       	<input type="text" name="descr" placeholder="Description"><br>
-		       	<select name="category">
-					<option value="volvo">Volvo</option>
-					<option value="saab">Saab</option>
-					<option value="fiat">Fiat</option>
-					<option value="audi">Audi</option>
-				</select>
-		       	<input type="submit" value="Valider">
-		    </form>
-		 </div>
-		 <div class="post-feed">
-       		<p><a href="#">
-	       		<img src="../../../public/img/PP_2.png" alt="">
-	       		Prénom Nom </a>- il y a 2 minutes<br>
-	       		Pourquoi Facebook Paper est-il dangereux pour vos mains? bit.ly/3lymOp  
-	       	</p>
-       	</div>
-       	<div class="post-feed">
-       		<p><a href="#">
-	       		<img src="../../../public/img/PP_1.png" alt="">
-	       		Prénom Nom </a>- il y a 3 minutes<br>
-	       		Pourquoi Facebook Paper est-il dangereux pour vos mains? bit.ly/3lymOp  
-	       	</p>
-       	</div>
-       	<div class="post-feed">
-       		<p><a href="#">
-	       		<img src="../../../public/img/PP_2.png" alt="">
-	       		Prénom Nom </a>- il y a 4 minutes<br>
-	       		Pourquoi Facebook Paper est-il dangereux pour vos mains? bit.ly/3lymOp  
-	       	</p>
-       	</div>
-       	<div class="post-feed">
-       		<p><a href="#">
-	       		<img src="../../../public/img/PP_1.png" alt="">
-	       		Prénom Nom </a>- il y a 5 minutes<br>
-	       		Pourquoi Facebook Paper est-il dangereux pour vos mains? bit.ly/3lymOp  
-	       	</p>
-       	</div>
-		<div>
-
-		</div>
-       </div>
-    </div>
-    <div class="col-3-12">
-       <div class="content">
-       	<img src="../../../public/img/settings_icon.png" alt=""><br>
-       	<img src="../../../public/img/PP.png" alt=""><br>
-       	<span class="user-name">Prénom Nom</span>
-       	<div><span class="follow-number">000</span> followers</div>
-       	<div><span class="follow-number">000</span> following</div>
-       </div>
-       <div class="content">
-       	<h2>Statistiques</h2>
-       	<img src="../../../public/img/circular_bar.png" alt="">
-       </div>
-    </div>
-</div>
-
-	<script src="http://code.jquery.com/jquery-1.10.2.min.js"></script>
-	<script type="text/javascript" src="../../../public/js/wtfay.js"></script>
+<script src="http://code.jquery.com/jquery-1.10.2.min.js"></script>
 
 </body>
+
 </html>
