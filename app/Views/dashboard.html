@@ -26,7 +26,7 @@
          </div>
          <div class="content" id="badges">
           <h3>Derniers badges</h3>
-          
+          <div id="display-badges"></div>
           <p><a href="#"> >> Voir tous mes badges</a></p>
          </div>
          <div class="content">
@@ -46,9 +46,9 @@
           <h1><a href="#"><img src="public/img/temporary_logo.png" alt="Nabu"></a></h1>
           <div id="search">
             <form action="users/search" method="post">
-            <input type="text" name="name" placeholder="Rechercher un ami"><div><img src="public/img/icons/loupe.svg"  class="icon-search" alt="Rechercher"></div>
+            <input type="text" name="name" autocomplete="off" placeholder="Rechercher un ami"><div><img src="public/img/icons/loupe.svg"  class="icon-search" alt="Rechercher"></div>
             </form>
-            <div><ul class="users-result"><?php require('partials/users.html'); ?></ul></div>
+            <div id="search-results"><ul class="users-result"><?php require('partials/users.html'); ?></ul></div>
           </div>
       </div><!-- END LOGO AND SEARCHBAR -->
       <div class="col-3-12" id="menu"><!-- MENU -->
@@ -125,7 +125,9 @@
          </div> <!-- END CONTENT SUGGESTIONS -->
          <div class="content"><!-- CONTENT OBJECTIVES -->
           <h2>Objectifs<a href="#"><img src="public/img/icons/sync.svg" class="icon-sync" alt=""></a></h2>
-          <div class="obj-progress"><img src="public/img/PP_large.png" class="avatar-35" alt=""> barre progression <img src="public/img/badge.png" class="icon-35" alt="Badge description"></div>
+          <div class="obj-progress"><img src="public/img/PP_large.png" class="avatar-35" alt=""> 
+          <div class="obj-progressbar"><span style="width: 25%"></span></div>
+          <img src="public/img/badge.png" class="icon-35" alt="Badge description"></div>
           <p>Machin a relevé le défi :<br>
           <a href="#">Devenir Gamewatcher</a></p>
          </div><!-- END CONTENT OBJECTIVES -->

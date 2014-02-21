@@ -398,7 +398,7 @@ a:hover{
 #sidebar .content {
   background-color: transparent;
   padding: 15px 20px;
-  
+  margin: 0;
 }
 
 #sidebar-content {
@@ -424,6 +424,9 @@ margin-top: -80px;
   display: inline-block;
   width:45%;
 }
+#sidebar .content:nth-child(1){
+  margin-bottom: 20px;
+}
 
 .follow-number {
   display: block;
@@ -442,7 +445,7 @@ margin-top: -80px;
   font-size: 1.429em;
   margin-bottom: 3px;
   font-weight: normal;
-  margin-top: 40px;
+  margin-top: 25px;
 }
 
 #sidebar h2+span {
@@ -464,6 +467,12 @@ margin-top: -80px;
   margin-top: 25px;
 }
 
+.view-profile,.view-profile:visited{
+  color: #fff;
+  margin-top: 25px;
+  display: inline-block;
+}
+
 #right{
   margin-left: 20%;
   position: relative;
@@ -473,10 +482,10 @@ margin-top: -80px;
   padding: 0;
 }
 #top-content {
-  /*line-height: 10.714em;*/
   height: 10.714em;
   padding: 0 0 0 20px;
   position: relative;
+  overflow: visible;
 }
 
 #top-content div {
@@ -485,7 +494,7 @@ margin-top: -80px;
   top: 40%;
 }
 
-#search div{
+#search form div{
   display: inline-block;
   margin: 03px 0 0 -25px;
 }
@@ -506,6 +515,31 @@ margin-top: -80px;
 }
 #search input:focus{
   width: 250px;
+}
+
+#search-results {
+  margin: 22px 0 0 109px !important;
+  background-color: #fff;
+  width: 250px;
+  box-sizing: border-box;
+  position: absolute !important;
+}
+
+.users-result{
+  padding: 0;
+  margin: 0;
+}
+.users-result li a{
+  transition: all 0.5s;
+  -webkit-transition: all 0.5s;
+  display: inline-block;
+  width: 100%;
+  padding: 3px 10px;
+}
+.users-result li a:hover{
+  color: #000;
+  padding-left: 10px;
+  background-color: #f9f9f9;
 }
 
 #logo h1, #menu p {
@@ -617,6 +651,10 @@ margin-top: -80px;
   border: none;
 }
 
+input[name="post_user_id"] {
+  display: none;
+}
+
 .grid .col-7-12 .content:nth-child(2) {
   background-color: transparent;
   padding: 0;
@@ -674,14 +712,11 @@ margin-top: -80px;
   margin-right:20px; 
   float: right;
 }
-/*.col-3-12 .content div{
-  padding: 20px 25px;
-  position: relative;
-}*/
+
 .col-3-12 .avatar-45{
   margin-right: 20px
 }
-.follow-button{
+.follow-button, .follow-button:visited{
   color: #fff;
   display: inline-block;
   text-align: center;
@@ -706,7 +741,8 @@ margin-top: -80px;
 }
 .suggestion-category{
   float: left;
-  line-height: 70px;
+  height: 70px;
+  padding-top: 20px;
   padding-right: 20px;
 }
 .rond-category {
@@ -738,6 +774,38 @@ margin-top: -80px;
   font-size: 0.857em;
 }
 
+.obj-progressbar {
+  height: 10px; 
+  position: relative;
+  background-color: #ededed;
+  -moz-border-radius: 2px;
+  -webkit-border-radius: 2px;
+  border-radius: 2px;
+  display: inline-block;
+  width: 40%;
+  top: -12px;
+  margin: 0 15px;
+}
+
+.obj-progressbar > span {
+  display: block;
+  height: 100%;
+     -webkit-border-top-right-radius: 0px;
+  -webkit-border-bottom-right-radius: 0px;
+         -moz-border-radius-topright: 0px;
+      -moz-border-radius-bottomright: 0px;
+             border-top-right-radius: 0px;
+          border-bottom-right-radius: 0px;
+      -webkit-border-top-left-radius: 2px;
+   -webkit-border-bottom-left-radius: 2px;
+          -moz-border-radius-topleft: 2px;
+       -moz-border-radius-bottomleft: 2px;
+              border-top-left-radius: 2px;
+           border-bottom-left-radius: 2px;
+  background-color: #ff7461;
+  position: relative;
+  overflow: hidden;
+}
 
 /*----------PROFILE-----------*/
 .stats-wrapper {

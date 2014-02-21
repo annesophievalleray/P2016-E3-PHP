@@ -48,7 +48,7 @@ $.ajax({
 		method:"get",
 	})
 	.success(function(data){
-		$('#badges').append(data);
+		$('#display-badges').append(data);
 		//console.log(data);
 	})
 
@@ -81,7 +81,11 @@ $('input[name="name"]').on('keyup',function(e){
 		data:$parent.serialize()
 	})
 	.success(function(data){
+		$('.users-result').show();
 		$('.users-result').html(data);
 		console.log(data);
 	})
+	$('input[name="name"]').focusout(function() {
+	    $('.users-result').hide();
+	  })
 })
