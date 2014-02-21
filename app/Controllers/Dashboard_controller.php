@@ -25,12 +25,12 @@ class Dashboard_controller extends Controller{
 		echo 'nombre follow :'.count($followSuggest_).'</br>';
 		
 		$id1=rand(1,count($followSuggest_));
-		do{
-		$id2=rand(1,count($followSuggest_));
-		}while($id1==$id2);
+		// do{
+		// $id2=rand(1,count($followSuggest_));
+		// }while($id1==$id2);
 		
 		echo 'nombre 1 :'.$id1.'</br>';
-		echo 'nombre 2 :'.$id2.'</br>';
+		// echo 'nombre 2 :'.$id2.'</br>';
 		
 		foreach($followSuggest_ as $follow){
 			
