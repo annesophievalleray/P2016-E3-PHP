@@ -8,6 +8,9 @@
 
 	<link rel="stylesheet" type="text/css" href="public/stylesheet/style.css">
 	<link rel="stylesheet" type="text/css" href="public/stylesheet/simplegrid.css" />
+  <link href="public/stylesheet/app.css" type="text/css" />
+  <link href="public/stylesheet/pizza.css" type="text/css" />
+  <script src="public/js/custom.modernizr.js"></script>
 	
 </head>
 
@@ -33,7 +36,17 @@
           <h2>Mon activité</h2>
           <span>Janvier 2014</span>
           <div><span class="follow-number" id="nb_posts">0</span> pages bookées</div>
-          <div id="graph"><img src="public/img/fictive_diagram.png" alt=""></div>
+          <div id="graph">
+            <ul data-pie-id="activity">
+              <li class="data-activity" data-value="36">Pepperoni</li>
+              <li class="data-activity" data-value="14">Sausage</li>
+              <li class="data-activity" data-value="8">Cheese</li>
+              <li class="data-activity" data-value="11">Mushrooms</li>
+              <li class="data-activity" data-value="7">Chicken</li>
+              <li class="data-activity" data-value="24">Other</li>
+            </ul>
+            <div id="activity"></div>
+          </div>
           <a href="#" class="view-profile">Consulter le profil complet</a>
          </div>
       </div>
@@ -63,17 +76,19 @@
             <div>
               <form name="post-article" id="post_article">
               <input type="text" name="url" id="url" placeholder="Insérez une URL pour ajouter un contenu"><br>
-              <input type="text" name="descr" placeholder="Message accompagnant le contenu"><br>
-              <div class="styled-select">
-                <select name="category">
-                  <option value="category">Catégorie</option><!-- faire une boucle php avec les catégroies-->
-                  <option value="volvo">Volvo</option>
-                  <option value="saab">Saab</option>
-                  <option value="fiat">Fiat</option>
-                  <option value="audi">Audi</option>
-                </select>
+              <div id="form-extended">
+                <input type="text" name="descr" placeholder="Message accompagnant le contenu"><br>
+                <div class="styled-select">
+                  <select name="category">
+                    <option value="category">Catégorie</option><!-- faire une boucle php avec les catégroies-->
+                    <option value="volvo">Volvo</option>
+                    <option value="saab">Saab</option>
+                    <option value="fiat">Fiat</option>
+                    <option value="audi">Audi</option>
+                  </select>
+                </div>
+                <input type="submit" value="Publier">
               </div>
-              <input type="submit" value="Publier">
           </form>
        </div>
        </div><!-- END NEW POST -->
@@ -143,8 +158,10 @@
 
 	<script src="http://localhost:8080/socket.io/socket.io.js"></script>
 	<script src="http://code.jquery.com/jquery-1.10.2.min.js"></script>
-	<script type="text/javascript" src="public/js/nabu.js"></script>
-  <script type="text/javascript" src="public/js/nabu_feed.js"></script>
+  <script src="public/js/snap.svg.js"></script>
+  <script src="public/js/pizza.js"></script>
+	<script src="public/js/nabu.js"></script>
+  <script src="public/js/nabu_feed.js"></script>
 
 </body>
 </html>

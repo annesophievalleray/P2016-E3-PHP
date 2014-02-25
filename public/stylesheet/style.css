@@ -380,7 +380,8 @@ a:hover{
 
 #sidebar {
   width: 25%;
-  min-width: 230px;
+  min-width: 240px;
+  max-width: 290px;
   height: 100%;
   background-color: #1c2227;
   color:#ffffff;
@@ -464,18 +465,56 @@ margin-top: -80px;
 }
 
 #sidebar #graph {
-  margin-top: 25px;
+  /*margin-top: 25px;*/
+  position: relative;
+}
+/*--graph dashboard---*/
+#graph ul, .data-activity{
+  position: absolute;
+  margin: 0;
+  padding: 0;
+}
+#graph ul {
+  left: 35%;
+  top:50%;
+}
+.data-activity {
+  opacity: 0.8;
+  text-align: center;
+  text-transform: uppercase;
+}
+.data-activity:hover {
+  opacity: 1;
+}
+ul[data-pie-id] li:nth-child(1) {
+  color: red;
+}
+ul[data-pie-id] li:nth-child(2) {
+  color: blue;
+}
+ul[data-pie-id] li:nth-child(3) {
+  color: yellow;
+}
+#activity svg{
+  width: 100%;
+  height: 210px;
+}
+
+#activity svg text{
+  fill:#fff;
+  font-size: 2em;
 }
 
 .view-profile,.view-profile:visited{
   color: #fff;
-  margin-top: 25px;
+  /*margin-top: 25px;*/
   display: inline-block;
 }
 
 #right{
   margin-left: 20%;
   position: relative;
+  padding-bottom: 50px;
 } 
 
 .content {
@@ -492,6 +531,7 @@ margin-top: -80px;
   margin: auto 0;
   position: relative;
   top: 40%;
+  line-height: 5.500em;
 }
 
 #search form div{
@@ -542,10 +582,10 @@ margin-top: -80px;
   background-color: #f9f9f9;
 }
 
-#logo h1, #menu p {
+#logo a img, #menu p {
   margin:auto;
 }
-#logo h1{
+#logo a img{
   float: left;
   margin: 0 20px 0 0; 
 }
@@ -603,7 +643,7 @@ margin-top: -80px;
     border-radius:50px;
 }
 .avatar-feed {
-  margin: 10px 20px 10px 0;
+  margin: -5px 20px 10px 0;
 }
 
 #new-post{
@@ -651,7 +691,32 @@ margin-top: -80px;
   border: none;
 }
 
+#new-post input[type="submit"]:hover{
+  animation: submithover 2s;
+-webkit-animation: submithover 2s;
+animation-iteration-count:infinite;
+-webkit-animation-iteration-count:infinite;
+}
+
+@keyframes submithover
+{
+0% {background-color: #fe6258;}
+50% {background-color: #ff786f;}
+100% {background-color: #fe6258;}
+}
+
+@-webkit-keyframes submithover /* Safari and Chrome */
+{
+0% {background-color: #fe6258;}
+50% {background-color: #ff786f;}
+100% {background-color: #fe6258;}
+}
+
 input[name="post_user_id"] {
+  display: none;
+}
+
+#form-extended{
   display: none;
 }
 
@@ -690,7 +755,8 @@ input[name="post_user_id"] {
   margin: 0;
   padding: 20px 25px;
   border-bottom: solid 3px #efefec;
-  text-align: left
+  text-align: left;
+  font-weight: normal;
 }
 
 .col-3-12 h2 img,  .col-4-12 h2 img{
@@ -928,4 +994,24 @@ input[name="post_user_id"] {
 }
 
 
-
+@media screen and (max-width: 1200px) {
+  #right {
+    margin-left: 260px;
+  }
+}
+@media screen and (max-width: 768px) {
+  #right {
+    margin-left: 50px;
+  }
+  #sidebar {
+    width: 250px;
+    position: absolute;
+    left:-220px;
+    transition: left 0.7s;
+  -webkit-transition: left 0.7s;
+  z-index:100;
+  }
+  #sidebar:hover {
+    left:0px;
+  }
+}

@@ -84,8 +84,24 @@ $('input[name="name"]').on('keyup',function(e){
 		$('.users-result').show();
 		$('.users-result').html(data);
 		console.log(data);
-	})
+	});
 	$('input[name="name"]').focusout(function() {
 	    $('.users-result').hide();
-	  })
-})
+	  });
+});
+
+
+$('input[name="url"]').on('focus',function(){
+	$('#form-extended').fadeIn(400);
+});
+$('input[name="url"]').on('blur',function(){
+	if( !$(this).val() ) {
+		$('#form-extended').fadeOut(400);
+	}
+});
+
+
+/*------GRAPH DASHBOARD ---*/
+$(window).load(function() {
+      Pizza.init();
+});
