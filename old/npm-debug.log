@@ -1,0 +1,2009 @@
+0 info it worked if it ends with ok
+1 verbose cli [ 'C:\\Program Files\\nodejs\\\\node.exe',
+1 verbose cli   'C:\\Program Files\\nodejs\\node_modules\\npm\\bin\\npm-cli.js',
+1 verbose cli   'install',
+1 verbose cli   'ssh' ]
+2 info using npm@1.3.14
+3 info using node@v0.10.22
+4 verbose node symlink C:\Program Files\nodejs\\node.exe
+5 warn package.json nabu@0.0.0 No description
+6 warn package.json nabu@0.0.0 No repository field.
+7 warn package.json nabu@0.0.0 No README data
+8 verbose readDependencies using package.json deps
+9 verbose cache add [ 'ssh', null ]
+10 verbose cache add name=undefined spec="ssh" args=["ssh",null]
+11 verbose parsed url { protocol: null,
+11 verbose parsed url   slashes: null,
+11 verbose parsed url   auth: null,
+11 verbose parsed url   host: null,
+11 verbose parsed url   port: null,
+11 verbose parsed url   hostname: null,
+11 verbose parsed url   hash: null,
+11 verbose parsed url   search: null,
+11 verbose parsed url   query: null,
+11 verbose parsed url   pathname: 'ssh',
+11 verbose parsed url   path: 'ssh',
+11 verbose parsed url   href: 'ssh' }
+12 silly lockFile e8b9f665-ssh ssh
+13 verbose lock ssh C:\Users\sony\AppData\Roaming\npm-cache\e8b9f665-ssh.lock
+14 silly lockFile e8b9f665-ssh ssh
+15 silly lockFile e8b9f665-ssh ssh
+16 verbose addNamed [ 'ssh', '' ]
+17 verbose addNamed [ null, '*' ]
+18 silly lockFile c1fb3dea-ssh ssh@
+19 verbose lock ssh@ C:\Users\sony\AppData\Roaming\npm-cache\c1fb3dea-ssh.lock
+20 silly addNameRange { name: 'ssh', range: '*', hasData: false }
+21 verbose url raw ssh
+22 verbose url resolving [ 'https://registry.npmjs.org/', './ssh' ]
+23 verbose url resolved https://registry.npmjs.org/ssh
+24 info trying registry request attempt 1 at 16:11:19
+25 http GET https://registry.npmjs.org/ssh
+26 http 200 https://registry.npmjs.org/ssh
+27 silly registry.get cb [ 200,
+27 silly registry.get   { date: 'Thu, 20 Feb 2014 15:11:22 GMT',
+27 silly registry.get     server: 'CouchDB/1.5.0 (Erlang OTP/R16B)',
+27 silly registry.get     etag: '"5E8CLEZ66P3247BWXNP0MTFPM"',
+27 silly registry.get     'content-type': 'application/json',
+27 silly registry.get     via: '1.1 varnish',
+27 silly registry.get     'cache-control': 'max-age=1',
+27 silly registry.get     'content-length': '31093',
+27 silly registry.get     'accept-ranges': 'bytes',
+27 silly registry.get     age: '0',
+27 silly registry.get     'x-served-by': 'cache-v37-ASH, cache-lcy1127-LCY',
+27 silly registry.get     'x-cache': 'MISS, MISS',
+27 silly registry.get     'x-cache-hits': '0, 0',
+27 silly registry.get     'x-timer': 'S1392909082.255645514,VS0,VS43,VE68,VE176',
+27 silly registry.get     vary: 'Accept',
+27 silly registry.get     'keep-alive': 'timeout=10, max=50',
+27 silly registry.get     connection: 'Keep-Alive' } ]
+28 silly addNameRange number 2 { name: 'ssh', range: '*', hasData: true }
+29 silly addNameRange versions [ 'ssh',
+29 silly addNameRange   [ '0.0.1',
+29 silly addNameRange     '1.0.0',
+29 silly addNameRange     '1.0.1',
+29 silly addNameRange     '1.0.2',
+29 silly addNameRange     '1.1.0',
+29 silly addNameRange     '1.1.1',
+29 silly addNameRange     '1.2.0',
+29 silly addNameRange     '1.2.1',
+29 silly addNameRange     '1.2.2',
+29 silly addNameRange     '1.3.0',
+29 silly addNameRange     '1.4.0',
+29 silly addNameRange     '1.4.1',
+29 silly addNameRange     '1.5.0',
+29 silly addNameRange     '1.5.1',
+29 silly addNameRange     '1.6.0',
+29 silly addNameRange     '1.7.0',
+29 silly addNameRange     '1.7.1' ] ]
+30 verbose addNamed [ 'ssh', '1.7.1' ]
+31 verbose addNamed [ '1.7.1', '1.7.1' ]
+32 silly lockFile bd1864b7-ssh-1-7-1 ssh@1.7.1
+33 verbose lock ssh@1.7.1 C:\Users\sony\AppData\Roaming\npm-cache\bd1864b7-ssh-1-7-1.lock
+34 silly lockFile ba146d2d-stry-npmjs-org-ssh-ssh-1-7-1-tgz https://registry.npmjs.org/ssh/-/ssh-1.7.1.tgz
+35 verbose lock https://registry.npmjs.org/ssh/-/ssh-1.7.1.tgz C:\Users\sony\AppData\Roaming\npm-cache\ba146d2d-stry-npmjs-org-ssh-ssh-1-7-1-tgz.lock
+36 verbose addRemoteTarball [ 'https://registry.npmjs.org/ssh/-/ssh-1.7.1.tgz',
+36 verbose addRemoteTarball   'd4e984084dd9dee05b3c8b95acf37e7776d0de8c' ]
+37 info retry fetch attempt 1 at 16:11:19
+38 verbose fetch to= C:\Users\sony\AppData\Local\Temp\npm-15224-DguZS5vn\1392909079851-0.5523481380660087\tmp.tgz
+39 http GET https://registry.npmjs.org/ssh/-/ssh-1.7.1.tgz
+40 http 200 https://registry.npmjs.org/ssh/-/ssh-1.7.1.tgz
+41 verbose tar unpack C:\Users\sony\AppData\Local\Temp\npm-15224-DguZS5vn\1392909079851-0.5523481380660087\tmp.tgz
+42 silly lockFile 9ab20411-79851-0-5523481380660087-package tar://C:\Users\sony\AppData\Local\Temp\npm-15224-DguZS5vn\1392909079851-0.5523481380660087\package
+43 verbose lock tar://C:\Users\sony\AppData\Local\Temp\npm-15224-DguZS5vn\1392909079851-0.5523481380660087\package C:\Users\sony\AppData\Roaming\npm-cache\9ab20411-79851-0-5523481380660087-package.lock
+44 silly lockFile 9e64e280-79851-0-5523481380660087-tmp-tgz tar://C:\Users\sony\AppData\Local\Temp\npm-15224-DguZS5vn\1392909079851-0.5523481380660087\tmp.tgz
+45 verbose lock tar://C:\Users\sony\AppData\Local\Temp\npm-15224-DguZS5vn\1392909079851-0.5523481380660087\tmp.tgz C:\Users\sony\AppData\Roaming\npm-cache\9e64e280-79851-0-5523481380660087-tmp-tgz.lock
+46 silly gunzTarPerm modes [ '755', '644' ]
+47 silly gunzTarPerm extractEntry package.json
+48 silly gunzTarPerm extractEntry .npmignore
+49 silly gunzTarPerm extractEntry README.md
+50 silly gunzTarPerm extractEntry LICENSE
+51 silly gunzTarPerm extractEntry index.js
+52 silly gunzTarPerm extractEntry binding.gyp
+53 silly gunzTarPerm extractEntry .travis.yml
+54 silly gunzTarPerm extractEntry .jshintrc
+55 silly gunzTarPerm extractEntry deps/build/config.gypi
+56 silly gunzTarPerm extractEntry deps/include/config.h
+57 silly gunzTarPerm extractEntry deps/include-osx/config.h
+58 silly gunzTarPerm extractEntry deps/libssh-0.6.0/README
+59 silly gunzTarPerm extractEntry deps/libssh-0.6.0/SubmittingPatches
+60 silly gunzTarPerm extractEntry deps/libssh-0.6.0/BSD
+61 silly gunzTarPerm extractEntry deps/libssh-0.6.0/CMakeLists.txt
+62 silly gunzTarPerm extractEntry deps/libssh-0.6.0/COPYING
+63 silly gunzTarPerm extractEntry deps/libssh-0.6.0/CPackConfig.cmake
+64 silly gunzTarPerm extractEntry deps/libssh-0.6.0/CTestConfig.cmake
+65 silly gunzTarPerm extractEntry deps/libssh-0.6.0/ChangeLog
+66 silly gunzTarPerm extractEntry deps/libssh-0.6.0/CodingStyle
+67 silly gunzTarPerm extractEntry deps/libssh-0.6.0/ConfigureChecks.cmake
+68 silly gunzTarPerm extractEntry deps/libssh-0.6.0/DefineOptions.cmake
+69 silly gunzTarPerm extractEntry deps/libssh-0.6.0/INSTALL
+70 silly gunzTarPerm extractEntry deps/libssh-0.6.0/.clang_complete
+71 silly gunzTarPerm extractEntry deps/libssh-0.6.0/AUTHORS
+72 silly gunzTarPerm extractEntry deps/libssh-0.6.0/cmake/Modules/FindCMocka.cmake
+73 silly gunzTarPerm extractEntry deps/libssh-0.6.0/cmake/Modules/AddCMockaTest.cmake
+74 silly gunzTarPerm extractEntry deps/libssh-0.6.0/cmake/Modules/CheckCCompilerFlagSSP.cmake
+75 silly gunzTarPerm extractEntry deps/libssh-0.6.0/cmake/Modules/DefineCMakeDefaults.cmake
+76 silly gunzTarPerm extractEntry deps/libssh-0.6.0/cmake/Modules/DefineCompilerFlags.cmake
+77 silly gunzTarPerm extractEntry deps/libssh-0.6.0/cmake/Modules/DefineInstallationPaths.cmake
+78 silly gunzTarPerm extractEntry deps/libssh-0.6.0/cmake/Modules/DefinePlatformDefaults.cmake
+79 silly gunzTarPerm extractEntry deps/libssh-0.6.0/cmake/Modules/FindArgp.cmake
+80 silly gunzTarPerm extractEntry deps/libssh-0.6.0/cmake/Modules/COPYING-CMAKE-SCRIPTS
+81 silly gunzTarPerm extractEntry deps/libssh-0.6.0/cmake/Modules/FindGCrypt.cmake
+82 silly gunzTarPerm extractEntry deps/libssh-0.6.0/cmake/Modules/FindGSSAPI.cmake
+83 silly gunzTarPerm extractEntry deps/libssh-0.6.0/cmake/Modules/FindNSIS.cmake
+84 silly gunzTarPerm extractEntry deps/libssh-0.6.0/cmake/Modules/FindNaCl.cmake
+85 silly gunzTarPerm extractEntry deps/libssh-0.6.0/cmake/Modules/FindOpenSSL.cmake
+86 silly gunzTarPerm extractEntry deps/libssh-0.6.0/cmake/Modules/FindZLIB.cmake
+87 silly gunzTarPerm extractEntry deps/libssh-0.6.0/cmake/Modules/MacroEnsureOutOfSourceBuild.cmake
+88 silly gunzTarPerm extractEntry deps/libssh-0.6.0/cmake/Modules/UseDoxygen.cmake
+89 silly gunzTarPerm extractEntry deps/libssh-0.6.0/config.h.cmake
+90 silly gunzTarPerm extractEntry deps/libssh-0.6.0/doc/introduction.dox
+91 silly gunzTarPerm extractEntry deps/libssh-0.6.0/doc/CMakeLists.txt
+92 silly gunzTarPerm extractEntry deps/libssh-0.6.0/doc/command.dox
+93 silly gunzTarPerm extractEntry deps/libssh-0.6.0/doc/curve25519-sha256@libssh.org.txt
+94 silly gunzTarPerm extractEntry deps/libssh-0.6.0/doc/doxy.config.in
+95 silly gunzTarPerm extractEntry deps/libssh-0.6.0/doc/doxy.trac.in
+96 silly gunzTarPerm extractEntry deps/libssh-0.6.0/doc/forwarding.dox
+97 silly gunzTarPerm extractEntry deps/libssh-0.6.0/doc/guided_tour.dox
+98 silly gunzTarPerm extractEntry deps/libssh-0.6.0/doc/authentication.dox
+99 silly gunzTarPerm extractEntry deps/libssh-0.6.0/doc/linking.dox
+100 silly gunzTarPerm extractEntry deps/libssh-0.6.0/doc/mainpage.dox
+101 silly gunzTarPerm extractEntry deps/libssh-0.6.0/doc/scp.dox
+102 silly gunzTarPerm extractEntry deps/libssh-0.6.0/doc/sftp.dox
+103 silly gunzTarPerm extractEntry deps/libssh-0.6.0/doc/shell.dox
+104 silly gunzTarPerm extractEntry deps/libssh-0.6.0/doc/tbd.dox
+105 silly gunzTarPerm extractEntry deps/libssh-0.6.0/doc/threading.dox
+106 silly gunzTarPerm extractEntry deps/libssh-0.6.0/examples/proxy.c
+107 silly gunzTarPerm extractEntry deps/libssh-0.6.0/examples/CMakeLists.txt
+108 silly gunzTarPerm extractEntry deps/libssh-0.6.0/examples/connect_ssh.c
+109 silly gunzTarPerm extractEntry deps/libssh-0.6.0/examples/examples_common.h
+110 silly gunzTarPerm extractEntry deps/libssh-0.6.0/examples/exec.c
+111 silly gunzTarPerm extractEntry deps/libssh-0.6.0/examples/knownhosts.c
+112 silly gunzTarPerm extractEntry deps/libssh-0.6.0/examples/libssh_scp.c
+113 silly gunzTarPerm extractEntry deps/libssh-0.6.0/examples/libsshpp.cpp
+114 silly gunzTarPerm extractEntry deps/libssh-0.6.0/examples/libsshpp_noexcept.cpp
+115 silly gunzTarPerm extractEntry deps/libssh-0.6.0/examples/authentication.c
+116 silly gunzTarPerm extractEntry deps/libssh-0.6.0/examples/sample.c
+117 silly gunzTarPerm extractEntry deps/libssh-0.6.0/examples/samplesftp.c
+118 silly gunzTarPerm extractEntry deps/libssh-0.6.0/examples/samplesshd-cb.c
+119 silly gunzTarPerm extractEntry deps/libssh-0.6.0/examples/samplesshd-kbdint.c
+120 silly gunzTarPerm extractEntry deps/libssh-0.6.0/examples/samplesshd-tty.c
+121 silly gunzTarPerm extractEntry deps/libssh-0.6.0/examples/samplesshd.c
+122 silly gunzTarPerm extractEntry deps/libssh-0.6.0/examples/scp_download.c
+123 silly gunzTarPerm extractEntry deps/libssh-0.6.0/examples/senddata.c
+124 silly gunzTarPerm extractEntry deps/libssh-0.6.0/examples/sshnetcat.c
+125 silly gunzTarPerm extractEntry deps/libssh-0.6.0/include/CMakeLists.txt
+126 silly gunzTarPerm extractEntry deps/libssh-0.6.0/include/libssh/libsshpp.hpp
+127 silly gunzTarPerm extractEntry deps/libssh-0.6.0/include/libssh/CMakeLists.txt
+128 silly gunzTarPerm extractEntry deps/libssh-0.6.0/include/libssh/auth.h
+129 silly gunzTarPerm extractEntry deps/libssh-0.6.0/include/libssh/bind.h
+130 silly gunzTarPerm extractEntry deps/libssh-0.6.0/include/libssh/buffer.h
+131 silly gunzTarPerm extractEntry deps/libssh-0.6.0/include/libssh/callbacks.h
+132 silly gunzTarPerm extractEntry deps/libssh-0.6.0/include/libssh/channels.h
+133 silly gunzTarPerm extractEntry deps/libssh-0.6.0/include/libssh/crc32.h
+134 silly gunzTarPerm extractEntry deps/libssh-0.6.0/include/libssh/crypto.h
+135 silly gunzTarPerm extractEntry deps/libssh-0.6.0/include/libssh/curve25519.h
+136 silly gunzTarPerm extractEntry deps/libssh-0.6.0/include/libssh/dh.h
+137 silly gunzTarPerm extractEntry deps/libssh-0.6.0/include/libssh/ecdh.h
+138 silly gunzTarPerm extractEntry deps/libssh-0.6.0/include/libssh/gssapi.h
+139 silly gunzTarPerm extractEntry deps/libssh-0.6.0/include/libssh/kex.h
+140 silly gunzTarPerm extractEntry deps/libssh-0.6.0/include/libssh/keys.h
+141 silly gunzTarPerm extractEntry deps/libssh-0.6.0/include/libssh/legacy.h
+142 silly gunzTarPerm extractEntry deps/libssh-0.6.0/include/libssh/libcrypto.h
+143 silly gunzTarPerm extractEntry deps/libssh-0.6.0/include/libssh/libgcrypt.h
+144 silly gunzTarPerm extractEntry deps/libssh-0.6.0/include/libssh/libssh.h
+145 silly gunzTarPerm extractEntry deps/libssh-0.6.0/include/libssh/agent.h
+146 silly gunzTarPerm extractEntry deps/libssh-0.6.0/include/libssh/messages.h
+147 silly gunzTarPerm extractEntry deps/libssh-0.6.0/include/libssh/misc.h
+148 silly gunzTarPerm extractEntry deps/libssh-0.6.0/include/libssh/options.h
+149 silly gunzTarPerm extractEntry deps/libssh-0.6.0/include/libssh/packet.h
+150 silly gunzTarPerm extractEntry deps/libssh-0.6.0/include/libssh/pcap.h
+151 silly gunzTarPerm extractEntry deps/libssh-0.6.0/include/libssh/pki.h
+152 silly gunzTarPerm extractEntry deps/libssh-0.6.0/include/libssh/pki_priv.h
+153 silly gunzTarPerm extractEntry deps/libssh-0.6.0/include/libssh/poll.h
+154 silly gunzTarPerm extractEntry deps/libssh-0.6.0/include/libssh/priv.h
+155 silly gunzTarPerm extractEntry deps/libssh-0.6.0/include/libssh/scp.h
+156 silly gunzTarPerm extractEntry deps/libssh-0.6.0/include/libssh/server.h
+157 silly gunzTarPerm extractEntry deps/libssh-0.6.0/include/libssh/session.h
+158 silly gunzTarPerm extractEntry deps/libssh-0.6.0/include/libssh/sftp.h
+159 silly gunzTarPerm extractEntry deps/libssh-0.6.0/include/libssh/socket.h
+160 silly gunzTarPerm extractEntry deps/libssh-0.6.0/include/libssh/ssh1.h
+161 silly gunzTarPerm extractEntry deps/libssh-0.6.0/include/libssh/ssh2.h
+162 silly gunzTarPerm extractEntry deps/libssh-0.6.0/include/libssh/string.h
+163 silly gunzTarPerm extractEntry deps/libssh-0.6.0/include/libssh/threads.h
+164 silly gunzTarPerm extractEntry deps/libssh-0.6.0/include/libssh/wrapper.h
+165 silly gunzTarPerm extractEntry deps/libssh-0.6.0/libssh-build-tree-settings.cmake.in
+166 silly gunzTarPerm extractEntry deps/libssh-0.6.0/libssh-config-version.cmake.in
+167 silly gunzTarPerm extractEntry deps/libssh-0.6.0/libssh-config.cmake.in
+168 silly gunzTarPerm extractEntry deps/libssh-0.6.0/libssh.pc.cmake
+169 silly gunzTarPerm extractEntry deps/libssh-0.6.0/libssh_threads.pc.cmake
+170 silly gunzTarPerm extractEntry deps/libssh-0.6.0/src/legacy.c
+171 silly gunzTarPerm extractEntry deps/libssh-0.6.0/src/CMakeLists.txt
+172 silly gunzTarPerm extractEntry deps/libssh-0.6.0/src/auth.c
+173 silly gunzTarPerm extractEntry deps/libssh-0.6.0/src/auth1.c
+174 silly gunzTarPerm extractEntry deps/libssh-0.6.0/src/base64.c
+175 silly gunzTarPerm extractEntry deps/libssh-0.6.0/src/bind.c
+176 silly gunzTarPerm extractEntry deps/libssh-0.6.0/src/buffer.c
+177 silly gunzTarPerm extractEntry deps/libssh-0.6.0/src/callbacks.c
+178 silly gunzTarPerm extractEntry deps/libssh-0.6.0/src/channels.c
+179 silly gunzTarPerm extractEntry deps/libssh-0.6.0/src/channels1.c
+180 silly gunzTarPerm extractEntry deps/libssh-0.6.0/src/client.c
+181 silly gunzTarPerm extractEntry deps/libssh-0.6.0/src/config.c
+182 silly gunzTarPerm extractEntry deps/libssh-0.6.0/src/connect.c
+183 silly gunzTarPerm extractEntry deps/libssh-0.6.0/src/crc32.c
+184 silly gunzTarPerm extractEntry deps/libssh-0.6.0/src/curve25519.c
+185 silly gunzTarPerm extractEntry deps/libssh-0.6.0/src/curve25519_ref.c
+186 silly gunzTarPerm extractEntry deps/libssh-0.6.0/src/dh.c
+187 silly gunzTarPerm extractEntry deps/libssh-0.6.0/src/ecdh.c
+188 silly gunzTarPerm extractEntry deps/libssh-0.6.0/src/error.c
+189 silly gunzTarPerm extractEntry deps/libssh-0.6.0/src/gcrypt_missing.c
+190 silly gunzTarPerm extractEntry deps/libssh-0.6.0/src/getpass.c
+191 silly gunzTarPerm extractEntry deps/libssh-0.6.0/src/gssapi.c
+192 silly gunzTarPerm extractEntry deps/libssh-0.6.0/src/gzip.c
+193 silly gunzTarPerm extractEntry deps/libssh-0.6.0/src/init.c
+194 silly gunzTarPerm extractEntry deps/libssh-0.6.0/src/kex.c
+195 silly gunzTarPerm extractEntry deps/libssh-0.6.0/src/kex1.c
+196 silly gunzTarPerm extractEntry deps/libssh-0.6.0/src/known_hosts.c
+197 silly gunzTarPerm extractEntry deps/libssh-0.6.0/src/agent.c
+198 silly gunzTarPerm extractEntry deps/libssh-0.6.0/src/libcrypto.c
+199 silly gunzTarPerm extractEntry deps/libssh-0.6.0/src/libgcrypt.c
+200 silly gunzTarPerm extractEntry deps/libssh-0.6.0/src/log.c
+201 silly gunzTarPerm extractEntry deps/libssh-0.6.0/src/match.c
+202 silly gunzTarPerm extractEntry deps/libssh-0.6.0/src/messages.c
+203 silly gunzTarPerm extractEntry deps/libssh-0.6.0/src/misc.c
+204 silly gunzTarPerm extractEntry deps/libssh-0.6.0/src/options.c
+205 silly gunzTarPerm extractEntry deps/libssh-0.6.0/src/packet.c
+206 silly gunzTarPerm extractEntry deps/libssh-0.6.0/src/packet1.c
+207 silly gunzTarPerm extractEntry deps/libssh-0.6.0/src/packet_cb.c
+208 silly gunzTarPerm extractEntry deps/libssh-0.6.0/src/packet_crypt.c
+209 silly gunzTarPerm extractEntry deps/libssh-0.6.0/src/pcap.c
+210 silly gunzTarPerm extractEntry deps/libssh-0.6.0/src/pki.c
+211 silly gunzTarPerm extractEntry deps/libssh-0.6.0/src/pki_crypto.c
+212 silly gunzTarPerm extractEntry deps/libssh-0.6.0/src/pki_gcrypt.c
+213 silly gunzTarPerm extractEntry deps/libssh-0.6.0/src/poll.c
+214 silly gunzTarPerm extractEntry deps/libssh-0.6.0/src/scp.c
+215 silly gunzTarPerm extractEntry deps/libssh-0.6.0/src/server.c
+216 silly gunzTarPerm extractEntry deps/libssh-0.6.0/src/session.c
+217 silly gunzTarPerm extractEntry deps/libssh-0.6.0/src/sftp.c
+218 silly gunzTarPerm extractEntry deps/libssh-0.6.0/src/sftpserver.c
+219 silly gunzTarPerm extractEntry deps/libssh-0.6.0/src/socket.c
+220 silly gunzTarPerm extractEntry deps/libssh-0.6.0/src/string.c
+221 silly gunzTarPerm extractEntry deps/libssh-0.6.0/src/threads/CMakeLists.txt
+222 silly gunzTarPerm extractEntry deps/libssh-0.6.0/src/threads/pthread.c
+223 silly gunzTarPerm extractEntry deps/libssh-0.6.0/src/threads.c
+224 silly gunzTarPerm extractEntry deps/libssh-0.6.0/src/wrapper.c
+225 silly gunzTarPerm extractEntry deps/libssh-0.6.0/tests/sftp_stress/main.c
+226 silly gunzTarPerm extractEntry deps/libssh-0.6.0/tests/CMakeLists.txt
+227 silly gunzTarPerm extractEntry deps/libssh-0.6.0/tests/benchmarks/CMakeLists.txt
+228 silly gunzTarPerm extractEntry deps/libssh-0.6.0/tests/benchmarks/bench1.sh
+229 silly gunzTarPerm extractEntry deps/libssh-0.6.0/tests/benchmarks/bench2.sh
+230 silly gunzTarPerm extractEntry deps/libssh-0.6.0/tests/benchmarks/bench_raw.c
+231 silly gunzTarPerm extractEntry deps/libssh-0.6.0/tests/benchmarks/bench_scp.c
+232 silly gunzTarPerm extractEntry deps/libssh-0.6.0/tests/benchmarks/bench_sftp.c
+233 silly gunzTarPerm extractEntry deps/libssh-0.6.0/tests/benchmarks/benchmarks.c
+234 silly gunzTarPerm extractEntry deps/libssh-0.6.0/tests/benchmarks/benchmarks.h
+235 silly gunzTarPerm extractEntry deps/libssh-0.6.0/tests/benchmarks/latency.c
+236 silly gunzTarPerm extractEntry deps/libssh-0.6.0/tests/chmodtest.c
+237 silly gunzTarPerm extractEntry deps/libssh-0.6.0/tests/client/torture_proxycommand.c
+238 silly gunzTarPerm extractEntry deps/libssh-0.6.0/tests/client/CMakeLists.txt
+239 silly gunzTarPerm extractEntry deps/libssh-0.6.0/tests/client/torture_auth.c
+240 silly gunzTarPerm extractEntry deps/libssh-0.6.0/tests/client/torture_connect.c
+241 silly gunzTarPerm extractEntry deps/libssh-0.6.0/tests/client/torture_forward.c
+242 silly gunzTarPerm extractEntry deps/libssh-0.6.0/tests/client/torture_knownhosts.c
+243 silly gunzTarPerm extractEntry deps/libssh-0.6.0/tests/client/torture_algorithms.c
+244 silly gunzTarPerm extractEntry deps/libssh-0.6.0/tests/client/torture_request_env.c
+245 silly gunzTarPerm extractEntry deps/libssh-0.6.0/tests/client/torture_session.c
+246 silly gunzTarPerm extractEntry deps/libssh-0.6.0/tests/client/torture_sftp_dir.c
+247 silly gunzTarPerm extractEntry deps/libssh-0.6.0/tests/client/torture_sftp_read.c
+248 silly gunzTarPerm extractEntry deps/libssh-0.6.0/tests/client/torture_sftp_static.c
+249 silly gunzTarPerm extractEntry deps/libssh-0.6.0/tests/cmdline.c
+250 silly gunzTarPerm extractEntry deps/libssh-0.6.0/tests/connection.c
+251 silly gunzTarPerm extractEntry deps/libssh-0.6.0/tests/ctest-default.cmake
+252 silly gunzTarPerm extractEntry deps/libssh-0.6.0/tests/generate.py
+253 silly gunzTarPerm extractEntry deps/libssh-0.6.0/tests/authentication.c
+254 silly gunzTarPerm extractEntry deps/libssh-0.6.0/tests/test_exec.c
+255 silly gunzTarPerm extractEntry deps/libssh-0.6.0/tests/test_pcap.c
+256 silly gunzTarPerm extractEntry deps/libssh-0.6.0/tests/test_socket.c
+257 silly gunzTarPerm extractEntry deps/libssh-0.6.0/tests/test_tunnel.c
+258 silly gunzTarPerm extractEntry deps/libssh-0.6.0/tests/tests.h
+259 silly gunzTarPerm extractEntry deps/libssh-0.6.0/tests/torture.c
+260 silly gunzTarPerm extractEntry deps/libssh-0.6.0/tests/torture.h
+261 silly gunzTarPerm extractEntry deps/libssh-0.6.0/tests/unittests/torture_keyfiles.c
+262 silly gunzTarPerm extractEntry deps/libssh-0.6.0/tests/unittests/CMakeLists.txt
+263 silly gunzTarPerm extractEntry deps/libssh-0.6.0/tests/unittests/torture_callbacks.c
+264 silly gunzTarPerm extractEntry deps/libssh-0.6.0/tests/unittests/torture_channel.c
+265 silly gunzTarPerm extractEntry deps/libssh-0.6.0/tests/unittests/torture_init.c
+266 silly gunzTarPerm extractEntry deps/libssh-0.6.0/tests/unittests/torture_isipaddr.c
+267 silly gunzTarPerm extractEntry deps/libssh-0.6.0/tests/unittests/torture_buffer.c
+268 silly gunzTarPerm extractEntry deps/libssh-0.6.0/tests/unittests/torture_list.c
+269 silly gunzTarPerm extractEntry deps/libssh-0.6.0/tests/unittests/torture_misc.c
+270 silly gunzTarPerm extractEntry deps/libssh-0.6.0/tests/unittests/torture_options.c
+271 silly gunzTarPerm extractEntry deps/libssh-0.6.0/tests/unittests/torture_pki.c
+272 silly gunzTarPerm extractEntry deps/libssh-0.6.0/tests/unittests/torture_rand.c
+273 silly gunzTarPerm extractEntry deps/libssh-0.6.0/tests/valgrind.supp
+274 silly gunzTarPerm extractEntry deps/libssh.gyp
+275 silly gunzTarPerm extractEntry examples/exec.js
+276 silly gunzTarPerm extractEntry examples/stdiopipe.js
+277 silly gunzTarPerm extractEntry examples/term.js
+278 silly gunzTarPerm extractEntry examples/trickysftp.js
+279 silly gunzTarPerm extractEntry examples/fileforyou.txt
+280 silly gunzTarPerm extractEntry CONTRIBUTING.md
+281 silly gunzTarPerm extractEntry lib/channel.js
+282 silly gunzTarPerm extractEntry lib/server.js
+283 silly gunzTarPerm extractEntry lib/session.js
+284 silly gunzTarPerm extractEntry lib/stat.js
+285 silly gunzTarPerm extractEntry .dntrc
+286 silly gunzTarPerm extractEntry src/server.cc
+287 silly gunzTarPerm extractEntry src/channel.cc
+288 silly gunzTarPerm extractEntry src/message.cc
+289 silly gunzTarPerm extractEntry src/message.h
+290 silly gunzTarPerm extractEntry src/nssh.cc
+291 silly gunzTarPerm extractEntry src/nssh.h
+292 silly gunzTarPerm extractEntry src/channel.h
+293 silly gunzTarPerm extractEntry src/server.h
+294 silly gunzTarPerm extractEntry src/session.cc
+295 silly gunzTarPerm extractEntry src/session.h
+296 silly gunzTarPerm extractEntry src/sftp_message.cc
+297 silly gunzTarPerm extractEntry src/sftp_message.h
+298 silly gunzTarPerm extractEntry test/basic-test.js
+299 silly gunzTarPerm extractEntry test/exec-test.js
+300 silly gunzTarPerm extractEntry test/execute-server.js
+301 silly gunzTarPerm extractEntry test/sftp-test.js
+302 silly gunzTarPerm extractEntry test/standard-connection-test.js
+303 silly gunzTarPerm extractEntry test/util.js
+304 silly gunzTarPerm extractEntry test/build/config.gypi
+305 silly gunzTarPerm extractEntry test/keys/host_dsa
+306 silly gunzTarPerm extractEntry test/keys/host_dsa.pub
+307 silly gunzTarPerm extractEntry test/keys/host_rsa
+308 silly gunzTarPerm extractEntry test/keys/host_rsa.pub
+309 silly gunzTarPerm extractEntry test/keys/id_rsa
+310 silly gunzTarPerm extractEntry test/keys/id_rsa.pub
+311 silly gunzTarPerm extractEntry test/testdata.bin
+312 silly lockFile 9ab20411-79851-0-5523481380660087-package tar://C:\Users\sony\AppData\Local\Temp\npm-15224-DguZS5vn\1392909079851-0.5523481380660087\package
+313 silly lockFile 9ab20411-79851-0-5523481380660087-package tar://C:\Users\sony\AppData\Local\Temp\npm-15224-DguZS5vn\1392909079851-0.5523481380660087\package
+314 silly lockFile 9e64e280-79851-0-5523481380660087-tmp-tgz tar://C:\Users\sony\AppData\Local\Temp\npm-15224-DguZS5vn\1392909079851-0.5523481380660087\tmp.tgz
+315 silly lockFile 9e64e280-79851-0-5523481380660087-tmp-tgz tar://C:\Users\sony\AppData\Local\Temp\npm-15224-DguZS5vn\1392909079851-0.5523481380660087\tmp.tgz
+316 verbose tar pack [ 'C:\\Users\\sony\\AppData\\Roaming\\npm-cache\\ssh\\1.7.1\\package.tgz',
+316 verbose tar pack   'C:\\Users\\sony\\AppData\\Local\\Temp\\npm-15224-DguZS5vn\\1392909079851-0.5523481380660087\\package' ]
+317 verbose tarball C:\Users\sony\AppData\Roaming\npm-cache\ssh\1.7.1\package.tgz
+318 verbose folder C:\Users\sony\AppData\Local\Temp\npm-15224-DguZS5vn\1392909079851-0.5523481380660087\package
+319 silly lockFile 9ab20411-79851-0-5523481380660087-package tar://C:\Users\sony\AppData\Local\Temp\npm-15224-DguZS5vn\1392909079851-0.5523481380660087\package
+320 verbose lock tar://C:\Users\sony\AppData\Local\Temp\npm-15224-DguZS5vn\1392909079851-0.5523481380660087\package C:\Users\sony\AppData\Roaming\npm-cache\9ab20411-79851-0-5523481380660087-package.lock
+321 silly lockFile a2e6a39c--npm-cache-ssh-1-7-1-package-tgz tar://C:\Users\sony\AppData\Roaming\npm-cache\ssh\1.7.1\package.tgz
+322 verbose lock tar://C:\Users\sony\AppData\Roaming\npm-cache\ssh\1.7.1\package.tgz C:\Users\sony\AppData\Roaming\npm-cache\a2e6a39c--npm-cache-ssh-1-7-1-package-tgz.lock
+323 silly lockFile 9ab20411-79851-0-5523481380660087-package tar://C:\Users\sony\AppData\Local\Temp\npm-15224-DguZS5vn\1392909079851-0.5523481380660087\package
+324 silly lockFile 9ab20411-79851-0-5523481380660087-package tar://C:\Users\sony\AppData\Local\Temp\npm-15224-DguZS5vn\1392909079851-0.5523481380660087\package
+325 silly lockFile a2e6a39c--npm-cache-ssh-1-7-1-package-tgz tar://C:\Users\sony\AppData\Roaming\npm-cache\ssh\1.7.1\package.tgz
+326 silly lockFile a2e6a39c--npm-cache-ssh-1-7-1-package-tgz tar://C:\Users\sony\AppData\Roaming\npm-cache\ssh\1.7.1\package.tgz
+327 silly lockFile 469211e4-ming-npm-cache-ssh-1-7-1-package C:\Users\sony\AppData\Roaming\npm-cache\ssh\1.7.1\package
+328 verbose lock C:\Users\sony\AppData\Roaming\npm-cache\ssh\1.7.1\package C:\Users\sony\AppData\Roaming\npm-cache\469211e4-ming-npm-cache-ssh-1-7-1-package.lock
+329 silly lockFile 469211e4-ming-npm-cache-ssh-1-7-1-package C:\Users\sony\AppData\Roaming\npm-cache\ssh\1.7.1\package
+330 silly lockFile 469211e4-ming-npm-cache-ssh-1-7-1-package C:\Users\sony\AppData\Roaming\npm-cache\ssh\1.7.1\package
+331 verbose tar unpack C:\Users\sony\AppData\Roaming\npm-cache\ssh\1.7.1\package.tgz
+332 silly lockFile 2577a3f6-ming-npm-cache-ssh-1-7-1-package tar://C:\Users\sony\AppData\Roaming\npm-cache\ssh\1.7.1\package
+333 verbose lock tar://C:\Users\sony\AppData\Roaming\npm-cache\ssh\1.7.1\package C:\Users\sony\AppData\Roaming\npm-cache\2577a3f6-ming-npm-cache-ssh-1-7-1-package.lock
+334 silly lockFile a2e6a39c--npm-cache-ssh-1-7-1-package-tgz tar://C:\Users\sony\AppData\Roaming\npm-cache\ssh\1.7.1\package.tgz
+335 verbose lock tar://C:\Users\sony\AppData\Roaming\npm-cache\ssh\1.7.1\package.tgz C:\Users\sony\AppData\Roaming\npm-cache\a2e6a39c--npm-cache-ssh-1-7-1-package-tgz.lock
+336 silly gunzTarPerm modes [ '755', '644' ]
+337 silly gunzTarPerm extractEntry package.json
+338 silly gunzTarPerm modified mode [ 'package.json', 438, 420 ]
+339 silly gunzTarPerm extractEntry .npmignore
+340 silly gunzTarPerm modified mode [ '.npmignore', 438, 420 ]
+341 silly gunzTarPerm extractEntry README.md
+342 silly gunzTarPerm modified mode [ 'README.md', 438, 420 ]
+343 silly gunzTarPerm extractEntry LICENSE
+344 silly gunzTarPerm modified mode [ 'LICENSE', 438, 420 ]
+345 silly gunzTarPerm extractEntry index.js
+346 silly gunzTarPerm modified mode [ 'index.js', 438, 420 ]
+347 silly gunzTarPerm extractEntry examples/exec.js
+348 silly gunzTarPerm modified mode [ 'examples/exec.js', 438, 420 ]
+349 silly gunzTarPerm extractEntry examples/stdiopipe.js
+350 silly gunzTarPerm modified mode [ 'examples/stdiopipe.js', 438, 420 ]
+351 silly gunzTarPerm extractEntry examples/term.js
+352 silly gunzTarPerm modified mode [ 'examples/term.js', 438, 420 ]
+353 silly gunzTarPerm extractEntry examples/trickysftp.js
+354 silly gunzTarPerm modified mode [ 'examples/trickysftp.js', 438, 420 ]
+355 silly gunzTarPerm extractEntry examples/fileforyou.txt
+356 silly gunzTarPerm modified mode [ 'examples/fileforyou.txt', 438, 420 ]
+357 silly gunzTarPerm extractEntry deps/build/config.gypi
+358 silly gunzTarPerm modified mode [ 'deps/build/config.gypi', 438, 420 ]
+359 silly gunzTarPerm extractEntry deps/include/config.h
+360 silly gunzTarPerm modified mode [ 'deps/include/config.h', 438, 420 ]
+361 silly gunzTarPerm extractEntry deps/include-osx/config.h
+362 silly gunzTarPerm modified mode [ 'deps/include-osx/config.h', 438, 420 ]
+363 silly gunzTarPerm extractEntry deps/libssh-0.6.0/README
+364 silly gunzTarPerm modified mode [ 'deps/libssh-0.6.0/README', 438, 420 ]
+365 silly gunzTarPerm extractEntry deps/libssh-0.6.0/doc/introduction.dox
+366 silly gunzTarPerm modified mode [ 'deps/libssh-0.6.0/doc/introduction.dox', 438, 420 ]
+367 silly gunzTarPerm extractEntry deps/libssh-0.6.0/doc/authentication.dox
+368 silly gunzTarPerm modified mode [ 'deps/libssh-0.6.0/doc/authentication.dox', 438, 420 ]
+369 silly gunzTarPerm extractEntry deps/libssh-0.6.0/doc/command.dox
+370 silly gunzTarPerm modified mode [ 'deps/libssh-0.6.0/doc/command.dox', 438, 420 ]
+371 silly gunzTarPerm extractEntry deps/libssh-0.6.0/doc/curve25519-sha256@libssh.org.txt
+372 silly gunzTarPerm modified mode [ 'deps/libssh-0.6.0/doc/curve25519-sha256@libssh.org.txt',
+372 silly gunzTarPerm   438,
+372 silly gunzTarPerm   420 ]
+373 silly gunzTarPerm extractEntry deps/libssh-0.6.0/doc/doxy.config.in
+374 silly gunzTarPerm modified mode [ 'deps/libssh-0.6.0/doc/doxy.config.in', 438, 420 ]
+375 silly gunzTarPerm extractEntry deps/libssh-0.6.0/doc/doxy.trac.in
+376 silly gunzTarPerm modified mode [ 'deps/libssh-0.6.0/doc/doxy.trac.in', 438, 420 ]
+377 silly gunzTarPerm extractEntry deps/libssh-0.6.0/doc/forwarding.dox
+378 silly gunzTarPerm modified mode [ 'deps/libssh-0.6.0/doc/forwarding.dox', 438, 420 ]
+379 silly gunzTarPerm extractEntry deps/libssh-0.6.0/doc/guided_tour.dox
+380 silly gunzTarPerm modified mode [ 'deps/libssh-0.6.0/doc/guided_tour.dox', 438, 420 ]
+381 silly gunzTarPerm extractEntry deps/libssh-0.6.0/doc/CMakeLists.txt
+382 silly gunzTarPerm modified mode [ 'deps/libssh-0.6.0/doc/CMakeLists.txt', 438, 420 ]
+383 silly gunzTarPerm extractEntry deps/libssh-0.6.0/doc/linking.dox
+384 silly gunzTarPerm modified mode [ 'deps/libssh-0.6.0/doc/linking.dox', 438, 420 ]
+385 silly gunzTarPerm extractEntry deps/libssh-0.6.0/doc/mainpage.dox
+386 silly gunzTarPerm modified mode [ 'deps/libssh-0.6.0/doc/mainpage.dox', 438, 420 ]
+387 silly gunzTarPerm extractEntry deps/libssh-0.6.0/doc/scp.dox
+388 silly gunzTarPerm modified mode [ 'deps/libssh-0.6.0/doc/scp.dox', 438, 420 ]
+389 silly gunzTarPerm extractEntry deps/libssh-0.6.0/doc/sftp.dox
+390 silly gunzTarPerm modified mode [ 'deps/libssh-0.6.0/doc/sftp.dox', 438, 420 ]
+391 silly gunzTarPerm extractEntry deps/libssh-0.6.0/doc/shell.dox
+392 silly gunzTarPerm modified mode [ 'deps/libssh-0.6.0/doc/shell.dox', 438, 420 ]
+393 silly gunzTarPerm extractEntry deps/libssh-0.6.0/doc/tbd.dox
+394 silly gunzTarPerm modified mode [ 'deps/libssh-0.6.0/doc/tbd.dox', 438, 420 ]
+395 silly gunzTarPerm extractEntry deps/libssh-0.6.0/doc/threading.dox
+396 silly gunzTarPerm modified mode [ 'deps/libssh-0.6.0/doc/threading.dox', 438, 420 ]
+397 silly gunzTarPerm extractEntry deps/libssh-0.6.0/BSD
+398 silly gunzTarPerm modified mode [ 'deps/libssh-0.6.0/BSD', 438, 420 ]
+399 silly gunzTarPerm extractEntry deps/libssh-0.6.0/ChangeLog
+400 silly gunzTarPerm modified mode [ 'deps/libssh-0.6.0/ChangeLog', 438, 420 ]
+401 silly gunzTarPerm extractEntry deps/libssh-0.6.0/cmake/Modules/FindCMocka.cmake
+402 silly gunzTarPerm modified mode [ 'deps/libssh-0.6.0/cmake/Modules/FindCMocka.cmake', 438, 420 ]
+403 silly gunzTarPerm extractEntry deps/libssh-0.6.0/cmake/Modules/AddCMockaTest.cmake
+404 silly gunzTarPerm modified mode [ 'deps/libssh-0.6.0/cmake/Modules/AddCMockaTest.cmake',
+404 silly gunzTarPerm   438,
+404 silly gunzTarPerm   420 ]
+405 silly gunzTarPerm extractEntry deps/libssh-0.6.0/cmake/Modules/COPYING-CMAKE-SCRIPTS
+406 silly gunzTarPerm modified mode [ 'deps/libssh-0.6.0/cmake/Modules/COPYING-CMAKE-SCRIPTS',
+406 silly gunzTarPerm   438,
+406 silly gunzTarPerm   420 ]
+407 silly gunzTarPerm extractEntry deps/libssh-0.6.0/cmake/Modules/DefineCMakeDefaults.cmake
+408 silly gunzTarPerm modified mode [ 'deps/libssh-0.6.0/cmake/Modules/DefineCMakeDefaults.cmake',
+408 silly gunzTarPerm   438,
+408 silly gunzTarPerm   420 ]
+409 silly gunzTarPerm extractEntry deps/libssh-0.6.0/cmake/Modules/DefineCompilerFlags.cmake
+410 silly gunzTarPerm modified mode [ 'deps/libssh-0.6.0/cmake/Modules/DefineCompilerFlags.cmake',
+410 silly gunzTarPerm   438,
+410 silly gunzTarPerm   420 ]
+411 silly gunzTarPerm extractEntry deps/libssh-0.6.0/cmake/Modules/DefineInstallationPaths.cmake
+412 silly gunzTarPerm modified mode [ 'deps/libssh-0.6.0/cmake/Modules/DefineInstallationPaths.cmake',
+412 silly gunzTarPerm   438,
+412 silly gunzTarPerm   420 ]
+413 silly gunzTarPerm extractEntry deps/libssh-0.6.0/cmake/Modules/DefinePlatformDefaults.cmake
+414 silly gunzTarPerm modified mode [ 'deps/libssh-0.6.0/cmake/Modules/DefinePlatformDefaults.cmake',
+414 silly gunzTarPerm   438,
+414 silly gunzTarPerm   420 ]
+415 silly gunzTarPerm extractEntry deps/libssh-0.6.0/cmake/Modules/FindArgp.cmake
+416 silly gunzTarPerm modified mode [ 'deps/libssh-0.6.0/cmake/Modules/FindArgp.cmake', 438, 420 ]
+417 silly gunzTarPerm extractEntry deps/libssh-0.6.0/cmake/Modules/CheckCCompilerFlagSSP.cmake
+418 silly gunzTarPerm modified mode [ 'deps/libssh-0.6.0/cmake/Modules/CheckCCompilerFlagSSP.cmake',
+418 silly gunzTarPerm   438,
+418 silly gunzTarPerm   420 ]
+419 silly gunzTarPerm extractEntry deps/libssh-0.6.0/cmake/Modules/FindGCrypt.cmake
+420 silly gunzTarPerm modified mode [ 'deps/libssh-0.6.0/cmake/Modules/FindGCrypt.cmake', 438, 420 ]
+421 silly gunzTarPerm extractEntry deps/libssh-0.6.0/cmake/Modules/FindGSSAPI.cmake
+422 silly gunzTarPerm modified mode [ 'deps/libssh-0.6.0/cmake/Modules/FindGSSAPI.cmake', 438, 420 ]
+423 silly gunzTarPerm extractEntry deps/libssh-0.6.0/cmake/Modules/FindNaCl.cmake
+424 silly gunzTarPerm modified mode [ 'deps/libssh-0.6.0/cmake/Modules/FindNaCl.cmake', 438, 420 ]
+425 silly gunzTarPerm extractEntry deps/libssh-0.6.0/cmake/Modules/FindNSIS.cmake
+426 silly gunzTarPerm modified mode [ 'deps/libssh-0.6.0/cmake/Modules/FindNSIS.cmake', 438, 420 ]
+427 silly gunzTarPerm extractEntry deps/libssh-0.6.0/cmake/Modules/FindOpenSSL.cmake
+428 silly gunzTarPerm modified mode [ 'deps/libssh-0.6.0/cmake/Modules/FindOpenSSL.cmake', 438, 420 ]
+429 silly gunzTarPerm extractEntry deps/libssh-0.6.0/cmake/Modules/FindZLIB.cmake
+430 silly gunzTarPerm modified mode [ 'deps/libssh-0.6.0/cmake/Modules/FindZLIB.cmake', 438, 420 ]
+431 silly gunzTarPerm extractEntry deps/libssh-0.6.0/cmake/Modules/MacroEnsureOutOfSourceBuild.cmake
+432 silly gunzTarPerm modified mode [ 'deps/libssh-0.6.0/cmake/Modules/MacroEnsureOutOfSourceBuild.cmake',
+432 silly gunzTarPerm   438,
+432 silly gunzTarPerm   420 ]
+433 silly gunzTarPerm extractEntry deps/libssh-0.6.0/cmake/Modules/UseDoxygen.cmake
+434 silly gunzTarPerm modified mode [ 'deps/libssh-0.6.0/cmake/Modules/UseDoxygen.cmake', 438, 420 ]
+435 silly gunzTarPerm extractEntry deps/libssh-0.6.0/CMakeLists.txt
+436 silly gunzTarPerm modified mode [ 'deps/libssh-0.6.0/CMakeLists.txt', 438, 420 ]
+437 silly gunzTarPerm extractEntry deps/libssh-0.6.0/CodingStyle
+438 silly gunzTarPerm modified mode [ 'deps/libssh-0.6.0/CodingStyle', 438, 420 ]
+439 silly gunzTarPerm extractEntry deps/libssh-0.6.0/config.h.cmake
+440 silly gunzTarPerm modified mode [ 'deps/libssh-0.6.0/config.h.cmake', 438, 420 ]
+441 silly gunzTarPerm extractEntry deps/libssh-0.6.0/ConfigureChecks.cmake
+442 silly gunzTarPerm modified mode [ 'deps/libssh-0.6.0/ConfigureChecks.cmake', 438, 420 ]
+443 silly gunzTarPerm extractEntry deps/libssh-0.6.0/COPYING
+444 silly gunzTarPerm modified mode [ 'deps/libssh-0.6.0/COPYING', 438, 420 ]
+445 silly gunzTarPerm extractEntry deps/libssh-0.6.0/CPackConfig.cmake
+446 silly gunzTarPerm modified mode [ 'deps/libssh-0.6.0/CPackConfig.cmake', 438, 420 ]
+447 silly gunzTarPerm extractEntry deps/libssh-0.6.0/CTestConfig.cmake
+448 silly gunzTarPerm modified mode [ 'deps/libssh-0.6.0/CTestConfig.cmake', 438, 420 ]
+449 silly gunzTarPerm extractEntry deps/libssh-0.6.0/DefineOptions.cmake
+450 silly gunzTarPerm modified mode [ 'deps/libssh-0.6.0/DefineOptions.cmake', 438, 420 ]
+451 silly gunzTarPerm extractEntry deps/libssh-0.6.0/AUTHORS
+452 silly gunzTarPerm modified mode [ 'deps/libssh-0.6.0/AUTHORS', 438, 420 ]
+453 silly gunzTarPerm extractEntry deps/libssh-0.6.0/examples/proxy.c
+454 silly gunzTarPerm modified mode [ 'deps/libssh-0.6.0/examples/proxy.c', 438, 420 ]
+455 silly gunzTarPerm extractEntry deps/libssh-0.6.0/examples/authentication.c
+456 silly gunzTarPerm modified mode [ 'deps/libssh-0.6.0/examples/authentication.c', 438, 420 ]
+457 silly gunzTarPerm extractEntry deps/libssh-0.6.0/examples/connect_ssh.c
+458 silly gunzTarPerm modified mode [ 'deps/libssh-0.6.0/examples/connect_ssh.c', 438, 420 ]
+459 silly gunzTarPerm extractEntry deps/libssh-0.6.0/examples/examples_common.h
+460 silly gunzTarPerm modified mode [ 'deps/libssh-0.6.0/examples/examples_common.h', 438, 420 ]
+461 silly gunzTarPerm extractEntry deps/libssh-0.6.0/examples/exec.c
+462 silly gunzTarPerm modified mode [ 'deps/libssh-0.6.0/examples/exec.c', 438, 420 ]
+463 silly gunzTarPerm extractEntry deps/libssh-0.6.0/examples/knownhosts.c
+464 silly gunzTarPerm modified mode [ 'deps/libssh-0.6.0/examples/knownhosts.c', 438, 420 ]
+465 silly gunzTarPerm extractEntry deps/libssh-0.6.0/examples/libsshpp.cpp
+466 silly gunzTarPerm modified mode [ 'deps/libssh-0.6.0/examples/libsshpp.cpp', 438, 420 ]
+467 silly gunzTarPerm extractEntry deps/libssh-0.6.0/examples/libsshpp_noexcept.cpp
+468 silly gunzTarPerm modified mode [ 'deps/libssh-0.6.0/examples/libsshpp_noexcept.cpp', 438, 420 ]
+469 silly gunzTarPerm extractEntry deps/libssh-0.6.0/examples/libssh_scp.c
+470 silly gunzTarPerm modified mode [ 'deps/libssh-0.6.0/examples/libssh_scp.c', 438, 420 ]
+471 silly gunzTarPerm extractEntry deps/libssh-0.6.0/examples/CMakeLists.txt
+472 silly gunzTarPerm modified mode [ 'deps/libssh-0.6.0/examples/CMakeLists.txt', 438, 420 ]
+473 silly gunzTarPerm extractEntry deps/libssh-0.6.0/examples/sample.c
+474 silly gunzTarPerm modified mode [ 'deps/libssh-0.6.0/examples/sample.c', 438, 420 ]
+475 silly gunzTarPerm extractEntry deps/libssh-0.6.0/examples/samplesftp.c
+476 silly gunzTarPerm modified mode [ 'deps/libssh-0.6.0/examples/samplesftp.c', 438, 420 ]
+477 silly gunzTarPerm extractEntry deps/libssh-0.6.0/examples/samplesshd-cb.c
+478 silly gunzTarPerm modified mode [ 'deps/libssh-0.6.0/examples/samplesshd-cb.c', 438, 420 ]
+479 silly gunzTarPerm extractEntry deps/libssh-0.6.0/examples/samplesshd-kbdint.c
+480 silly gunzTarPerm modified mode [ 'deps/libssh-0.6.0/examples/samplesshd-kbdint.c', 438, 420 ]
+481 silly gunzTarPerm extractEntry deps/libssh-0.6.0/examples/samplesshd-tty.c
+482 silly gunzTarPerm modified mode [ 'deps/libssh-0.6.0/examples/samplesshd-tty.c', 438, 420 ]
+483 silly gunzTarPerm extractEntry deps/libssh-0.6.0/examples/samplesshd.c
+484 silly gunzTarPerm modified mode [ 'deps/libssh-0.6.0/examples/samplesshd.c', 438, 420 ]
+485 silly gunzTarPerm extractEntry deps/libssh-0.6.0/examples/scp_download.c
+486 silly gunzTarPerm modified mode [ 'deps/libssh-0.6.0/examples/scp_download.c', 438, 420 ]
+487 silly gunzTarPerm extractEntry deps/libssh-0.6.0/examples/senddata.c
+488 silly gunzTarPerm modified mode [ 'deps/libssh-0.6.0/examples/senddata.c', 438, 420 ]
+489 silly gunzTarPerm extractEntry deps/libssh-0.6.0/examples/sshnetcat.c
+490 silly gunzTarPerm modified mode [ 'deps/libssh-0.6.0/examples/sshnetcat.c', 438, 420 ]
+491 silly gunzTarPerm extractEntry deps/libssh-0.6.0/include/CMakeLists.txt
+492 silly gunzTarPerm modified mode [ 'deps/libssh-0.6.0/include/CMakeLists.txt', 438, 420 ]
+493 silly gunzTarPerm extractEntry deps/libssh-0.6.0/include/libssh/libsshpp.hpp
+494 silly gunzTarPerm modified mode [ 'deps/libssh-0.6.0/include/libssh/libsshpp.hpp', 438, 420 ]
+495 silly gunzTarPerm extractEntry deps/libssh-0.6.0/include/libssh/agent.h
+496 silly gunzTarPerm modified mode [ 'deps/libssh-0.6.0/include/libssh/agent.h', 438, 420 ]
+497 silly gunzTarPerm extractEntry deps/libssh-0.6.0/include/libssh/bind.h
+498 silly gunzTarPerm modified mode [ 'deps/libssh-0.6.0/include/libssh/bind.h', 438, 420 ]
+499 silly gunzTarPerm extractEntry deps/libssh-0.6.0/include/libssh/buffer.h
+500 silly gunzTarPerm modified mode [ 'deps/libssh-0.6.0/include/libssh/buffer.h', 438, 420 ]
+501 silly gunzTarPerm extractEntry deps/libssh-0.6.0/include/libssh/callbacks.h
+502 silly gunzTarPerm modified mode [ 'deps/libssh-0.6.0/include/libssh/callbacks.h', 438, 420 ]
+503 silly gunzTarPerm extractEntry deps/libssh-0.6.0/include/libssh/channels.h
+504 silly gunzTarPerm modified mode [ 'deps/libssh-0.6.0/include/libssh/channels.h', 438, 420 ]
+505 silly gunzTarPerm extractEntry deps/libssh-0.6.0/include/libssh/CMakeLists.txt
+506 silly gunzTarPerm modified mode [ 'deps/libssh-0.6.0/include/libssh/CMakeLists.txt', 438, 420 ]
+507 silly gunzTarPerm extractEntry deps/libssh-0.6.0/include/libssh/crc32.h
+508 silly gunzTarPerm modified mode [ 'deps/libssh-0.6.0/include/libssh/crc32.h', 438, 420 ]
+509 silly gunzTarPerm extractEntry deps/libssh-0.6.0/include/libssh/crypto.h
+510 silly gunzTarPerm modified mode [ 'deps/libssh-0.6.0/include/libssh/crypto.h', 438, 420 ]
+511 silly gunzTarPerm extractEntry deps/libssh-0.6.0/include/libssh/curve25519.h
+512 silly gunzTarPerm modified mode [ 'deps/libssh-0.6.0/include/libssh/curve25519.h', 438, 420 ]
+513 silly gunzTarPerm extractEntry deps/libssh-0.6.0/include/libssh/dh.h
+514 silly gunzTarPerm modified mode [ 'deps/libssh-0.6.0/include/libssh/dh.h', 438, 420 ]
+515 silly gunzTarPerm extractEntry deps/libssh-0.6.0/include/libssh/ecdh.h
+516 silly gunzTarPerm modified mode [ 'deps/libssh-0.6.0/include/libssh/ecdh.h', 438, 420 ]
+517 silly gunzTarPerm extractEntry deps/libssh-0.6.0/include/libssh/gssapi.h
+518 silly gunzTarPerm modified mode [ 'deps/libssh-0.6.0/include/libssh/gssapi.h', 438, 420 ]
+519 silly gunzTarPerm extractEntry deps/libssh-0.6.0/include/libssh/kex.h
+520 silly gunzTarPerm modified mode [ 'deps/libssh-0.6.0/include/libssh/kex.h', 438, 420 ]
+521 silly gunzTarPerm extractEntry deps/libssh-0.6.0/include/libssh/keys.h
+522 silly gunzTarPerm modified mode [ 'deps/libssh-0.6.0/include/libssh/keys.h', 438, 420 ]
+523 silly gunzTarPerm extractEntry deps/libssh-0.6.0/include/libssh/legacy.h
+524 silly gunzTarPerm modified mode [ 'deps/libssh-0.6.0/include/libssh/legacy.h', 438, 420 ]
+525 silly gunzTarPerm extractEntry deps/libssh-0.6.0/include/libssh/libcrypto.h
+526 silly gunzTarPerm modified mode [ 'deps/libssh-0.6.0/include/libssh/libcrypto.h', 438, 420 ]
+527 silly gunzTarPerm extractEntry deps/libssh-0.6.0/include/libssh/libgcrypt.h
+528 silly gunzTarPerm modified mode [ 'deps/libssh-0.6.0/include/libssh/libgcrypt.h', 438, 420 ]
+529 silly gunzTarPerm extractEntry deps/libssh-0.6.0/include/libssh/libssh.h
+530 silly gunzTarPerm modified mode [ 'deps/libssh-0.6.0/include/libssh/libssh.h', 438, 420 ]
+531 silly gunzTarPerm extractEntry deps/libssh-0.6.0/include/libssh/auth.h
+532 silly gunzTarPerm modified mode [ 'deps/libssh-0.6.0/include/libssh/auth.h', 438, 420 ]
+533 silly gunzTarPerm extractEntry deps/libssh-0.6.0/include/libssh/messages.h
+534 silly gunzTarPerm modified mode [ 'deps/libssh-0.6.0/include/libssh/messages.h', 438, 420 ]
+535 silly gunzTarPerm extractEntry deps/libssh-0.6.0/include/libssh/misc.h
+536 silly gunzTarPerm modified mode [ 'deps/libssh-0.6.0/include/libssh/misc.h', 438, 420 ]
+537 silly gunzTarPerm extractEntry deps/libssh-0.6.0/include/libssh/options.h
+538 silly gunzTarPerm modified mode [ 'deps/libssh-0.6.0/include/libssh/options.h', 438, 420 ]
+539 silly gunzTarPerm extractEntry deps/libssh-0.6.0/include/libssh/packet.h
+540 silly gunzTarPerm modified mode [ 'deps/libssh-0.6.0/include/libssh/packet.h', 438, 420 ]
+541 silly gunzTarPerm extractEntry deps/libssh-0.6.0/include/libssh/pcap.h
+542 silly gunzTarPerm modified mode [ 'deps/libssh-0.6.0/include/libssh/pcap.h', 438, 420 ]
+543 silly gunzTarPerm extractEntry deps/libssh-0.6.0/include/libssh/pki.h
+544 silly gunzTarPerm modified mode [ 'deps/libssh-0.6.0/include/libssh/pki.h', 438, 420 ]
+545 silly gunzTarPerm extractEntry deps/libssh-0.6.0/include/libssh/pki_priv.h
+546 silly gunzTarPerm modified mode [ 'deps/libssh-0.6.0/include/libssh/pki_priv.h', 438, 420 ]
+547 silly gunzTarPerm extractEntry deps/libssh-0.6.0/include/libssh/poll.h
+548 silly gunzTarPerm modified mode [ 'deps/libssh-0.6.0/include/libssh/poll.h', 438, 420 ]
+549 silly gunzTarPerm extractEntry deps/libssh-0.6.0/include/libssh/priv.h
+550 silly gunzTarPerm modified mode [ 'deps/libssh-0.6.0/include/libssh/priv.h', 438, 420 ]
+551 silly gunzTarPerm extractEntry deps/libssh-0.6.0/include/libssh/scp.h
+552 silly gunzTarPerm modified mode [ 'deps/libssh-0.6.0/include/libssh/scp.h', 438, 420 ]
+553 silly gunzTarPerm extractEntry deps/libssh-0.6.0/include/libssh/server.h
+554 silly gunzTarPerm modified mode [ 'deps/libssh-0.6.0/include/libssh/server.h', 438, 420 ]
+555 silly gunzTarPerm extractEntry deps/libssh-0.6.0/include/libssh/session.h
+556 silly gunzTarPerm modified mode [ 'deps/libssh-0.6.0/include/libssh/session.h', 438, 420 ]
+557 silly gunzTarPerm extractEntry deps/libssh-0.6.0/include/libssh/sftp.h
+558 silly gunzTarPerm modified mode [ 'deps/libssh-0.6.0/include/libssh/sftp.h', 438, 420 ]
+559 silly gunzTarPerm extractEntry deps/libssh-0.6.0/include/libssh/socket.h
+560 silly gunzTarPerm modified mode [ 'deps/libssh-0.6.0/include/libssh/socket.h', 438, 420 ]
+561 silly gunzTarPerm extractEntry deps/libssh-0.6.0/include/libssh/ssh1.h
+562 silly gunzTarPerm modified mode [ 'deps/libssh-0.6.0/include/libssh/ssh1.h', 438, 420 ]
+563 silly gunzTarPerm extractEntry deps/libssh-0.6.0/include/libssh/ssh2.h
+564 silly gunzTarPerm modified mode [ 'deps/libssh-0.6.0/include/libssh/ssh2.h', 438, 420 ]
+565 silly gunzTarPerm extractEntry deps/libssh-0.6.0/include/libssh/string.h
+566 silly gunzTarPerm modified mode [ 'deps/libssh-0.6.0/include/libssh/string.h', 438, 420 ]
+567 silly gunzTarPerm extractEntry deps/libssh-0.6.0/include/libssh/threads.h
+568 silly gunzTarPerm modified mode [ 'deps/libssh-0.6.0/include/libssh/threads.h', 438, 420 ]
+569 silly gunzTarPerm extractEntry deps/libssh-0.6.0/include/libssh/wrapper.h
+570 silly gunzTarPerm modified mode [ 'deps/libssh-0.6.0/include/libssh/wrapper.h', 438, 420 ]
+571 silly gunzTarPerm extractEntry deps/libssh-0.6.0/INSTALL
+572 silly gunzTarPerm modified mode [ 'deps/libssh-0.6.0/INSTALL', 438, 420 ]
+573 silly gunzTarPerm extractEntry deps/libssh-0.6.0/libssh-build-tree-settings.cmake.in
+574 silly gunzTarPerm modified mode [ 'deps/libssh-0.6.0/libssh-build-tree-settings.cmake.in',
+574 silly gunzTarPerm   438,
+574 silly gunzTarPerm   420 ]
+575 silly gunzTarPerm extractEntry deps/libssh-0.6.0/libssh-config-version.cmake.in
+576 silly gunzTarPerm modified mode [ 'deps/libssh-0.6.0/libssh-config-version.cmake.in', 438, 420 ]
+577 silly gunzTarPerm extractEntry deps/libssh-0.6.0/libssh-config.cmake.in
+578 silly gunzTarPerm modified mode [ 'deps/libssh-0.6.0/libssh-config.cmake.in', 438, 420 ]
+579 silly gunzTarPerm extractEntry deps/libssh-0.6.0/libssh.pc.cmake
+580 silly gunzTarPerm modified mode [ 'deps/libssh-0.6.0/libssh.pc.cmake', 438, 420 ]
+581 silly gunzTarPerm extractEntry deps/libssh-0.6.0/libssh_threads.pc.cmake
+582 silly gunzTarPerm modified mode [ 'deps/libssh-0.6.0/libssh_threads.pc.cmake', 438, 420 ]
+583 silly gunzTarPerm extractEntry deps/libssh-0.6.0/.clang_complete
+584 silly gunzTarPerm modified mode [ 'deps/libssh-0.6.0/.clang_complete', 438, 420 ]
+585 silly gunzTarPerm extractEntry deps/libssh-0.6.0/src/legacy.c
+586 silly gunzTarPerm modified mode [ 'deps/libssh-0.6.0/src/legacy.c', 438, 420 ]
+587 silly gunzTarPerm extractEntry deps/libssh-0.6.0/src/agent.c
+588 silly gunzTarPerm modified mode [ 'deps/libssh-0.6.0/src/agent.c', 438, 420 ]
+589 silly gunzTarPerm extractEntry deps/libssh-0.6.0/src/auth1.c
+590 silly gunzTarPerm modified mode [ 'deps/libssh-0.6.0/src/auth1.c', 438, 420 ]
+591 silly gunzTarPerm extractEntry deps/libssh-0.6.0/src/base64.c
+592 silly gunzTarPerm modified mode [ 'deps/libssh-0.6.0/src/base64.c', 438, 420 ]
+593 silly gunzTarPerm extractEntry deps/libssh-0.6.0/src/bind.c
+594 silly gunzTarPerm modified mode [ 'deps/libssh-0.6.0/src/bind.c', 438, 420 ]
+595 silly gunzTarPerm extractEntry deps/libssh-0.6.0/src/buffer.c
+596 silly gunzTarPerm modified mode [ 'deps/libssh-0.6.0/src/buffer.c', 438, 420 ]
+597 silly gunzTarPerm extractEntry deps/libssh-0.6.0/src/callbacks.c
+598 silly gunzTarPerm modified mode [ 'deps/libssh-0.6.0/src/callbacks.c', 438, 420 ]
+599 silly gunzTarPerm extractEntry deps/libssh-0.6.0/src/channels.c
+600 silly gunzTarPerm modified mode [ 'deps/libssh-0.6.0/src/channels.c', 438, 420 ]
+601 silly gunzTarPerm extractEntry deps/libssh-0.6.0/src/channels1.c
+602 silly gunzTarPerm modified mode [ 'deps/libssh-0.6.0/src/channels1.c', 438, 420 ]
+603 silly gunzTarPerm extractEntry deps/libssh-0.6.0/src/client.c
+604 silly gunzTarPerm modified mode [ 'deps/libssh-0.6.0/src/client.c', 438, 420 ]
+605 silly gunzTarPerm extractEntry deps/libssh-0.6.0/src/CMakeLists.txt
+606 silly gunzTarPerm modified mode [ 'deps/libssh-0.6.0/src/CMakeLists.txt', 438, 420 ]
+607 silly gunzTarPerm extractEntry deps/libssh-0.6.0/src/config.c
+608 silly gunzTarPerm modified mode [ 'deps/libssh-0.6.0/src/config.c', 438, 420 ]
+609 silly gunzTarPerm extractEntry deps/libssh-0.6.0/src/connect.c
+610 silly gunzTarPerm modified mode [ 'deps/libssh-0.6.0/src/connect.c', 438, 420 ]
+611 silly gunzTarPerm extractEntry deps/libssh-0.6.0/src/crc32.c
+612 silly gunzTarPerm modified mode [ 'deps/libssh-0.6.0/src/crc32.c', 438, 420 ]
+613 silly gunzTarPerm extractEntry deps/libssh-0.6.0/src/curve25519.c
+614 silly gunzTarPerm modified mode [ 'deps/libssh-0.6.0/src/curve25519.c', 438, 420 ]
+615 silly gunzTarPerm extractEntry deps/libssh-0.6.0/src/curve25519_ref.c
+616 silly gunzTarPerm modified mode [ 'deps/libssh-0.6.0/src/curve25519_ref.c', 438, 420 ]
+617 silly gunzTarPerm extractEntry deps/libssh-0.6.0/src/dh.c
+618 silly gunzTarPerm modified mode [ 'deps/libssh-0.6.0/src/dh.c', 438, 420 ]
+619 silly gunzTarPerm extractEntry deps/libssh-0.6.0/src/ecdh.c
+620 silly gunzTarPerm modified mode [ 'deps/libssh-0.6.0/src/ecdh.c', 438, 420 ]
+621 silly gunzTarPerm extractEntry deps/libssh-0.6.0/src/error.c
+622 silly gunzTarPerm modified mode [ 'deps/libssh-0.6.0/src/error.c', 438, 420 ]
+623 silly gunzTarPerm extractEntry deps/libssh-0.6.0/src/gcrypt_missing.c
+624 silly gunzTarPerm modified mode [ 'deps/libssh-0.6.0/src/gcrypt_missing.c', 438, 420 ]
+625 silly gunzTarPerm extractEntry deps/libssh-0.6.0/src/getpass.c
+626 silly gunzTarPerm modified mode [ 'deps/libssh-0.6.0/src/getpass.c', 438, 420 ]
+627 silly gunzTarPerm extractEntry deps/libssh-0.6.0/src/gssapi.c
+628 silly gunzTarPerm modified mode [ 'deps/libssh-0.6.0/src/gssapi.c', 438, 420 ]
+629 silly gunzTarPerm extractEntry deps/libssh-0.6.0/src/gzip.c
+630 silly gunzTarPerm modified mode [ 'deps/libssh-0.6.0/src/gzip.c', 438, 420 ]
+631 silly gunzTarPerm extractEntry deps/libssh-0.6.0/src/init.c
+632 silly gunzTarPerm modified mode [ 'deps/libssh-0.6.0/src/init.c', 438, 420 ]
+633 silly gunzTarPerm extractEntry deps/libssh-0.6.0/src/kex.c
+634 silly gunzTarPerm modified mode [ 'deps/libssh-0.6.0/src/kex.c', 438, 420 ]
+635 silly gunzTarPerm extractEntry deps/libssh-0.6.0/src/kex1.c
+636 silly gunzTarPerm modified mode [ 'deps/libssh-0.6.0/src/kex1.c', 438, 420 ]
+637 silly gunzTarPerm extractEntry deps/libssh-0.6.0/src/known_hosts.c
+638 silly gunzTarPerm modified mode [ 'deps/libssh-0.6.0/src/known_hosts.c', 438, 420 ]
+639 silly gunzTarPerm extractEntry deps/libssh-0.6.0/src/auth.c
+640 silly gunzTarPerm modified mode [ 'deps/libssh-0.6.0/src/auth.c', 438, 420 ]
+641 silly gunzTarPerm extractEntry deps/libssh-0.6.0/src/libcrypto.c
+642 silly gunzTarPerm modified mode [ 'deps/libssh-0.6.0/src/libcrypto.c', 438, 420 ]
+643 silly gunzTarPerm extractEntry deps/libssh-0.6.0/src/libgcrypt.c
+644 silly gunzTarPerm modified mode [ 'deps/libssh-0.6.0/src/libgcrypt.c', 438, 420 ]
+645 silly gunzTarPerm extractEntry deps/libssh-0.6.0/src/log.c
+646 silly gunzTarPerm modified mode [ 'deps/libssh-0.6.0/src/log.c', 438, 420 ]
+647 silly gunzTarPerm extractEntry deps/libssh-0.6.0/src/match.c
+648 silly gunzTarPerm modified mode [ 'deps/libssh-0.6.0/src/match.c', 438, 420 ]
+649 silly gunzTarPerm extractEntry deps/libssh-0.6.0/src/messages.c
+650 silly gunzTarPerm modified mode [ 'deps/libssh-0.6.0/src/messages.c', 438, 420 ]
+651 silly gunzTarPerm extractEntry deps/libssh-0.6.0/src/misc.c
+652 silly gunzTarPerm modified mode [ 'deps/libssh-0.6.0/src/misc.c', 438, 420 ]
+653 silly gunzTarPerm extractEntry deps/libssh-0.6.0/src/options.c
+654 silly gunzTarPerm modified mode [ 'deps/libssh-0.6.0/src/options.c', 438, 420 ]
+655 silly gunzTarPerm extractEntry deps/libssh-0.6.0/src/packet.c
+656 silly gunzTarPerm modified mode [ 'deps/libssh-0.6.0/src/packet.c', 438, 420 ]
+657 silly gunzTarPerm extractEntry deps/libssh-0.6.0/src/packet1.c
+658 silly gunzTarPerm modified mode [ 'deps/libssh-0.6.0/src/packet1.c', 438, 420 ]
+659 silly gunzTarPerm extractEntry deps/libssh-0.6.0/src/packet_cb.c
+660 silly gunzTarPerm modified mode [ 'deps/libssh-0.6.0/src/packet_cb.c', 438, 420 ]
+661 silly gunzTarPerm extractEntry deps/libssh-0.6.0/src/packet_crypt.c
+662 silly gunzTarPerm modified mode [ 'deps/libssh-0.6.0/src/packet_crypt.c', 438, 420 ]
+663 silly gunzTarPerm extractEntry deps/libssh-0.6.0/src/pcap.c
+664 silly gunzTarPerm modified mode [ 'deps/libssh-0.6.0/src/pcap.c', 438, 420 ]
+665 silly gunzTarPerm extractEntry deps/libssh-0.6.0/src/pki.c
+666 silly gunzTarPerm modified mode [ 'deps/libssh-0.6.0/src/pki.c', 438, 420 ]
+667 silly gunzTarPerm extractEntry deps/libssh-0.6.0/src/pki_crypto.c
+668 silly gunzTarPerm modified mode [ 'deps/libssh-0.6.0/src/pki_crypto.c', 438, 420 ]
+669 silly gunzTarPerm extractEntry deps/libssh-0.6.0/src/pki_gcrypt.c
+670 silly gunzTarPerm modified mode [ 'deps/libssh-0.6.0/src/pki_gcrypt.c', 438, 420 ]
+671 silly gunzTarPerm extractEntry deps/libssh-0.6.0/src/poll.c
+672 silly gunzTarPerm modified mode [ 'deps/libssh-0.6.0/src/poll.c', 438, 420 ]
+673 silly gunzTarPerm extractEntry deps/libssh-0.6.0/src/scp.c
+674 silly gunzTarPerm modified mode [ 'deps/libssh-0.6.0/src/scp.c', 438, 420 ]
+675 silly gunzTarPerm extractEntry deps/libssh-0.6.0/src/server.c
+676 silly gunzTarPerm modified mode [ 'deps/libssh-0.6.0/src/server.c', 438, 420 ]
+677 silly gunzTarPerm extractEntry deps/libssh-0.6.0/src/session.c
+678 silly gunzTarPerm modified mode [ 'deps/libssh-0.6.0/src/session.c', 438, 420 ]
+679 silly gunzTarPerm extractEntry deps/libssh-0.6.0/src/sftp.c
+680 silly gunzTarPerm modified mode [ 'deps/libssh-0.6.0/src/sftp.c', 438, 420 ]
+681 silly gunzTarPerm extractEntry deps/libssh-0.6.0/src/sftpserver.c
+682 silly gunzTarPerm modified mode [ 'deps/libssh-0.6.0/src/sftpserver.c', 438, 420 ]
+683 silly gunzTarPerm extractEntry deps/libssh-0.6.0/src/socket.c
+684 silly gunzTarPerm modified mode [ 'deps/libssh-0.6.0/src/socket.c', 438, 420 ]
+685 silly gunzTarPerm extractEntry deps/libssh-0.6.0/src/string.c
+686 silly gunzTarPerm modified mode [ 'deps/libssh-0.6.0/src/string.c', 438, 420 ]
+687 silly gunzTarPerm extractEntry deps/libssh-0.6.0/src/threads/CMakeLists.txt
+688 silly gunzTarPerm modified mode [ 'deps/libssh-0.6.0/src/threads/CMakeLists.txt', 438, 420 ]
+689 silly gunzTarPerm extractEntry deps/libssh-0.6.0/src/threads/pthread.c
+690 silly gunzTarPerm modified mode [ 'deps/libssh-0.6.0/src/threads/pthread.c', 438, 420 ]
+691 silly gunzTarPerm extractEntry deps/libssh-0.6.0/src/threads.c
+692 silly gunzTarPerm modified mode [ 'deps/libssh-0.6.0/src/threads.c', 438, 420 ]
+693 silly gunzTarPerm extractEntry deps/libssh-0.6.0/src/wrapper.c
+694 silly gunzTarPerm modified mode [ 'deps/libssh-0.6.0/src/wrapper.c', 438, 420 ]
+695 silly gunzTarPerm extractEntry deps/libssh-0.6.0/SubmittingPatches
+696 silly gunzTarPerm modified mode [ 'deps/libssh-0.6.0/SubmittingPatches', 438, 420 ]
+697 silly gunzTarPerm extractEntry deps/libssh-0.6.0/tests/sftp_stress/main.c
+698 silly gunzTarPerm modified mode [ 'deps/libssh-0.6.0/tests/sftp_stress/main.c', 438, 420 ]
+699 silly gunzTarPerm extractEntry deps/libssh-0.6.0/tests/authentication.c
+700 silly gunzTarPerm modified mode [ 'deps/libssh-0.6.0/tests/authentication.c', 438, 420 ]
+701 silly gunzTarPerm extractEntry deps/libssh-0.6.0/tests/chmodtest.c
+702 silly gunzTarPerm modified mode [ 'deps/libssh-0.6.0/tests/chmodtest.c', 438, 420 ]
+703 silly gunzTarPerm extractEntry deps/libssh-0.6.0/tests/client/torture_proxycommand.c
+704 silly gunzTarPerm modified mode [ 'deps/libssh-0.6.0/tests/client/torture_proxycommand.c',
+704 silly gunzTarPerm   438,
+704 silly gunzTarPerm   420 ]
+705 silly gunzTarPerm extractEntry deps/libssh-0.6.0/tests/client/CMakeLists.txt
+706 silly gunzTarPerm modified mode [ 'deps/libssh-0.6.0/tests/client/CMakeLists.txt', 438, 420 ]
+707 silly gunzTarPerm extractEntry deps/libssh-0.6.0/tests/client/torture_auth.c
+708 silly gunzTarPerm modified mode [ 'deps/libssh-0.6.0/tests/client/torture_auth.c', 438, 420 ]
+709 silly gunzTarPerm extractEntry deps/libssh-0.6.0/tests/client/torture_connect.c
+710 silly gunzTarPerm modified mode [ 'deps/libssh-0.6.0/tests/client/torture_connect.c', 438, 420 ]
+711 silly gunzTarPerm extractEntry deps/libssh-0.6.0/tests/client/torture_forward.c
+712 silly gunzTarPerm modified mode [ 'deps/libssh-0.6.0/tests/client/torture_forward.c', 438, 420 ]
+713 silly gunzTarPerm extractEntry deps/libssh-0.6.0/tests/client/torture_knownhosts.c
+714 silly gunzTarPerm modified mode [ 'deps/libssh-0.6.0/tests/client/torture_knownhosts.c',
+714 silly gunzTarPerm   438,
+714 silly gunzTarPerm   420 ]
+715 silly gunzTarPerm extractEntry deps/libssh-0.6.0/tests/client/torture_algorithms.c
+716 silly gunzTarPerm modified mode [ 'deps/libssh-0.6.0/tests/client/torture_algorithms.c',
+716 silly gunzTarPerm   438,
+716 silly gunzTarPerm   420 ]
+717 silly gunzTarPerm extractEntry deps/libssh-0.6.0/tests/client/torture_request_env.c
+718 silly gunzTarPerm modified mode [ 'deps/libssh-0.6.0/tests/client/torture_request_env.c',
+718 silly gunzTarPerm   438,
+718 silly gunzTarPerm   420 ]
+719 silly gunzTarPerm extractEntry deps/libssh-0.6.0/tests/client/torture_session.c
+720 silly gunzTarPerm modified mode [ 'deps/libssh-0.6.0/tests/client/torture_session.c', 438, 420 ]
+721 silly gunzTarPerm extractEntry deps/libssh-0.6.0/tests/client/torture_sftp_dir.c
+722 silly gunzTarPerm modified mode [ 'deps/libssh-0.6.0/tests/client/torture_sftp_dir.c', 438, 420 ]
+723 silly gunzTarPerm extractEntry deps/libssh-0.6.0/tests/client/torture_sftp_read.c
+724 silly gunzTarPerm modified mode [ 'deps/libssh-0.6.0/tests/client/torture_sftp_read.c',
+724 silly gunzTarPerm   438,
+724 silly gunzTarPerm   420 ]
+725 silly gunzTarPerm extractEntry deps/libssh-0.6.0/tests/client/torture_sftp_static.c
+726 silly gunzTarPerm modified mode [ 'deps/libssh-0.6.0/tests/client/torture_sftp_static.c',
+726 silly gunzTarPerm   438,
+726 silly gunzTarPerm   420 ]
+727 silly gunzTarPerm extractEntry deps/libssh-0.6.0/tests/CMakeLists.txt
+728 silly gunzTarPerm modified mode [ 'deps/libssh-0.6.0/tests/CMakeLists.txt', 438, 420 ]
+729 silly gunzTarPerm extractEntry deps/libssh-0.6.0/tests/cmdline.c
+730 silly gunzTarPerm modified mode [ 'deps/libssh-0.6.0/tests/cmdline.c', 438, 420 ]
+731 silly gunzTarPerm extractEntry deps/libssh-0.6.0/tests/connection.c
+732 silly gunzTarPerm modified mode [ 'deps/libssh-0.6.0/tests/connection.c', 438, 420 ]
+733 silly gunzTarPerm extractEntry deps/libssh-0.6.0/tests/ctest-default.cmake
+734 silly gunzTarPerm modified mode [ 'deps/libssh-0.6.0/tests/ctest-default.cmake', 438, 420 ]
+735 silly gunzTarPerm extractEntry deps/libssh-0.6.0/tests/generate.py
+736 silly gunzTarPerm modified mode [ 'deps/libssh-0.6.0/tests/generate.py', 438, 420 ]
+737 silly gunzTarPerm extractEntry deps/libssh-0.6.0/tests/benchmarks/bench1.sh
+738 silly gunzTarPerm modified mode [ 'deps/libssh-0.6.0/tests/benchmarks/bench1.sh', 438, 420 ]
+739 silly gunzTarPerm extractEntry deps/libssh-0.6.0/tests/benchmarks/bench2.sh
+740 silly gunzTarPerm modified mode [ 'deps/libssh-0.6.0/tests/benchmarks/bench2.sh', 438, 420 ]
+741 silly gunzTarPerm extractEntry deps/libssh-0.6.0/tests/benchmarks/benchmarks.c
+742 silly gunzTarPerm modified mode [ 'deps/libssh-0.6.0/tests/benchmarks/benchmarks.c', 438, 420 ]
+743 silly gunzTarPerm extractEntry deps/libssh-0.6.0/tests/benchmarks/benchmarks.h
+744 silly gunzTarPerm modified mode [ 'deps/libssh-0.6.0/tests/benchmarks/benchmarks.h', 438, 420 ]
+745 silly gunzTarPerm extractEntry deps/libssh-0.6.0/tests/benchmarks/bench_raw.c
+746 silly gunzTarPerm modified mode [ 'deps/libssh-0.6.0/tests/benchmarks/bench_raw.c', 438, 420 ]
+747 silly gunzTarPerm extractEntry deps/libssh-0.6.0/tests/benchmarks/bench_scp.c
+748 silly gunzTarPerm modified mode [ 'deps/libssh-0.6.0/tests/benchmarks/bench_scp.c', 438, 420 ]
+749 silly gunzTarPerm extractEntry deps/libssh-0.6.0/tests/benchmarks/bench_sftp.c
+750 silly gunzTarPerm modified mode [ 'deps/libssh-0.6.0/tests/benchmarks/bench_sftp.c', 438, 420 ]
+751 silly gunzTarPerm extractEntry deps/libssh-0.6.0/tests/benchmarks/CMakeLists.txt
+752 silly gunzTarPerm modified mode [ 'deps/libssh-0.6.0/tests/benchmarks/CMakeLists.txt', 438, 420 ]
+753 silly gunzTarPerm extractEntry deps/libssh-0.6.0/tests/benchmarks/latency.c
+754 silly gunzTarPerm modified mode [ 'deps/libssh-0.6.0/tests/benchmarks/latency.c', 438, 420 ]
+755 silly gunzTarPerm extractEntry deps/libssh-0.6.0/tests/tests.h
+756 silly gunzTarPerm modified mode [ 'deps/libssh-0.6.0/tests/tests.h', 438, 420 ]
+757 silly gunzTarPerm extractEntry deps/libssh-0.6.0/tests/test_exec.c
+758 silly gunzTarPerm modified mode [ 'deps/libssh-0.6.0/tests/test_exec.c', 438, 420 ]
+759 silly gunzTarPerm extractEntry deps/libssh-0.6.0/tests/test_pcap.c
+760 silly gunzTarPerm modified mode [ 'deps/libssh-0.6.0/tests/test_pcap.c', 438, 420 ]
+761 silly gunzTarPerm extractEntry deps/libssh-0.6.0/tests/test_socket.c
+762 silly gunzTarPerm modified mode [ 'deps/libssh-0.6.0/tests/test_socket.c', 438, 420 ]
+763 silly gunzTarPerm extractEntry deps/libssh-0.6.0/tests/test_tunnel.c
+764 silly gunzTarPerm modified mode [ 'deps/libssh-0.6.0/tests/test_tunnel.c', 438, 420 ]
+765 silly gunzTarPerm extractEntry deps/libssh-0.6.0/tests/torture.c
+766 silly gunzTarPerm modified mode [ 'deps/libssh-0.6.0/tests/torture.c', 438, 420 ]
+767 silly gunzTarPerm extractEntry deps/libssh-0.6.0/tests/torture.h
+768 silly gunzTarPerm modified mode [ 'deps/libssh-0.6.0/tests/torture.h', 438, 420 ]
+769 silly gunzTarPerm extractEntry deps/libssh-0.6.0/tests/unittests/torture_keyfiles.c
+770 silly gunzTarPerm modified mode [ 'deps/libssh-0.6.0/tests/unittests/torture_keyfiles.c',
+770 silly gunzTarPerm   438,
+770 silly gunzTarPerm   420 ]
+771 silly gunzTarPerm extractEntry deps/libssh-0.6.0/tests/unittests/CMakeLists.txt
+772 silly gunzTarPerm modified mode [ 'deps/libssh-0.6.0/tests/unittests/CMakeLists.txt', 438, 420 ]
+773 silly gunzTarPerm extractEntry deps/libssh-0.6.0/tests/unittests/torture_callbacks.c
+774 silly gunzTarPerm modified mode [ 'deps/libssh-0.6.0/tests/unittests/torture_callbacks.c',
+774 silly gunzTarPerm   438,
+774 silly gunzTarPerm   420 ]
+775 silly gunzTarPerm extractEntry deps/libssh-0.6.0/tests/unittests/torture_channel.c
+776 silly gunzTarPerm modified mode [ 'deps/libssh-0.6.0/tests/unittests/torture_channel.c',
+776 silly gunzTarPerm   438,
+776 silly gunzTarPerm   420 ]
+777 silly gunzTarPerm extractEntry deps/libssh-0.6.0/tests/unittests/torture_init.c
+778 silly gunzTarPerm modified mode [ 'deps/libssh-0.6.0/tests/unittests/torture_init.c', 438, 420 ]
+779 silly gunzTarPerm extractEntry deps/libssh-0.6.0/tests/unittests/torture_isipaddr.c
+780 silly gunzTarPerm modified mode [ 'deps/libssh-0.6.0/tests/unittests/torture_isipaddr.c',
+780 silly gunzTarPerm   438,
+780 silly gunzTarPerm   420 ]
+781 silly gunzTarPerm extractEntry deps/libssh-0.6.0/tests/unittests/torture_buffer.c
+782 silly gunzTarPerm modified mode [ 'deps/libssh-0.6.0/tests/unittests/torture_buffer.c',
+782 silly gunzTarPerm   438,
+782 silly gunzTarPerm   420 ]
+783 silly gunzTarPerm extractEntry deps/libssh-0.6.0/tests/unittests/torture_list.c
+784 silly gunzTarPerm modified mode [ 'deps/libssh-0.6.0/tests/unittests/torture_list.c', 438, 420 ]
+785 silly gunzTarPerm extractEntry deps/libssh-0.6.0/tests/unittests/torture_misc.c
+786 silly gunzTarPerm modified mode [ 'deps/libssh-0.6.0/tests/unittests/torture_misc.c', 438, 420 ]
+787 silly gunzTarPerm extractEntry deps/libssh-0.6.0/tests/unittests/torture_options.c
+788 silly gunzTarPerm modified mode [ 'deps/libssh-0.6.0/tests/unittests/torture_options.c',
+788 silly gunzTarPerm   438,
+788 silly gunzTarPerm   420 ]
+789 silly gunzTarPerm extractEntry deps/libssh-0.6.0/tests/unittests/torture_pki.c
+790 silly gunzTarPerm modified mode [ 'deps/libssh-0.6.0/tests/unittests/torture_pki.c', 438, 420 ]
+791 silly gunzTarPerm extractEntry deps/libssh-0.6.0/tests/unittests/torture_rand.c
+792 silly gunzTarPerm modified mode [ 'deps/libssh-0.6.0/tests/unittests/torture_rand.c', 438, 420 ]
+793 silly gunzTarPerm extractEntry deps/libssh-0.6.0/tests/valgrind.supp
+794 silly gunzTarPerm modified mode [ 'deps/libssh-0.6.0/tests/valgrind.supp', 438, 420 ]
+795 silly gunzTarPerm extractEntry deps/libssh.gyp
+796 silly gunzTarPerm modified mode [ 'deps/libssh.gyp', 438, 420 ]
+797 silly gunzTarPerm extractEntry .jshintrc
+798 silly gunzTarPerm modified mode [ '.jshintrc', 438, 420 ]
+799 silly gunzTarPerm extractEntry .dntrc
+800 silly gunzTarPerm modified mode [ '.dntrc', 438, 420 ]
+801 silly gunzTarPerm extractEntry lib/channel.js
+802 silly gunzTarPerm modified mode [ 'lib/channel.js', 438, 420 ]
+803 silly gunzTarPerm extractEntry lib/server.js
+804 silly gunzTarPerm modified mode [ 'lib/server.js', 438, 420 ]
+805 silly gunzTarPerm extractEntry lib/session.js
+806 silly gunzTarPerm modified mode [ 'lib/session.js', 438, 420 ]
+807 silly gunzTarPerm extractEntry lib/stat.js
+808 silly gunzTarPerm modified mode [ 'lib/stat.js', 438, 420 ]
+809 silly gunzTarPerm extractEntry .travis.yml
+810 silly gunzTarPerm modified mode [ '.travis.yml', 438, 420 ]
+811 silly gunzTarPerm extractEntry binding.gyp
+812 silly gunzTarPerm modified mode [ 'binding.gyp', 438, 420 ]
+813 silly gunzTarPerm extractEntry CONTRIBUTING.md
+814 silly gunzTarPerm modified mode [ 'CONTRIBUTING.md', 438, 420 ]
+815 silly gunzTarPerm extractEntry src/server.cc
+816 silly gunzTarPerm modified mode [ 'src/server.cc', 438, 420 ]
+817 silly gunzTarPerm extractEntry src/channel.cc
+818 silly gunzTarPerm modified mode [ 'src/channel.cc', 438, 420 ]
+819 silly gunzTarPerm extractEntry src/message.cc
+820 silly gunzTarPerm modified mode [ 'src/message.cc', 438, 420 ]
+821 silly gunzTarPerm extractEntry src/message.h
+822 silly gunzTarPerm modified mode [ 'src/message.h', 438, 420 ]
+823 silly gunzTarPerm extractEntry src/nssh.cc
+824 silly gunzTarPerm modified mode [ 'src/nssh.cc', 438, 420 ]
+825 silly gunzTarPerm extractEntry src/nssh.h
+826 silly gunzTarPerm modified mode [ 'src/nssh.h', 438, 420 ]
+827 silly gunzTarPerm extractEntry src/channel.h
+828 silly gunzTarPerm modified mode [ 'src/channel.h', 438, 420 ]
+829 silly gunzTarPerm extractEntry src/server.h
+830 silly gunzTarPerm modified mode [ 'src/server.h', 438, 420 ]
+831 silly gunzTarPerm extractEntry src/session.cc
+832 silly gunzTarPerm modified mode [ 'src/session.cc', 438, 420 ]
+833 silly gunzTarPerm extractEntry src/session.h
+834 silly gunzTarPerm modified mode [ 'src/session.h', 438, 420 ]
+835 silly gunzTarPerm extractEntry src/sftp_message.cc
+836 silly gunzTarPerm modified mode [ 'src/sftp_message.cc', 438, 420 ]
+837 silly gunzTarPerm extractEntry src/sftp_message.h
+838 silly gunzTarPerm modified mode [ 'src/sftp_message.h', 438, 420 ]
+839 silly gunzTarPerm extractEntry test/basic-test.js
+840 silly gunzTarPerm modified mode [ 'test/basic-test.js', 438, 420 ]
+841 silly gunzTarPerm extractEntry test/exec-test.js
+842 silly gunzTarPerm modified mode [ 'test/exec-test.js', 438, 420 ]
+843 silly gunzTarPerm extractEntry test/execute-server.js
+844 silly gunzTarPerm modified mode [ 'test/execute-server.js', 438, 420 ]
+845 silly gunzTarPerm extractEntry test/sftp-test.js
+846 silly gunzTarPerm modified mode [ 'test/sftp-test.js', 438, 420 ]
+847 silly gunzTarPerm extractEntry test/standard-connection-test.js
+848 silly gunzTarPerm modified mode [ 'test/standard-connection-test.js', 438, 420 ]
+849 silly gunzTarPerm extractEntry test/util.js
+850 silly gunzTarPerm modified mode [ 'test/util.js', 438, 420 ]
+851 silly gunzTarPerm extractEntry test/build/config.gypi
+852 silly gunzTarPerm modified mode [ 'test/build/config.gypi', 438, 420 ]
+853 silly gunzTarPerm extractEntry test/keys/host_dsa
+854 silly gunzTarPerm modified mode [ 'test/keys/host_dsa', 438, 420 ]
+855 silly gunzTarPerm extractEntry test/keys/host_dsa.pub
+856 silly gunzTarPerm modified mode [ 'test/keys/host_dsa.pub', 438, 420 ]
+857 silly gunzTarPerm extractEntry test/keys/host_rsa
+858 silly gunzTarPerm modified mode [ 'test/keys/host_rsa', 438, 420 ]
+859 silly gunzTarPerm extractEntry test/keys/host_rsa.pub
+860 silly gunzTarPerm modified mode [ 'test/keys/host_rsa.pub', 438, 420 ]
+861 silly gunzTarPerm extractEntry test/keys/id_rsa
+862 silly gunzTarPerm modified mode [ 'test/keys/id_rsa', 438, 420 ]
+863 silly gunzTarPerm extractEntry test/keys/id_rsa.pub
+864 silly gunzTarPerm modified mode [ 'test/keys/id_rsa.pub', 438, 420 ]
+865 silly gunzTarPerm extractEntry test/testdata.bin
+866 silly gunzTarPerm modified mode [ 'test/testdata.bin', 438, 420 ]
+867 silly lockFile 2577a3f6-ming-npm-cache-ssh-1-7-1-package tar://C:\Users\sony\AppData\Roaming\npm-cache\ssh\1.7.1\package
+868 silly lockFile 2577a3f6-ming-npm-cache-ssh-1-7-1-package tar://C:\Users\sony\AppData\Roaming\npm-cache\ssh\1.7.1\package
+869 silly lockFile a2e6a39c--npm-cache-ssh-1-7-1-package-tgz tar://C:\Users\sony\AppData\Roaming\npm-cache\ssh\1.7.1\package.tgz
+870 silly lockFile a2e6a39c--npm-cache-ssh-1-7-1-package-tgz tar://C:\Users\sony\AppData\Roaming\npm-cache\ssh\1.7.1\package.tgz
+871 verbose chmod C:\Users\sony\AppData\Roaming\npm-cache\ssh\1.7.1\package.tgz 644
+872 silly chown skipping for windows C:\Users\sony\AppData\Roaming\npm-cache\ssh\1.7.1\package.tgz
+873 silly lockFile ba146d2d-stry-npmjs-org-ssh-ssh-1-7-1-tgz https://registry.npmjs.org/ssh/-/ssh-1.7.1.tgz
+874 silly lockFile ba146d2d-stry-npmjs-org-ssh-ssh-1-7-1-tgz https://registry.npmjs.org/ssh/-/ssh-1.7.1.tgz
+875 silly lockFile bd1864b7-ssh-1-7-1 ssh@1.7.1
+876 silly lockFile bd1864b7-ssh-1-7-1 ssh@1.7.1
+877 silly lockFile c1fb3dea-ssh ssh@
+878 silly lockFile c1fb3dea-ssh ssh@
+879 silly resolved [ { name: 'ssh',
+879 silly resolved     description: 'A Node.js binding for libssh',
+879 silly resolved     maintainers: [ [Object], [Object], [Object], [Object] ],
+879 silly resolved     keywords: [ 'ssh', 'libssh' ],
+879 silly resolved     version: '1.7.1',
+879 silly resolved     main: 'index.js',
+879 silly resolved     dependencies: { bindings: '~1.1.0', nan: '~0.6.0' },
+879 silly resolved     devDependencies:
+879 silly resolved      { tap: '*',
+879 silly resolved        ssh2: '*',
+879 silly resolved        bl: '*',
+879 silly resolved        'node-gyp': '~0.12.1',
+879 silly resolved        'pty.js': '~0.2.3' },
+879 silly resolved     repository: { type: 'git', url: 'https://github.com/rvagg/node-libssh.git' },
+879 silly resolved     scripts:
+879 silly resolved      { test: 'tap test/*-test.js --stderr',
+879 silly resolved        install: 'node-gyp rebuild' },
+879 silly resolved     license: 'MIT',
+879 silly resolved     gypfile: true,
+879 silly resolved     readme: 'node-libssh\n===========\n\nA Low-level Node.js binding for [libssh](http://www.libssh.org/)\n----------------------------------------------------------------\n\n[![Build Status](https://secure.travis-ci.org/rvagg/node-libssh.png)](http://travis-ci.org/rvagg/node-libssh)\n\nCurrently this project is only concerned with a subset of the **server** functionality provided by libssh. The client functionality may be added at a future date (and you\'re invited to contribute if you want it!).\n\nYou can find it in npm as **ssh**, (version 0.0.1 of which is [substack\'s version](https://github.com/substack/node-ssh) with an older libssh).\n\n[![NPM](https://nodei.co/npm/ssh.png?downloads)](https://nodei.co/npm/ssh/)\n\n### Installing\n\nTo compile, you\'ll need to have libkrb5-dev (kerberos development files) and libssl-dev (openssl development files) installed on your system. `npm install ssh` should do the rest.\n\n### Lets make a Node.js SSH server!\n\n```js\nvar server = libssh.createServer({\n    hostRsaKeyFile : \'/path/to/host_rsa\'\n  , hostDsaKeyFile : \'/path/to/host_dsa\'\n})\n\nserver.on(\'connection\', function (session) {\n  session.on(\'auth\', function (message) {\n    if (message.subtype == \'publickey\'\n        && message.authUser == \'$ecretb@ckdoor\'\n        && message.comparePublicKey(\n            fs.readFileSync(\'/path/to/id_rsa.pub\'))) {\n      // matching keypair, correct user\n      return message.replyAuthSuccess()\n    }\n\n    if (message.subtype == \'password\'\n        && message.authUser == \'$ecretb@ckdoor\'\n        && message.authPassword == \'nsa\') {\n      // correct user, matching password\n      return message.replyAuthSuccess()\n    }\n    message.replyDefault() // auth failed\n  })\n\n  session.on(\'channel\', function (channel) {\n    channel.on(\'end\', function () {\n      // current channel ended\n    })\n    channel.on(\'exec\', function (message) {\n      // execute `message.execCommand`\n    })\n    channel.on(\'subsystem\', function (message) {\n      // `message.subsystem` tells you what\'s requested\n      // could be \'sftp\'\n    })\n    channel.on(\'pty\', function (message) {\n      // `message` contains relevant terminal properties\n      message.replySuccess()\n    })\n    channel.on(\'shell\', function (message) {\n      // enter a shell mode, interact directly with the client\n      message.replySuccess()\n      // `channel` is a duplex stream allowing you to interact with\n      // the client\n\n      channel.write(\'Welcome to my party!\\n\')\n      // lets do a console chat via ssh!\n      process.stdin                  // take stdin and pipe it to the channel\n        .pipe(channel.pipe(channel)) // pipe the channel to itself for an echo\n        .pipe(process.stdout)        // pipe the channel to stdout\n    })\n  })\n})\n\nserver.listen(3333)\n```\n\nSee *[stdiopipe.js](https://github.com/rvagg/node-libssh/blob/master/examples/stdiopipe.js)* in the examples directory if you want to try this out.\n\n### Remote exec!\n\nWe can receive **exec** requests and send the results back to the client. In this example we\'ll allow *any* exec if you have the right publickey.\n\n```js\n// a simple exec utility that spawns a process and pipes stdio to\n// back to the channel\nfunction exec (channel, cmd) {\n  var cmdarr = cmd.split(\' \')\n    , child  = spawn(cmdarr.shift(), cmdarr)\n\n  child.stdout.pipe(channel)\n\n  child.on(\'close\', function (code) {\n    // explicitly end the command with an EOF and send the exit status\n    channel.sendEof()\n    channel.sendExitStatus(code)\n    channel.close()\n  })\n}\n\nserver.on(\'connection\', function (session) {\n  session.on(\'auth\', function (message) {\n    if (message.subtype == \'publickey\'\n        && message.comparePublicKey(\n            fs.readFileSync(__dirname + \'/path/to/id_rsa.pub\'))) {\n      // could check message.authUser if we cared about the username\n      return message.replyAuthSuccess()\n    }\n    message.replyDefault() // auth failed\n  })\n\n  session.on(\'channel\', function (channel) {\n    channel.on(\'exec\', function (message) {\n      message.replySuccess() // a success reply is needed before we send output\n      exec(channel, message.execCommand)\n    })\n  })\n})\n```\n\nSee *[exec.js](https://github.com/rvagg/node-libssh/blob/master/examples/exec.js)* in the examples directory if you want to try this out.\n\n### How about some SFTP goodness?\n\n```js\nserver.on(\'connection\', function (session) {\n  session.on(\'auth\', function (message) {\n    // we\'re just going to let everyone in to this party!\n    return message.replyAuthSuccess()\n  })\n\n  // authenticated sessions can open channels, you need to react to\n  // events for each channel\n  session.on(\'channel\', function (channel) {\n    channel.on(\'subsystem\', function (message) {\n      if (message.subsystem == \'sftp\') {\n        // we have to indicate success and also accept a switch to\n        // SFTP mode\n        message.replySuccess()\n        message.sftpAccept()\n      }\n    })\n\n    // after switching in to sftp mode with `message.sftpAccept()` we will\n    // now be receiving \'sftp:X\' messages, where *X* is an SFTP command\n    // the messages are also emitted on the \'sftpmessage\' event, for convenience\n\n    channel.on(\'sftp:realpath\', function (message) {\n      // client wants to know the real path to the given file/directory\n      // provided in `message.filename`, we respond with a `message.replyName()`\n      // we don\'t have to be truthful...\n      if (message.filename == \'.\' || (/\\/$/).test(message.filename)) {\n        message.replyName(\'/foo/bar/\', {\n           permissions: +libssh.Stat(\'755\').dir() // see below for info about Stat\n        })\n      } else {\n        message.replyName(\'fileforyou.txt\', {\n           permissions: +libssh.Stat(\'644\').reg()\n        })\n      }\n    })\n\n    channel.on(\'sftp:stat\', statHandle)\n\n    function statHandle (message) {\n      // `message.filename` contains the path the client wants to stat\n\n      // let\'s play a game of "pretend":\n      var attrs = {\n          permissions: +libssh.Stat(644).reg()\n        , uid: 101\n        , gid: 202\n        , size: fs.statSync(\'fileforyou.txt\').size // must be accurate\n        , atime: Date.now()\n        , mtime: Date.now()\n      }\n\n      message.replyAttr(attrs)\n    }\n\n    // can be handled the same way as \'stat\' if you like\n    channel.on(\'sftp:lstat\', statHandle)\n\n    channel.on(\'sftp:opendir\', function (message) {\n      // client wants to move to a given directory, you must return a \'handle\'\n      // that represents that directory, it can just be the directory name\n      message.replyHandle(message.filename)\n    })\n\n    // see sftp:readdir to know why we\'re doing this\n    var lastmsg\n    channel.on(\'sftpmessage\', function (message) {\n      lastmsg = message\n    })\n\n    channel.on(\'sftp:readdir\', function (message) {\n      // client wants to read the directory, you must respond using\n      // `message.replyNames()` with an array of files and their attributes\n\n      // the client will keep sending a \'readdir\' until you give it an\n      // OK, so you have to keep track of state. \'sftpmessage\' is emitted after\n      // sftp:* so you can easily use it for this purpose\n\n      // you probably should be more intelligent than this which will return\n      // the same list for each readdir:\n\n      if (lastmsg.type == \'readdir\')\n        return message.replyStatus(\'ok\')\n\n      message.replyNames([\n          { filename: \'foo\', longname: \'foo\'\n              , attrs: { permissions: +libssh.Stat(644).reg() } }\n        , { filename: \'bar\', longname: \'bar\'\n              , attrs: { permissions: +libssh.Stat(750).dir() } }\n        , { filename: \'baz\', longname: \'baz\'\n              , attrs: { permissions: +libssh.Stat(600).reg() } }\n      ])\n    })\n\n    var openHandles = {}\n\n    channel.on(\'sftp:open\', function (message) {\n      // client wants to open `message.filename`, you must return a \'handle\'\n      // that represents that file, it can just be the filename\n      // we\'re just going to give them the same file no matter what they\n      // request\n      openHandles[\'@\' + message.filename] = fs.openSync(\'fileforyou.txt\', \'r\')\n      message.replyHandle(\'@\' + message.filename)\n    })\n\n    channel.on(\'sftp:read\', function (message) {\n      // client wants to read a chunk of the given handle that represents\n      // an open file\n      // sadly there is no easy streaming here, that\'s left up to you to\n      // implement\n\n      var buf = new Buffer(message.length) // message.length the reqeusted amount\n      var length = fs.readSync(\n            openHandles[message.handle]\n          , buf\n          , 0\n          , message.length\n          , message.offset // the requested start offset for a read\n        )\n\n      if (!length) // no more data left to read, send an EOF\n        message.replyStatus(\'eof\')\n      else // `message.replyData()` needs a buffer and the length to send\n        message.replyData(buf, length)\n    })\n\n    channel.on(\'sftp:close\', function (message) {\n      // client wants to close `message.handle`, tell it that it\'s done\n      if (openHandles[message.handle]) {\n        fs.closeSync(openHandles[message.handle])\n        openHandles[message.handle] = undefined\n      }\n      message.replyStatus(\'ok\')\n    })\n  })\n})\n```\n\nSee *[trickysftp.js](https://github.com/rvagg/node-libssh/blob/master/examples/stdiopipe.js)* in the examples directory if you want to try this out.\n\nSFTP events include:\n\n * sftp:open\n * sftp:close\n * sftp:read\n * sftp:write\n * sftp:lstat\n * sftp:fstat\n * sftp:setstat\n * sftp:fsetstat\n * sftp:opendir\n * sftp:readdir\n * sftp:remove\n * sftp:mkdir\n * sftp:rmdir\n * sftp:realpath\n * sftp:stat\n * sftp:rename\n * sftp:readlink\n * sftp:symlink\n\nSee the test files for more usage examples.\n\n\n### `Stat`\n\n*TODO: document this...*\n\n## Important project notes\n\nThis project is very new and immature and is bound to have some warts. There are a few known, minor memory leaks that need to be addressed. While node-libssh makes use of both libssh\'s nonblocking I/O facilities and libuv\'s socket polling, it\'s likely that there could be more performance gained from some more async work within the binding code.\n\nThe streams do not implement back-pressure very well, particularly the read component of channel stream which will just keep on filling up its buffer.\n\nPlease file issues if you have any questions or concerns or want to see a particular area focused on for development&mdash;just don\'t expect me to be able to justify time developing or fixing your own pet features, contributions would be greatly appreciated no matter how much of a n00b you feel.\n\nIf you want to see more of what\'s going on, you can send a `debug:true` option when you make a new `Server` instance, it\'ll print out some message details. There\'s additional debug cruft you can enable in the source but you\'ll have to dig to find that and it\'s very noisy.\n\n<a name="contributing"></a>\nContributing\n------------\n\nnode-libssh is an **OPEN Open Source Project**. This means that:\n\n> Individuals making significant and valuable contributions are given commit-access to the project to contribute as they see fit. This project is more like an open wiki than a standard guarded open source project.\n\nSee the [CONTRIBUTING.md](https://github.com/rvagg/node-libssh/blob/master/CONTRIBUTING.md) file for more details.\n\n<a name="maintainers"></a>\nMaintainers\n-----------\n * Rod Vagg [@rvagg](https://github.com/rvagg)\n * Brian White [@mscdex](https://github.com/mscdex)\n * Audrius Butkevicius\n   [@AudriusButkevicius](https://github.com/AudriusButkevicius)\n * Darius Clark [@dariusc93](https://github.com/dariusc93)\n\n\n<a name="licence"></a>\nLicence &amp; copyright\n-------------------\n\nCopyright (c) 2013-2014 Rod Vagg and Maintainers (above)\n\nnode-libssh is licensed under an MIT +no-false-attribs license. All rights not explicitly granted in the MIT license are reserved. See the included LICENSE file for more details.\n\n*node-libssh builds on the excellent work of the [libssh](http://www.libssh.org/) team. **libssh** is licensed under the LGPLv2.\n',
+879 silly resolved     readmeFilename: 'README.md',
+879 silly resolved     bugs: { url: 'https://github.com/rvagg/node-libssh/issues' },
+879 silly resolved     homepage: 'https://github.com/rvagg/node-libssh',
+879 silly resolved     _id: 'ssh@1.7.1',
+879 silly resolved     dist: { shasum: 'ed7439c88d1caa68844c2f7159462f4149a450ff' },
+879 silly resolved     _from: 'ssh@',
+879 silly resolved     _resolved: 'https://registry.npmjs.org/ssh/-/ssh-1.7.1.tgz' } ]
+880 info install ssh@1.7.1 into C:\wamp\www\Nabu\nabu
+881 info installOne ssh@1.7.1
+882 info C:\wamp\www\Nabu\nabu\node_modules\ssh unbuild
+883 verbose tar unpack C:\Users\sony\AppData\Roaming\npm-cache\ssh\1.7.1\package.tgz
+884 silly lockFile 72a97579-p-www-Nabu-nabu-node-modules-ssh tar://C:\wamp\www\Nabu\nabu\node_modules\ssh
+885 verbose lock tar://C:\wamp\www\Nabu\nabu\node_modules\ssh C:\Users\sony\AppData\Roaming\npm-cache\72a97579-p-www-Nabu-nabu-node-modules-ssh.lock
+886 silly lockFile a2e6a39c--npm-cache-ssh-1-7-1-package-tgz tar://C:\Users\sony\AppData\Roaming\npm-cache\ssh\1.7.1\package.tgz
+887 verbose lock tar://C:\Users\sony\AppData\Roaming\npm-cache\ssh\1.7.1\package.tgz C:\Users\sony\AppData\Roaming\npm-cache\a2e6a39c--npm-cache-ssh-1-7-1-package-tgz.lock
+888 silly gunzTarPerm modes [ '755', '644' ]
+889 silly gunzTarPerm extractEntry package.json
+890 silly gunzTarPerm modified mode [ 'package.json', 438, 420 ]
+891 silly gunzTarPerm extractEntry .npmignore
+892 silly gunzTarPerm modified mode [ '.npmignore', 438, 420 ]
+893 silly gunzTarPerm extractEntry README.md
+894 silly gunzTarPerm modified mode [ 'README.md', 438, 420 ]
+895 silly gunzTarPerm extractEntry LICENSE
+896 silly gunzTarPerm modified mode [ 'LICENSE', 438, 420 ]
+897 silly gunzTarPerm extractEntry index.js
+898 silly gunzTarPerm modified mode [ 'index.js', 438, 420 ]
+899 silly gunzTarPerm extractEntry examples/exec.js
+900 silly gunzTarPerm modified mode [ 'examples/exec.js', 438, 420 ]
+901 silly gunzTarPerm extractEntry examples/stdiopipe.js
+902 silly gunzTarPerm modified mode [ 'examples/stdiopipe.js', 438, 420 ]
+903 silly gunzTarPerm extractEntry examples/term.js
+904 silly gunzTarPerm modified mode [ 'examples/term.js', 438, 420 ]
+905 silly gunzTarPerm extractEntry examples/trickysftp.js
+906 silly gunzTarPerm modified mode [ 'examples/trickysftp.js', 438, 420 ]
+907 silly gunzTarPerm extractEntry examples/fileforyou.txt
+908 silly gunzTarPerm modified mode [ 'examples/fileforyou.txt', 438, 420 ]
+909 silly gunzTarPerm extractEntry deps/build/config.gypi
+910 silly gunzTarPerm modified mode [ 'deps/build/config.gypi', 438, 420 ]
+911 silly gunzTarPerm extractEntry deps/include/config.h
+912 silly gunzTarPerm modified mode [ 'deps/include/config.h', 438, 420 ]
+913 silly gunzTarPerm extractEntry deps/include-osx/config.h
+914 silly gunzTarPerm modified mode [ 'deps/include-osx/config.h', 438, 420 ]
+915 silly gunzTarPerm extractEntry deps/libssh-0.6.0/README
+916 silly gunzTarPerm modified mode [ 'deps/libssh-0.6.0/README', 438, 420 ]
+917 silly gunzTarPerm extractEntry deps/libssh-0.6.0/doc/introduction.dox
+918 silly gunzTarPerm modified mode [ 'deps/libssh-0.6.0/doc/introduction.dox', 438, 420 ]
+919 silly gunzTarPerm extractEntry deps/libssh-0.6.0/doc/authentication.dox
+920 silly gunzTarPerm modified mode [ 'deps/libssh-0.6.0/doc/authentication.dox', 438, 420 ]
+921 silly gunzTarPerm extractEntry deps/libssh-0.6.0/doc/command.dox
+922 silly gunzTarPerm modified mode [ 'deps/libssh-0.6.0/doc/command.dox', 438, 420 ]
+923 silly gunzTarPerm extractEntry deps/libssh-0.6.0/doc/curve25519-sha256@libssh.org.txt
+924 silly gunzTarPerm modified mode [ 'deps/libssh-0.6.0/doc/curve25519-sha256@libssh.org.txt',
+924 silly gunzTarPerm   438,
+924 silly gunzTarPerm   420 ]
+925 silly gunzTarPerm extractEntry deps/libssh-0.6.0/doc/doxy.config.in
+926 silly gunzTarPerm modified mode [ 'deps/libssh-0.6.0/doc/doxy.config.in', 438, 420 ]
+927 silly gunzTarPerm extractEntry deps/libssh-0.6.0/doc/doxy.trac.in
+928 silly gunzTarPerm modified mode [ 'deps/libssh-0.6.0/doc/doxy.trac.in', 438, 420 ]
+929 silly gunzTarPerm extractEntry deps/libssh-0.6.0/doc/forwarding.dox
+930 silly gunzTarPerm modified mode [ 'deps/libssh-0.6.0/doc/forwarding.dox', 438, 420 ]
+931 silly gunzTarPerm extractEntry deps/libssh-0.6.0/doc/guided_tour.dox
+932 silly gunzTarPerm modified mode [ 'deps/libssh-0.6.0/doc/guided_tour.dox', 438, 420 ]
+933 silly gunzTarPerm extractEntry deps/libssh-0.6.0/doc/CMakeLists.txt
+934 silly gunzTarPerm modified mode [ 'deps/libssh-0.6.0/doc/CMakeLists.txt', 438, 420 ]
+935 silly gunzTarPerm extractEntry deps/libssh-0.6.0/doc/linking.dox
+936 silly gunzTarPerm modified mode [ 'deps/libssh-0.6.0/doc/linking.dox', 438, 420 ]
+937 silly gunzTarPerm extractEntry deps/libssh-0.6.0/doc/mainpage.dox
+938 silly gunzTarPerm modified mode [ 'deps/libssh-0.6.0/doc/mainpage.dox', 438, 420 ]
+939 silly gunzTarPerm extractEntry deps/libssh-0.6.0/doc/scp.dox
+940 silly gunzTarPerm modified mode [ 'deps/libssh-0.6.0/doc/scp.dox', 438, 420 ]
+941 silly gunzTarPerm extractEntry deps/libssh-0.6.0/doc/sftp.dox
+942 silly gunzTarPerm modified mode [ 'deps/libssh-0.6.0/doc/sftp.dox', 438, 420 ]
+943 silly gunzTarPerm extractEntry deps/libssh-0.6.0/doc/shell.dox
+944 silly gunzTarPerm modified mode [ 'deps/libssh-0.6.0/doc/shell.dox', 438, 420 ]
+945 silly gunzTarPerm extractEntry deps/libssh-0.6.0/doc/tbd.dox
+946 silly gunzTarPerm modified mode [ 'deps/libssh-0.6.0/doc/tbd.dox', 438, 420 ]
+947 silly gunzTarPerm extractEntry deps/libssh-0.6.0/doc/threading.dox
+948 silly gunzTarPerm modified mode [ 'deps/libssh-0.6.0/doc/threading.dox', 438, 420 ]
+949 silly gunzTarPerm extractEntry deps/libssh-0.6.0/BSD
+950 silly gunzTarPerm modified mode [ 'deps/libssh-0.6.0/BSD', 438, 420 ]
+951 silly gunzTarPerm extractEntry deps/libssh-0.6.0/ChangeLog
+952 silly gunzTarPerm modified mode [ 'deps/libssh-0.6.0/ChangeLog', 438, 420 ]
+953 silly gunzTarPerm extractEntry deps/libssh-0.6.0/cmake/Modules/FindCMocka.cmake
+954 silly gunzTarPerm modified mode [ 'deps/libssh-0.6.0/cmake/Modules/FindCMocka.cmake', 438, 420 ]
+955 silly gunzTarPerm extractEntry deps/libssh-0.6.0/cmake/Modules/AddCMockaTest.cmake
+956 silly gunzTarPerm modified mode [ 'deps/libssh-0.6.0/cmake/Modules/AddCMockaTest.cmake',
+956 silly gunzTarPerm   438,
+956 silly gunzTarPerm   420 ]
+957 silly gunzTarPerm extractEntry deps/libssh-0.6.0/cmake/Modules/COPYING-CMAKE-SCRIPTS
+958 silly gunzTarPerm modified mode [ 'deps/libssh-0.6.0/cmake/Modules/COPYING-CMAKE-SCRIPTS',
+958 silly gunzTarPerm   438,
+958 silly gunzTarPerm   420 ]
+959 silly gunzTarPerm extractEntry deps/libssh-0.6.0/cmake/Modules/DefineCMakeDefaults.cmake
+960 silly gunzTarPerm modified mode [ 'deps/libssh-0.6.0/cmake/Modules/DefineCMakeDefaults.cmake',
+960 silly gunzTarPerm   438,
+960 silly gunzTarPerm   420 ]
+961 silly gunzTarPerm extractEntry deps/libssh-0.6.0/cmake/Modules/DefineCompilerFlags.cmake
+962 silly gunzTarPerm modified mode [ 'deps/libssh-0.6.0/cmake/Modules/DefineCompilerFlags.cmake',
+962 silly gunzTarPerm   438,
+962 silly gunzTarPerm   420 ]
+963 silly gunzTarPerm extractEntry deps/libssh-0.6.0/cmake/Modules/DefineInstallationPaths.cmake
+964 silly gunzTarPerm modified mode [ 'deps/libssh-0.6.0/cmake/Modules/DefineInstallationPaths.cmake',
+964 silly gunzTarPerm   438,
+964 silly gunzTarPerm   420 ]
+965 silly gunzTarPerm extractEntry deps/libssh-0.6.0/cmake/Modules/DefinePlatformDefaults.cmake
+966 silly gunzTarPerm modified mode [ 'deps/libssh-0.6.0/cmake/Modules/DefinePlatformDefaults.cmake',
+966 silly gunzTarPerm   438,
+966 silly gunzTarPerm   420 ]
+967 silly gunzTarPerm extractEntry deps/libssh-0.6.0/cmake/Modules/FindArgp.cmake
+968 silly gunzTarPerm modified mode [ 'deps/libssh-0.6.0/cmake/Modules/FindArgp.cmake', 438, 420 ]
+969 silly gunzTarPerm extractEntry deps/libssh-0.6.0/cmake/Modules/CheckCCompilerFlagSSP.cmake
+970 silly gunzTarPerm modified mode [ 'deps/libssh-0.6.0/cmake/Modules/CheckCCompilerFlagSSP.cmake',
+970 silly gunzTarPerm   438,
+970 silly gunzTarPerm   420 ]
+971 silly gunzTarPerm extractEntry deps/libssh-0.6.0/cmake/Modules/FindGCrypt.cmake
+972 silly gunzTarPerm modified mode [ 'deps/libssh-0.6.0/cmake/Modules/FindGCrypt.cmake', 438, 420 ]
+973 silly gunzTarPerm extractEntry deps/libssh-0.6.0/cmake/Modules/FindGSSAPI.cmake
+974 silly gunzTarPerm modified mode [ 'deps/libssh-0.6.0/cmake/Modules/FindGSSAPI.cmake', 438, 420 ]
+975 silly gunzTarPerm extractEntry deps/libssh-0.6.0/cmake/Modules/FindNaCl.cmake
+976 silly gunzTarPerm modified mode [ 'deps/libssh-0.6.0/cmake/Modules/FindNaCl.cmake', 438, 420 ]
+977 silly gunzTarPerm extractEntry deps/libssh-0.6.0/cmake/Modules/FindNSIS.cmake
+978 silly gunzTarPerm modified mode [ 'deps/libssh-0.6.0/cmake/Modules/FindNSIS.cmake', 438, 420 ]
+979 silly gunzTarPerm extractEntry deps/libssh-0.6.0/cmake/Modules/FindOpenSSL.cmake
+980 silly gunzTarPerm modified mode [ 'deps/libssh-0.6.0/cmake/Modules/FindOpenSSL.cmake', 438, 420 ]
+981 silly gunzTarPerm extractEntry deps/libssh-0.6.0/cmake/Modules/FindZLIB.cmake
+982 silly gunzTarPerm modified mode [ 'deps/libssh-0.6.0/cmake/Modules/FindZLIB.cmake', 438, 420 ]
+983 silly gunzTarPerm extractEntry deps/libssh-0.6.0/cmake/Modules/MacroEnsureOutOfSourceBuild.cmake
+984 silly gunzTarPerm modified mode [ 'deps/libssh-0.6.0/cmake/Modules/MacroEnsureOutOfSourceBuild.cmake',
+984 silly gunzTarPerm   438,
+984 silly gunzTarPerm   420 ]
+985 silly gunzTarPerm extractEntry deps/libssh-0.6.0/cmake/Modules/UseDoxygen.cmake
+986 silly gunzTarPerm modified mode [ 'deps/libssh-0.6.0/cmake/Modules/UseDoxygen.cmake', 438, 420 ]
+987 silly gunzTarPerm extractEntry deps/libssh-0.6.0/CMakeLists.txt
+988 silly gunzTarPerm modified mode [ 'deps/libssh-0.6.0/CMakeLists.txt', 438, 420 ]
+989 silly gunzTarPerm extractEntry deps/libssh-0.6.0/CodingStyle
+990 silly gunzTarPerm modified mode [ 'deps/libssh-0.6.0/CodingStyle', 438, 420 ]
+991 silly gunzTarPerm extractEntry deps/libssh-0.6.0/config.h.cmake
+992 silly gunzTarPerm modified mode [ 'deps/libssh-0.6.0/config.h.cmake', 438, 420 ]
+993 silly gunzTarPerm extractEntry deps/libssh-0.6.0/ConfigureChecks.cmake
+994 silly gunzTarPerm modified mode [ 'deps/libssh-0.6.0/ConfigureChecks.cmake', 438, 420 ]
+995 silly gunzTarPerm extractEntry deps/libssh-0.6.0/COPYING
+996 silly gunzTarPerm modified mode [ 'deps/libssh-0.6.0/COPYING', 438, 420 ]
+997 silly gunzTarPerm extractEntry deps/libssh-0.6.0/CPackConfig.cmake
+998 silly gunzTarPerm modified mode [ 'deps/libssh-0.6.0/CPackConfig.cmake', 438, 420 ]
+999 silly gunzTarPerm extractEntry deps/libssh-0.6.0/CTestConfig.cmake
+1000 silly gunzTarPerm modified mode [ 'deps/libssh-0.6.0/CTestConfig.cmake', 438, 420 ]
+1001 silly gunzTarPerm extractEntry deps/libssh-0.6.0/DefineOptions.cmake
+1002 silly gunzTarPerm modified mode [ 'deps/libssh-0.6.0/DefineOptions.cmake', 438, 420 ]
+1003 silly gunzTarPerm extractEntry deps/libssh-0.6.0/AUTHORS
+1004 silly gunzTarPerm modified mode [ 'deps/libssh-0.6.0/AUTHORS', 438, 420 ]
+1005 silly gunzTarPerm extractEntry deps/libssh-0.6.0/examples/proxy.c
+1006 silly gunzTarPerm modified mode [ 'deps/libssh-0.6.0/examples/proxy.c', 438, 420 ]
+1007 silly gunzTarPerm extractEntry deps/libssh-0.6.0/examples/authentication.c
+1008 silly gunzTarPerm modified mode [ 'deps/libssh-0.6.0/examples/authentication.c', 438, 420 ]
+1009 silly gunzTarPerm extractEntry deps/libssh-0.6.0/examples/connect_ssh.c
+1010 silly gunzTarPerm modified mode [ 'deps/libssh-0.6.0/examples/connect_ssh.c', 438, 420 ]
+1011 silly gunzTarPerm extractEntry deps/libssh-0.6.0/examples/examples_common.h
+1012 silly gunzTarPerm modified mode [ 'deps/libssh-0.6.0/examples/examples_common.h', 438, 420 ]
+1013 silly gunzTarPerm extractEntry deps/libssh-0.6.0/examples/exec.c
+1014 silly gunzTarPerm modified mode [ 'deps/libssh-0.6.0/examples/exec.c', 438, 420 ]
+1015 silly gunzTarPerm extractEntry deps/libssh-0.6.0/examples/knownhosts.c
+1016 silly gunzTarPerm modified mode [ 'deps/libssh-0.6.0/examples/knownhosts.c', 438, 420 ]
+1017 silly gunzTarPerm extractEntry deps/libssh-0.6.0/examples/libsshpp.cpp
+1018 silly gunzTarPerm modified mode [ 'deps/libssh-0.6.0/examples/libsshpp.cpp', 438, 420 ]
+1019 silly gunzTarPerm extractEntry deps/libssh-0.6.0/examples/libsshpp_noexcept.cpp
+1020 silly gunzTarPerm modified mode [ 'deps/libssh-0.6.0/examples/libsshpp_noexcept.cpp', 438, 420 ]
+1021 silly gunzTarPerm extractEntry deps/libssh-0.6.0/examples/libssh_scp.c
+1022 silly gunzTarPerm modified mode [ 'deps/libssh-0.6.0/examples/libssh_scp.c', 438, 420 ]
+1023 silly gunzTarPerm extractEntry deps/libssh-0.6.0/examples/CMakeLists.txt
+1024 silly gunzTarPerm modified mode [ 'deps/libssh-0.6.0/examples/CMakeLists.txt', 438, 420 ]
+1025 silly gunzTarPerm extractEntry deps/libssh-0.6.0/examples/sample.c
+1026 silly gunzTarPerm modified mode [ 'deps/libssh-0.6.0/examples/sample.c', 438, 420 ]
+1027 silly gunzTarPerm extractEntry deps/libssh-0.6.0/examples/samplesftp.c
+1028 silly gunzTarPerm modified mode [ 'deps/libssh-0.6.0/examples/samplesftp.c', 438, 420 ]
+1029 silly gunzTarPerm extractEntry deps/libssh-0.6.0/examples/samplesshd-cb.c
+1030 silly gunzTarPerm modified mode [ 'deps/libssh-0.6.0/examples/samplesshd-cb.c', 438, 420 ]
+1031 silly gunzTarPerm extractEntry deps/libssh-0.6.0/examples/samplesshd-kbdint.c
+1032 silly gunzTarPerm modified mode [ 'deps/libssh-0.6.0/examples/samplesshd-kbdint.c', 438, 420 ]
+1033 silly gunzTarPerm extractEntry deps/libssh-0.6.0/examples/samplesshd-tty.c
+1034 silly gunzTarPerm modified mode [ 'deps/libssh-0.6.0/examples/samplesshd-tty.c', 438, 420 ]
+1035 silly gunzTarPerm extractEntry deps/libssh-0.6.0/examples/samplesshd.c
+1036 silly gunzTarPerm modified mode [ 'deps/libssh-0.6.0/examples/samplesshd.c', 438, 420 ]
+1037 silly gunzTarPerm extractEntry deps/libssh-0.6.0/examples/scp_download.c
+1038 silly gunzTarPerm modified mode [ 'deps/libssh-0.6.0/examples/scp_download.c', 438, 420 ]
+1039 silly gunzTarPerm extractEntry deps/libssh-0.6.0/examples/senddata.c
+1040 silly gunzTarPerm modified mode [ 'deps/libssh-0.6.0/examples/senddata.c', 438, 420 ]
+1041 silly gunzTarPerm extractEntry deps/libssh-0.6.0/examples/sshnetcat.c
+1042 silly gunzTarPerm modified mode [ 'deps/libssh-0.6.0/examples/sshnetcat.c', 438, 420 ]
+1043 silly gunzTarPerm extractEntry deps/libssh-0.6.0/include/CMakeLists.txt
+1044 silly gunzTarPerm modified mode [ 'deps/libssh-0.6.0/include/CMakeLists.txt', 438, 420 ]
+1045 silly gunzTarPerm extractEntry deps/libssh-0.6.0/include/libssh/libsshpp.hpp
+1046 silly gunzTarPerm modified mode [ 'deps/libssh-0.6.0/include/libssh/libsshpp.hpp', 438, 420 ]
+1047 silly gunzTarPerm extractEntry deps/libssh-0.6.0/include/libssh/agent.h
+1048 silly gunzTarPerm modified mode [ 'deps/libssh-0.6.0/include/libssh/agent.h', 438, 420 ]
+1049 silly gunzTarPerm extractEntry deps/libssh-0.6.0/include/libssh/bind.h
+1050 silly gunzTarPerm modified mode [ 'deps/libssh-0.6.0/include/libssh/bind.h', 438, 420 ]
+1051 silly gunzTarPerm extractEntry deps/libssh-0.6.0/include/libssh/buffer.h
+1052 silly gunzTarPerm modified mode [ 'deps/libssh-0.6.0/include/libssh/buffer.h', 438, 420 ]
+1053 silly gunzTarPerm extractEntry deps/libssh-0.6.0/include/libssh/callbacks.h
+1054 silly gunzTarPerm modified mode [ 'deps/libssh-0.6.0/include/libssh/callbacks.h', 438, 420 ]
+1055 silly gunzTarPerm extractEntry deps/libssh-0.6.0/include/libssh/channels.h
+1056 silly gunzTarPerm modified mode [ 'deps/libssh-0.6.0/include/libssh/channels.h', 438, 420 ]
+1057 silly gunzTarPerm extractEntry deps/libssh-0.6.0/include/libssh/CMakeLists.txt
+1058 silly gunzTarPerm modified mode [ 'deps/libssh-0.6.0/include/libssh/CMakeLists.txt', 438, 420 ]
+1059 silly gunzTarPerm extractEntry deps/libssh-0.6.0/include/libssh/crc32.h
+1060 silly gunzTarPerm modified mode [ 'deps/libssh-0.6.0/include/libssh/crc32.h', 438, 420 ]
+1061 silly gunzTarPerm extractEntry deps/libssh-0.6.0/include/libssh/crypto.h
+1062 silly gunzTarPerm modified mode [ 'deps/libssh-0.6.0/include/libssh/crypto.h', 438, 420 ]
+1063 silly gunzTarPerm extractEntry deps/libssh-0.6.0/include/libssh/curve25519.h
+1064 silly gunzTarPerm modified mode [ 'deps/libssh-0.6.0/include/libssh/curve25519.h', 438, 420 ]
+1065 silly gunzTarPerm extractEntry deps/libssh-0.6.0/include/libssh/dh.h
+1066 silly gunzTarPerm modified mode [ 'deps/libssh-0.6.0/include/libssh/dh.h', 438, 420 ]
+1067 silly gunzTarPerm extractEntry deps/libssh-0.6.0/include/libssh/ecdh.h
+1068 silly gunzTarPerm modified mode [ 'deps/libssh-0.6.0/include/libssh/ecdh.h', 438, 420 ]
+1069 silly gunzTarPerm extractEntry deps/libssh-0.6.0/include/libssh/gssapi.h
+1070 silly gunzTarPerm modified mode [ 'deps/libssh-0.6.0/include/libssh/gssapi.h', 438, 420 ]
+1071 silly gunzTarPerm extractEntry deps/libssh-0.6.0/include/libssh/kex.h
+1072 silly gunzTarPerm modified mode [ 'deps/libssh-0.6.0/include/libssh/kex.h', 438, 420 ]
+1073 silly gunzTarPerm extractEntry deps/libssh-0.6.0/include/libssh/keys.h
+1074 silly gunzTarPerm modified mode [ 'deps/libssh-0.6.0/include/libssh/keys.h', 438, 420 ]
+1075 silly gunzTarPerm extractEntry deps/libssh-0.6.0/include/libssh/legacy.h
+1076 silly gunzTarPerm modified mode [ 'deps/libssh-0.6.0/include/libssh/legacy.h', 438, 420 ]
+1077 silly gunzTarPerm extractEntry deps/libssh-0.6.0/include/libssh/libcrypto.h
+1078 silly gunzTarPerm modified mode [ 'deps/libssh-0.6.0/include/libssh/libcrypto.h', 438, 420 ]
+1079 silly gunzTarPerm extractEntry deps/libssh-0.6.0/include/libssh/libgcrypt.h
+1080 silly gunzTarPerm modified mode [ 'deps/libssh-0.6.0/include/libssh/libgcrypt.h', 438, 420 ]
+1081 silly gunzTarPerm extractEntry deps/libssh-0.6.0/include/libssh/libssh.h
+1082 silly gunzTarPerm modified mode [ 'deps/libssh-0.6.0/include/libssh/libssh.h', 438, 420 ]
+1083 silly gunzTarPerm extractEntry deps/libssh-0.6.0/include/libssh/auth.h
+1084 silly gunzTarPerm modified mode [ 'deps/libssh-0.6.0/include/libssh/auth.h', 438, 420 ]
+1085 silly gunzTarPerm extractEntry deps/libssh-0.6.0/include/libssh/messages.h
+1086 silly gunzTarPerm modified mode [ 'deps/libssh-0.6.0/include/libssh/messages.h', 438, 420 ]
+1087 silly gunzTarPerm extractEntry deps/libssh-0.6.0/include/libssh/misc.h
+1088 silly gunzTarPerm modified mode [ 'deps/libssh-0.6.0/include/libssh/misc.h', 438, 420 ]
+1089 silly gunzTarPerm extractEntry deps/libssh-0.6.0/include/libssh/options.h
+1090 silly gunzTarPerm modified mode [ 'deps/libssh-0.6.0/include/libssh/options.h', 438, 420 ]
+1091 silly gunzTarPerm extractEntry deps/libssh-0.6.0/include/libssh/packet.h
+1092 silly gunzTarPerm modified mode [ 'deps/libssh-0.6.0/include/libssh/packet.h', 438, 420 ]
+1093 silly gunzTarPerm extractEntry deps/libssh-0.6.0/include/libssh/pcap.h
+1094 silly gunzTarPerm modified mode [ 'deps/libssh-0.6.0/include/libssh/pcap.h', 438, 420 ]
+1095 silly gunzTarPerm extractEntry deps/libssh-0.6.0/include/libssh/pki.h
+1096 silly gunzTarPerm modified mode [ 'deps/libssh-0.6.0/include/libssh/pki.h', 438, 420 ]
+1097 silly gunzTarPerm extractEntry deps/libssh-0.6.0/include/libssh/pki_priv.h
+1098 silly gunzTarPerm modified mode [ 'deps/libssh-0.6.0/include/libssh/pki_priv.h', 438, 420 ]
+1099 silly gunzTarPerm extractEntry deps/libssh-0.6.0/include/libssh/poll.h
+1100 silly gunzTarPerm modified mode [ 'deps/libssh-0.6.0/include/libssh/poll.h', 438, 420 ]
+1101 silly gunzTarPerm extractEntry deps/libssh-0.6.0/include/libssh/priv.h
+1102 silly gunzTarPerm modified mode [ 'deps/libssh-0.6.0/include/libssh/priv.h', 438, 420 ]
+1103 silly gunzTarPerm extractEntry deps/libssh-0.6.0/include/libssh/scp.h
+1104 silly gunzTarPerm modified mode [ 'deps/libssh-0.6.0/include/libssh/scp.h', 438, 420 ]
+1105 silly gunzTarPerm extractEntry deps/libssh-0.6.0/include/libssh/server.h
+1106 silly gunzTarPerm modified mode [ 'deps/libssh-0.6.0/include/libssh/server.h', 438, 420 ]
+1107 silly gunzTarPerm extractEntry deps/libssh-0.6.0/include/libssh/session.h
+1108 silly gunzTarPerm modified mode [ 'deps/libssh-0.6.0/include/libssh/session.h', 438, 420 ]
+1109 silly gunzTarPerm extractEntry deps/libssh-0.6.0/include/libssh/sftp.h
+1110 silly gunzTarPerm modified mode [ 'deps/libssh-0.6.0/include/libssh/sftp.h', 438, 420 ]
+1111 silly gunzTarPerm extractEntry deps/libssh-0.6.0/include/libssh/socket.h
+1112 silly gunzTarPerm modified mode [ 'deps/libssh-0.6.0/include/libssh/socket.h', 438, 420 ]
+1113 silly gunzTarPerm extractEntry deps/libssh-0.6.0/include/libssh/ssh1.h
+1114 silly gunzTarPerm modified mode [ 'deps/libssh-0.6.0/include/libssh/ssh1.h', 438, 420 ]
+1115 silly gunzTarPerm extractEntry deps/libssh-0.6.0/include/libssh/ssh2.h
+1116 silly gunzTarPerm modified mode [ 'deps/libssh-0.6.0/include/libssh/ssh2.h', 438, 420 ]
+1117 silly gunzTarPerm extractEntry deps/libssh-0.6.0/include/libssh/string.h
+1118 silly gunzTarPerm modified mode [ 'deps/libssh-0.6.0/include/libssh/string.h', 438, 420 ]
+1119 silly gunzTarPerm extractEntry deps/libssh-0.6.0/include/libssh/threads.h
+1120 silly gunzTarPerm modified mode [ 'deps/libssh-0.6.0/include/libssh/threads.h', 438, 420 ]
+1121 silly gunzTarPerm extractEntry deps/libssh-0.6.0/include/libssh/wrapper.h
+1122 silly gunzTarPerm modified mode [ 'deps/libssh-0.6.0/include/libssh/wrapper.h', 438, 420 ]
+1123 silly gunzTarPerm extractEntry deps/libssh-0.6.0/INSTALL
+1124 silly gunzTarPerm modified mode [ 'deps/libssh-0.6.0/INSTALL', 438, 420 ]
+1125 silly gunzTarPerm extractEntry deps/libssh-0.6.0/libssh-build-tree-settings.cmake.in
+1126 silly gunzTarPerm modified mode [ 'deps/libssh-0.6.0/libssh-build-tree-settings.cmake.in',
+1126 silly gunzTarPerm   438,
+1126 silly gunzTarPerm   420 ]
+1127 silly gunzTarPerm extractEntry deps/libssh-0.6.0/libssh-config-version.cmake.in
+1128 silly gunzTarPerm modified mode [ 'deps/libssh-0.6.0/libssh-config-version.cmake.in', 438, 420 ]
+1129 silly gunzTarPerm extractEntry deps/libssh-0.6.0/libssh-config.cmake.in
+1130 silly gunzTarPerm modified mode [ 'deps/libssh-0.6.0/libssh-config.cmake.in', 438, 420 ]
+1131 silly gunzTarPerm extractEntry deps/libssh-0.6.0/libssh.pc.cmake
+1132 silly gunzTarPerm modified mode [ 'deps/libssh-0.6.0/libssh.pc.cmake', 438, 420 ]
+1133 silly gunzTarPerm extractEntry deps/libssh-0.6.0/libssh_threads.pc.cmake
+1134 silly gunzTarPerm modified mode [ 'deps/libssh-0.6.0/libssh_threads.pc.cmake', 438, 420 ]
+1135 silly gunzTarPerm extractEntry deps/libssh-0.6.0/.clang_complete
+1136 silly gunzTarPerm modified mode [ 'deps/libssh-0.6.0/.clang_complete', 438, 420 ]
+1137 silly gunzTarPerm extractEntry deps/libssh-0.6.0/src/legacy.c
+1138 silly gunzTarPerm modified mode [ 'deps/libssh-0.6.0/src/legacy.c', 438, 420 ]
+1139 silly gunzTarPerm extractEntry deps/libssh-0.6.0/src/agent.c
+1140 silly gunzTarPerm modified mode [ 'deps/libssh-0.6.0/src/agent.c', 438, 420 ]
+1141 silly gunzTarPerm extractEntry deps/libssh-0.6.0/src/auth1.c
+1142 silly gunzTarPerm modified mode [ 'deps/libssh-0.6.0/src/auth1.c', 438, 420 ]
+1143 silly gunzTarPerm extractEntry deps/libssh-0.6.0/src/base64.c
+1144 silly gunzTarPerm modified mode [ 'deps/libssh-0.6.0/src/base64.c', 438, 420 ]
+1145 silly gunzTarPerm extractEntry deps/libssh-0.6.0/src/bind.c
+1146 silly gunzTarPerm modified mode [ 'deps/libssh-0.6.0/src/bind.c', 438, 420 ]
+1147 silly gunzTarPerm extractEntry deps/libssh-0.6.0/src/buffer.c
+1148 silly gunzTarPerm modified mode [ 'deps/libssh-0.6.0/src/buffer.c', 438, 420 ]
+1149 silly gunzTarPerm extractEntry deps/libssh-0.6.0/src/callbacks.c
+1150 silly gunzTarPerm modified mode [ 'deps/libssh-0.6.0/src/callbacks.c', 438, 420 ]
+1151 silly gunzTarPerm extractEntry deps/libssh-0.6.0/src/channels.c
+1152 silly gunzTarPerm modified mode [ 'deps/libssh-0.6.0/src/channels.c', 438, 420 ]
+1153 silly gunzTarPerm extractEntry deps/libssh-0.6.0/src/channels1.c
+1154 silly gunzTarPerm modified mode [ 'deps/libssh-0.6.0/src/channels1.c', 438, 420 ]
+1155 silly gunzTarPerm extractEntry deps/libssh-0.6.0/src/client.c
+1156 silly gunzTarPerm modified mode [ 'deps/libssh-0.6.0/src/client.c', 438, 420 ]
+1157 silly gunzTarPerm extractEntry deps/libssh-0.6.0/src/CMakeLists.txt
+1158 silly gunzTarPerm modified mode [ 'deps/libssh-0.6.0/src/CMakeLists.txt', 438, 420 ]
+1159 silly gunzTarPerm extractEntry deps/libssh-0.6.0/src/config.c
+1160 silly gunzTarPerm modified mode [ 'deps/libssh-0.6.0/src/config.c', 438, 420 ]
+1161 silly gunzTarPerm extractEntry deps/libssh-0.6.0/src/connect.c
+1162 silly gunzTarPerm modified mode [ 'deps/libssh-0.6.0/src/connect.c', 438, 420 ]
+1163 silly gunzTarPerm extractEntry deps/libssh-0.6.0/src/crc32.c
+1164 silly gunzTarPerm modified mode [ 'deps/libssh-0.6.0/src/crc32.c', 438, 420 ]
+1165 silly gunzTarPerm extractEntry deps/libssh-0.6.0/src/curve25519.c
+1166 silly gunzTarPerm modified mode [ 'deps/libssh-0.6.0/src/curve25519.c', 438, 420 ]
+1167 silly gunzTarPerm extractEntry deps/libssh-0.6.0/src/curve25519_ref.c
+1168 silly gunzTarPerm modified mode [ 'deps/libssh-0.6.0/src/curve25519_ref.c', 438, 420 ]
+1169 silly gunzTarPerm extractEntry deps/libssh-0.6.0/src/dh.c
+1170 silly gunzTarPerm modified mode [ 'deps/libssh-0.6.0/src/dh.c', 438, 420 ]
+1171 silly gunzTarPerm extractEntry deps/libssh-0.6.0/src/ecdh.c
+1172 silly gunzTarPerm modified mode [ 'deps/libssh-0.6.0/src/ecdh.c', 438, 420 ]
+1173 silly gunzTarPerm extractEntry deps/libssh-0.6.0/src/error.c
+1174 silly gunzTarPerm modified mode [ 'deps/libssh-0.6.0/src/error.c', 438, 420 ]
+1175 silly gunzTarPerm extractEntry deps/libssh-0.6.0/src/gcrypt_missing.c
+1176 silly gunzTarPerm modified mode [ 'deps/libssh-0.6.0/src/gcrypt_missing.c', 438, 420 ]
+1177 silly gunzTarPerm extractEntry deps/libssh-0.6.0/src/getpass.c
+1178 silly gunzTarPerm modified mode [ 'deps/libssh-0.6.0/src/getpass.c', 438, 420 ]
+1179 silly gunzTarPerm extractEntry deps/libssh-0.6.0/src/gssapi.c
+1180 silly gunzTarPerm modified mode [ 'deps/libssh-0.6.0/src/gssapi.c', 438, 420 ]
+1181 silly gunzTarPerm extractEntry deps/libssh-0.6.0/src/gzip.c
+1182 silly gunzTarPerm modified mode [ 'deps/libssh-0.6.0/src/gzip.c', 438, 420 ]
+1183 silly gunzTarPerm extractEntry deps/libssh-0.6.0/src/init.c
+1184 silly gunzTarPerm modified mode [ 'deps/libssh-0.6.0/src/init.c', 438, 420 ]
+1185 silly gunzTarPerm extractEntry deps/libssh-0.6.0/src/kex.c
+1186 silly gunzTarPerm modified mode [ 'deps/libssh-0.6.0/src/kex.c', 438, 420 ]
+1187 silly gunzTarPerm extractEntry deps/libssh-0.6.0/src/kex1.c
+1188 silly gunzTarPerm modified mode [ 'deps/libssh-0.6.0/src/kex1.c', 438, 420 ]
+1189 silly gunzTarPerm extractEntry deps/libssh-0.6.0/src/known_hosts.c
+1190 silly gunzTarPerm modified mode [ 'deps/libssh-0.6.0/src/known_hosts.c', 438, 420 ]
+1191 silly gunzTarPerm extractEntry deps/libssh-0.6.0/src/auth.c
+1192 silly gunzTarPerm modified mode [ 'deps/libssh-0.6.0/src/auth.c', 438, 420 ]
+1193 silly gunzTarPerm extractEntry deps/libssh-0.6.0/src/libcrypto.c
+1194 silly gunzTarPerm modified mode [ 'deps/libssh-0.6.0/src/libcrypto.c', 438, 420 ]
+1195 silly gunzTarPerm extractEntry deps/libssh-0.6.0/src/libgcrypt.c
+1196 silly gunzTarPerm modified mode [ 'deps/libssh-0.6.0/src/libgcrypt.c', 438, 420 ]
+1197 silly gunzTarPerm extractEntry deps/libssh-0.6.0/src/log.c
+1198 silly gunzTarPerm modified mode [ 'deps/libssh-0.6.0/src/log.c', 438, 420 ]
+1199 silly gunzTarPerm extractEntry deps/libssh-0.6.0/src/match.c
+1200 silly gunzTarPerm modified mode [ 'deps/libssh-0.6.0/src/match.c', 438, 420 ]
+1201 silly gunzTarPerm extractEntry deps/libssh-0.6.0/src/messages.c
+1202 silly gunzTarPerm modified mode [ 'deps/libssh-0.6.0/src/messages.c', 438, 420 ]
+1203 silly gunzTarPerm extractEntry deps/libssh-0.6.0/src/misc.c
+1204 silly gunzTarPerm modified mode [ 'deps/libssh-0.6.0/src/misc.c', 438, 420 ]
+1205 silly gunzTarPerm extractEntry deps/libssh-0.6.0/src/options.c
+1206 silly gunzTarPerm modified mode [ 'deps/libssh-0.6.0/src/options.c', 438, 420 ]
+1207 silly gunzTarPerm extractEntry deps/libssh-0.6.0/src/packet.c
+1208 silly gunzTarPerm modified mode [ 'deps/libssh-0.6.0/src/packet.c', 438, 420 ]
+1209 silly gunzTarPerm extractEntry deps/libssh-0.6.0/src/packet1.c
+1210 silly gunzTarPerm modified mode [ 'deps/libssh-0.6.0/src/packet1.c', 438, 420 ]
+1211 silly gunzTarPerm extractEntry deps/libssh-0.6.0/src/packet_cb.c
+1212 silly gunzTarPerm modified mode [ 'deps/libssh-0.6.0/src/packet_cb.c', 438, 420 ]
+1213 silly gunzTarPerm extractEntry deps/libssh-0.6.0/src/packet_crypt.c
+1214 silly gunzTarPerm modified mode [ 'deps/libssh-0.6.0/src/packet_crypt.c', 438, 420 ]
+1215 silly gunzTarPerm extractEntry deps/libssh-0.6.0/src/pcap.c
+1216 silly gunzTarPerm modified mode [ 'deps/libssh-0.6.0/src/pcap.c', 438, 420 ]
+1217 silly gunzTarPerm extractEntry deps/libssh-0.6.0/src/pki.c
+1218 silly gunzTarPerm modified mode [ 'deps/libssh-0.6.0/src/pki.c', 438, 420 ]
+1219 silly gunzTarPerm extractEntry deps/libssh-0.6.0/src/pki_crypto.c
+1220 silly gunzTarPerm modified mode [ 'deps/libssh-0.6.0/src/pki_crypto.c', 438, 420 ]
+1221 silly gunzTarPerm extractEntry deps/libssh-0.6.0/src/pki_gcrypt.c
+1222 silly gunzTarPerm modified mode [ 'deps/libssh-0.6.0/src/pki_gcrypt.c', 438, 420 ]
+1223 silly gunzTarPerm extractEntry deps/libssh-0.6.0/src/poll.c
+1224 silly gunzTarPerm modified mode [ 'deps/libssh-0.6.0/src/poll.c', 438, 420 ]
+1225 silly gunzTarPerm extractEntry deps/libssh-0.6.0/src/scp.c
+1226 silly gunzTarPerm modified mode [ 'deps/libssh-0.6.0/src/scp.c', 438, 420 ]
+1227 silly gunzTarPerm extractEntry deps/libssh-0.6.0/src/server.c
+1228 silly gunzTarPerm modified mode [ 'deps/libssh-0.6.0/src/server.c', 438, 420 ]
+1229 silly gunzTarPerm extractEntry deps/libssh-0.6.0/src/session.c
+1230 silly gunzTarPerm modified mode [ 'deps/libssh-0.6.0/src/session.c', 438, 420 ]
+1231 silly gunzTarPerm extractEntry deps/libssh-0.6.0/src/sftp.c
+1232 silly gunzTarPerm modified mode [ 'deps/libssh-0.6.0/src/sftp.c', 438, 420 ]
+1233 silly gunzTarPerm extractEntry deps/libssh-0.6.0/src/sftpserver.c
+1234 silly gunzTarPerm modified mode [ 'deps/libssh-0.6.0/src/sftpserver.c', 438, 420 ]
+1235 silly gunzTarPerm extractEntry deps/libssh-0.6.0/src/socket.c
+1236 silly gunzTarPerm modified mode [ 'deps/libssh-0.6.0/src/socket.c', 438, 420 ]
+1237 silly gunzTarPerm extractEntry deps/libssh-0.6.0/src/string.c
+1238 silly gunzTarPerm modified mode [ 'deps/libssh-0.6.0/src/string.c', 438, 420 ]
+1239 silly gunzTarPerm extractEntry deps/libssh-0.6.0/src/threads/CMakeLists.txt
+1240 silly gunzTarPerm modified mode [ 'deps/libssh-0.6.0/src/threads/CMakeLists.txt', 438, 420 ]
+1241 silly gunzTarPerm extractEntry deps/libssh-0.6.0/src/threads/pthread.c
+1242 silly gunzTarPerm modified mode [ 'deps/libssh-0.6.0/src/threads/pthread.c', 438, 420 ]
+1243 silly gunzTarPerm extractEntry deps/libssh-0.6.0/src/threads.c
+1244 silly gunzTarPerm modified mode [ 'deps/libssh-0.6.0/src/threads.c', 438, 420 ]
+1245 silly gunzTarPerm extractEntry deps/libssh-0.6.0/src/wrapper.c
+1246 silly gunzTarPerm modified mode [ 'deps/libssh-0.6.0/src/wrapper.c', 438, 420 ]
+1247 silly gunzTarPerm extractEntry deps/libssh-0.6.0/SubmittingPatches
+1248 silly gunzTarPerm modified mode [ 'deps/libssh-0.6.0/SubmittingPatches', 438, 420 ]
+1249 silly gunzTarPerm extractEntry deps/libssh-0.6.0/tests/sftp_stress/main.c
+1250 silly gunzTarPerm modified mode [ 'deps/libssh-0.6.0/tests/sftp_stress/main.c', 438, 420 ]
+1251 silly gunzTarPerm extractEntry deps/libssh-0.6.0/tests/authentication.c
+1252 silly gunzTarPerm modified mode [ 'deps/libssh-0.6.0/tests/authentication.c', 438, 420 ]
+1253 silly gunzTarPerm extractEntry deps/libssh-0.6.0/tests/chmodtest.c
+1254 silly gunzTarPerm modified mode [ 'deps/libssh-0.6.0/tests/chmodtest.c', 438, 420 ]
+1255 silly gunzTarPerm extractEntry deps/libssh-0.6.0/tests/client/torture_proxycommand.c
+1256 silly gunzTarPerm modified mode [ 'deps/libssh-0.6.0/tests/client/torture_proxycommand.c',
+1256 silly gunzTarPerm   438,
+1256 silly gunzTarPerm   420 ]
+1257 silly gunzTarPerm extractEntry deps/libssh-0.6.0/tests/client/CMakeLists.txt
+1258 silly gunzTarPerm modified mode [ 'deps/libssh-0.6.0/tests/client/CMakeLists.txt', 438, 420 ]
+1259 silly gunzTarPerm extractEntry deps/libssh-0.6.0/tests/client/torture_auth.c
+1260 silly gunzTarPerm modified mode [ 'deps/libssh-0.6.0/tests/client/torture_auth.c', 438, 420 ]
+1261 silly gunzTarPerm extractEntry deps/libssh-0.6.0/tests/client/torture_connect.c
+1262 silly gunzTarPerm modified mode [ 'deps/libssh-0.6.0/tests/client/torture_connect.c', 438, 420 ]
+1263 silly gunzTarPerm extractEntry deps/libssh-0.6.0/tests/client/torture_forward.c
+1264 silly gunzTarPerm modified mode [ 'deps/libssh-0.6.0/tests/client/torture_forward.c', 438, 420 ]
+1265 silly gunzTarPerm extractEntry deps/libssh-0.6.0/tests/client/torture_knownhosts.c
+1266 silly gunzTarPerm modified mode [ 'deps/libssh-0.6.0/tests/client/torture_knownhosts.c',
+1266 silly gunzTarPerm   438,
+1266 silly gunzTarPerm   420 ]
+1267 silly gunzTarPerm extractEntry deps/libssh-0.6.0/tests/client/torture_algorithms.c
+1268 silly gunzTarPerm modified mode [ 'deps/libssh-0.6.0/tests/client/torture_algorithms.c',
+1268 silly gunzTarPerm   438,
+1268 silly gunzTarPerm   420 ]
+1269 silly gunzTarPerm extractEntry deps/libssh-0.6.0/tests/client/torture_request_env.c
+1270 silly gunzTarPerm modified mode [ 'deps/libssh-0.6.0/tests/client/torture_request_env.c',
+1270 silly gunzTarPerm   438,
+1270 silly gunzTarPerm   420 ]
+1271 silly gunzTarPerm extractEntry deps/libssh-0.6.0/tests/client/torture_session.c
+1272 silly gunzTarPerm modified mode [ 'deps/libssh-0.6.0/tests/client/torture_session.c', 438, 420 ]
+1273 silly gunzTarPerm extractEntry deps/libssh-0.6.0/tests/client/torture_sftp_dir.c
+1274 silly gunzTarPerm modified mode [ 'deps/libssh-0.6.0/tests/client/torture_sftp_dir.c', 438, 420 ]
+1275 silly gunzTarPerm extractEntry deps/libssh-0.6.0/tests/client/torture_sftp_read.c
+1276 silly gunzTarPerm modified mode [ 'deps/libssh-0.6.0/tests/client/torture_sftp_read.c',
+1276 silly gunzTarPerm   438,
+1276 silly gunzTarPerm   420 ]
+1277 silly gunzTarPerm extractEntry deps/libssh-0.6.0/tests/client/torture_sftp_static.c
+1278 silly gunzTarPerm modified mode [ 'deps/libssh-0.6.0/tests/client/torture_sftp_static.c',
+1278 silly gunzTarPerm   438,
+1278 silly gunzTarPerm   420 ]
+1279 silly gunzTarPerm extractEntry deps/libssh-0.6.0/tests/CMakeLists.txt
+1280 silly gunzTarPerm modified mode [ 'deps/libssh-0.6.0/tests/CMakeLists.txt', 438, 420 ]
+1281 silly gunzTarPerm extractEntry deps/libssh-0.6.0/tests/cmdline.c
+1282 silly gunzTarPerm modified mode [ 'deps/libssh-0.6.0/tests/cmdline.c', 438, 420 ]
+1283 silly gunzTarPerm extractEntry deps/libssh-0.6.0/tests/connection.c
+1284 silly gunzTarPerm modified mode [ 'deps/libssh-0.6.0/tests/connection.c', 438, 420 ]
+1285 silly gunzTarPerm extractEntry deps/libssh-0.6.0/tests/ctest-default.cmake
+1286 silly gunzTarPerm modified mode [ 'deps/libssh-0.6.0/tests/ctest-default.cmake', 438, 420 ]
+1287 silly gunzTarPerm extractEntry deps/libssh-0.6.0/tests/generate.py
+1288 silly gunzTarPerm modified mode [ 'deps/libssh-0.6.0/tests/generate.py', 438, 420 ]
+1289 silly gunzTarPerm extractEntry deps/libssh-0.6.0/tests/benchmarks/bench1.sh
+1290 silly gunzTarPerm modified mode [ 'deps/libssh-0.6.0/tests/benchmarks/bench1.sh', 438, 420 ]
+1291 silly gunzTarPerm extractEntry deps/libssh-0.6.0/tests/benchmarks/bench2.sh
+1292 silly gunzTarPerm modified mode [ 'deps/libssh-0.6.0/tests/benchmarks/bench2.sh', 438, 420 ]
+1293 silly gunzTarPerm extractEntry deps/libssh-0.6.0/tests/benchmarks/benchmarks.c
+1294 silly gunzTarPerm modified mode [ 'deps/libssh-0.6.0/tests/benchmarks/benchmarks.c', 438, 420 ]
+1295 silly gunzTarPerm extractEntry deps/libssh-0.6.0/tests/benchmarks/benchmarks.h
+1296 silly gunzTarPerm modified mode [ 'deps/libssh-0.6.0/tests/benchmarks/benchmarks.h', 438, 420 ]
+1297 silly gunzTarPerm extractEntry deps/libssh-0.6.0/tests/benchmarks/bench_raw.c
+1298 silly gunzTarPerm modified mode [ 'deps/libssh-0.6.0/tests/benchmarks/bench_raw.c', 438, 420 ]
+1299 silly gunzTarPerm extractEntry deps/libssh-0.6.0/tests/benchmarks/bench_scp.c
+1300 silly gunzTarPerm modified mode [ 'deps/libssh-0.6.0/tests/benchmarks/bench_scp.c', 438, 420 ]
+1301 silly gunzTarPerm extractEntry deps/libssh-0.6.0/tests/benchmarks/bench_sftp.c
+1302 silly gunzTarPerm modified mode [ 'deps/libssh-0.6.0/tests/benchmarks/bench_sftp.c', 438, 420 ]
+1303 silly gunzTarPerm extractEntry deps/libssh-0.6.0/tests/benchmarks/CMakeLists.txt
+1304 silly gunzTarPerm modified mode [ 'deps/libssh-0.6.0/tests/benchmarks/CMakeLists.txt', 438, 420 ]
+1305 silly gunzTarPerm extractEntry deps/libssh-0.6.0/tests/benchmarks/latency.c
+1306 silly gunzTarPerm modified mode [ 'deps/libssh-0.6.0/tests/benchmarks/latency.c', 438, 420 ]
+1307 silly gunzTarPerm extractEntry deps/libssh-0.6.0/tests/tests.h
+1308 silly gunzTarPerm modified mode [ 'deps/libssh-0.6.0/tests/tests.h', 438, 420 ]
+1309 silly gunzTarPerm extractEntry deps/libssh-0.6.0/tests/test_exec.c
+1310 silly gunzTarPerm modified mode [ 'deps/libssh-0.6.0/tests/test_exec.c', 438, 420 ]
+1311 silly gunzTarPerm extractEntry deps/libssh-0.6.0/tests/test_pcap.c
+1312 silly gunzTarPerm modified mode [ 'deps/libssh-0.6.0/tests/test_pcap.c', 438, 420 ]
+1313 silly gunzTarPerm extractEntry deps/libssh-0.6.0/tests/test_socket.c
+1314 silly gunzTarPerm modified mode [ 'deps/libssh-0.6.0/tests/test_socket.c', 438, 420 ]
+1315 silly gunzTarPerm extractEntry deps/libssh-0.6.0/tests/test_tunnel.c
+1316 silly gunzTarPerm modified mode [ 'deps/libssh-0.6.0/tests/test_tunnel.c', 438, 420 ]
+1317 silly gunzTarPerm extractEntry deps/libssh-0.6.0/tests/torture.c
+1318 silly gunzTarPerm modified mode [ 'deps/libssh-0.6.0/tests/torture.c', 438, 420 ]
+1319 silly gunzTarPerm extractEntry deps/libssh-0.6.0/tests/torture.h
+1320 silly gunzTarPerm modified mode [ 'deps/libssh-0.6.0/tests/torture.h', 438, 420 ]
+1321 silly gunzTarPerm extractEntry deps/libssh-0.6.0/tests/unittests/torture_keyfiles.c
+1322 silly gunzTarPerm modified mode [ 'deps/libssh-0.6.0/tests/unittests/torture_keyfiles.c',
+1322 silly gunzTarPerm   438,
+1322 silly gunzTarPerm   420 ]
+1323 silly gunzTarPerm extractEntry deps/libssh-0.6.0/tests/unittests/CMakeLists.txt
+1324 silly gunzTarPerm modified mode [ 'deps/libssh-0.6.0/tests/unittests/CMakeLists.txt', 438, 420 ]
+1325 silly gunzTarPerm extractEntry deps/libssh-0.6.0/tests/unittests/torture_callbacks.c
+1326 silly gunzTarPerm modified mode [ 'deps/libssh-0.6.0/tests/unittests/torture_callbacks.c',
+1326 silly gunzTarPerm   438,
+1326 silly gunzTarPerm   420 ]
+1327 silly gunzTarPerm extractEntry deps/libssh-0.6.0/tests/unittests/torture_channel.c
+1328 silly gunzTarPerm modified mode [ 'deps/libssh-0.6.0/tests/unittests/torture_channel.c',
+1328 silly gunzTarPerm   438,
+1328 silly gunzTarPerm   420 ]
+1329 silly gunzTarPerm extractEntry deps/libssh-0.6.0/tests/unittests/torture_init.c
+1330 silly gunzTarPerm modified mode [ 'deps/libssh-0.6.0/tests/unittests/torture_init.c', 438, 420 ]
+1331 silly gunzTarPerm extractEntry deps/libssh-0.6.0/tests/unittests/torture_isipaddr.c
+1332 silly gunzTarPerm modified mode [ 'deps/libssh-0.6.0/tests/unittests/torture_isipaddr.c',
+1332 silly gunzTarPerm   438,
+1332 silly gunzTarPerm   420 ]
+1333 silly gunzTarPerm extractEntry deps/libssh-0.6.0/tests/unittests/torture_buffer.c
+1334 silly gunzTarPerm modified mode [ 'deps/libssh-0.6.0/tests/unittests/torture_buffer.c',
+1334 silly gunzTarPerm   438,
+1334 silly gunzTarPerm   420 ]
+1335 silly gunzTarPerm extractEntry deps/libssh-0.6.0/tests/unittests/torture_list.c
+1336 silly gunzTarPerm modified mode [ 'deps/libssh-0.6.0/tests/unittests/torture_list.c', 438, 420 ]
+1337 silly gunzTarPerm extractEntry deps/libssh-0.6.0/tests/unittests/torture_misc.c
+1338 silly gunzTarPerm modified mode [ 'deps/libssh-0.6.0/tests/unittests/torture_misc.c', 438, 420 ]
+1339 silly gunzTarPerm extractEntry deps/libssh-0.6.0/tests/unittests/torture_options.c
+1340 silly gunzTarPerm modified mode [ 'deps/libssh-0.6.0/tests/unittests/torture_options.c',
+1340 silly gunzTarPerm   438,
+1340 silly gunzTarPerm   420 ]
+1341 silly gunzTarPerm extractEntry deps/libssh-0.6.0/tests/unittests/torture_pki.c
+1342 silly gunzTarPerm modified mode [ 'deps/libssh-0.6.0/tests/unittests/torture_pki.c', 438, 420 ]
+1343 silly gunzTarPerm extractEntry deps/libssh-0.6.0/tests/unittests/torture_rand.c
+1344 silly gunzTarPerm modified mode [ 'deps/libssh-0.6.0/tests/unittests/torture_rand.c', 438, 420 ]
+1345 silly gunzTarPerm extractEntry deps/libssh-0.6.0/tests/valgrind.supp
+1346 silly gunzTarPerm modified mode [ 'deps/libssh-0.6.0/tests/valgrind.supp', 438, 420 ]
+1347 silly gunzTarPerm extractEntry deps/libssh.gyp
+1348 silly gunzTarPerm modified mode [ 'deps/libssh.gyp', 438, 420 ]
+1349 silly gunzTarPerm extractEntry .jshintrc
+1350 silly gunzTarPerm modified mode [ '.jshintrc', 438, 420 ]
+1351 silly gunzTarPerm extractEntry .dntrc
+1352 silly gunzTarPerm modified mode [ '.dntrc', 438, 420 ]
+1353 silly gunzTarPerm extractEntry lib/channel.js
+1354 silly gunzTarPerm modified mode [ 'lib/channel.js', 438, 420 ]
+1355 silly gunzTarPerm extractEntry lib/server.js
+1356 silly gunzTarPerm modified mode [ 'lib/server.js', 438, 420 ]
+1357 silly gunzTarPerm extractEntry lib/session.js
+1358 silly gunzTarPerm modified mode [ 'lib/session.js', 438, 420 ]
+1359 silly gunzTarPerm extractEntry lib/stat.js
+1360 silly gunzTarPerm modified mode [ 'lib/stat.js', 438, 420 ]
+1361 silly gunzTarPerm extractEntry .travis.yml
+1362 silly gunzTarPerm modified mode [ '.travis.yml', 438, 420 ]
+1363 silly gunzTarPerm extractEntry binding.gyp
+1364 silly gunzTarPerm modified mode [ 'binding.gyp', 438, 420 ]
+1365 silly gunzTarPerm extractEntry CONTRIBUTING.md
+1366 silly gunzTarPerm modified mode [ 'CONTRIBUTING.md', 438, 420 ]
+1367 silly gunzTarPerm extractEntry src/server.cc
+1368 silly gunzTarPerm modified mode [ 'src/server.cc', 438, 420 ]
+1369 silly gunzTarPerm extractEntry src/channel.cc
+1370 silly gunzTarPerm modified mode [ 'src/channel.cc', 438, 420 ]
+1371 silly gunzTarPerm extractEntry src/message.cc
+1372 silly gunzTarPerm modified mode [ 'src/message.cc', 438, 420 ]
+1373 silly gunzTarPerm extractEntry src/message.h
+1374 silly gunzTarPerm modified mode [ 'src/message.h', 438, 420 ]
+1375 silly gunzTarPerm extractEntry src/nssh.cc
+1376 silly gunzTarPerm modified mode [ 'src/nssh.cc', 438, 420 ]
+1377 silly gunzTarPerm extractEntry src/nssh.h
+1378 silly gunzTarPerm modified mode [ 'src/nssh.h', 438, 420 ]
+1379 silly gunzTarPerm extractEntry src/channel.h
+1380 silly gunzTarPerm modified mode [ 'src/channel.h', 438, 420 ]
+1381 silly gunzTarPerm extractEntry src/server.h
+1382 silly gunzTarPerm modified mode [ 'src/server.h', 438, 420 ]
+1383 silly gunzTarPerm extractEntry src/session.cc
+1384 silly gunzTarPerm modified mode [ 'src/session.cc', 438, 420 ]
+1385 silly gunzTarPerm extractEntry src/session.h
+1386 silly gunzTarPerm modified mode [ 'src/session.h', 438, 420 ]
+1387 silly gunzTarPerm extractEntry src/sftp_message.cc
+1388 silly gunzTarPerm modified mode [ 'src/sftp_message.cc', 438, 420 ]
+1389 silly gunzTarPerm extractEntry src/sftp_message.h
+1390 silly gunzTarPerm modified mode [ 'src/sftp_message.h', 438, 420 ]
+1391 silly gunzTarPerm extractEntry test/basic-test.js
+1392 silly gunzTarPerm modified mode [ 'test/basic-test.js', 438, 420 ]
+1393 silly gunzTarPerm extractEntry test/exec-test.js
+1394 silly gunzTarPerm modified mode [ 'test/exec-test.js', 438, 420 ]
+1395 silly gunzTarPerm extractEntry test/execute-server.js
+1396 silly gunzTarPerm modified mode [ 'test/execute-server.js', 438, 420 ]
+1397 silly gunzTarPerm extractEntry test/sftp-test.js
+1398 silly gunzTarPerm modified mode [ 'test/sftp-test.js', 438, 420 ]
+1399 silly gunzTarPerm extractEntry test/standard-connection-test.js
+1400 silly gunzTarPerm modified mode [ 'test/standard-connection-test.js', 438, 420 ]
+1401 silly gunzTarPerm extractEntry test/util.js
+1402 silly gunzTarPerm modified mode [ 'test/util.js', 438, 420 ]
+1403 silly gunzTarPerm extractEntry test/build/config.gypi
+1404 silly gunzTarPerm modified mode [ 'test/build/config.gypi', 438, 420 ]
+1405 silly gunzTarPerm extractEntry test/keys/host_dsa
+1406 silly gunzTarPerm modified mode [ 'test/keys/host_dsa', 438, 420 ]
+1407 silly gunzTarPerm extractEntry test/keys/host_dsa.pub
+1408 silly gunzTarPerm modified mode [ 'test/keys/host_dsa.pub', 438, 420 ]
+1409 silly gunzTarPerm extractEntry test/keys/host_rsa
+1410 silly gunzTarPerm modified mode [ 'test/keys/host_rsa', 438, 420 ]
+1411 silly gunzTarPerm extractEntry test/keys/host_rsa.pub
+1412 silly gunzTarPerm modified mode [ 'test/keys/host_rsa.pub', 438, 420 ]
+1413 silly gunzTarPerm extractEntry test/keys/id_rsa
+1414 silly gunzTarPerm modified mode [ 'test/keys/id_rsa', 438, 420 ]
+1415 silly gunzTarPerm extractEntry test/keys/id_rsa.pub
+1416 silly gunzTarPerm modified mode [ 'test/keys/id_rsa.pub', 438, 420 ]
+1417 silly gunzTarPerm extractEntry test/testdata.bin
+1418 silly gunzTarPerm modified mode [ 'test/testdata.bin', 438, 420 ]
+1419 silly lockFile 72a97579-p-www-Nabu-nabu-node-modules-ssh tar://C:\wamp\www\Nabu\nabu\node_modules\ssh
+1420 silly lockFile 72a97579-p-www-Nabu-nabu-node-modules-ssh tar://C:\wamp\www\Nabu\nabu\node_modules\ssh
+1421 silly lockFile a2e6a39c--npm-cache-ssh-1-7-1-package-tgz tar://C:\Users\sony\AppData\Roaming\npm-cache\ssh\1.7.1\package.tgz
+1422 silly lockFile a2e6a39c--npm-cache-ssh-1-7-1-package-tgz tar://C:\Users\sony\AppData\Roaming\npm-cache\ssh\1.7.1\package.tgz
+1423 info preinstall ssh@1.7.1
+1424 verbose readDependencies using package.json deps
+1425 verbose readDependencies using package.json deps
+1426 verbose cache add [ 'bindings@~1.1.0', null ]
+1427 verbose cache add name=undefined spec="bindings@~1.1.0" args=["bindings@~1.1.0",null]
+1428 verbose parsed url { protocol: null,
+1428 verbose parsed url   slashes: null,
+1428 verbose parsed url   auth: null,
+1428 verbose parsed url   host: null,
+1428 verbose parsed url   port: null,
+1428 verbose parsed url   hostname: null,
+1428 verbose parsed url   hash: null,
+1428 verbose parsed url   search: null,
+1428 verbose parsed url   query: null,
+1428 verbose parsed url   pathname: 'bindings@~1.1.0',
+1428 verbose parsed url   path: 'bindings@~1.1.0',
+1428 verbose parsed url   href: 'bindings@~1.1.0' }
+1429 verbose cache add name="bindings" spec="~1.1.0" args=["bindings","~1.1.0"]
+1430 verbose parsed url { protocol: null,
+1430 verbose parsed url   slashes: null,
+1430 verbose parsed url   auth: null,
+1430 verbose parsed url   host: null,
+1430 verbose parsed url   port: null,
+1430 verbose parsed url   hostname: null,
+1430 verbose parsed url   hash: null,
+1430 verbose parsed url   search: null,
+1430 verbose parsed url   query: null,
+1430 verbose parsed url   pathname: '~1.1.0',
+1430 verbose parsed url   path: '~1.1.0',
+1430 verbose parsed url   href: '~1.1.0' }
+1431 verbose addNamed [ 'bindings', '~1.1.0' ]
+1432 verbose addNamed [ null, '>=1.1.0-0 <1.2.0-0' ]
+1433 silly lockFile 3e6cf8d3-bindings-1-1-0 bindings@~1.1.0
+1434 verbose lock bindings@~1.1.0 C:\Users\sony\AppData\Roaming\npm-cache\3e6cf8d3-bindings-1-1-0.lock
+1435 verbose cache add [ 'nan@~0.6.0', null ]
+1436 verbose cache add name=undefined spec="nan@~0.6.0" args=["nan@~0.6.0",null]
+1437 verbose parsed url { protocol: null,
+1437 verbose parsed url   slashes: null,
+1437 verbose parsed url   auth: null,
+1437 verbose parsed url   host: null,
+1437 verbose parsed url   port: null,
+1437 verbose parsed url   hostname: null,
+1437 verbose parsed url   hash: null,
+1437 verbose parsed url   search: null,
+1437 verbose parsed url   query: null,
+1437 verbose parsed url   pathname: 'nan@~0.6.0',
+1437 verbose parsed url   path: 'nan@~0.6.0',
+1437 verbose parsed url   href: 'nan@~0.6.0' }
+1438 verbose cache add name="nan" spec="~0.6.0" args=["nan","~0.6.0"]
+1439 verbose parsed url { protocol: null,
+1439 verbose parsed url   slashes: null,
+1439 verbose parsed url   auth: null,
+1439 verbose parsed url   host: null,
+1439 verbose parsed url   port: null,
+1439 verbose parsed url   hostname: null,
+1439 verbose parsed url   hash: null,
+1439 verbose parsed url   search: null,
+1439 verbose parsed url   query: null,
+1439 verbose parsed url   pathname: '~0.6.0',
+1439 verbose parsed url   path: '~0.6.0',
+1439 verbose parsed url   href: '~0.6.0' }
+1440 verbose addNamed [ 'nan', '~0.6.0' ]
+1441 verbose addNamed [ null, '>=0.6.0-0 <0.7.0-0' ]
+1442 silly lockFile bb2a8d25-nan-0-6-0 nan@~0.6.0
+1443 verbose lock nan@~0.6.0 C:\Users\sony\AppData\Roaming\npm-cache\bb2a8d25-nan-0-6-0.lock
+1444 silly addNameRange { name: 'bindings', range: '>=1.1.0-0 <1.2.0-0', hasData: false }
+1445 verbose url raw bindings
+1446 verbose url resolving [ 'https://registry.npmjs.org/', './bindings' ]
+1447 verbose url resolved https://registry.npmjs.org/bindings
+1448 info trying registry request attempt 1 at 16:11:27
+1449 http GET https://registry.npmjs.org/bindings
+1450 silly addNameRange { name: 'nan', range: '>=0.6.0-0 <0.7.0-0', hasData: false }
+1451 http 200 https://registry.npmjs.org/bindings
+1452 silly registry.get cb [ 200,
+1452 silly registry.get   { date: 'Thu, 20 Feb 2014 15:11:30 GMT',
+1452 silly registry.get     server: 'CouchDB/1.5.0 (Erlang OTP/R16B)',
+1452 silly registry.get     etag: '"8K98OB4X6MFFOACLX579JQDPQ"',
+1452 silly registry.get     'content-type': 'application/json',
+1452 silly registry.get     via: '1.1 varnish',
+1452 silly registry.get     'cache-control': 'max-age=1',
+1452 silly registry.get     'content-length': '32541',
+1452 silly registry.get     'accept-ranges': 'bytes',
+1452 silly registry.get     age: '169218',
+1452 silly registry.get     'x-served-by': 'cache-v41-ASH, cache-lcy1127-LCY',
+1452 silly registry.get     'x-cache': 'HIT, HIT',
+1452 silly registry.get     'x-cache-hits': '4165, 1',
+1452 silly registry.get     'x-timer': 'S1392894980.499211073,VS0,VS113,VE113,VE14109558',
+1452 silly registry.get     vary: 'Accept',
+1452 silly registry.get     'keep-alive': 'timeout=10, max=50',
+1452 silly registry.get     connection: 'Keep-Alive' } ]
+1453 verbose url raw nan
+1454 verbose url resolving [ 'https://registry.npmjs.org/', './nan' ]
+1455 verbose url resolved https://registry.npmjs.org/nan
+1456 info trying registry request attempt 1 at 16:11:27
+1457 verbose etag "37ANZBW39BZR8XGNNF9P4ZLJI"
+1458 http GET https://registry.npmjs.org/nan
+1459 silly addNameRange number 2 { name: 'bindings', range: '>=1.1.0-0 <1.2.0-0', hasData: true }
+1460 silly addNameRange versions [ 'bindings',
+1460 silly addNameRange   [ '0.0.1',
+1460 silly addNameRange     '0.1.0',
+1460 silly addNameRange     '0.1.1',
+1460 silly addNameRange     '0.2.0',
+1460 silly addNameRange     '0.2.1',
+1460 silly addNameRange     '0.2.2',
+1460 silly addNameRange     '0.2.3',
+1460 silly addNameRange     '0.2.4',
+1460 silly addNameRange     '0.3.0',
+1460 silly addNameRange     '0.4.0',
+1460 silly addNameRange     '1.0.0',
+1460 silly addNameRange     '1.1.0',
+1460 silly addNameRange     '1.1.1' ] ]
+1461 verbose addNamed [ 'bindings', '1.1.1' ]
+1462 verbose addNamed [ '1.1.1', '1.1.1' ]
+1463 silly lockFile 52dd60a7-bindings-1-1-1 bindings@1.1.1
+1464 verbose lock bindings@1.1.1 C:\Users\sony\AppData\Roaming\npm-cache\52dd60a7-bindings-1-1-1.lock
+1465 silly lockFile 4e5e3491--org-bindings-bindings-1-1-1-tgz https://registry.npmjs.org/bindings/-/bindings-1.1.1.tgz
+1466 verbose lock https://registry.npmjs.org/bindings/-/bindings-1.1.1.tgz C:\Users\sony\AppData\Roaming\npm-cache\4e5e3491--org-bindings-bindings-1-1-1-tgz.lock
+1467 verbose addRemoteTarball [ 'https://registry.npmjs.org/bindings/-/bindings-1.1.1.tgz',
+1467 verbose addRemoteTarball   '951f7ae010302ffc50b265b124032017ed2bf6f3' ]
+1468 info retry fetch attempt 1 at 16:11:27
+1469 verbose fetch to= C:\Users\sony\AppData\Local\Temp\npm-15224-DguZS5vn\1392909087410-0.4222199360374361\tmp.tgz
+1470 http GET https://registry.npmjs.org/bindings/-/bindings-1.1.1.tgz
+1471 http 200 https://registry.npmjs.org/bindings/-/bindings-1.1.1.tgz
+1472 verbose tar unpack C:\Users\sony\AppData\Local\Temp\npm-15224-DguZS5vn\1392909087410-0.4222199360374361\tmp.tgz
+1473 silly lockFile a1fd62b5-87410-0-4222199360374361-package tar://C:\Users\sony\AppData\Local\Temp\npm-15224-DguZS5vn\1392909087410-0.4222199360374361\package
+1474 verbose lock tar://C:\Users\sony\AppData\Local\Temp\npm-15224-DguZS5vn\1392909087410-0.4222199360374361\package C:\Users\sony\AppData\Roaming\npm-cache\a1fd62b5-87410-0-4222199360374361-package.lock
+1475 silly lockFile 6f1ef394-87410-0-4222199360374361-tmp-tgz tar://C:\Users\sony\AppData\Local\Temp\npm-15224-DguZS5vn\1392909087410-0.4222199360374361\tmp.tgz
+1476 verbose lock tar://C:\Users\sony\AppData\Local\Temp\npm-15224-DguZS5vn\1392909087410-0.4222199360374361\tmp.tgz C:\Users\sony\AppData\Roaming\npm-cache\6f1ef394-87410-0-4222199360374361-tmp-tgz.lock
+1477 silly gunzTarPerm modes [ '755', '644' ]
+1478 silly gunzTarPerm extractEntry package.json
+1479 silly gunzTarPerm extractEntry README.md
+1480 silly gunzTarPerm extractEntry bindings.js
+1481 http 304 https://registry.npmjs.org/nan
+1482 silly registry.get cb [ 304,
+1482 silly registry.get   { date: 'Thu, 20 Feb 2014 15:11:30 GMT',
+1482 silly registry.get     server: 'Apache',
+1482 silly registry.get     connection: 'Keep-Alive',
+1482 silly registry.get     'keep-alive': 'timeout=10, max=50',
+1482 silly registry.get     etag: '"37ANZBW39BZR8XGNNF9P4ZLJI"',
+1482 silly registry.get     'cache-control': 'max-age=1',
+1482 silly registry.get     vary: 'Accept' } ]
+1483 verbose etag nan from cache
+1484 silly lockFile a1fd62b5-87410-0-4222199360374361-package tar://C:\Users\sony\AppData\Local\Temp\npm-15224-DguZS5vn\1392909087410-0.4222199360374361\package
+1485 silly lockFile a1fd62b5-87410-0-4222199360374361-package tar://C:\Users\sony\AppData\Local\Temp\npm-15224-DguZS5vn\1392909087410-0.4222199360374361\package
+1486 silly lockFile 6f1ef394-87410-0-4222199360374361-tmp-tgz tar://C:\Users\sony\AppData\Local\Temp\npm-15224-DguZS5vn\1392909087410-0.4222199360374361\tmp.tgz
+1487 silly lockFile 6f1ef394-87410-0-4222199360374361-tmp-tgz tar://C:\Users\sony\AppData\Local\Temp\npm-15224-DguZS5vn\1392909087410-0.4222199360374361\tmp.tgz
+1488 verbose tar pack [ 'C:\\Users\\sony\\AppData\\Roaming\\npm-cache\\bindings\\1.1.1\\package.tgz',
+1488 verbose tar pack   'C:\\Users\\sony\\AppData\\Local\\Temp\\npm-15224-DguZS5vn\\1392909087410-0.4222199360374361\\package' ]
+1489 verbose tarball C:\Users\sony\AppData\Roaming\npm-cache\bindings\1.1.1\package.tgz
+1490 verbose folder C:\Users\sony\AppData\Local\Temp\npm-15224-DguZS5vn\1392909087410-0.4222199360374361\package
+1491 silly lockFile a1fd62b5-87410-0-4222199360374361-package tar://C:\Users\sony\AppData\Local\Temp\npm-15224-DguZS5vn\1392909087410-0.4222199360374361\package
+1492 verbose lock tar://C:\Users\sony\AppData\Local\Temp\npm-15224-DguZS5vn\1392909087410-0.4222199360374361\package C:\Users\sony\AppData\Roaming\npm-cache\a1fd62b5-87410-0-4222199360374361-package.lock
+1493 silly lockFile 97ada6e2-cache-bindings-1-1-1-package-tgz tar://C:\Users\sony\AppData\Roaming\npm-cache\bindings\1.1.1\package.tgz
+1494 verbose lock tar://C:\Users\sony\AppData\Roaming\npm-cache\bindings\1.1.1\package.tgz C:\Users\sony\AppData\Roaming\npm-cache\97ada6e2-cache-bindings-1-1-1-package-tgz.lock
+1495 silly lockFile a1fd62b5-87410-0-4222199360374361-package tar://C:\Users\sony\AppData\Local\Temp\npm-15224-DguZS5vn\1392909087410-0.4222199360374361\package
+1496 silly lockFile a1fd62b5-87410-0-4222199360374361-package tar://C:\Users\sony\AppData\Local\Temp\npm-15224-DguZS5vn\1392909087410-0.4222199360374361\package
+1497 silly lockFile 97ada6e2-cache-bindings-1-1-1-package-tgz tar://C:\Users\sony\AppData\Roaming\npm-cache\bindings\1.1.1\package.tgz
+1498 silly lockFile 97ada6e2-cache-bindings-1-1-1-package-tgz tar://C:\Users\sony\AppData\Roaming\npm-cache\bindings\1.1.1\package.tgz
+1499 silly lockFile f426ec89-npm-cache-bindings-1-1-1-package C:\Users\sony\AppData\Roaming\npm-cache\bindings\1.1.1\package
+1500 verbose lock C:\Users\sony\AppData\Roaming\npm-cache\bindings\1.1.1\package C:\Users\sony\AppData\Roaming\npm-cache\f426ec89-npm-cache-bindings-1-1-1-package.lock
+1501 silly lockFile f426ec89-npm-cache-bindings-1-1-1-package C:\Users\sony\AppData\Roaming\npm-cache\bindings\1.1.1\package
+1502 silly lockFile f426ec89-npm-cache-bindings-1-1-1-package C:\Users\sony\AppData\Roaming\npm-cache\bindings\1.1.1\package
+1503 verbose tar unpack C:\Users\sony\AppData\Roaming\npm-cache\bindings\1.1.1\package.tgz
+1504 silly lockFile e8b74d7a-npm-cache-bindings-1-1-1-package tar://C:\Users\sony\AppData\Roaming\npm-cache\bindings\1.1.1\package
+1505 verbose lock tar://C:\Users\sony\AppData\Roaming\npm-cache\bindings\1.1.1\package C:\Users\sony\AppData\Roaming\npm-cache\e8b74d7a-npm-cache-bindings-1-1-1-package.lock
+1506 silly lockFile 97ada6e2-cache-bindings-1-1-1-package-tgz tar://C:\Users\sony\AppData\Roaming\npm-cache\bindings\1.1.1\package.tgz
+1507 verbose lock tar://C:\Users\sony\AppData\Roaming\npm-cache\bindings\1.1.1\package.tgz C:\Users\sony\AppData\Roaming\npm-cache\97ada6e2-cache-bindings-1-1-1-package-tgz.lock
+1508 silly gunzTarPerm modes [ '755', '644' ]
+1509 silly gunzTarPerm extractEntry package.json
+1510 silly gunzTarPerm modified mode [ 'package.json', 438, 420 ]
+1511 silly gunzTarPerm extractEntry README.md
+1512 silly gunzTarPerm modified mode [ 'README.md', 438, 420 ]
+1513 silly gunzTarPerm extractEntry bindings.js
+1514 silly gunzTarPerm modified mode [ 'bindings.js', 438, 420 ]
+1515 silly lockFile e8b74d7a-npm-cache-bindings-1-1-1-package tar://C:\Users\sony\AppData\Roaming\npm-cache\bindings\1.1.1\package
+1516 silly lockFile e8b74d7a-npm-cache-bindings-1-1-1-package tar://C:\Users\sony\AppData\Roaming\npm-cache\bindings\1.1.1\package
+1517 silly lockFile 97ada6e2-cache-bindings-1-1-1-package-tgz tar://C:\Users\sony\AppData\Roaming\npm-cache\bindings\1.1.1\package.tgz
+1518 silly lockFile 97ada6e2-cache-bindings-1-1-1-package-tgz tar://C:\Users\sony\AppData\Roaming\npm-cache\bindings\1.1.1\package.tgz
+1519 verbose chmod C:\Users\sony\AppData\Roaming\npm-cache\bindings\1.1.1\package.tgz 644
+1520 silly chown skipping for windows C:\Users\sony\AppData\Roaming\npm-cache\bindings\1.1.1\package.tgz
+1521 silly lockFile 4e5e3491--org-bindings-bindings-1-1-1-tgz https://registry.npmjs.org/bindings/-/bindings-1.1.1.tgz
+1522 silly lockFile 4e5e3491--org-bindings-bindings-1-1-1-tgz https://registry.npmjs.org/bindings/-/bindings-1.1.1.tgz
+1523 silly lockFile 52dd60a7-bindings-1-1-1 bindings@1.1.1
+1524 silly lockFile 52dd60a7-bindings-1-1-1 bindings@1.1.1
+1525 silly lockFile 3e6cf8d3-bindings-1-1-0 bindings@~1.1.0
+1526 silly lockFile 3e6cf8d3-bindings-1-1-0 bindings@~1.1.0
+1527 silly addNameRange number 2 { name: 'nan', range: '>=0.6.0-0 <0.7.0-0', hasData: true }
+1528 silly addNameRange versions [ 'nan',
+1528 silly addNameRange   [ '0.3.0-wip',
+1528 silly addNameRange     '0.3.0-wip2',
+1528 silly addNameRange     '0.3.0',
+1528 silly addNameRange     '0.3.1',
+1528 silly addNameRange     '0.3.2',
+1528 silly addNameRange     '0.4.0',
+1528 silly addNameRange     '0.4.1',
+1528 silly addNameRange     '0.4.2',
+1528 silly addNameRange     '0.4.3',
+1528 silly addNameRange     '0.4.4',
+1528 silly addNameRange     '0.5.0',
+1528 silly addNameRange     '0.5.1',
+1528 silly addNameRange     '0.5.2',
+1528 silly addNameRange     '0.6.0',
+1528 silly addNameRange     '0.7.0',
+1528 silly addNameRange     '0.7.1',
+1528 silly addNameRange     '0.8.0' ] ]
+1529 verbose addNamed [ 'nan', '0.6.0' ]
+1530 verbose addNamed [ '0.6.0', '0.6.0' ]
+1531 silly lockFile fb2e119c-nan-0-6-0 nan@0.6.0
+1532 verbose lock nan@0.6.0 C:\Users\sony\AppData\Roaming\npm-cache\fb2e119c-nan-0-6-0.lock
+1533 silly lockFile 4a862549-stry-npmjs-org-nan-nan-0-6-0-tgz https://registry.npmjs.org/nan/-/nan-0.6.0.tgz
+1534 verbose lock https://registry.npmjs.org/nan/-/nan-0.6.0.tgz C:\Users\sony\AppData\Roaming\npm-cache\4a862549-stry-npmjs-org-nan-nan-0-6-0-tgz.lock
+1535 verbose addRemoteTarball [ 'https://registry.npmjs.org/nan/-/nan-0.6.0.tgz',
+1535 verbose addRemoteTarball   'a54ebe59717b467c77425302bd7c17574c887aaa' ]
+1536 info retry fetch attempt 1 at 16:11:27
+1537 verbose fetch to= C:\Users\sony\AppData\Local\Temp\npm-15224-DguZS5vn\1392909087714-0.3562299788463861\tmp.tgz
+1538 http GET https://registry.npmjs.org/nan/-/nan-0.6.0.tgz
+1539 http 200 https://registry.npmjs.org/nan/-/nan-0.6.0.tgz
+1540 verbose tar unpack C:\Users\sony\AppData\Local\Temp\npm-15224-DguZS5vn\1392909087714-0.3562299788463861\tmp.tgz
+1541 silly lockFile 965ae8cf-87714-0-3562299788463861-package tar://C:\Users\sony\AppData\Local\Temp\npm-15224-DguZS5vn\1392909087714-0.3562299788463861\package
+1542 verbose lock tar://C:\Users\sony\AppData\Local\Temp\npm-15224-DguZS5vn\1392909087714-0.3562299788463861\package C:\Users\sony\AppData\Roaming\npm-cache\965ae8cf-87714-0-3562299788463861-package.lock
+1543 silly lockFile bf2cb9e6-87714-0-3562299788463861-tmp-tgz tar://C:\Users\sony\AppData\Local\Temp\npm-15224-DguZS5vn\1392909087714-0.3562299788463861\tmp.tgz
+1544 verbose lock tar://C:\Users\sony\AppData\Local\Temp\npm-15224-DguZS5vn\1392909087714-0.3562299788463861\tmp.tgz C:\Users\sony\AppData\Roaming\npm-cache\bf2cb9e6-87714-0-3562299788463861-tmp-tgz.lock
+1545 silly gunzTarPerm modes [ '755', '644' ]
+1546 silly gunzTarPerm extractEntry package.json
+1547 silly gunzTarPerm extractEntry README.md
+1548 silly gunzTarPerm extractEntry LICENSE
+1549 silly gunzTarPerm extractEntry include_dirs.js
+1550 silly gunzTarPerm extractEntry build/config.gypi
+1551 silly gunzTarPerm extractEntry nan.h
+1552 silly lockFile 965ae8cf-87714-0-3562299788463861-package tar://C:\Users\sony\AppData\Local\Temp\npm-15224-DguZS5vn\1392909087714-0.3562299788463861\package
+1553 silly lockFile 965ae8cf-87714-0-3562299788463861-package tar://C:\Users\sony\AppData\Local\Temp\npm-15224-DguZS5vn\1392909087714-0.3562299788463861\package
+1554 silly lockFile bf2cb9e6-87714-0-3562299788463861-tmp-tgz tar://C:\Users\sony\AppData\Local\Temp\npm-15224-DguZS5vn\1392909087714-0.3562299788463861\tmp.tgz
+1555 silly lockFile bf2cb9e6-87714-0-3562299788463861-tmp-tgz tar://C:\Users\sony\AppData\Local\Temp\npm-15224-DguZS5vn\1392909087714-0.3562299788463861\tmp.tgz
+1556 verbose tar pack [ 'C:\\Users\\sony\\AppData\\Roaming\\npm-cache\\nan\\0.6.0\\package.tgz',
+1556 verbose tar pack   'C:\\Users\\sony\\AppData\\Local\\Temp\\npm-15224-DguZS5vn\\1392909087714-0.3562299788463861\\package' ]
+1557 verbose tarball C:\Users\sony\AppData\Roaming\npm-cache\nan\0.6.0\package.tgz
+1558 verbose folder C:\Users\sony\AppData\Local\Temp\npm-15224-DguZS5vn\1392909087714-0.3562299788463861\package
+1559 silly lockFile 965ae8cf-87714-0-3562299788463861-package tar://C:\Users\sony\AppData\Local\Temp\npm-15224-DguZS5vn\1392909087714-0.3562299788463861\package
+1560 verbose lock tar://C:\Users\sony\AppData\Local\Temp\npm-15224-DguZS5vn\1392909087714-0.3562299788463861\package C:\Users\sony\AppData\Roaming\npm-cache\965ae8cf-87714-0-3562299788463861-package.lock
+1561 silly lockFile 1fd43cbe--npm-cache-nan-0-6-0-package-tgz tar://C:\Users\sony\AppData\Roaming\npm-cache\nan\0.6.0\package.tgz
+1562 verbose lock tar://C:\Users\sony\AppData\Roaming\npm-cache\nan\0.6.0\package.tgz C:\Users\sony\AppData\Roaming\npm-cache\1fd43cbe--npm-cache-nan-0-6-0-package-tgz.lock
+1563 silly lockFile 965ae8cf-87714-0-3562299788463861-package tar://C:\Users\sony\AppData\Local\Temp\npm-15224-DguZS5vn\1392909087714-0.3562299788463861\package
+1564 silly lockFile 965ae8cf-87714-0-3562299788463861-package tar://C:\Users\sony\AppData\Local\Temp\npm-15224-DguZS5vn\1392909087714-0.3562299788463861\package
+1565 silly lockFile 1fd43cbe--npm-cache-nan-0-6-0-package-tgz tar://C:\Users\sony\AppData\Roaming\npm-cache\nan\0.6.0\package.tgz
+1566 silly lockFile 1fd43cbe--npm-cache-nan-0-6-0-package-tgz tar://C:\Users\sony\AppData\Roaming\npm-cache\nan\0.6.0\package.tgz
+1567 silly lockFile 357b64c2-ming-npm-cache-nan-0-6-0-package C:\Users\sony\AppData\Roaming\npm-cache\nan\0.6.0\package
+1568 verbose lock C:\Users\sony\AppData\Roaming\npm-cache\nan\0.6.0\package C:\Users\sony\AppData\Roaming\npm-cache\357b64c2-ming-npm-cache-nan-0-6-0-package.lock
+1569 silly lockFile 357b64c2-ming-npm-cache-nan-0-6-0-package C:\Users\sony\AppData\Roaming\npm-cache\nan\0.6.0\package
+1570 silly lockFile 357b64c2-ming-npm-cache-nan-0-6-0-package C:\Users\sony\AppData\Roaming\npm-cache\nan\0.6.0\package
+1571 verbose tar unpack C:\Users\sony\AppData\Roaming\npm-cache\nan\0.6.0\package.tgz
+1572 silly lockFile a09c6d68-ming-npm-cache-nan-0-6-0-package tar://C:\Users\sony\AppData\Roaming\npm-cache\nan\0.6.0\package
+1573 verbose lock tar://C:\Users\sony\AppData\Roaming\npm-cache\nan\0.6.0\package C:\Users\sony\AppData\Roaming\npm-cache\a09c6d68-ming-npm-cache-nan-0-6-0-package.lock
+1574 silly lockFile 1fd43cbe--npm-cache-nan-0-6-0-package-tgz tar://C:\Users\sony\AppData\Roaming\npm-cache\nan\0.6.0\package.tgz
+1575 verbose lock tar://C:\Users\sony\AppData\Roaming\npm-cache\nan\0.6.0\package.tgz C:\Users\sony\AppData\Roaming\npm-cache\1fd43cbe--npm-cache-nan-0-6-0-package-tgz.lock
+1576 silly gunzTarPerm modes [ '755', '644' ]
+1577 silly gunzTarPerm extractEntry package.json
+1578 silly gunzTarPerm modified mode [ 'package.json', 438, 420 ]
+1579 silly gunzTarPerm extractEntry README.md
+1580 silly gunzTarPerm modified mode [ 'README.md', 438, 420 ]
+1581 silly gunzTarPerm extractEntry LICENSE
+1582 silly gunzTarPerm modified mode [ 'LICENSE', 438, 420 ]
+1583 silly gunzTarPerm extractEntry include_dirs.js
+1584 silly gunzTarPerm modified mode [ 'include_dirs.js', 438, 420 ]
+1585 silly gunzTarPerm extractEntry build/config.gypi
+1586 silly gunzTarPerm modified mode [ 'build/config.gypi', 438, 420 ]
+1587 silly gunzTarPerm extractEntry nan.h
+1588 silly gunzTarPerm modified mode [ 'nan.h', 438, 420 ]
+1589 silly lockFile a09c6d68-ming-npm-cache-nan-0-6-0-package tar://C:\Users\sony\AppData\Roaming\npm-cache\nan\0.6.0\package
+1590 silly lockFile a09c6d68-ming-npm-cache-nan-0-6-0-package tar://C:\Users\sony\AppData\Roaming\npm-cache\nan\0.6.0\package
+1591 silly lockFile 1fd43cbe--npm-cache-nan-0-6-0-package-tgz tar://C:\Users\sony\AppData\Roaming\npm-cache\nan\0.6.0\package.tgz
+1592 silly lockFile 1fd43cbe--npm-cache-nan-0-6-0-package-tgz tar://C:\Users\sony\AppData\Roaming\npm-cache\nan\0.6.0\package.tgz
+1593 verbose chmod C:\Users\sony\AppData\Roaming\npm-cache\nan\0.6.0\package.tgz 644
+1594 silly chown skipping for windows C:\Users\sony\AppData\Roaming\npm-cache\nan\0.6.0\package.tgz
+1595 silly lockFile 4a862549-stry-npmjs-org-nan-nan-0-6-0-tgz https://registry.npmjs.org/nan/-/nan-0.6.0.tgz
+1596 silly lockFile 4a862549-stry-npmjs-org-nan-nan-0-6-0-tgz https://registry.npmjs.org/nan/-/nan-0.6.0.tgz
+1597 silly lockFile fb2e119c-nan-0-6-0 nan@0.6.0
+1598 silly lockFile fb2e119c-nan-0-6-0 nan@0.6.0
+1599 silly lockFile bb2a8d25-nan-0-6-0 nan@~0.6.0
+1600 silly lockFile bb2a8d25-nan-0-6-0 nan@~0.6.0
+1601 silly resolved [ { name: 'bindings',
+1601 silly resolved     description: 'Helper module for loading your native module\'s .node file',
+1601 silly resolved     keywords: [ 'native', 'addon', 'bindings', 'gyp', 'waf', 'c', 'c++' ],
+1601 silly resolved     version: '1.1.1',
+1601 silly resolved     author:
+1601 silly resolved      { name: 'Nathan Rajlich',
+1601 silly resolved        email: 'nathan@tootallnate.net',
+1601 silly resolved        url: 'http://tootallnate.net' },
+1601 silly resolved     repository:
+1601 silly resolved      { type: 'git',
+1601 silly resolved        url: 'git://github.com/TooTallNate/node-bindings.git' },
+1601 silly resolved     main: './bindings.js',
+1601 silly resolved     readme: 'node-bindings\n=============\n### Helper module for loading your native module\'s .node file\n\nThis is a helper module for authors of Node.js native addon modules.\nIt is basically the "swiss army knife" of `require()`ing your native module\'s\n`.node` file.\n\nThroughout the course of Node\'s native addon history, addons have ended up being\ncompiled in a variety of different places, depending on which build tool and which\nversion of node was used. To make matters worse, now the _gyp_ build tool can\nproduce either a _Release_ or _Debug_ build, each being built into different\nlocations.\n\nThis module checks _all_ the possible locations that a native addon would be built\nat, and returns the first one that loads successfully.\n\n\nInstallation\n------------\n\nInstall with `npm`:\n\n``` bash\n$ npm install bindings\n```\n\nOr add it to the `"dependencies"` section of your _package.json_ file.\n\n\nExample\n-------\n\n`require()`ing the proper bindings file for the current node version, platform\nand architecture is as simple as:\n\n``` js\nvar bindings = require(\'bindings\')(\'binding.node\')\n\n// Use your bindings defined in your C files\nbindings.your_c_function()\n```\n\n\nNice Error Output\n-----------------\n\nWhen the `.node` file could not be loaded, `node-bindings` throws an Error with\na nice error message telling you exactly what was tried. You can also check the\n`err.tries` Array property.\n\n```\nError: Could not load the bindings file. Tried:\n → /Users/nrajlich/ref/build/binding.node\n → /Users/nrajlich/ref/build/Debug/binding.node\n → /Users/nrajlich/ref/build/Release/binding.node\n → /Users/nrajlich/ref/out/Debug/binding.node\n → /Users/nrajlich/ref/Debug/binding.node\n → /Users/nrajlich/ref/out/Release/binding.node\n → /Users/nrajlich/ref/Release/binding.node\n → /Users/nrajlich/ref/build/default/binding.node\n → /Users/nrajlich/ref/compiled/0.8.2/darwin/x64/binding.node\n    at bindings (/Users/nrajlich/ref/node_modules/bindings/bindings.js:84:13)\n    at Object.<anonymous> (/Users/nrajlich/ref/lib/ref.js:5:47)\n    at Module._compile (module.js:449:26)\n    at Object.Module._extensions..js (module.js:467:10)\n    at Module.load (module.js:356:32)\n    at Function.Module._load (module.js:312:12)\n    ...\n```\n\n\nLicense\n-------\n\n(The MIT License)\n\nCopyright (c) 2012 Nathan Rajlich &lt;nathan@tootallnate.net&gt;\n\nPermission is hereby granted, free of charge, to any person obtaining\na copy of this software and associated documentation files (the\n\'Software\'), to deal in the Software without restriction, including\nwithout limitation the rights to use, copy, modify, merge, publish,\ndistribute, sublicense, and/or sell copies of the Software, and to\npermit persons to whom the Software is furnished to do so, subject to\nthe following conditions:\n\nThe above copyright notice and this permission notice shall be\nincluded in all copies or substantial portions of the Software.\n\nTHE SOFTWARE IS PROVIDED \'AS IS\', WITHOUT WARRANTY OF ANY KIND,\nEXPRESS OR IMPLIED, INCLUDING BUT NOT LIMITED TO THE WARRANTIES OF\nMERCHANTABILITY, FITNESS FOR A PARTICULAR PURPOSE AND NONINFRINGEMENT.\nIN NO EVENT SHALL THE AUTHORS OR COPYRIGHT HOLDERS BE LIABLE FOR ANY\nCLAIM, DAMAGES OR OTHER LIABILITY, WHETHER IN AN ACTION OF CONTRACT,\nTORT OR OTHERWISE, ARISING FROM, OUT OF OR IN CONNECTION WITH THE\nSOFTWARE OR THE USE OR OTHER DEALINGS IN THE SOFTWARE.\n',
+1601 silly resolved     readmeFilename: 'README.md',
+1601 silly resolved     bugs: { url: 'https://github.com/TooTallNate/node-bindings/issues' },
+1601 silly resolved     homepage: 'https://github.com/TooTallNate/node-bindings',
+1601 silly resolved     _id: 'bindings@1.1.1',
+1601 silly resolved     dist: { shasum: '9c9282deddb5f904dd5413d5d4b73f57d6d3a42f' },
+1601 silly resolved     _from: 'bindings@~1.1.0',
+1601 silly resolved     _resolved: 'https://registry.npmjs.org/bindings/-/bindings-1.1.1.tgz' },
+1601 silly resolved   { name: 'nan',
+1601 silly resolved     version: '0.6.0',
+1601 silly resolved     description: 'Native Abstractions for Node.js: C++ header for Node 0.8->0.12 compatibility',
+1601 silly resolved     main: 'include_dirs.js',
+1601 silly resolved     repository: { type: 'git', url: 'git://github.com/rvagg/nan.git' },
+1601 silly resolved     contributors: [ [Object], [Object], [Object], [Object] ],
+1601 silly resolved     license: 'MIT',
+1601 silly resolved     readme: 'Native Abstractions for Node.js\n===============================\n\n**A header file filled with macro and utility goodness for making add-on development for Node.js easier across versions 0.8, 0.10 and 0.11, and eventually 0.12.**\n\n***Current version: 0.6.0*** *(See [nan.h](https://github.com/rvagg/nan/blob/master/nan.h) for complete ChangeLog)*\n\n[![NPM](https://nodei.co/npm/nan.png?downloads=true)](https://nodei.co/npm/nan/) [![NPM](https://nodei.co/npm-dl/nan.png?months=6)](https://nodei.co/npm/nan/)\n\nThanks to the crazy changes in V8 (and some in Node core), keeping native addons compiling happily across versions, particularly 0.10 to 0.11/0.12, is a minor nightmare. The goal of this project is to store all logic necessary to develop native Node.js addons without having to inspect `NODE_MODULE_VERSION` and get yourself into a macro-tangle.\n\nThis project also contains some helper utilities that make addon development a bit more pleasant.\n\n * **[News & Updates](#news)**\n * **[Usage](#usage)**\n * **[Example](#example)**\n * **[API](#api)**\n\n<a name="news"></a>\n## News & Updates\n\n### Nov-2013: Node 0.11.9+ breaking V8 change\n\nThe version of V8 that\'s shipping with Node 0.11.9+ has changed the signature for new `Local`s to: `v8::Local<T>::New(isolate, value)`, i.e. introducing the `isolate` argument and therefore breaking all new `Local` declarations for previous versions. NAN 0.6+ now includes a `NanNewLocal<T>(value)` that can be used in place to work around this incompatibility and maintain compatibility with 0.8->0.11.9+ (minus a few early 0.11 releases).\n\nFor example, if you wanted to return a `null` on a callback you will have to change the argument from `v8::Local<v8::Value>::New(v8::Null())` to `NanNewLocal<v8::Value>(v8::Null())`.\n\n### Nov-2013: Change to binding.gyp `"include_dirs"` for NAN\n\nInclusion of NAN in a project\'s binding.gyp is now greatly simplified. You can now just use `"<!(node -e \\"require(\'nan\')\\")"` in your `"include_dirs"`, see example below.\n\n<a name="usage"></a>\n## Usage\n\nSimply add **NAN** as a dependency in the *package.json* of your Node addon:\n\n``` bash\n$ npm install --save nan\n```\n\nPull in the path to **NAN** in your *binding.gyp* so that you can use `#include "nan.h"` in your *.cpp* files:\n\n``` python\n"include_dirs" : [\n    "<!(node -e \\"require(\'nan\')\\")"\n]\n```\n\nThis works like a `-I<path-to-NAN>` when compiling your addon.\n\n<a name="example"></a>\n## Example\n\nSee **[LevelDOWN](https://github.com/rvagg/node-leveldown/pull/48)** for a full example of **NAN** in use.\n\nFor a simpler example, see the **[async pi estimation example](https://github.com/rvagg/nan/tree/master/examples/async_pi_estimate)** in the examples directory for full code and an explanation of what this Monte Carlo Pi estimation example does. Below are just some parts of the full example that illustrate the use of **NAN**.\n\nCompare to the current 0.10 version of this example, found in the [node-addon-examples](https://github.com/rvagg/node-addon-examples/tree/master/9_async_work) repository and also a 0.11 version of the same found [here](https://github.com/kkoopa/node-addon-examples/tree/5c01f58fc993377a567812597e54a83af69686d7/9_async_work).\n\nNote that there is no embedded version sniffing going on here and also the async work is made much simpler, see below for details on the `NanAsyncWorker` class.\n\n```c++\n// addon.cc\n#include <node.h>\n#include "nan.h"\n// ...\n\nusing namespace v8;\n\nvoid InitAll(Handle<Object> exports) {\n  exports->Set(NanSymbol("calculateSync"),\n    FunctionTemplate::New(CalculateSync)->GetFunction());\n\n  exports->Set(NanSymbol("calculateAsync"),\n    FunctionTemplate::New(CalculateAsync)->GetFunction());\n}\n\nNODE_MODULE(addon, InitAll)\n```\n\n```c++\n// sync.h\n#include <node.h>\n#include "nan.h"\n\nNAN_METHOD(CalculateSync);\n```\n\n```c++\n// sync.cc\n#include <node.h>\n#include "nan.h"\n#include "sync.h"\n// ...\n\nusing namespace v8;\n\n// Simple synchronous access to the `Estimate()` function\nNAN_METHOD(CalculateSync) {\n  NanScope();\n\n  // expect a number as the first argument\n  int points = args[0]->Uint32Value();\n  double est = Estimate(points);\n\n  NanReturnValue(Number::New(est));\n}\n```\n\n```c++\n// async.cc\n#include <node.h>\n#include "nan.h"\n#include "async.h"\n\n// ...\n\nusing namespace v8;\n\nclass PiWorker : public NanAsyncWorker {\n public:\n  PiWorker(NanCallback *callback, int points)\n    : NanAsyncWorker(callback), points(points) {}\n  ~PiWorker() {}\n\n  // Executed inside the worker-thread.\n  // It is not safe to access V8, or V8 data structures\n  // here, so everything we need for input and output\n  // should go on `this`.\n  void Execute () {\n    estimate = Estimate(points);\n  }\n\n  // Executed when the async work is complete\n  // this function will be run inside the main event loop\n  // so it is safe to use V8 again\n  void HandleOKCallback () {\n    NanScope();\n\n    Local<Value> argv[] = {\n        Local<Value>::New(Null())\n      , Number::New(estimate)\n    };\n\n    callback->Call(2, argv);\n  };\n\n private:\n  int points;\n  double estimate;\n};\n\n// Asynchronous access to the `Estimate()` function\nNAN_METHOD(CalculateAsync) {\n  NanScope();\n\n  int points = args[0]->Uint32Value();\n  NanCallback *callback = new NanCallback(args[1].As<Function>());\n\n  NanAsyncQueueWorker(new PiWorker(callback, points));\n  NanReturnUndefined();\n}\n```\n\n<a name="api"></a>\n## API\n\n * <a href="#api_nan_method"><b><code>NAN_METHOD</code></b></a>\n * <a href="#api_nan_getter"><b><code>NAN_GETTER</code></b></a>\n * <a href="#api_nan_setter"><b><code>NAN_SETTER</code></b></a>\n * <a href="#api_nan_property_getter"><b><code>NAN_PROPERTY_GETTER</code></b></a>\n * <a href="#api_nan_property_setter"><b><code>NAN_PROPERTY_SETTER</code></b></a>\n * <a href="#api_nan_property_enumerator"><b><code>NAN_PROPERTY_ENUMERATOR</code></b></a>\n * <a href="#api_nan_property_deleter"><b><code>NAN_PROPERTY_DELETER</code></b></a>\n * <a href="#api_nan_property_query"><b><code>NAN_PROPERTY_QUERY</code></b></a>\n * <a href="#api_nan_index_getter"><b><code>NAN_INDEX_GETTER</code></b></a>\n * <a href="#api_nan_index_setter"><b><code>NAN_INDEX_SETTER</code></b></a>\n * <a href="#api_nan_index_enumerator"><b><code>NAN_INDEX_ENUMERATOR</code></b></a>\n * <a href="#api_nan_index_deleter"><b><code>NAN_INDEX_DELETER</code></b></a>\n * <a href="#api_nan_index_query"><b><code>NAN_INDEX_QUERY</code></b></a>\n * <a href="#api_nan_weak_callback"><b><code>NAN_WEAK_CALLBACK</code></b></a>\n * <a href="#api_nan_deprecated"><b><code>NAN_DEPRECATED</code></b></a>\n * <a href="#api_nan_inline"><b><code>NAN_INLINE</code></b></a> \n * <a href="#api_nan_new_local"><b><code>NanNewLocal</code></b></a>\n * <a href="#api_nan_return_value"><b><code>NanReturnValue</code></b></a>\n * <a href="#api_nan_return_undefined"><b><code>NanReturnUndefined</code></b></a>\n * <a href="#api_nan_return_null"><b><code>NanReturnNull</code></b></a>\n * <a href="#api_nan_return_empty_string"><b><code>NanReturnEmptyString</code></b></a>\n * <a href="#api_nan_scope"><b><code>NanScope</code></b></a>\n * <a href="#api_nan_locker"><b><code>NanLocker</code></b></a>\n * <a href="#api_nan_unlocker"><b><code>NanUnlocker</code></b></a>\n * <a href="#api_nan_get_internal_field_pointer"><b><code>NanGetInternalFieldPointer</code></b></a>\n * <a href="#api_nan_set_internal_field_pointer"><b><code>NanSetInternalFieldPointer</code></b></a>\n * <a href="#api_nan_object_wrap_handle"><b><code>NanObjectWrapHandle</code></b></a>\n * <a href="#api_nan_make_weak"><b><code>NanMakeWeak</code></b></a>\n * <a href="#api_nan_symbol"><b><code>NanSymbol</code></b></a>\n * <a href="#api_nan_get_pointer_safe"><b><code>NanGetPointerSafe</code></b></a>\n * <a href="#api_nan_set_pointer_safe"><b><code>NanSetPointerSafe</code></b></a>\n * <a href="#api_nan_from_v8_string"><b><code>NanFromV8String</code></b></a>\n * <a href="#api_nan_boolean_option_value"><b><code>NanBooleanOptionValue</code></b></a>\n * <a href="#api_nan_uint32_option_value"><b><code>NanUInt32OptionValue</code></b></a>\n * <a href="#api_nan_error"><b><code>NanError</code></b>, <b><code>NanTypeError</code></b>, <b><code>NanRangeError</code></b></a>\n * <a href="#api_nan_throw_error"><b><code>NanThrowError</code></b>, <b><code>NanThrowTypeError</code></b>, <b><code>NanThrowRangeError</code></b>, <b><code>NanThrowError(Handle<Value>)</code></b>, <b><code>NanThrowError(Handle<Value>, int)</code></b></a>\n * <a href="#api_nan_new_buffer_handle"><b><code>NanNewBufferHandle(char *, size_t, FreeCallback, void *)</code></b>, <b><code>NanNewBufferHandle(char *, uint32_t)</code></b>, <b><code>NanNewBufferHandle(uint32_t)</code></b></a>\n * <a href="#api_nan_buffer_use"><b><code>NanBufferUse(char *, uint32_t)</code></b></a>\n * <a href="#api_nan_new_context_handle"><b><code>NanNewContextHandle</code></b></a>\n * <a href="#api_nan_has_instance"><b><code>NanHasInstance</code></b></a>\n * <a href="#api_nan_persistent_to_local"><b><code>NanPersistentToLocal</code></b></a>\n * <a href="#api_nan_dispose"><b><code>NanDispose</code></b></a>\n * <a href="#api_nan_assign_persistent"><b><code>NanAssignPersistent</code></b></a>\n * <a href="#api_nan_init_persistent"><b><code>NanInitPersistent</code></b></a>\n * <a href="#api_nan_callback"><b><code>NanCallback</code></b></a>\n * <a href="#api_nan_async_worker"><b><code>NanAsyncWorker</code></b></a>\n * <a href="#api_nan_async_queue_worker"><b><code>NanAsyncQueueWorker</code></b></a>\n\n<a name="api_nan_method"></a>\n### NAN_METHOD(methodname)\n\nUse `NAN_METHOD` to define your V8 accessible methods:\n\n```c++\n// .h:\nclass Foo : public node::ObjectWrap {\n  ...\n\n  static NAN_METHOD(Bar);\n  static NAN_METHOD(Baz);\n}\n\n\n// .cc:\nNAN_METHOD(Foo::Bar) {\n  ...\n}\n\nNAN_METHOD(Foo::Baz) {\n  ...\n}\n```\n\nThe reason for this macro is because of the method signature change in 0.11:\n\n```c++\n// 0.10 and below:\nHandle<Value> name(const Arguments& args)\n\n// 0.11 and above\nvoid name(const FunctionCallbackInfo<Value>& args)\n```\n\nThe introduction of `FunctionCallbackInfo` brings additional complications:\n\n<a name="api_nan_getter"></a>\n### NAN_GETTER(methodname)\n\nUse `NAN_GETTER` to declare your V8 accessible getters. You get a `Local<String>` `property` and an appropriately typed `args` object that can act like the `args` argument to a `NAN_METHOD` call.\n\nYou can use `NanReturnNull()`, `NanReturnEmptyString()`, `NanReturnUndefined()` and `NanReturnValue()` in a `NAN_GETTER`.\n\n<a name="api_nan_setter"></a>\n### NAN_SETTER(methodname)\n\nUse `NAN_SETTER` to declare your V8 accessible setters. Same as `NAN_GETTER` but you also get a `Local<Value>` `value` object to work with.\n\nYou can use `NanReturnNull()`, `NanReturnEmptyString()`, `NanReturnUndefined()` and `NanReturnValue()` in a `NAN_SETTER`.\n\n<a name="api_nan_property_getter"></a>\n### NAN_PROPERTY_GETTER(cbname)\nUse `NAN_PROPERTY_GETTER` to declare your V8 accessible property getters. You get a `Local<String>` `property` and an appropriately typed `args` object that can act similar to the `args` argument to a `NAN_METHOD` call.\n\nYou can use `NanReturnNull()`, `NanReturnEmptyString()`, `NanReturnUndefined()` and `NanReturnValue()` in a `NAN_PROPERTY_GETTER`.\n\n<a name="api_nan_property_setter"></a>\n### NAN_PROPERTY_SETTER(cbname)\nUse `NAN_PROPERTY_SETTER` to declare your V8 accessible property setters. Same as `NAN_PROPERTY_GETTER` but you also get a `Local<Value>` `value` object to work with.\n\nYou can use `NanReturnNull()`, `NanReturnEmptyString()`, `NanReturnUndefined()` and `NanReturnValue()` in a `NAN_PROPERTY_SETTER`.\n\n<a name="api_nan_property_enumerator"></a>\n### NAN_PROPERTY_ENUMERATOR(cbname)\nUse `NAN_PROPERTY_ENUMERATOR` to declare your V8 accessible property enumerators. You get an appropriately typed `args` object like the `args` argument to a `NAN_PROPERTY_GETTER` call.\n\nYou can use `NanReturnNull()`, `NanReturnEmptyString()`, `NanReturnUndefined()` and `NanReturnValue()` in a `NAN_PROPERTY_ENUMERATOR`.\n\n<a name="api_nan_property_deleter"></a>\n### NAN_PROPERTY_DELETER(cbname)\nUse `NAN_PROPERTY_DELETER` to declare your V8 accessible property deleters. Same as `NAN_PROPERTY_GETTER`.\n\nYou can use `NanReturnNull()`, `NanReturnEmptyString()`, `NanReturnUndefined()` and `NanReturnValue()` in a `NAN_PROPERTY_DELETER`.\n\n<a name="api_nan_property_query"></a>\n### NAN_PROPERTY_QUERY(cbname)\nUse `NAN_PROPERTY_QUERY` to declare your V8 accessible property queries. Same as `NAN_PROPERTY_GETTER`.\n\nYou can use `NanReturnNull()`, `NanReturnEmptyString()`, `NanReturnUndefined()` and `NanReturnValue()` in a `NAN_PROPERTY_QUERY`.\n\n<a name="api_nan_index_getter"></a>\n### NAN_INDEX_GETTER(cbname)\nUse `NAN_INDEX_GETTER` to declare your V8 accessible index getters. You get a `uint32_t` `index` and an appropriately typed `args` object that can act similar to the `args` argument to a `NAN_METHOD` call.\n\nYou can use `NanReturnNull()`, `NanReturnEmptyString()`, `NanReturnUndefined()` and `NanReturnValue()` in a `NAN_INDEX_GETTER`.\n\n<a name="api_nan_index_setter"></a>\n### NAN_INDEX_SETTER(cbname)\nUse `NAN_INDEX_SETTER` to declare your V8 accessible index setters. Same as `NAN_INDEX_GETTER` but you also get a `Local<Value>` `value` object to work with.\n\nYou can use `NanReturnNull()`, `NanReturnEmptyString()`, `NanReturnUndefined()` and `NanReturnValue()` in a `NAN_INDEX_SETTER`.\n\n<a name="api_nan_index_enumerator"></a>\n### NAN_INDEX_ENUMERATOR(cbname)\nUse `NAN_INDEX_ENUMERATOR` to declare your V8 accessible index enumerators. You get an appropriately typed `args` object like the `args` argument to a `NAN_INDEX_GETTER` call.\n\nYou can use `NanReturnNull()`, `NanReturnEmptyString()`, `NanReturnUndefined()` and `NanReturnValue()` in a `NAN_INDEX_ENUMERATOR`.\n\n<a name="api_nan_index_deleter"></a>\n### NAN_INDEX_DELETER(cbname)\nUse `NAN_INDEX_DELETER` to declare your V8 accessible index deleters. Same as `NAN_INDEX_GETTER`.\n\nYou can use `NanReturnNull()`, `NanReturnEmptyString()`, `NanReturnUndefined()` and `NanReturnValue()` in a `NAN_INDEX_DELETER`.\n\n<a name="api_nan_index_query"></a>\n### NAN_INDEX_QUERY(cbname)\nUse `NAN_INDEX_QUERY` to declare your V8 accessible index queries. Same as `NAN_INDEX_GETTER`.\n\nYou can use `NanReturnNull()`, `NanReturnEmptyString()`, `NanReturnUndefined()` and `NanReturnValue()` in a `NAN_INDEX_QUERY`.\n\n<a name="api_nan_weak_callback"></a>\n### NAN_WEAK_CALLBACK(type, cbname)\n\nUse `NAN_WEAK_CALLBACK` to declare your V8 WeakReference callbacks. There is an object argument accessible through `NAN_WEAK_CALLBACK_OBJECT`. The `type` argument gives the type of the `data` argument, accessible through `NAN_WEAK_CALLBACK_DATA(type)`.\n\n```c++\nstatic NAN_WEAK_CALLBACK(BufferReference*, WeakCheck) {\n  if (NAN_WEAK_CALLBACK_DATA(BufferReference*)->noLongerNeeded_) {\n    delete NAN_WEAK_CALLBACK_DATA(BufferReference*);\n  } else {\n    // Still in use, revive, prevent GC\n    NanMakeWeak(NAN_WEAK_CALLBACK_OBJECT, NAN_WEAK_CALLBACK_DATA(BufferReference*), &WeakCheck);\n  }\n}\n```\n\n<a name="api_nan_deprecated"></a>\n### NAN_DEPRECATED(declarator)\nDeclares a function as deprecated. Identical to `V8_DEPRECATED`.\n\n```c++\nstatic NAN_DEPRECATED(NAN_METHOD(foo)) {\n  ...\n}\n```\n\n<a name="api_nan_inline"></a>\n### NAN_INLINE(declarator)\nInlines a function. Identical to `V8_INLINE`.\n\n```c++\nstatic NAN_INLINE(int foo(int bar)) {\n  ...\n}\n```\n\n<a name="api_nan_new_local"></a>\n### NanNewLocal&lt;T&gt;(Handle&lt;Value&gt;)\n\nUse `NanNewLocal` in place of `v8::Local<T>::New(...)` as this function\nrequires an `isolate` argument in recent versions of V8 but not in older versions.\n\n```c++\nNanNewLocal<v8::Value>(v8::Null())\n```\n\n<a name="api_nan_return_value"></a>\n### NanReturnValue(Handle&lt;Value&gt;)\n\nUse `NanReturnValue` when you want to return a value from your V8 accessible method:\n\n```c++\nNAN_METHOD(Foo::Bar) {\n  ...\n\n  NanReturnValue(String::New("FooBar!"));\n}\n```\n\nNo `return` statement required.\n\n<a name="api_nan_return_undefined"></a>\n### NanReturnUndefined()\n\nUse `NanReturnUndefined` when you don\'t want to return anything from your V8 accessible method:\n\n```c++\nNAN_METHOD(Foo::Baz) {\n  ...\n\n  NanReturnUndefined();\n}\n```\n\n<a name="api_nan_return_null"></a>\n### NanReturnNull()\n\nUse `NanReturnNull` when you want to return `Null` from your V8 accessible method:\n\n```c++\nNAN_METHOD(Foo::Baz) {\n  ...\n\n  NanReturnNull();\n}\n```\n\n<a name="api_nan_return_empty_string"></a>\n### NanReturnEmptyString()\n\nUse `NanReturnEmptyString` when you want to return an empty `String` from your V8 accessible method:\n\n```c++\nNAN_METHOD(Foo::Baz) {\n  ...\n\n  NanReturnEmptyString();\n}\n```\n\n<a name="api_nan_scope"></a>\n### NanScope()\n\nThe introduction of `isolate` references for many V8 calls in Node 0.11 makes `NanScope()` necessary, use it in place of `HandleScope scope`:\n\n```c++\nNAN_METHOD(Foo::Bar) {\n  NanScope();\n\n  NanReturnValue(String::New("FooBar!"));\n}\n```\n\n<a name="api_nan_locker"></a>\n### NanLocker()\n\nThe introduction of `isolate` references for many V8 calls in Node 0.11 makes `NanLocker()` necessary, use it in place of `Locker locker`:\n\n```c++\nNAN_METHOD(Foo::Bar) {\n  NanLocker();\n  ...\n  NanUnlocker();\n}\n```\n\n<a name="api_nan_unlocker"></a>\n### NanUnlocker()\n\nThe introduction of `isolate` references for many V8 calls in Node 0.11 makes `NanUnlocker()` necessary, use it in place of `Unlocker unlocker`:\n\n```c++\nNAN_METHOD(Foo::Bar) {\n  NanLocker();\n  ...\n  NanUnlocker();\n}\n```\n\n<a name="api_nan_get_internal_field_pointer"></a>\n### void * NanGetInternalFieldPointer(Handle&lt;Object&gt;, int)\n\nGets a pointer to the internal field with at `index` from a V8 `Object` handle.\n\n```c++\nLocal<Object> obj;\n...\nNanGetInternalFieldPointer(obj, 0);\n```\n<a name="api_nan_set_internal_field_pointer"></a>\n### void NanSetInternalFieldPointer(Handle&lt;Object&gt;, int, void *)\n\nSets the value of the internal field at `index` on a V8 `Object` handle.\n\n```c++\nstatic Persistent<Function> dataWrapperCtor;\n...\nLocal<Object> wrapper = NanPersistentToLocal(dataWrapperCtor)->NewInstance();\nNanSetInternalFieldPointer(wrapper, 0, this);\n```\n\n<a name="api_nan_object_wrap_handle"></a>\n### Local&lt;Object&gt; NanObjectWrapHandle(Object)\n\nWhen you want to fetch the V8 object handle from a native object you\'ve wrapped with Node\'s `ObjectWrap`, you should use `NanObjectWrapHandle`:\n\n```c++\nNanObjectWrapHandle(iterator)->Get(String::NewSymbol("end"))\n```\n\n<a name="api_nan_make_weak"></a>\n### NanMakeWeak(Persistent&lt;T&gt;, parameter, callback)\n\nMake a persistent reference weak.\n\n<a name="api_nan_symbol"></a>\n### String NanSymbol(char *)\n\nThis isn\'t strictly about compatibility, it\'s just an easier way to create string symbol objects (i.e. `String::NewSymbol(x)`), for getting and setting object properties, or names of objects.\n\n```c++\nbool foo = false;\nif (obj->Has(NanSymbol("foo")))\n  foo = optionsObj->Get(NanSymbol("foo"))->BooleanValue()\n```\n\n<a name="api_nan_get_pointer_safe"></a>\n### Type NanGetPointerSafe(Type *[, Type])\n\nA helper for getting values from optional pointers. If the pointer is `NULL`, the function returns the optional default value, which defaults to `0`.  Otherwise, the function returns the value the pointer points to.\n\n```c++\nchar *plugh(uint32_t *optional) {\n  char res[] = "xyzzy";\n  uint32_t param = NanGetPointerSafe<uint32_t>(optional, 0x1337);\n  switch (param) {\n    ...\n  }\n  NanSetPointerSafe<uint32_t>(optional, 0xDEADBEEF);\n}  \n```\n\n<a name="api_nan_set_pointer_safe"></a>\n### bool NanSetPointerSafe(Type *, Type)\n\nA helper for setting optional argument pointers. If the pointer is `NULL`, the function simply return `false`.  Otherwise, the value is assigned to the variable the pointer points to.\n\n```c++\nconst char *plugh(size_t *outputsize) {\n  char res[] = "xyzzy";\n  if !(NanSetPointerSafe<size_t>(outputsize, strlen(res) + 1)) {\n    ...\n  }\n\n  ...\n}\n```\n\n<a name="api_nan_from_v8_string"></a>\n### char* NanFromV8String(Handle&lt;Value&gt;[, enum Nan::Encoding, size_t *, char *, size_t, int])\n\nWhen you want to convert a V8 `String` to a `char*` use `NanFromV8String`. It is possible to define an encoding that defaults to `Nan::UTF8` as well as a pointer to a variable that will be assigned the number of bytes in the returned string. It is also possible to supply a buffer and its length to the function in order not to have a new buffer allocated. The final argument allows optionally setting `String::WriteOptions`, which default to `String::HINT_MANY_WRITES_EXPECTED | String::NO_NULL_TERMINATION`.\nJust remember that you\'ll end up with an object that you\'ll need to `delete[]` at some point unless you supply your own buffer:\n\n```c++\nsize_t count;\nchar* name = NanFromV8String(args[0]);\nchar* decoded = NanFromV8String(args[1], Nan::BASE64, &count, NULL, 0, String::HINT_MANY_WRITES_EXPECTED);\nchar param_copy[count];\nmemcpy(param_copy, decoded, count);\ndelete[] decoded;\n```\n\n<a name="api_nan_boolean_option_value"></a>\n### bool NanBooleanOptionValue(Handle&lt;Value&gt;, Handle&lt;String&gt;[, bool])\n\nWhen you have an "options" object that you need to fetch properties from, boolean options can be fetched with this pair. They check first if the object exists (`IsEmpty`), then if the object has the given property (`Has`) then they get and convert/coerce the property to a `bool`.\n\nThe optional last parameter is the *default* value, which is `false` if left off:\n\n```c++\n// `foo` is false unless the user supplies a truthy value for it\nbool foo = NanBooleanOptionValue(optionsObj, NanSymbol("foo"));\n// `bar` is true unless the user supplies a falsy value for it\nbool bar = NanBooleanOptionValueDefTrue(optionsObj, NanSymbol("bar"), true);\n```\n\n<a name="api_nan_uint32_option_value"></a>\n### uint32_t NanUInt32OptionValue(Handle&lt;Value&gt;, Handle&lt;String&gt;, uint32_t)\n\nSimilar to `NanBooleanOptionValue`, use `NanUInt32OptionValue` to fetch an integer option from your options object. Can be any kind of JavaScript `Number` and it will be coerced to an unsigned 32-bit integer.\n\nRequires all 3 arguments as a default is not optional:\n\n```c++\nuint32_t count = NanUInt32OptionValue(optionsObj, NanSymbol("count"), 1024);\n```\n\n<a name="api_nan_error"></a>\n### NanError(message), NanTypeError(message), NanRangeError(message)\n\nFor making `Error`, `TypeError` and `RangeError` objects.\n\n```c++\nLocal<Value> res = NanError("you must supply a callback argument");\n```\n\n<a name="api_nan_throw_error"></a>\n### NanThrowError(message), NanThrowTypeError(message), NanThrowRangeError(message), NanThrowError(Local&lt;Value&gt;), NanThrowError(Local&lt;Value&gt;, int)\n\nFor throwing `Error`, `TypeError` and `RangeError` objects. You should `return` this call:\n\n```c++\nreturn NanThrowError("you must supply a callback argument");\n```\n\nCan also handle any custom object you may want to throw. If used with the error code argument, it will add the supplied error code to the error object as a property called `code`.\n\n<a name="api_nan_new_buffer_handle"></a>\n### Local&lt;Object&gt; NanNewBufferHandle(char *, uint32_t), Local&lt;Object&gt; NanNewBufferHandle(uint32_t)\n\nThe `Buffer` API has changed a little in Node 0.11, this helper provides consistent access to `Buffer` creation:\n\n```c++\nNanNewBufferHandle((char*)value.data(), value.size());\n```\n\nCan also be used to initialize a `Buffer` with just a `size` argument.\n\nCan also be supplied with a `NAN_WEAK_CALLBACK` and a hint for the garbage collector, when dealing with weak references.\n\n<a name="api_nan_buffer_use"></a>\n### Local&lt;Object&gt; NanBufferUse(char*, uint32_t)\n\n`Buffer::New(char*, uint32_t)` prior to 0.11 would make a copy of the data.\nWhile it was possible to get around this, it required a shim by passing a\ncallback. So the new API `Buffer::Use(char*, uint32_t)` was introduced to remove\nneeding to use this shim.\n\n`NanBufferUse` uses the `char*` passed as the backing data, and will free the\nmemory automatically when the weak callback is called. Keep this in mind, as\ncareless use can lead to "double free or corruption" and other cryptic failures.\n\n<a name="api_nan_has_instance"></a>\n### bool NanHasInstance(Persistent&lt;FunctionTemplate&gt;&, Handle&lt;Value&gt;)\n\nCan be used to check the type of an object to determine it is of a particular class you have already defined and have a `Persistent<FunctionTemplate>` handle for.\n\n<a name="api_nan_persistent_to_local"></a>\n### Local&lt;Type&gt; NanPersistentToLocal(Persistent&lt;Type&gt;&)\n\nAside from `FunctionCallbackInfo`, the biggest and most painful change to V8 in Node 0.11 is the many restrictions now placed on `Persistent` handles. They are difficult to assign and difficult to fetch the original value out of.\n\nUse `NanPersistentToLocal` to convert a `Persistent` handle back to a `Local` handle.\n\n```c++\nLocal<Object> handle = NanPersistentToLocal(persistentHandle);\n```\n\n<a href="#api_nan_new_context_handle">\n### Local&lt;Context&gt; NanNewContextHandle([ExtensionConfiguration*, Handle&lt;ObjectTemplate&gt;, Handle&lt;Value&gt;])\nCreates a new `Local<Context>` handle.\n\n```c++\nLocal<FunctionTemplate> ftmpl = FunctionTemplate::New();\nLocal<ObjectTemplate> otmpl = ftmpl->InstanceTemplate();\nLocal<Context> ctx =  NanNewContextHandle(NULL, otmpl);\n```\n\n<a name="api_nan_dispose"></a>\n### void NanDispose(Persistent&lt;T&gt; &)\n\nUse `NanDispose` to dispose a `Persistent` handle.\n\n```c++\nNanDispose(persistentHandle);\n```\n\n<a name="api_nan_assign_persistent"></a>\n### NanAssignPersistent(type, handle, object)\n\nUse `NanAssignPersistent` to assign a non-`Persistent` handle to a `Persistent` one. You can no longer just declare a `Persistent` handle and assign directly to it later, you have to `Reset` it in Node 0.11, so this makes it easier.\n\nIn general it is now better to place anything you want to protect from V8\'s garbage collector as properties of a generic `Object` and then assign that to a `Persistent`. This works in older versions of Node also if you use `NanAssignPersistent`:\n\n```c++\nPersistent<Object> persistentHandle;\n\n...\n\nLocal<Object> obj = Object::New();\nobj->Set(NanSymbol("key"), keyHandle); // where keyHandle might be a Local<String>\nNanAssignPersistent(Object, persistentHandle, obj)\n```\n\n<a name="api_nan_init_persistent"></a>\n### NanInitPersistent(type, name, object)\n\nUser `NanInitPersistent` to declare and initialize a new `Persistent` with the supplied object. The assignment operator for `Persistent` is no longer public in Node 0.11, so this macro makes it easier to declare and initializing a new `Persistent`. See <a href="#api_nan_assign_persistent"><b><code>NanAssignPersistent</code></b></a> for more information.\n\n```c++\nLocal<Object> obj = Object::New();\nobj->Set(NanSymbol("key"), keyHandle); // where keyHandle might be a Local<String>\nNanInitPersistent(Object, persistentHandle, obj);\n```\n\n<a name="api_nan_callback"></a>\n### NanCallback\n\nBecause of the difficulties imposed by the changes to `Persistent` handles in V8 in Node 0.11, creating `Persistent` versions of your `Local<Function>` handles is annoyingly tricky. `NanCallback` makes it easier by taking your `Local` handle, making it persistent until the `NanCallback` is deleted and even providing a handy `Call()` method to fetch and execute the callback `Function`.\n\n```c++\nLocal<Function> callbackHandle = args[0].As<Function>();\nNanCallback *callback = new NanCallback(callbackHandle);\n// pass `callback` around and it\'s safe from GC until you:\ndelete callback;\n```\n\nYou can execute the callback like so:\n\n```c++\n// no arguments:\ncallback->Call(0, NULL);\n\n// an error argument:\nLocal<Value> argv[] = {\n  Exception::Error(String::New("fail!"))\n};\ncallback->Call(1, argv);\n\n// a success argument:\nLocal<Value> argv[] = {\n  Local<Value>::New(Null()),\n  String::New("w00t!")\n};\ncallback->Call(2, argv);\n```\n\n`NanCallback` also has a `Local<Function> GetCallback()` method that you can use to fetch a local handle to the underlying callback function if you need it.\n\n<a name="api_nan_async_worker"></a>\n### NanAsyncWorker\n\n`NanAsyncWorker` is an abstract class that you can subclass to have much of the annoying async queuing and handling taken care of for you. It can even store arbitrary V8 objects for you and have them persist while the async work is in progress.\n\nSee a rough outline of the implementation:\n\n```c++\nclass NanAsyncWorker {\npublic:\n  NanAsyncWorker (NanCallback *callback);\n\n  // Clean up persistent handles and delete the *callback\n  virtual ~NanAsyncWorker ();\n\n  // Check the `char *errmsg` property and call HandleOKCallback()\n  // or HandleErrorCallback depending on whether it has been set or not\n  virtual void WorkComplete ();\n\n  // You must implement this to do some async work. If there is an\n  // error then allocate `errmsg` to to a message and the callback will\n  // be passed that string in an Error object\n  virtual void Execute ();\n\n  // Save a V8 object in a Persistent handle to protect it from GC\n  void SavePersistent(const char *key, Local<Object> &obj);\n\n  // Fetch a stored V8 object (don\'t call from within `Execute()`)\n  Local<Object> GetFromPersistent(const char *key);\n\nprotected:\n  // Set this if there is an error, otherwise it\'s NULL\n  const char *errmsg;\n\n  // Default implementation calls the callback function with no arguments.\n  // Override this to return meaningful data\n  virtual void HandleOKCallback ();\n\n  // Default implementation calls the callback function with an Error object\n  // wrapping the `errmsg` string\n  virtual void HandleErrorCallback ();\n};\n```\n\n<a name="api_nan_async_queue_worker"></a>\n### NanAsyncQueueWorker(NanAsyncWorker *)\n\n`NanAsyncQueueWorker` will run a `NanAsyncWorker` asynchronously via libuv. Both the *execute* and *after_work* steps are taken care of for you&mdash;most of the logic for this is embedded in `NanAsyncWorker`.\n\n### Contributors\n\nNAN is only possible due to the excellent work of the following contributors:\n\n<table><tbody>\n<tr><th align="left">Rod Vagg</th><td><a href="https://github.com/rvagg">GitHub/rvagg</a></td><td><a href="http://twitter.com/rvagg">Twitter/@rvagg</a></td></tr>\n<tr><th align="left">Benjamin Byholm</th><td><a href="https://github.com/kkoopa/">GitHub/kkoopa</a></td></tr>\n<tr><th align="left">Trevor Norris</th><td><a href="https://github.com/trevnorris">GitHub/trevnorris</a></td><td><a href="http://twitter.com/trevnorris">Twitter/@trevnorris</a></td></tr>\n<tr><th align="left">Nathan Rajlich</th><td><a href="https://github.com/TooTallNate">GitHub/TooTallNate</a></td><td><a href="http://twitter.com/TooTallNate">Twitter/@TooTallNate</a></td></tr>\n</tbody></table>\n\nLicence &amp; copyright\n-----------------------\n\nCopyright (c) 2013 NAN contributors (listed above).\n\nNative Abstractions for Node.js is licensed under an MIT +no-false-attribs license. All rights not explicitly granted in the MIT license are reserved. See the included LICENSE file for more details.\n',
+1601 silly resolved     readmeFilename: 'README.md',
+1601 silly resolved     bugs: { url: 'https://github.com/rvagg/nan/issues' },
+1601 silly resolved     homepage: 'https://github.com/rvagg/nan',
+1601 silly resolved     _id: 'nan@0.6.0',
+1601 silly resolved     dist: { shasum: '9b00daba8de615607f5ee52838c6c7e542767fb0' },
+1601 silly resolved     _from: 'nan@~0.6.0',
+1601 silly resolved     _resolved: 'https://registry.npmjs.org/nan/-/nan-0.6.0.tgz' } ]
+1602 info install bindings@1.1.1 into C:\wamp\www\Nabu\nabu\node_modules\ssh
+1603 info install nan@0.6.0 into C:\wamp\www\Nabu\nabu\node_modules\ssh
+1604 info installOne bindings@1.1.1
+1605 info installOne nan@0.6.0
+1606 info C:\wamp\www\Nabu\nabu\node_modules\ssh\node_modules\bindings unbuild
+1607 info C:\wamp\www\Nabu\nabu\node_modules\ssh\node_modules\nan unbuild
+1608 verbose tar unpack C:\Users\sony\AppData\Roaming\npm-cache\bindings\1.1.1\package.tgz
+1609 silly lockFile a19a51d4-odules-ssh-node-modules-bindings tar://C:\wamp\www\Nabu\nabu\node_modules\ssh\node_modules\bindings
+1610 verbose lock tar://C:\wamp\www\Nabu\nabu\node_modules\ssh\node_modules\bindings C:\Users\sony\AppData\Roaming\npm-cache\a19a51d4-odules-ssh-node-modules-bindings.lock
+1611 silly lockFile 97ada6e2-cache-bindings-1-1-1-package-tgz tar://C:\Users\sony\AppData\Roaming\npm-cache\bindings\1.1.1\package.tgz
+1612 verbose lock tar://C:\Users\sony\AppData\Roaming\npm-cache\bindings\1.1.1\package.tgz C:\Users\sony\AppData\Roaming\npm-cache\97ada6e2-cache-bindings-1-1-1-package-tgz.lock
+1613 verbose tar unpack C:\Users\sony\AppData\Roaming\npm-cache\nan\0.6.0\package.tgz
+1614 silly lockFile 45ecf994-ode-modules-ssh-node-modules-nan tar://C:\wamp\www\Nabu\nabu\node_modules\ssh\node_modules\nan
+1615 verbose lock tar://C:\wamp\www\Nabu\nabu\node_modules\ssh\node_modules\nan C:\Users\sony\AppData\Roaming\npm-cache\45ecf994-ode-modules-ssh-node-modules-nan.lock
+1616 silly lockFile 1fd43cbe--npm-cache-nan-0-6-0-package-tgz tar://C:\Users\sony\AppData\Roaming\npm-cache\nan\0.6.0\package.tgz
+1617 verbose lock tar://C:\Users\sony\AppData\Roaming\npm-cache\nan\0.6.0\package.tgz C:\Users\sony\AppData\Roaming\npm-cache\1fd43cbe--npm-cache-nan-0-6-0-package-tgz.lock
+1618 silly gunzTarPerm modes [ '755', '644' ]
+1619 silly gunzTarPerm modes [ '755', '644' ]
+1620 silly gunzTarPerm extractEntry package.json
+1621 silly gunzTarPerm modified mode [ 'package.json', 438, 420 ]
+1622 silly gunzTarPerm extractEntry package.json
+1623 silly gunzTarPerm modified mode [ 'package.json', 438, 420 ]
+1624 silly gunzTarPerm extractEntry README.md
+1625 silly gunzTarPerm modified mode [ 'README.md', 438, 420 ]
+1626 silly gunzTarPerm extractEntry LICENSE
+1627 silly gunzTarPerm modified mode [ 'LICENSE', 438, 420 ]
+1628 silly gunzTarPerm extractEntry include_dirs.js
+1629 silly gunzTarPerm modified mode [ 'include_dirs.js', 438, 420 ]
+1630 silly gunzTarPerm extractEntry build/config.gypi
+1631 silly gunzTarPerm modified mode [ 'build/config.gypi', 438, 420 ]
+1632 silly gunzTarPerm extractEntry nan.h
+1633 silly gunzTarPerm modified mode [ 'nan.h', 438, 420 ]
+1634 silly gunzTarPerm extractEntry README.md
+1635 silly gunzTarPerm modified mode [ 'README.md', 438, 420 ]
+1636 silly gunzTarPerm extractEntry bindings.js
+1637 silly gunzTarPerm modified mode [ 'bindings.js', 438, 420 ]
+1638 silly lockFile a19a51d4-odules-ssh-node-modules-bindings tar://C:\wamp\www\Nabu\nabu\node_modules\ssh\node_modules\bindings
+1639 silly lockFile a19a51d4-odules-ssh-node-modules-bindings tar://C:\wamp\www\Nabu\nabu\node_modules\ssh\node_modules\bindings
+1640 silly lockFile 97ada6e2-cache-bindings-1-1-1-package-tgz tar://C:\Users\sony\AppData\Roaming\npm-cache\bindings\1.1.1\package.tgz
+1641 silly lockFile 97ada6e2-cache-bindings-1-1-1-package-tgz tar://C:\Users\sony\AppData\Roaming\npm-cache\bindings\1.1.1\package.tgz
+1642 info preinstall bindings@1.1.1
+1643 verbose readDependencies using package.json deps
+1644 verbose readDependencies using package.json deps
+1645 silly resolved []
+1646 verbose about to build C:\wamp\www\Nabu\nabu\node_modules\ssh\node_modules\bindings
+1647 info build C:\wamp\www\Nabu\nabu\node_modules\ssh\node_modules\bindings
+1648 verbose linkStuff [ false,
+1648 verbose linkStuff   false,
+1648 verbose linkStuff   false,
+1648 verbose linkStuff   'C:\\wamp\\www\\Nabu\\nabu\\node_modules\\ssh\\node_modules' ]
+1649 info linkStuff bindings@1.1.1
+1650 verbose linkBins bindings@1.1.1
+1651 verbose linkMans bindings@1.1.1
+1652 verbose rebuildBundles bindings@1.1.1
+1653 info install bindings@1.1.1
+1654 info postinstall bindings@1.1.1
+1655 silly lockFile 45ecf994-ode-modules-ssh-node-modules-nan tar://C:\wamp\www\Nabu\nabu\node_modules\ssh\node_modules\nan
+1656 silly lockFile 45ecf994-ode-modules-ssh-node-modules-nan tar://C:\wamp\www\Nabu\nabu\node_modules\ssh\node_modules\nan
+1657 silly lockFile 1fd43cbe--npm-cache-nan-0-6-0-package-tgz tar://C:\Users\sony\AppData\Roaming\npm-cache\nan\0.6.0\package.tgz
+1658 silly lockFile 1fd43cbe--npm-cache-nan-0-6-0-package-tgz tar://C:\Users\sony\AppData\Roaming\npm-cache\nan\0.6.0\package.tgz
+1659 info preinstall nan@0.6.0
+1660 verbose readDependencies using package.json deps
+1661 verbose readDependencies using package.json deps
+1662 silly resolved []
+1663 verbose about to build C:\wamp\www\Nabu\nabu\node_modules\ssh\node_modules\nan
+1664 info build C:\wamp\www\Nabu\nabu\node_modules\ssh\node_modules\nan
+1665 verbose linkStuff [ false,
+1665 verbose linkStuff   false,
+1665 verbose linkStuff   false,
+1665 verbose linkStuff   'C:\\wamp\\www\\Nabu\\nabu\\node_modules\\ssh\\node_modules' ]
+1666 info linkStuff nan@0.6.0
+1667 verbose linkBins nan@0.6.0
+1668 verbose linkMans nan@0.6.0
+1669 verbose rebuildBundles nan@0.6.0
+1670 info install nan@0.6.0
+1671 info postinstall nan@0.6.0
+1672 verbose about to build C:\wamp\www\Nabu\nabu\node_modules\ssh
+1673 info build C:\wamp\www\Nabu\nabu\node_modules\ssh
+1674 verbose linkStuff [ false, false, false, 'C:\\wamp\\www\\Nabu\\nabu\\node_modules' ]
+1675 info linkStuff ssh@1.7.1
+1676 verbose linkBins ssh@1.7.1
+1677 verbose linkMans ssh@1.7.1
+1678 verbose rebuildBundles ssh@1.7.1
+1679 verbose rebuildBundles [ 'bindings', 'nan' ]
+1680 info install ssh@1.7.1
+1681 verbose unsafe-perm in lifecycle true
+1682 info ssh@1.7.1 Failed to exec install script
+1683 info C:\wamp\www\Nabu\nabu\node_modules\ssh unbuild
+1684 info preuninstall ssh@1.7.1
+1685 info uninstall ssh@1.7.1
+1686 verbose true,C:\wamp\www\Nabu\nabu\node_modules,C:\wamp\www\Nabu\nabu\node_modules unbuild ssh@1.7.1
+1687 info postuninstall ssh@1.7.1
+1688 error ssh@1.7.1 install: `node-gyp rebuild`
+1688 error Exit status 1
+1689 error Failed at the ssh@1.7.1 install script.
+1689 error This is most likely a problem with the ssh package,
+1689 error not with npm itself.
+1689 error Tell the author that this fails on your system:
+1689 error     node-gyp rebuild
+1689 error You can get their info via:
+1689 error     npm owner ls ssh
+1689 error There is likely additional logging output above.
+1690 error System Windows_NT 6.1.7601
+1691 error command "C:\\Program Files\\nodejs\\\\node.exe" "C:\\Program Files\\nodejs\\node_modules\\npm\\bin\\npm-cli.js" "install" "ssh"
+1692 error cwd C:\wamp\www\Nabu\nabu
+1693 error node -v v0.10.22
+1694 error npm -v 1.3.14
+1695 error code ELIFECYCLE
+1696 verbose exit [ 1, true ]

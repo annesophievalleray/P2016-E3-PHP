@@ -1,0 +1,11 @@
+{
+  "name": "nabu",
+  "subdomain": "annesophievalleray-nabu",
+  "scripts": {
+    "start": "node app"
+  },
+  "version": "0.0.0",
+  "engines": {
+    "node": "0.10.x"
+  }
+}

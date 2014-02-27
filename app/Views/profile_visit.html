@@ -1,0 +1,131 @@
+<!DOCTYPE html>
+<head>
+  <meta charset="utf-8">
+  <base href="<?php echo $BASE; ?>/" />
+  <title>Nabu</title>
+  <meta name="description" content="">
+  <meta name="viewport" content="width=device-width">
+
+  <link rel="stylesheet" type="text/css" href="public/stylesheet/style.css">
+  <link rel="stylesheet" type="text/css" href="public/stylesheet/simplegrid.css" />
+  
+</head>
+
+<body>
+<div id="wrapper">  
+
+  <div id="left"><!-- LEFT PART -->
+    <div id="sidebar"><!-- SIDEBAR -->
+      <div id="sidebar-cover"></div>
+      <div id="sidebar-content">
+         <div class="content">
+          <img src="public/img/PP_large_2.png" class="avatar-main" alt="<?php echo $_SESSION['login']; ?>"><br>
+          <span class="user-name"><?php echo $userLogin; ?></span>
+          <div><span class="follow-number" id="nb_followers">000</span> followers</div>
+          <div><span class="follow-number" id="nb_following">000</span> following</div>
+          <a href="user/follow/3/<?php echo $_SESSION['id']; ?>">Suivre</a>
+         </div>
+         <div class="content">
+          <h3>Badges débloqués</h3>
+          <img src="public/img/badge.png" class="badges" alt="Badge description">
+          <img src="public/img/badge.png" class="badges" alt="Badge description">
+          <img src="public/img/badge.png" class="badges" alt="Badge description">
+          <img src="public/img/badge.png" class="badges" alt="Badge description">
+          <img src="public/img/badge.png" class="badges" alt="Badge description">
+          <img src="public/img/badge.png" class="badges" alt="Badge description">
+         </div>
+         <div class="content list-follow">
+          <h3>Vos followers</h3>
+          <ul>
+            <li><a href="#"><img src="public/img/PP_large_2.png" class="avatar-30" alt=""> Nom prénom</a></li>
+          </ul>
+         </div>
+         <div class="content list-follow">
+          <h3>Vos followings</h3>
+          <ul>
+            <li><a href=""><img src="public/img/PP_large_2.png" class="avatar-30" alt=""> Nom prénom</a></li>
+          </ul>
+         </div>
+      </div>
+    </div><!-- END SIDEBAR -->
+  </div><!-- END LEFT PART -->
+
+  <div id="right"><!-- RIGHT PART -->
+    <div class="grid grid-pad" id="top-content"><!-- GRID LOGO/SEARCH/MENU -->
+      <div class="col-7-12" id="logo"><!-- LOGO AND SEARCHBAR -->
+          <a href="dashboard/<?php echo $SESSION['id']; ?>"><img src="public/img/temporary_logo.png" alt="Nabu"></a>
+          <div id="search">
+            <form action="users/search" method="post">
+            <input type="text" name="name" placeholder="Rechercher un ami"><div><img src="public/img/icons/loupe.svg"  class="icon-search" alt="Rechercher"></div>
+            </form>
+            <div><ul class="users-result"><?php require('partials/users.html'); ?></ul></div>
+          </div>
+      </div><!-- END LOGO AND SEARCHBAR -->
+      <div class="col-3-12" id="menu"><!-- MENU -->
+        <p><a href="#"><img src="public/img/icons/user.svg" class="icon-menu" alt="Profil"></a> <a href="#"><img src="public/img/icons/settings.svg" class="icon-menu" alt="Paramètres"></a><a href="user/signout"><img src="public/img/icons/power.svg" class="icon-menu" alt="Déconnexion"></a></p>
+      </div><!-- END MENU -->
+    </div><!-- END GRID LOGO/SEARCH/MENU -->
+
+    <div class="grid grid-pad"><!-- GRID CONTENT -->
+      <div class="col-6-12"><!-- CENTRAL COLUMN -->
+            <div><!-- NUMBERS -->
+                <div class="stats-wrapper">
+                  <div class="content"><span class="follow-number" id="nb_posts">000</span> pages bookées</div>
+                </div>
+                <div class="stats-wrapper">
+                  <div class="content"><span class="follow-number" id="nb_badges">000</span> badges</div>
+                </div>
+                <div class="stats-wrapper">
+                  <div class="content"><span class="follow-number">000</span> objectifs</div>
+                </div>
+            </div><!-- END NUMBERS -->
+        <div class="content" id="graph-wrapper"><!-- GRAPH -->
+          <div>
+            <h2>Votre navigation</h2>
+            <img src="public/img/graph_example.png" width="100%" alt=""></div>
+         </div><!-- END GRAPH -->
+      </div><!-- END CENTRAL COLUMN -->
+
+      <div class="col-4-12"><!--  RIGHT COLUMN -->
+        
+
+         <div class="content" id="obj-list"><!-- CONTENT OBJECTIVES -->
+            <h2>Ses objectifs en cours</h2>
+            <div><p>Booker 10 articles de cuisine cette semaine<br>
+              <img src="public/img/progress_bar.png" alt="" width="100%"></p>
+            </div>
+         </div><!-- END CONTENT OBJECTIVES -->
+         
+      </div><!-- END RIGHT COLUMN -->
+
+    </div><!-- END GRID CONTENT -->
+
+     <div class="grid grid-pad"><!-- GRID CONTENT BOTTOM -->
+      <div class="col-10-12">
+        <div class="content" id="bdg-list">
+          <h2>Badges obtenus</h2>
+          	<div id="display_badges" data-allbadges=1>badges</div>
+        </div>
+      </div>
+    </div><!-- END BOTTOM BLOCK -->
+
+    <div class="grid grid-pad"><!-- GRID CONTENT BOTTOM -->
+      <div class="col-10-12">
+        <div class="content" id="posts-list">
+          <h2>Pages bookées</h2>
+          <section id="zone_post">
+            <?php require('partials/posts_list.html'); ?>
+          </section>
+      </div><!-- END BOTTOM BLOCK -->
+    </div><!-- END RIGHT PART -->
+      
+</div>
+
+
+  <script src="http://localhost:8080/socket.io/socket.io.js"></script>
+  <script src="http://code.jquery.com/jquery-1.10.2.min.js"></script>
+  <script type="text/javascript" src="public/js/nabu.js"></script>
+  <script type="text/javascript" src="public/js/nabu_feed.js"></script>
+
+</body>
+</html>

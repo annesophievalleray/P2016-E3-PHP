@@ -1,0 +1,15 @@
+{"nb_badges":"<?php echo count($badges_array)-1;?>",
+"html_badges":"<?php if(isset($displayBadges) && $all==0):
+for($i=count($badges_array)-2; $i>=(count($badges_array)-$nb_badges-1); $i--){
+?>
+<img src='public/img/badges/<?php echo $badges_array[$i];?>.png' class='badges' alt='img'>
+<?php 
+} 
+endif; 
+if(isset($displayBadges)&& $all==1):
+for($j=count($badges_array)-2; $j>=0; $j--){
+?>
+<img src='public/img/badges/<?php echo $badges_array[$j];?>.png' class='badges' alt='img'>
+<?php 
+} 
+endif; ?>"}

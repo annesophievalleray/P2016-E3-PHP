@@ -469,35 +469,21 @@ margin-top: -80px;
   position: relative;
 }
 /*--graph dashboard---*/
-#graph ul, .data-activity{
-  position: absolute;
-  margin: 0;
+#graph ul{
+  margin: -10px 0 10px 0;
   padding: 0;
-}
-#graph ul {
   left: 35%;
   top:50%;
 }
 .data-activity {
   opacity: 0.8;
-  text-align: center;
-  text-transform: uppercase;
 }
 .data-activity:hover {
   opacity: 1;
 }
-ul[data-pie-id] li:nth-child(1) {
-  color: red;
-}
-ul[data-pie-id] li:nth-child(2) {
-  color: blue;
-}
-ul[data-pie-id] li:nth-child(3) {
-  color: yellow;
-}
 #activity svg{
   width: 100%;
-  height: 210px;
+  height: 200px;
 }
 
 #activity svg text{
@@ -531,7 +517,6 @@ ul[data-pie-id] li:nth-child(3) {
   margin: auto 0;
   position: relative;
   top: 40%;
-  line-height: 5.500em;
 }
 
 #search form div{
@@ -565,7 +550,7 @@ ul[data-pie-id] li:nth-child(3) {
   position: absolute !important;
 }
 
-.users-result{
+.users-result, .users-result li{
   padding: 0;
   margin: 0;
 }
@@ -590,7 +575,7 @@ ul[data-pie-id] li:nth-child(3) {
   margin: 0 20px 0 0; 
 }
 
-#menu {text-align: right;}
+#menu {text-align: right;line-height: 5.500em;}
 
 .avatar-main {
   overflow:hidden;
@@ -853,6 +838,12 @@ input[name="post_user_id"] {
   margin: 0 15px;
 }
 
+#obj-list .obj-progressbar {
+  width: 90%;
+  top:0;
+  height: 15px;
+}
+
 .obj-progressbar > span {
   display: block;
   height: 100%;
@@ -993,6 +984,101 @@ input[name="post_user_id"] {
   padding: 10px 20px;
 }
 
+.profile-follow-button,.profile-unfollow-button {
+  width: 150px;
+  padding: 10px 0;
+  text-align: center;
+  display: block;
+  -webkit-border-radius:2px;
+    border-radius:2px;
+}
+
+.profile-unfollow-button {
+ border: 1px solid #ff7461;
+}
+
+.profile-follow-button {
+  background-color: #ff7461;
+}
+
+#bdg-list #display-badges {
+  padding: 30px 10px;
+}
+
+#bdg-list #display-badges .badges {
+  margin: 0 20px;
+  width: 80px;
+  height: 80px;
+}
+
+
+/*------ CATEGORIES ------ */
+
+.actualites, .animaux, .art, .associations, .auto-moto {
+background-color: #ff7461;
+color: #ff7461;
+}
+
+.bd-mangas, .charme, .cinema, .commerce, .design {
+background-color: #46d3ae;
+color: #46d3ae;
+}
+
+.famille, .humour, .informatique, .internet, .jeux-video {
+background-color: #fcaf63;
+color: #fcaf63;
+}
+
+.litterature, .loisirs, .mode, .musique, .nature {
+background-color: #ff8395;
+color: #ff8395;
+}
+
+.people, .politique, .publicite, .religions, .rencontres{
+background-color: #b78bbb;
+color: #b78bbb;
+} 
+
+.sante, .sciences, .services, .sites-perso, .sport, .tv, .voyages, .divers {
+background-color: #ffe97b;
+color: #ffe97b;
+}
+
+/*------ CATEGORIES POUR GRAPH ------ */
+
+#graph .actualites,#graph .animaux,#graph .art,#graph .associations,#graph .auto-moto {
+background-color: transparent;
+color: #ff7461;
+}
+
+#graph .bd-mangas,#graph .charme,#graph .cinema,#graph .commerce,#graph .design {
+  background-color: transparent;
+color: #46d3ae;
+}
+
+#graph .famille,#graph .humour,#graph .informatique,#graph .internet, #graph .jeux-video {
+  background-color: transparent;
+color: #fcaf63;
+}
+
+#graph .litterature, #graph .loisirs, #graph .mode, #graph .musique, #graph .nature {
+  background-color: transparent;
+color: #ff8395;
+}
+
+#graph .people, #graph .politique, #graph .publicite, #graph .religions, #graph .rencontres{
+  background-color: transparent;
+color: #b78bbb;
+} 
+
+#graph .sante, #graph .sciences, #graph .services, #graph .sites-perso, #graph .sport, #graph .tv, #graph .voyages, #graph .divers {
+background-color: transparent;
+color: #ffe97b;
+}
+
+
+
+/*------ RESPONSIVE ------ */
 
 @media screen and (max-width: 1200px) {
   #right {

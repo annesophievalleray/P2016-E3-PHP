@@ -222,7 +222,7 @@
         } else {
           text.attr({
             x: 80,//text.attr('x') - left_offset,
-            y: 80,
+            y: 110,
             opacity: 0
           });
         }

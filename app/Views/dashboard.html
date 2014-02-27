@@ -23,31 +23,31 @@
       <div id="sidebar-content">
          <div class="content">
           <img src="public/img/PP_large_2.png" class="avatar-main" alt="<?php echo $_SESSION['login']; ?>"><br>
-          <span class="user-name"><?php echo $_SESSION['login']; ?></span>
+          <span class="user-name" id="user" data-id="<?php echo $SESSION['id']; ?>"><?php echo $SESSION['login']; ?></span>
           <div><span class="follow-number" id="nb_followers">0</span> followers</div>
           <div><span class="follow-number" id="nb_following">0</span> following</div>
          </div>
          <div class="content" id="badges">
           <h3>Derniers badges</h3>
-          <div id="display-badges"></div>
+          <div id="display_badges" data-allbadges=0></div>
           <p><a href="#"> >> Voir tous mes badges</a></p>
          </div>
          <div class="content">
           <h2>Mon activité</h2>
           <span>Janvier 2014</span>
           <div><span class="follow-number" id="nb_posts">0</span> pages bookées</div>
-          <div id="graph">
+          <div id="graph"><div id="activity"></div>
             <ul data-pie-id="activity">
-              <li class="data-activity" data-value="36">Pepperoni</li>
-              <li class="data-activity" data-value="14">Sausage</li>
-              <li class="data-activity" data-value="8">Cheese</li>
-              <li class="data-activity" data-value="11">Mushrooms</li>
-              <li class="data-activity" data-value="7">Chicken</li>
+              <li class="data-activity actualites" data-value="36">Pepperoni</li>
+              <li class="data-activity sport" data-value="14">Sausage</li>
+              <li class="data-activity tv" data-value="8">Cheese</li>
+              <li class="data-activity musique" data-value="11">Mushrooms</li>
+              <li class="data-activity internet" data-value="7">Chicken</li>
               <li class="data-activity" data-value="24">Other</li>
             </ul>
-            <div id="activity"></div>
+            
           </div>
-          <a href="#" class="view-profile">Consulter le profil complet</a>
+          <a href="user/<?php echo $SESSION['id']; ?>" class="view-profile">Consulter le profil complet</a>
          </div>
       </div>
     </div><!-- END SIDEBAR -->
@@ -56,7 +56,7 @@
   <div id="right"><!-- RIGHT PART -->
     <div class="grid grid-pad" id="top-content"><!-- GRID LOGO/SEARCH/MENU -->
       <div class="col-7-12" id="logo"><!-- LOGO AND SEARCHBAR -->
-          <h1><a href="#"><img src="public/img/temporary_logo.png" alt="Nabu"></a></h1>
+          <a href="dashboard/<?php echo $SESSION['id']; ?>"><img src="public/img/temporary_logo.png" alt="Nabu"></a></h1>
           <div id="search">
             <form action="users/search" method="post">
             <input type="text" name="name" autocomplete="off" placeholder="Rechercher un ami"><div><img src="public/img/icons/loupe.svg"  class="icon-search" alt="Rechercher"></div>
@@ -65,7 +65,7 @@
           </div>
       </div><!-- END LOGO AND SEARCHBAR -->
       <div class="col-3-12" id="menu"><!-- MENU -->
-        <p><a href="#"><img src="public/img/icons/user.svg" class="icon-menu" alt="Profil"></a> <a href="#"><img src="public/img/icons/settings.svg" class="icon-menu" alt="Paramètres"></a><a href="#"><img src="public/img/icons/power.svg" class="icon-menu" alt="Déconnexion"></a></p>
+        <p><a href="user/<?php echo $SESSION['id']; ?>"><img src="public/img/icons/user.svg" class="icon-menu" alt="Profil"></a> <a href="#"><img src="public/img/icons/settings.svg" class="icon-menu" alt="Paramètres"></a><a href="user/signout"><img src="public/img/icons/power.svg" class="icon-menu" alt="Déconnexion"></a></p>
       </div><!-- END MENU -->
     </div><!-- END GRID LOGO/SEARCH/MENU -->
 
@@ -74,17 +74,14 @@
          <div class="content" id="new-post"><!-- NEW POST -->
             <img src="public/img/PP_large_2.png" class="avatar-50" alt="">
             <div>
-              <form name="post-article" id="post_article">
-              <input type="text" name="url" id="url" placeholder="Insérez une URL pour ajouter un contenu"><br>
+              <form name="post-article" id="post_article" method="post">
+              <input type="url" name="post_url" id="url" placeholder="Insérez une URL pour ajouter un contenu" required><br>
               <div id="form-extended">
-                <input type="text" name="descr" placeholder="Message accompagnant le contenu"><br>
+                <input type="text" name="post_desc" id="desc" placeholder="Message accompagnant le contenu" required><br>
+                <input type="text" name="post_user_id" value="<?php echo $SESSION['id']; ?>"><br>
                 <div class="styled-select">
-                  <select name="category">
-                    <option value="category">Catégorie</option><!-- faire une boucle php avec les catégroies-->
-                    <option value="volvo">Volvo</option>
-                    <option value="saab">Saab</option>
-                    <option value="fiat">Fiat</option>
-                    <option value="audi">Audi</option>
+                  <select name="post_cat">
+                    <?php require('partials/categories.html'); ?>
                   </select>
                 </div>
                 <input type="submit" value="Publier">
@@ -124,8 +121,11 @@
           </div>
           
           <h3><img src="public/img/articles.png" class="icon-titles" alt="">Articles</h3>
-          <a href="#"><img src="public/img/icons/sync.svg" class="icon-sync" alt=""></a>
+          <a href="#" id="suggest_articles_button"><img src="public/img/icons/sync.svg" class="icon-sync" alt=""></a>
           <div class="suggestion-article-wrapper">
+            <div id="suggest_articles">
+              <?php require('partials/articles.html'); ?>
+            </div>
             <div class="suggestion-category"><span class="rond-category"></span></div>
             <div class="suggestion-article">         
                 Pourquoi Facebook Paper est-il dangereux pour vos mains? <a href="#" class="post-link">bit.ly/3lymOp</a>
@@ -156,12 +156,13 @@
 </div>
 
 
-	<script src="http://localhost:8080/socket.io/socket.io.js"></script>
 	<script src="http://code.jquery.com/jquery-1.10.2.min.js"></script>
   <script src="public/js/snap.svg.js"></script>
   <script src="public/js/pizza.js"></script>
+  <script src="public/js/User.js"></script>
+  <script src="public/js/UserDashboard.js"></script>
 	<script src="public/js/nabu.js"></script>
-  <script src="public/js/nabu_feed.js"></script>
+
 
 </body>
 </html>

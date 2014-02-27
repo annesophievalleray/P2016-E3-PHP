@@ -2,13 +2,30 @@
 if(isset($getFeed)):
 foreach($getFeed as $publi): 
 ?>
-		<div class="post-feed clearfix"><div class="tag"></div>
+		<div class="post-feed clearfix" data-postid="<?php echo $publi->post_id; ?>"><div class="tag"></div>
             <p><a href="<?php echo $publi->post_url; ?>" class="name">
               <img src="public/img/PP_large.png" class="avatar-50 avatar-feed" alt="">
-              <?php echo $publi->post_user_id; ?></a> - <?php echo $publi->post_date; ?><br>
-              Pourquoi Facebook Paper est-il dangereux pour vos mains? <a href="<?php echo $publi->post_url; ?>" class="post-link"><?php echo $publi->post_url; ?></a>  
+              <?php echo $publi->login; ?></a> - <?php echo $publi->post_date; ?><br>
+              <?php echo $publi->post_desc; ?> <a href="<?php echo $publi->post_url; ?>" class="post-link"><?php echo $publi->post_url; ?></a>  
             </p>
         </div>
+<?php 
+endforeach; 
+endif;
+?>
+
+<?php
+if(isset($getNewPosts)):
+foreach($getNewPosts as $publi): 
+?>
+		<div class="post-feed clearfix" data-postid="<?php echo $publi->post_id; ?>"><div class="tag"></div>
+            <p><a href="<?php echo $publi->post_url; ?>" class="name">
+              <img src="public/img/PP_large.png" class="avatar-50 avatar-feed" alt="">
+              <?php echo $publi->login; ?></a> - <?php echo $publi->post_date; ?><br>
+              <?php echo $publi->post_desc; ?> <a href="<?php echo $publi->post_url; ?>" class="post-link"><?php echo $publi->post_url; ?></a>  
+            </p>
+        </div>
+        
 <?php 
 endforeach; 
 endif;

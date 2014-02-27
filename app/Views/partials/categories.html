@@ -1,0 +1,9 @@
+<?php 
+if(isset($getCategories)):
+foreach($getCategories as $category): 
+?>
+<option value="<?php echo $category->cat_id ;?>"><?php echo $category->cat_name ;?></option>
+<?php 
+endforeach; 
+endif;
+?>

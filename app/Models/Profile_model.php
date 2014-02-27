@@ -12,13 +12,25 @@ class Profile_model extends Model{
   }
   
   function getProfil($params){
-    return $this->getMapper('user')->find(array('user_id = ?',$params['id']));
+    return $this->getMapper('user')->load(array('user_id = ?',$params['id']));
 	
+  }
+  
+    function getFollowers($params){
+	  
+	  return $this->getMapper('followers_view')->find(array('following_id =? AND state=1 AND follower_id!=?',$params['user_id'],$params['user_id'])); 
+	  
+  }
+  
+    function getFollowing($params){
+	  
+	  return $this->getMapper('following_view')->find(array('follower_id =? AND state=1 AND following_id!=?',$params['user_id'],$params['user_id'])); 
+	  
   }
 
 
-   function getFeedUser(){
-    return $this->getMapper('feed')->find(array(),array('order'=>'date_feed DESC'));
+   function getFeedUser($params){
+    return $this->getMapper('posts')->find(array('post_user_id = ?',$params['user_id']),array('order'=>'post_date DESC'));
   } 
   
   
@@ -45,22 +57,36 @@ class Profile_model extends Model{
   		$result->insert();
 	}
 	else{
-		$result->state=4;
+		if($result->state==0)
+			$result->state=1;
+		else
+			$result->state=0;
+			
 		$result->update();
 		
 		}
 		
 		
 	}
-	 function unfollow($f3){
-	return $db->exec(array('DELETE FROM follow WHERE following_id=? AND follower_id=?',$params['follower_id'], $params['following_id']));
+	
+  	function getStateFollow($params){
+		$follower_id=$params['follower_id'];
+		$following_id=$params['following_id'];
+	//return $db->exec(array('INSERT INTO follow (follower_id, following_id) VALUES (?,?)',$params['follower_id'], $params['following_id']));
+	return $this->getMapper('follow')->load(array('follower_id = ? AND following_id=? AND state=1',$follower_id, $following_id));
+
+		
+		
+	}
+	 /*function unfollow($f3){
+	return $db->exec(array('DELETE FROM follow WHERE following_id=? AND follower_id=? AND state=1',$params['follower_id'], $params['following_id']));
 		
 	}
 	
 	function dmd_follow($params){
 		//return $db->exec(array('SELECT * FROM user INNER JOIN follow ON user_id=follower_id WHERE following_id=? AND state=0',$params['user_id']));
 		
-		return $this->getMapper('follow_view')->find(array('following_id = ? AND state=0',$params['user_id']));
+		//return $this->getMapper('follow_view')->find(array('following_id = ? AND state=0',$params['user_id']));
 	
 		}
 	function back_follow($params){
@@ -69,7 +95,7 @@ class Profile_model extends Model{
 		$resultload->state=$params['state'];
 		$resultload->update();
 		
-	}
+	}*/
 	
 	function followSuggest($f3){
 		
@@ -77,13 +103,16 @@ class Profile_model extends Model{
 		
 	}
 	
-	 function getFeed($f3){
-		
-	}
 	
   	function addArticle($f3){
 		
-	}
+	}	
+	
+	function insertPost(){
+		$insertPost_=$this->getMapper('posts');
+			$insertPost_->copyfrom('POST');
+			$insertPost_->save();
+	  }
 	
 	//BADGES
 	
@@ -102,6 +131,11 @@ class Profile_model extends Model{
   	$stats=$this->getMapper('stats');
   	$resultload=$stats->load(array('stats_user_id = ?',$user_id));
 	$resultload->$keyword++;
+  	$resultload->update();
+	
+	$stats=$this->getMapper('user');
+  	$resultload=$stats->load(array('user_id = ?',$user_id));
+	$resultload->nb_posts++;
   	$resultload->update();
   }
 

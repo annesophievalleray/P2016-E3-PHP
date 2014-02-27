@@ -1,0 +1,12 @@
+<?php 
+if($getStateFollow){
+?>
+{ "state": "<?php echo 1; ?>"}
+<?php  
+}
+else{
+?>
+{ "state": "<?php echo 0; ?>"}
+<?php } 
+?>
+

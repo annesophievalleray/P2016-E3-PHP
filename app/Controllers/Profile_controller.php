@@ -8,24 +8,52 @@ class Profile_controller extends Controller{
   }
   
    function getProfil($f3){
-    $f3->set('getProfil',$this->model->getProfil(array('id'=>$f3->get('PARAMS.id'))));
+    $getProfil_=$f3->set('getProfil',$this->model->getProfil(array('id'=>$f3->get('PARAMS.id'))));
+		if($getProfil_){
+			$userLogin=$getProfil_->login;
+		}
+			$f3->set('userLogin',$userLogin);
+			
 
-	$this->_getFeed($f3);
-	$this->_displayBadges($f3);
-	$this->_dmd_follow($f3);
+	$this->_getFeedUser($f3);
+	$this->_getFollowers($f3);
+	$this->_getFollowing($f3);
+	//$this->displayBadges($f3);
+	//$this->_dmd_follow($f3);
 	$this->tpl['async']='profile.html';
   }
 //------UserDatas----
   function getUserData($f3){
-	      $f3->set('getUserData',$this->model->getUserData(array('id'=>$f3->get('SESSION.id'))));
+	      $f3->set('getUserData',$this->model->getUserData(array('id'=>$f3->get('PARAMS.id'))));
 	  //$this->redirection=true;
 		//echo $f3->get('SESSION.login');
 		$this->tpl['async']='json/dataUser.json';
 	  
   }
+  
+  function getUserVisitData($f3){
+	      $f3->set('getUserData',$this->model->getUserData(array('id'=>$f3->get('PARAMS.id'))));
+	  //$this->redirection=true;
+		//echo $f3->get('SESSION.login');
+		$this->tpl['async']='json/dataUser.json';
+	  
+  }
+  
+  	function _getFollowers($f3){
+	
+		$f3->set('getFollowers',$this->model->getFollowers(array('user_id'=>$f3->get('PARAMS.id'))));
+	
+		}
+		
+	function _getFollowing($f3){
+	
+		$f3->set('getFollowing',$this->model->getFollowing(array('user_id'=>$f3->get('PARAMS.id'))));
+	
+		}
+		
  //------FEED----   
-  	 function _getFeed($f3){
-		 	$f3->set('getFeedUser',$this->model->getFeedUser());
+  	 function _getFeedUser($f3){
+		 	$f3->set('getFeedUser',$this->model->getFeedUser(array('user_id'=>$f3->get('PARAMS.id'))));
 		
 	}
   
@@ -40,27 +68,34 @@ class Profile_controller extends Controller{
 		
 	}
 //----Follow----
-	function _dmd_follow($f3){
+	/*function _dmd_follow($f3){
 		$dmd_follow_=$f3->set('dmd_follow',$this->model->dmd_follow(array('user_id'=>$f3->get('SESSION.id'))));
 		
 		//echo $dmd_follow_;
 		
+	}*/
+	function getStateFollow($f3){
+	$getStateFollow_=$f3->set('getStateFollow',$this->model->getStateFollow(array('follower_id'=>$f3->get('SESSION.id'),'following_id'=>$f3->get('PARAMS.following_id'))));
+	
+	$this->tpl['async']='json/followState.json';
+		
 	}
+	
   	function follow($f3){
-		$follow_=$f3->set('follow',$this->model->follow(array('follower_id'=>$f3->get('PARAMS.follower'),'following_id'=>$f3->get('PARAMS.following'))));
+		$follow_=$f3->set('follow',$this->model->follow(array('follower_id'=>$f3->get('SESSION.id'),'following_id'=>$f3->get('PARAMS.following'))));
 		
 		
 		$this->tpl['async']='partials/users.html';
 		
 	}
 	
-  	function unfollow($f3){
+  	/*function unfollow($f3){
 		$unfollow_=$f3->set('unfollow',$this->model->unfollow(array('follower_id'=>$f3->get('PARAMS.follower'),'following_id'=>$f3->get('PARAMS.following'))));
 		
 		
 		$this->tpl['async']='partials/users.html';
 		
-	}
+	}*/
 
   	function followSuggest($f3){
 		$followSuggest_=$f3->set('followSuggest',$this->model->followSuggest(array('user_id'=>$f3->get('SESSION.id'))));
@@ -82,14 +117,32 @@ class Profile_controller extends Controller{
   	function addArticle($f3){
 		
 	}
+//POSTER
+
+	function insertPost($f3){
+		$f3->set('insertPost',$this->model->insertPost());
+		$this->addVisit($f3);
+		$this->tpl['async']='partials/users.html';
+	}
 	
 
 //-----BADGES----
+  function _getBadges($f3){
+    $getBadges_=$f3->set('getBadges',$this->model->getBadges(array('id'=>$f3->get('PARAMS.id'))));
+     
+	 if($getBadges_) { 
+      return $bdg_str=$getBadges_->bdg_id;
+	  
+	 }
+	 
+      //return $badges_array = explode(',',$bdg_str);
+      
+  }
+  	
+function _displayBadges($f3){
+   // $displayBadges_=$f3->set('displayBadges',$this->model->displayBadges(array('id'=>$f3->get('PARAMS.id'))));
 	
-function displayBadges($f3){
-    $displayBadges_=$f3->set('displayBadges',$this->model->displayBadges(array('id'=>$f3->get('SESSION.id'))));
-	
-    if($displayBadges_) {
+    //if($displayBadges_) {
 
       /*echo 'Chaine des badges : '.$bdg_str=$displayBadges_->bdg_id.'<br>';
 
@@ -105,8 +158,11 @@ function displayBadges($f3){
         
         echo $this->getBadgesName($badges_array[$i],$f3);
       }*/
-	 $bdg_str=$displayBadges_->bdg_id;
-	  
+	
+	 $bdg_str=$this->_getBadges($f3);
+	 
+	if($bdg_str!=""){ 
+	 
 	if(substr_count($bdg_str, ',')<=2)
 	  	$f3->set('nb_badges',(substr_count($bdg_str, ',')));
 	else
@@ -115,16 +171,22 @@ function displayBadges($f3){
 	  $f3->set('badges_array',explode(',',$bdg_str));
 	  $badges_array=$f3->get('badges_array');
 	  
-	  /*for ($i=count($f3->get('badges_array')); $i>=count(($f3->get('badges_array'))-3); $i++) { 
-       		$badges_name[$i]=$this->getBadgesName($badges_array[$i],$f3);
+	  $f3->set('all',$f3->get('GET.all'));
+	  
+	  for ($i=0; $i<=count($f3->get('badges_array'))-2; $i++) { 
+       		$badges_name[]=$this->getBadgesName($badges_array[$i],$f3);
+			//echo $badges_name[$i];
       }
-	  $f3->set('badges_name',$badge_name);*/
+	  
+	  $f3->set('badges_name',$badges_name);
 	  
 	  //echo"daccc!!";
 	  
 	   $this->tpl['async']='partials/apercuBadges.html';
 
     }
+	
+	
 
  
   }
@@ -136,12 +198,13 @@ function displayBadges($f3){
       return $bdg_name;
     }
   }
-
+//ajout d'une visite au post
   function addVisit($f3){
     //$f3->set('user_id',$f3->get('PARAMS.id'));
-    $f3->set('category',$f3->get('PARAMS.keyword'));
+    //$f3->set('category',$f3->get('PARAMS.keyword'));
+	$f3->set('category',$f3->get('POST.post_cat'));
 	
-    $f3->set('addVisit',$this->model->addVisit(array('keyword'=>$f3->get('category'),'user_id'=>$f3->get('user_id'))));
+    $f3->set('addVisit',$this->model->addVisit(array('keyword'=>$f3->get('category'),'user_id'=>$f3->get('SESSION.id'))));
     $this->_getVisits($f3);
     $this->tpl['async']='partials/users.html';
   }
@@ -164,13 +227,6 @@ function displayBadges($f3){
     }
   }
 
-  function _getBadges($f3){
-    $getBadges_=$f3->set('getBadges',$this->model->getBadges(array('id'=>$f3->get('SESSION.id'))));
-      
-      $bdg_str=$getBadges_->bdg_id;
-      return $badges_array = explode(',',$bdg_str);
-      
-  }
 
   function _checkBadges($f3,$cat_id){
     $checkBadges_=$f3->set('checkBadges',$this->model->checkBadges(array('cat_id'=>$cat_id,'cat_count'=>$f3->get('cat_count'))));
@@ -183,7 +239,7 @@ function displayBadges($f3){
         $bdg_id=$checkBadges_->bdg_id;
 
         $hasBadge=false;
-        $badges_array=$this->_getBadges($f3);
+        $badges_array=$f3->get('badges_array');
 
         for ($i=0; $i < count($badges_array); $i++) { 
          if($badges_array[$i]==$bdg_id){

@@ -1,0 +1,25 @@
+<?php
+$nb_articles=1;
+if(isset($noSuggest)){?>
+	<div class="suggestion-article"><?php echo $noSuggest;?>
+ 	</div>
+<?php
+}	
+else if(isset($articlesSuggestRand)){
+		foreach($articlesSuggestRand as $publi):
+        	if ($nb_articles>2 || (count($articlesSuggestRand)==1 && $nb_articles==2)){
+            	break;
+            }
+?>
+<div class="suggestion-article-wrapper">
+            <div class="suggestion-category"><span class="rond-category"></span></div>
+            <div class="suggestion-article">         
+                <?php echo $publi->post_desc; ?> <a href="<?php echo $publi->post_url; ?>" class="post-link"><?php echo $publi->post_url; ?></a>
+            </div>
+<?php 
+		$nb_articles++;
+	endforeach; 
+}
+?>
+
+

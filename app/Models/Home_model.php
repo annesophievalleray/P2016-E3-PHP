@@ -10,7 +10,7 @@ class Home_model extends Model{
     
   }
   function signIn($params){
-    return $this->getMapper('user')->load(array('login = ? and password = ?',$params['login'],$params['password']));
+    return $this->getMapper('user')->load(array('login = ? AND password = ?',$params['login'],$params['password']));
   }
   
   
