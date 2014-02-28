@@ -26,7 +26,7 @@
           <div id="stats-followers"><span class="follow-number" id="nb_followers">0</span> followers</div>
           <div id="stats-following"><span class="follow-number" id="nb_following">0</span> following</div>
           <?php if ($PARAMS['id']!= $_SESSION['id']):?>
-            <a class="profile-follow-button" href="user/follow/<?php echo $PARAMS['id']; ?>" id="follow_button">Suivre</a>
+            <a class="profile-follow-button" href="user/follow/<?php echo $PARAMS['id']; ?>/" id="follow_button">Suivre</a>
           <?php endif ?>
          </div>
          <div class="content list-follow followers">
@@ -63,9 +63,9 @@
           <h1><a href="dashboard/<?php echo $SESSION['id']; ?>"><img src="public/img/temporary_logo.png" alt="Nabu"></a></h1>
           <div id="search">
             <form action="users/search" method="post">
-            <input type="text" name="name" placeholder="Rechercher un ami"><div><img src="public/img/icons/loupe.svg"  class="icon-search" alt="Rechercher"></div>
+            <input type="text" name="name" autocomplete="off" placeholder="Rechercher un ami"><div><img src="public/img/icons/loupe.svg"  class="icon-search" alt="Rechercher"></div>
             </form>
-            <div><ul class="users-result"><?php require('partials/users.html'); ?></ul></div>
+            <div id="search-results"><ul class="users-result"><?php require('partials/users.html'); ?></ul></div>
           </div>
       </div><!-- END LOGO AND SEARCHBAR -->
       <div class="col-3-12" id="menu"><!-- MENU -->
@@ -123,7 +123,7 @@
         <div class="content" id="bdg-list">
           <h2>Badges obtenus</h2>
           <div id="display_badges" data-allbadges=1>Pas de badges</div>
-          <div class="bdg-wrap"><img class="badges" src="public/img/badges/1.png" alt=""/><br>Nom du badge</div>
+          <div class="clearfix"></div>
         </div>
       </div>
     </div><!-- END BOTTOM BLOCK -->
@@ -135,6 +135,7 @@
           <section id="zone_post_">
             <?php require('partials/posts_list.html'); ?>
           </section>
+          <div class="clearfix"></div>
       </div><!-- END BOTTOM BLOCK -->
     </div><!-- END RIGHT PART -->
       

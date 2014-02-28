@@ -50,6 +50,7 @@ $('#follow_button').on('click',function(e){
 
 	//search
 $('input[name="name"]').on('keyup',function(e){
+	$('.users-result').show();
 	var $parent=$(this).parent('form');
 	//console.log($parent.serialize());
 	UserDashboard.searchUser($parent);
@@ -79,7 +80,10 @@ $('input[name="post_url"]').on('blur',function(){
 	}
 });
 $('input[name="name"]').focusout(function() {
-   $('.users-result').hide();
+   $('.users-result').hide(200);
+});
+$('input[name="name"]').focus(function() {
+   $('.users-result').show(200);
 });
 // follow lists
 $('#sidebar #stats-followers, .followers .close').on('click',function(e){
