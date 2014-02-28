@@ -23,13 +23,27 @@
          <div class="content">
           <img src="public/img/PP_large_2.png" class="avatar-main" alt="<?php echo $userLogin; ?>"><br>
           <span class="user-name"><?php echo $userLogin; ?></span>
-          <div><span class="follow-number" id="nb_followers">000</span> followers</div>
-          <div><span class="follow-number" id="nb_following">000</span> following</div>
+          <div id="stats-followers"><span class="follow-number" id="nb_followers">0</span> followers</div>
+          <div id="stats-following"><span class="follow-number" id="nb_following">0</span> following</div>
           <?php if ($PARAMS['id']!= $_SESSION['id']):?>
             <a class="profile-follow-button" href="user/follow/<?php echo $PARAMS['id']; ?>" id="follow_button">Suivre</a>
           <?php endif ?>
          </div>
-         <div class="content">
+         <div class="content list-follow followers">
+          <h3>Vos followers</h3>
+          <a href="#" class="close"><img src="public/img/icons/close.png" alt=""></a>
+          <ul>
+            <?php require('partials/follower_view.html'); ?>
+          </ul>
+         </div>
+         <div class="content list-follow following">
+          <h3>Vos followings</h3>
+          <a href="#" class="close"><img src="public/img/icons/close.png" alt=""></a>
+          <ul>
+            <?php require('partials/following_view.html'); ?>
+          </ul>
+         </div>
+         <div class="content" id="badges">
           <h3>Badges débloqués</h3>
           <img src="public/img/badge.png" class="badges" alt="Badge description">
           <img src="public/img/badge.png" class="badges" alt="Badge description">
@@ -38,18 +52,7 @@
           <img src="public/img/badge.png" class="badges" alt="Badge description">
           <img src="public/img/badge.png" class="badges" alt="Badge description">
          </div>
-         <div class="content list-follow">
-          <h3>Vos followers</h3>
-          <ul>
-            <?php require('partials/follower_view.html'); ?>
-          </ul>
-         </div>
-         <div class="content list-follow">
-          <h3>Vos followings</h3>
-          <ul>
-            <?php require('partials/following_view.html'); ?>
-          </ul>
-         </div>
+         
       </div>
     </div><!-- END SIDEBAR -->
   </div><!-- END LEFT PART -->
@@ -57,7 +60,7 @@
   <div id="right"><!-- RIGHT PART -->
     <div class="grid grid-pad" id="top-content"><!-- GRID LOGO/SEARCH/MENU -->
       <div class="col-7-12" id="logo"><!-- LOGO AND SEARCHBAR -->
-          <a href="dashboard/<?php echo $SESSION['id']; ?>"><img src="public/img/temporary_logo.png" alt="Nabu"></a>
+          <h1><a href="dashboard/<?php echo $SESSION['id']; ?>"><img src="public/img/temporary_logo.png" alt="Nabu"></a></h1>
           <div id="search">
             <form action="users/search" method="post">
             <input type="text" name="name" placeholder="Rechercher un ami"><div><img src="public/img/icons/loupe.svg"  class="icon-search" alt="Rechercher"></div>
@@ -77,25 +80,30 @@
                   <div class="content"><span class="follow-number" id="nb_posts">0</span> pages bookées</div>
                 </div>
                 <div class="stats-wrapper">
-                  <div class="content"><span class="follow-number" id="nb_badges">0</span> badges obtenus</div>
+                  <div class="content"><span class="follow-number" id="nb_badges">0</span> badges</div>
                 </div>
                 <div class="stats-wrapper">
-                  <div class="content"><span class="follow-number">0</span> objectifs atteints</div>
+                  <div class="content"><span class="follow-number">0</span> objectifs</div>
                 </div>
             </div><!-- END NUMBERS -->
         <div class="content" id="graph-wrapper"><!-- GRAPH -->
-          <div>
             <h2>Votre navigation</h2>
-            <canvas id="canvas-graph" height="100%" width="100%"></canvas></div>
+              <div class="styled-select">
+                <select name="post_cat">
+                  <?php require('partials/categories.html'); ?>
+                </select>
+              </div>
+            <canvas id="canvas-graph" width="430" height="220"></canvas>
          </div><!-- END GRAPH -->
       </div><!-- END CENTRAL COLUMN -->
 
       <div class="col-4-12"><!--  RIGHT COLUMN -->
         <div class="content" id="top-right">
             <div>
-              Vous avez consulté <b>5</b> sites de vente<br>
-              Bookez 20 nouvelles pages et débloquez le badge Gamewatcher !
+              <span>Vous avez consulté <b>5</b> sites de vente</span>
+              <span>Bookez 20 nouvelles pages et débloquez le badge <b>Gamewatcher</b> !</span>
               <a href="#">Démarrer le défi</a>
+              <img src="public/img/badges/1.png" alt="">
             </div>
          </div> 
 
@@ -115,6 +123,7 @@
         <div class="content" id="bdg-list">
           <h2>Badges obtenus</h2>
           <div id="display_badges" data-allbadges=1>Pas de badges</div>
+          <div class="bdg-wrap"><img class="badges" src="public/img/badges/1.png" alt=""/><br>Nom du badge</div>
         </div>
       </div>
     </div><!-- END BOTTOM BLOCK -->

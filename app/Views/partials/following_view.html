@@ -4,7 +4,7 @@
 if(isset($getFollowing)):
 foreach($getFollowing as $publi): 
 ?>
-<li><a href="user/<?php echo $publi->user_id; ?>"><img src="public/img/PP_large_2.png" class="avatar-30" alt="avatar <?php echo $publi->login; ?>"><?php echo $publi->login; ?></a></li>
+<li><img src="public/img/PP_large_2.png" class="avatar-30" alt="<?php echo $publi->login; ?>"><a href="user/<?php echo $publi->user_id; ?>"><?php echo $publi->login; ?></a></li>
 <?php 
 endforeach; 
 endif;

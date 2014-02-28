@@ -11,10 +11,11 @@ else if(isset($articlesSuggestRand)){
             	break;
             }
 ?>
-<div class="suggestion-article-wrapper">
-            <div class="suggestion-category"><span class="rond-category"></span></div>
-            <div class="suggestion-article">         
-                <?php echo $publi->post_desc; ?> <a href="<?php echo $publi->post_url; ?>" class="post-link"><?php echo $publi->post_url; ?></a>
+            <div class="sugg-wrap">
+                <div class="suggestion-category"><span class="rond-category"></span></div>
+                <div class="suggestion-article">         
+                    <?php echo $publi->post_desc; ?> <a href="<?php echo $publi->post_url; ?>" class="post-link"><?php echo $publi->post_url; ?></a>
+                </div>
             </div>
 <?php 
 		$nb_articles++;

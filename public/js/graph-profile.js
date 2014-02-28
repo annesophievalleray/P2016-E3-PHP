@@ -106,5 +106,20 @@ var data = {
 		}
 
 		//var myLine = new Chart(document.getElementById("canvas-graph").getContext("2d")).Line(lineChartData);
+		var c = $('#canvas-graph'); //document.getElementById("canvas-graph");
 		var ctx = document.getElementById("canvas-graph").getContext("2d");
+		var container = $(c).parent();
+
+		//Run function when browser resizes
+		$(window).resize( respondCanvas() );
+
+		function respondCanvas(){ 
+		    c.attr('width', $(container).width() ); //max width
+		    //c.attr('height', $(container).height() ); //max height
+
+		}
+
+		//Initial call 
+		respondCanvas();
+
 		var myLine = new Chart(ctx).Line(data,options);

@@ -407,3 +407,7 @@
   window.Pizza = Pizza;
 
 }($, this, this.document));
+
+$(window).load(function() {
+      Pizza.init();
+});

@@ -53,9 +53,6 @@ $('input[name="name"]').on('keyup',function(e){
 	var $parent=$(this).parent('form');
 	//console.log($parent.serialize());
 	UserDashboard.searchUser($parent);
-	// $('input[name="name"]').focusout(function() {
-	//     $('.users-result').hide();
-	// });
 })
 
 
@@ -70,7 +67,8 @@ $('#post_article').submit(function () {
 
 
 
-/*------INTERFACE ---*/
+
+/*------INTERFACE ------*/
 
 $('input[name="post_url"]').on('focus',function(){
 	$('#form-extended').fadeIn(400);
@@ -80,9 +78,19 @@ $('input[name="post_url"]').on('blur',function(){
 		$('#form-extended').fadeOut(400);
 	}
 });
-
-
-/*------GRAPH DASHBOARD ---*/
-$(window).load(function() {
-      Pizza.init();
+$('input[name="name"]').focusout(function() {
+   $('.users-result').hide();
+});
+// follow lists
+$('#sidebar #stats-followers, .followers .close').on('click',function(e){
+	e.preventDefault();
+	//$('#sidebar .content:nth-child(2)').toggle(200);
+	if($('.following').is(':visible')){$('.following').hide()}
+	$('.followers').fadeToggle(200);
+});
+$('#sidebar #stats-following, .following .close').on('click',function(e){
+	e.preventDefault();
+	//$('#sidebar .content:nth-child(2)').toggle(200);
+	if($('.followers').is(':visible')){$('.followers').hide()}
+	$('.following').fadeToggle(200);
 });

@@ -72,7 +72,6 @@ var UserDashboard = {
 			data:$parent.serialize()
 		})
 		.success(function(data){
-			//$('.users-result').show();
 			$(UserDashboard.params.divResultRecherche).html(data);
 			console.log(data);
 		})	

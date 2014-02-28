@@ -56,7 +56,7 @@
   <div id="right"><!-- RIGHT PART -->
     <div class="grid grid-pad" id="top-content"><!-- GRID LOGO/SEARCH/MENU -->
       <div class="col-7-12" id="logo"><!-- LOGO AND SEARCHBAR -->
-          <a href="dashboard/<?php echo $SESSION['id']; ?>"><img src="public/img/temporary_logo.png" alt="Nabu"></a></h1>
+          <h1><a href="dashboard/<?php echo $SESSION['id']; ?>"><img src="public/img/temporary_logo.png" alt="Nabu"></a></h1>
           <div id="search">
             <form action="users/search" method="post">
             <input type="text" name="name" autocomplete="off" placeholder="Rechercher un ami"><div><img src="public/img/icons/loupe.svg"  class="icon-search" alt="Rechercher"></div>
@@ -125,16 +125,6 @@
           <div class="suggestion-article-wrapper">
             <div id="suggest_articles">
               <?php require('partials/articles.html'); ?>
-            </div>
-            <div class="suggestion-category"><span class="rond-category"></span></div>
-            <div class="suggestion-article">         
-                Pourquoi Facebook Paper est-il dangereux pour vos mains? <a href="#" class="post-link">bit.ly/3lymOp</a>
-            </div>
-          </div>
-          <div class="suggestion-article-wrapper">
-            <div class="suggestion-category"><span class="rond-category"></span></div>
-            <div class="suggestion-article">         
-                Pourquoi Facebook Paper est-il dangereux pour vos mains? <a href="#" class="post-link">bit.ly/3lymOp</a>
             </div>
           </div>
          </div> <!-- END CONTENT SUGGESTIONS -->
