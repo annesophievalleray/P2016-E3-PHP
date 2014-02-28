@@ -663,7 +663,8 @@ margin-top: -80px;
   width: 150px;
   height: 35px;
   display: inline-block;
-  background: url(../img/dropdown.png) no-repeat right #fff;
+  background: url(../img/dropdown.png) no-repeat #fff;
+  background-position:120px 12px;
 }
 #new-post .styled-select select {
   width: 100%;
@@ -918,6 +919,8 @@ input[name="post_user_id"] {
 
 #stats-followers:hover, #stats-following:hover {
   cursor: pointer;
+  background-color: #18181d;
+  opacity: 0.8;
 }
 
 .stats-wrapper .content {
@@ -944,12 +947,14 @@ input[name="post_user_id"] {
   right:10px;
   top:20px;
   height: 25px;
+  background-position: 130px 5px;
 }
 #graph-wrapper .styled-select select{
   width: 100%;
    background: transparent;
   -webkit-appearance: none;
   height: 25px;
+  padding: 5px 10px; 
   /* border: none; */
 }
 
@@ -960,6 +965,7 @@ input[name="post_user_id"] {
   text-align: left;
   font-size: 1.143em;
   border-bottom: solid 2px #efefef;
+  float: left;
 }
 .apercu {
   width: 100%;
@@ -1069,6 +1075,8 @@ input[name="post_user_id"] {
   position: relative;
   display: none;
   margin-bottom: 30px !important;
+  max-height: 280px;
+  overflow: scroll;
 }
 .list-follow h3{
   margin-left: 20px !important;
@@ -1125,12 +1133,18 @@ input[name="post_user_id"] {
   text-decoration: none;
 }
 
+#bdg-list{
+  padding-bottom: 30px;
+}
+
 #bdg-list #display_badges {
   padding: 30px 10px;
+  position: relative;
 }
 
 #bdg-list .bdg-wrap {
   display: inline-block;
+  float: left;
   width: 90px;
   text-align: center;
   margin: 0 20px;
@@ -1138,6 +1152,7 @@ input[name="post_user_id"] {
   font-size: 1.143em;
   color: #bababa;
 }
+
 #bdg-list .badges { /* #bdg-list #display_badges .badges */
   width: 80px;
   height: 80px;

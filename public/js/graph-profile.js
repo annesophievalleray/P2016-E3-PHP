@@ -7,13 +7,6 @@ var data = {
 					pointColor : "#f8a20f",
 					pointStrokeColor : "#fff",
 					data : [35,29,40,51,36,55,40]
-				},
-				{
-					fillColor : "transparent",
-					strokeColor : "#32d2c9",
-					pointColor : "#32d2c9",
-					pointStrokeColor : "#fff",
-					data : [28,18,20,19,45,27,40]
 				}
 			]
 			
@@ -123,3 +116,8 @@ var data = {
 		respondCanvas();
 
 		var myLine = new Chart(ctx).Line(data,options);
+
+
+
+
+		
