@@ -65,7 +65,11 @@ class Profile_controller extends Controller{
   }*/
  //-----Profil----- 
   	function profileUpdate($f3){
+<<<<<<< HEAD
 		$profileUpdate_=$f3->set('profileUpdate',$this->model->profileUpdate(array('')));
+=======
+		$profileUpdate_=$f3->set();
+>>>>>>> 37fd342dc86905d807f788315664c57b822feb6f
 		$this->tpl['async']='profile_update.html';
 	}
 //----Follow----
@@ -280,7 +284,11 @@ function _displayObjectives($f3){
       echo "Nombre d'objectifs : ".$nb_objectives.'<br>';
 
       $objectives_array = explode(',',$obj_str);
+<<<<<<< HEAD
       $f3->set('objectives_array',$objectives_array);
+=======
+      $f3->set('objectives_array',$objectivs_array);
+>>>>>>> 37fd342dc86905d807f788315664c57b822feb6f
 
       for ($i=0; $i < count($objectives_array)-1; $i++) { 
         echo 'Objectif '.($i+1).' : '.$objectives_array[$i].' - ';
@@ -309,8 +317,13 @@ function _displayObjectives($f3){
 
   function _checkObjectives($f3,$obj_id){
     $checkObjectives_=$f3->set('checkObjectives',$this->model->checkObjectives(array('cat_id'=>$cat_id,'cat_count'=>$f3->get('cat_count'))));
+<<<<<<< HEAD
 	//À modifier, URGENT..
     if(!$checkObjectives_){
+=======
+
+    if(!$checkBadges_){
+>>>>>>> 37fd342dc86905d807f788315664c57b822feb6f
       echo "<br><br>pas d'objectifs";
 	  //return quelque chose
     } else {
@@ -327,7 +340,11 @@ function _displayObjectives($f3){
         }
 
         if (!$hasObjective) {
+<<<<<<< HEAD
           $this->_addObjective($f3,$obj_id);
+=======
+          $this->_addObjective($f3,$bdg_id);
+>>>>>>> 37fd342dc86905d807f788315664c57b822feb6f
         } 
         
       }
