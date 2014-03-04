@@ -38,11 +38,12 @@ class Profile_model extends Model{
     return $this->getMapper('user')->find('login like "%'.$params['keywords'].'%"');
   }
   
-  	function editProfil($f3){
-		
-		
-		
-	}
+  // Édition / MÀJ du profil de l'utilisateur (html : profile_update.html)
+  function profileUpdate($params){
+	
+			
+  }
+	
   	function follow($params){
 		$follower_id=$params['follower_id'];
 		$following_id=$params['following_id'];
@@ -167,7 +168,25 @@ class Profile_model extends Model{
   	$resultload->update();
   }
 
+  function displayObjectives($params){
+  	return $this->getMapper('user')->load(array('user_id = ?',$params['id']));
+  }
   
+  function getObjectives($params){
+  	return $this->getMapper('user')->load(array('user_id = ?',$params['id']));
+  }
+  
+  function checkObjectives($params){
+  	return $this->getMapper('objectives_user')->load(array('cat_id = ? and nb_visites <= ?',$params['cat_id'],$params['cat_count']));
+  }
+  
+  function addObjective($params){
+	  $user=$this->getMapper('user');
+  }
+  
+  function getObjectiveName($params){
+  	return $this->getMapper('objectives_user')->load(array('obj_id = ?',$params['objective_id']));
+  }
 
 }
 
