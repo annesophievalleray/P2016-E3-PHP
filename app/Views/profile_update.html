@@ -1,0 +1,46 @@
+<!doctype html>
+<html lang="fr">
+<head>
+    <meta charset="utf-8">
+    <base href="<?php echo $BASE; ?>/" />
+    <title>Nabu</title>
+    <meta name="description" content="">
+    <meta name="viewport" content="width=device-width">
+
+    <link rel="stylesheet" type="text/css" href="public/stylesheet/style.css">
+    <link rel="stylesheet" type="text/css" href="public/stylesheet/simplegrid.css" />
+</head>
+<body>
+    <?php if(isset($error)): ?> 
+    <div class="error"><?php echo $error; ?></div>
+    <?php endif;?>  
+    <form action="updateProfile/" id="profileUpdate" method="post" enctype="multipart/form-data">
+	  <label for="avatar">Avatar</label>
+	  <input type="file" name="avatar" id="avatar"/>
+	  <label for="date_birth">Date de naissance</label>
+	  <input type="date" name="date_birth" id="date_birth">
+	  <label for="password">Mot de passe</label>
+      <input type="password" name="password" id="password">
+	  <label for="location">Lieu</label>
+	  <input type="text" name="location" id="location">
+	  <label for="email">Email</label>
+	  <input type="email" name="email" id="email">
+	  <input type="submit" value="Enregistrer"/>
+    </form>
+  
+	<script src="http://code.jquery.com/jquery-1.10.2.min.js"></script>
+	<script type="text/javascript">
+    $("#profileUpdate").on('submit',function(e){
+    	e.preventDefault();
+    	var files=$('#avatar')[0].files[0];
+    	var form=$(this).serialize();
+		var datas = new FormData();
+ 		datas.append('file',files);
+ 		datas.append('form',form);
+ 	 	$.ajax({url:"updateProfile/",type:'POST',data:datas,processData:false,contentType:false})
+		.success(function(){
+		console.log('datas envoyees'); 
+	});
+	</script>
+</body>
+</html>

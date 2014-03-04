@@ -89,6 +89,19 @@ var User = {
 		
 	},
 	
+	getUserObjectives:function(){
+		allObjectives=$(User.params.divObjectives).data('allobjectives');
+		
+		$.ajax({
+				url:"user/objectives/"+User.params.userId,
+				method:"get",
+				data:"all="+allObjectives
+			})
+			.success(function(objectives){
+				$(User.params.divObjectives).html(objectives);
+			})
+	},
+	
 	follow:function(){
 		$.ajax({
 				url:$('#follow_button').attr('href'),

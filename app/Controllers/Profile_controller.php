@@ -64,8 +64,9 @@ class Profile_controller extends Controller{
 	$this->tpl['async']='partials/users.html';
   }*/
  //-----Profil----- 
-  	function editProfil($f3){
-		
+  	function profileUpdate($f3){
+		$profileUpdate_=$f3->set();
+		$this->tpl['async']='profile_update.html';
 	}
 //----Follow----
 	/*function _dmd_follow($f3){
@@ -262,6 +263,81 @@ function _displayBadges($f3){
   }
 	
 }
+
+/*===========================
+		OBJECTIVES
+============================*/
+
+	
+function _displayObjectives($f3){
+    $displayObjectives_=$f3->set('displayObjectives',$this->model->displayObjectives(array('id'=>$f3->get('SESSION.id'))));
+	
+    if($displayObjectives_) {
+
+      echo 'Les objectifs : '.$obj_str=$displayObjectives_->obj_id.'<br>';
+
+      $nb_badges=substr_count($obj_str, ',');
+      echo "Nombre d'objectifs : ".$nb_objectives.'<br>';
+
+      $objectives_array = explode(',',$obj_str);
+      $f3->set('objectives_array',$objectivs_array);
+
+      for ($i=0; $i < count($objectives_array)-1; $i++) { 
+        echo 'Objectif '.($i+1).' : '.$objectives_array[$i].' - ';
+        
+        
+        echo $this->getObjectivesName($objectives_array[$i],$f3);
+      }
+    }
+}
+
+  function _getCatId($f3){
+    $getCatId_=$f3->set('getCatId',$this->model->getCatId(array('keyword'=>$f3->get('category'))));
+    if($getCatId_){
+      $cat_id=$getCatId_->cat_id;
+      $this->_checkObjectives($f3,$cat_id);
+    }
+  }
+
+  function _getObjectives($f3){
+    $getObjectives_=$f3->set('getObjectives',$this->model->getObjectives(array('id'=>$f3->get('SESSION.id'))));
+      
+      $obj_str=$getObjectives_->obj_id;
+      return $objectives_array = explode(',',$obj_str);
+      
+  }
+
+  function _checkObjectives($f3,$obj_id){
+    $checkObjectives_=$f3->set('checkObjectives',$this->model->checkObjectives(array('cat_id'=>$cat_id,'cat_count'=>$f3->get('cat_count'))));
+
+    if(!$checkBadges_){
+      echo "<br><br>pas d'objectifs";
+	  //return quelque chose
+    } else {
+
+        $obj_id=$checkObjectives_->obj_id;
+
+        $hasObjective=false;
+        $objectives_array=$this->_getObjectives($f3);
+
+        for ($i=0; $i < count($objectives_array); $i++) { 
+         if($objectives_array[$i]==$obj_id){
+          $hasObjective=true;
+         }
+        }
+
+        if (!$hasObjective) {
+          $this->_addObjective($f3,$bdg_id);
+        } 
+        
+      }
+
+  }
+
+  function _addObjective($f3,$obj_id){
+    $checkObjectives_=$f3->set('addObjective',$this->model->addObjective(array('user_id'=>$f3->get('SESSION.id'),'obj_id'=>$obj_id)));
+  }
+  
 	
 
 ?>
