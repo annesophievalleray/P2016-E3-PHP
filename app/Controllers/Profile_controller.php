@@ -65,7 +65,7 @@ class Profile_controller extends Controller{
   }*/
  //-----Profil----- 
   	function profileUpdate($f3){
-		$profileUpdate_=$f3->set();
+		$profileUpdate_=$f3->set('profileUpdate',$this->model->profileUpdate(array('')));
 		$this->tpl['async']='profile_update.html';
 	}
 //----Follow----
@@ -280,7 +280,7 @@ function _displayObjectives($f3){
       echo "Nombre d'objectifs : ".$nb_objectives.'<br>';
 
       $objectives_array = explode(',',$obj_str);
-      $f3->set('objectives_array',$objectivs_array);
+      $f3->set('objectives_array',$objectives_array);
 
       for ($i=0; $i < count($objectives_array)-1; $i++) { 
         echo 'Objectif '.($i+1).' : '.$objectives_array[$i].' - ';
