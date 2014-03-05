@@ -71,10 +71,10 @@ $('#post_article').submit(function () {
 
 /*------INTERFACE ------*/
 
-$('input[name="post_url"]').on('focus',function(){
+$('#wrapper input[name="post_url"]').on('focus',function(){
 	$('#form-extended').fadeIn(400);
 });
-$('input[name="post_url"]').on('blur',function(){
+$('#wrapper input[name="post_url"]').on('blur',function(){
 	if( !$(this).val() ) {
 		$('#form-extended').fadeOut(400);
 	}

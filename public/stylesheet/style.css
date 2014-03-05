@@ -1228,6 +1228,32 @@ background-color: transparent;
 color: #ffe97b;
 }
 
+/*------ IFRAME EXTENSION CHROME -----*/
+.iframe {
+  margin:60px;
+}
+.iframe #infos {
+  background-color: transparent;
+}
+
+.iframe #infos a {
+  margin-right: 20px;
+}
+
+.iframe .user-name {
+  display: inline-block;
+  font-size: 14px;
+  font-weight: normal;
+}
+
+.iframe #new-post{
+  width: 85%;
+  margin: 0 auto;
+}
+
+.iframe #form-extended {
+  display: block;
+}
 
 
 /*------ RESPONSIVE ------ */

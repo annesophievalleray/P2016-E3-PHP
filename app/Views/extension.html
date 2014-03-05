@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<head>
+	<meta charset="utf-8">
+	<base href="<?php echo $BASE; ?>/" />
+	<title>Nabu</title>
+	<meta name="description" content="">
+	<meta name="viewport" content="width=device-width">
+
+	<link rel="stylesheet" type="text/css" href="public/stylesheet/style.css">
+  <link href="public/stylesheet/app.css" type="text/css" />
+  <script src="public/js/custom.modernizr.js"></script>
+	
+</head>
+
+<body>
+<div class="iframe">  
+
+      <div id="infos">
+          <a href="dashboard/<?php echo $SESSION['id']; ?>"><img src="public/img/temporary_logo.png" alt="Nabu"></a> Connecté sous <span class="user-name" id="user" data-id="<?php echo $SESSION['id']; ?>"><?php echo $SESSION['login']; ?></span>
+      </div>
+ 
+          
+          
+
+   
+         <div class="content" id="new-post"><!-- NEW POST -->
+            <img src="public/img/PP_large_2.png" class="avatar-50" alt="">
+            <div>
+              <form name="post-article" id="post_article" method="post">
+              <input type="url" name="post_url" id="url" placeholder="Insérez une URL pour ajouter un contenu" required><br>
+              <div id="form-extended">
+                <input type="text" name="post_desc" id="desc" placeholder="Message accompagnant le contenu" required><br>
+                <input type="text" name="post_user_id" value="<?php echo $SESSION['id']; ?>"><br>
+                <div class="styled-select">
+                  <select name="post_cat">
+                    <?php require('partials/categories.html'); ?>
+                  </select>
+                </div>
+                <input type="submit" value="Publier">
+              </div>
+          </form>
+       </div>
+       </div><!-- END NEW POST -->
+
+</div>
+
+
+	<script src="http://code.jquery.com/jquery-1.10.2.min.js"></script>
+  <script src="public/js/User.js"></script>
+  <script src="public/js/UserDashboard.js"></script>
+	<script src="public/js/nabu.js"></script>
+
+
+</body>
+</html>
