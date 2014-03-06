@@ -5,14 +5,9 @@
   <title>Nabu</title>
   <meta name="description" content="">
   <meta name="viewport" content="width=device-width">
-  
-  <link rel="shortcut icon" href="public/img/favico.ico" />
+
   <link rel="stylesheet" type="text/css" href="public/stylesheet/style.css">
   <link rel="stylesheet" type="text/css" href="public/stylesheet/simplegrid.css" />
-  
-  /****CSS pour popup****/
-  <link rel="stylesheet" type="text/css" href="public/stylesheet/component.css" />
-  /**********************/
 
   <script src="public/js/Chart.js"></script>
   
@@ -74,7 +69,7 @@
           </div>
       </div><!-- END LOGO AND SEARCHBAR -->
       <div class="col-3-12" id="menu"><!-- MENU -->
-        <p><a href="#"><img src="public/img/icons/user.svg" class="icon-menu" alt="Profil"></a> <a class="md-trigger" data-modal="modal-settings" href="#"><img src="public/img/icons/settings.svg" class="icon-menu" alt="Paramètres"></a><a href="user/signout"><img src="public/img/icons/power.svg" class="icon-menu" alt="Déconnexion"></a></p>
+        <p><a href="#"><img src="public/img/icons/user.svg" class="icon-menu" alt="Profil"></a> <a href="#"><img src="public/img/icons/settings.svg" class="icon-menu" alt="Paramètres"></a><a href="user/signout"><img src="public/img/icons/power.svg" class="icon-menu" alt="Déconnexion"></a></p>
       </div><!-- END MENU -->
     </div><!-- END GRID LOGO/SEARCH/MENU -->
 
@@ -145,48 +140,6 @@
     </div><!-- END RIGHT PART -->
       
 </div>
-
-/*******popup settings : html popup + scripts *********/
-
-
-<div class="md-modal md-effect-10" id="modal-settings">
-	<div class="md-content">
-		<h3>Modifiez vos infos</h3>
-		<div>
-			<form method="post" action="#">
-				
-				<p>Mofidiez votre adresse mail</p>
-				<input type="file"/>
-			
-				<p>Mofidiez votre adresse mail</p>
-				<input class="name" type="text" placeholder="Nouvelle adresse mail" name="new_mail"/>
-				<p>Mofidiez votre mot de passe</p>
-				<input class="pw" type="password" placeholder="Nouveau mot de passe" name="new_password"/>
-				<input class="pw" type="password" placeholder="Retapez le mot de passe" name="password_confirm"/>
-				
-				<input id="send" class="button" type="submit" value="Log in"/>
-				
-			</form>
-			<button class="md-close">Close me!</button>
-		</div>
-	</div>
-</div>
-
-<div class="md-overlay"></div><!-- the overlay element -->
-
-
-	<script>
-		// this is important for IEs
-		var polyfilter_scriptpath = 'public/js/';
-	</script>
-	<script src="public/js/cssParser.js"></script>
-	<script src="public/js/css-filters-polyfill.js"></script>
-	<script src="public/js/classie.js"></script>
-	<script src="public/js/modalEffects.js"></script>
-	<script src="public/js/modernizr.custom.js"></script>
-
-
-/*******************************/
 
 
 
