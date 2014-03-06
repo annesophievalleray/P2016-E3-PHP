@@ -1171,7 +1171,7 @@ color: #ffe97b;
 
 /*------ IFRAME EXTENSION CHROME -----*/
 .iframe {
-  margin:60px;
+  margin:20px;
 }
 .iframe #infos {
   background-color: transparent;
@@ -1189,7 +1189,6 @@ color: #ffe97b;
 
 .iframe #new-post{
   width: 85%;
-  margin: 0 auto;
 }
 
 .iframe #form-extended {
