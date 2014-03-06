@@ -1,0 +1,237 @@
+html {
+	height: 100%;
+	-webkit-font-smoothing: antialiased;
+    font-smoothing: antialiased;
+	text-rendering: optimizeLegibility;
+
+}
+
+body {
+	background: #FFF;
+	height: 100%;
+	font-family: 'ProximaNovaRegular';
+	color:#adadad;
+	font-size:18px;
+}
+
+header{
+	height:50px;
+	background-color:#FFF;
+}
+
+header a{
+	position:absolute;
+	right:20px;
+	top:15px;
+	cursor:pointer;
+}
+
+header a:hover{
+	color:#252424;
+}
+
+#banner { background: url('../img/bkg-cover.jpg') no-repeat fixed 50% 0; background-size: cover; color: #fff; height: 726px; width: 100%; }
+#bannertext { width: 50%; position: fixed; top: 15%; left: 12%; }
+
+#bannertext h1{
+	padding:0;
+	margin:0;
+	font-size:48px;
+}
+
+#bannertext p{
+	font-size:28px;
+	padding:10px 0px 10px 0px;
+	margin:0px 0px 18px 0px;
+	font-family: 'ProximaNovaLight';
+}
+
+#bannertext a{
+	color:#FFF;
+	text-decoration:none;
+	padding:5px 20px;
+	border:2px solid white;
+	border-radius:2px;
+	-webkit-transition-property: background-color;
+	-webkit-transition-duration: 0.4s;
+	-moz-transition-property: background-color;
+	-moz-transition-duration: 0.4s;
+}
+
+#bannertext a:hover{
+	background-color:rgba(0, 0, 0, 0.3);
+}
+
+#content{
+	margin-top:80px;
+	background-color:#f3f4f6;
+}
+
+.col-1-2 {
+	height:300px;
+	margin-top:80px;
+}
+
+article h3, article h2{
+	font-size:36px;
+	color:#242a2f;
+	margin:0;
+}
+
+
+h3 + p + a{
+	width:200px;
+	display:block;
+	margin:0 auto;
+	font-size:20px;
+	color:#FFF;
+	background-color:#6797ce;
+	border-radius:3px;
+	padding:9px 17px;
+	font-family: 'ProximaNovaRegular';
+	font-weight:bold;
+	text-decoration:none;
+	-webkit-transition-property: background-color;
+	-webkit-transition-duration: 0.4s;
+	-moz-transition-property: background-color;
+	-moz-transition-duration: 0.4s;
+}
+
+h3 + p + a:hover{
+	background-color:#46d3ae;
+}
+
+#chrome_tool{
+	background:url('../img/chrome_tool.svg') no-repeat;
+	height:inherit;
+}
+
+aside:nth-of-type(1){
+	position:relative;
+}
+
+#chrome_plugin{
+	position: absolute;
+	top: 4px;
+	left: 395px;
+	width: 25px;
+	height: 25px;
+	background: url('../img/logo_nabu.svg') no-repeat;
+	background-size: contain;
+	-webkit-animation: rotating 1.5s linear infinite;
+}
+
+@-webkit-keyframes rotating {
+    from{
+        -webkit-transform: rotate(0deg);
+    }
+    to{
+        -webkit-transform: rotate(360deg);
+    }
+}
+
+#badges{
+	background:url('../img/badges.svg') no-repeat;
+	height:inherit;
+}
+	
+#dashboard{
+	background:url('../img/dashboard.svg') no-repeat;
+	height:inherit;
+}
+	
+#chrome_tool,#badges,#dashboard{
+	width:390px;
+	height:inherit;
+	margin:0 auto;
+}
+
+#team{
+	width:100%;
+	height: 325px;
+	background-color:#ff7461;
+	margin-top:80px;
+	color:#FFF;
+	text-align:center;
+}
+
+#team h3{
+	color:#FFF;
+	margin-bottom:20px;
+}
+
+#team h4,#team p{
+	font-size:16px;
+}
+
+#team h4{
+	margin-bottom:0px;
+}
+
+#team p{
+	margin-top:2px;
+	margin-bottom:15px;
+}
+
+@media screen and (max-width:760px){
+	#team .col-1-12{
+	display:none;
+	}
+	
+}
+
+@media screen and (min-width:760px){
+	#team .col-1-12{
+	height:100px;
+	}
+	
+}
+
+#As{
+	background:url('../img/AS.png') no-repeat;
+}
+
+#Marion{
+	background:url('../img/Marion.png') no-repeat;
+}
+
+#Val{
+	background:url('../img/Valentin.png') no-repeat;
+}
+
+#Nico{
+	background:url('../img/Nicolas.png') no-repeat;
+}
+
+#Loic{
+	background:url('../img/Loic.png') no-repeat;	
+}
+
+#As,#Marion,#Val,#Nico,#Loic{
+	height:150px;
+	width:100%;
+	background-size:contain;
+	background-position:center bottom;
+	margin:0 auto;
+	
+}
+
+
+@font-face {
+    font-family: 'ProximaNovaLight';
+    src: url('../font/ProximaNova-Light/proximanova-light.eot');
+    src: url('../font/ProximaNova-Light/proximanova-light.eot') format('embedded-opentype'),
+         url('../font/ProximaNova-Light/proximanova-light.woff') format('woff'),
+         url('../font/ProximaNova-Light/proximanova-light.ttf') format('truetype'),
+         url('../font/ProximaNova-Light/proximanova-light.svg#ProximaNovaLight') format('svg');
+}
+
+@font-face {
+    font-family: 'ProximaNovaRegular';
+    src: url('../font/ProximaNova-Regular/proximanova-regular.eot');
+    src: url('../font/ProximaNova-Regular/proximanova-regular.eot') format('embedded-opentype'),
+         url('../font/ProximaNova-Regular/proximanova-regular.woff') format('woff'),
+         url('../font/ProximaNova-Regular/proximanova-regular.ttf') format('truetype'),
+         url('../font/ProximaNova-Regular/proximanova-regular.svg#ProximaNovaRegular') format('svg');
+}
+
