@@ -30,6 +30,21 @@ header a:hover{
 	color:#252424;
 }
 
+header img{
+	display:block;
+	margin:0 auto;
+	-webkit-animation: rotatinglogo 7s linear infinite;
+}
+
+@-webkit-keyframes rotatinglogo {
+    from{
+        -webkit-transform: rotate(0deg);
+    }
+    to{
+        -webkit-transform: rotate(360deg);
+    }
+}
+
 #banner { background: url('../img/bkg-cover.jpg') no-repeat fixed 50% 0; background-size: cover; color: #fff; height: 726px; width: 100%; }
 #bannertext { width: 50%; position: fixed; top: 15%; left: 12%; }
 
@@ -219,19 +234,19 @@ aside:nth-of-type(1){
 
 @font-face {
     font-family: 'ProximaNovaLight';
-    src: url('../font/ProximaNova-Light/proximanova-light.eot');
-    src: url('../font/ProximaNova-Light/proximanova-light.eot') format('embedded-opentype'),
-         url('../font/ProximaNova-Light/proximanova-light.woff') format('woff'),
-         url('../font/ProximaNova-Light/proximanova-light.ttf') format('truetype'),
-         url('../font/ProximaNova-Light/proximanova-light.svg#ProximaNovaLight') format('svg');
+    src: url('../font/proxima_light/proximanova-light.eot');
+    src: url('../font/proxima_light/proximanova-light.eot') format('embedded-opentype'),
+         url('../font/proxima_light/proximanova-light.woff') format('woff'),
+         url('../font/proxima_light/proximanova-light.ttf') format('truetype'),
+         url('../font/proxima_light/proximanova-light.svg#ProximaNovaLight') format('svg');
 }
 
 @font-face {
     font-family: 'ProximaNovaRegular';
-    src: url('../font/ProximaNova-Regular/proximanova-regular.eot');
-    src: url('../font/ProximaNova-Regular/proximanova-regular.eot') format('embedded-opentype'),
-         url('../font/ProximaNova-Regular/proximanova-regular.woff') format('woff'),
-         url('../font/ProximaNova-Regular/proximanova-regular.ttf') format('truetype'),
-         url('../font/ProximaNova-Regular/proximanova-regular.svg#ProximaNovaRegular') format('svg');
+    src: url('../font/proxima_regular/proximanova-regular.eot');
+    src: url('../font/proxima_regular/proximanova-regular.eot') format('embedded-opentype'),
+         url('../font/proxima_regular/proximanova-regular.woff') format('woff'),
+         url('../font/proxima_regular/proximanova-regular.ttf') format('truetype'),
+         url('../font/proxima_regular/proximanova-regular.svg#ProximaNovaRegular') format('svg');
 }
 
