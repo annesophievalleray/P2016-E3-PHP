@@ -130,7 +130,10 @@
 						<input class="pw" type="password" placeholder="Mot de passe" name="password"/>
 						<input class="pw" type="password" placeholder="Retapez le mot de passe" name="password_confirm"/>
 						<!-- <li><a href="#">Forgot your password?</a></li> -->
-						<input class="button" type="submit" value="Log in"/>
+						<input id="send" class="button" type="submit" value="Log in"/>
+						<div style="display:none;" id="erreur"><p>Tous les champs ne sont pas remplis</p></div>
+						<div style="display:none;" id="different_passwords"><p>Les mots de passe ne sont pas identiques</p></div>
+
 					</form>
 					<button class="md-close">Close me!</button>
 				</div>
