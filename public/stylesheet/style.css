@@ -1014,7 +1014,7 @@ input[name="post_user_id"] {
   display: none;
   margin-bottom: 30px !important;
   max-height: 280px;
-  overflow: scroll;
+  overflow: auto;
 }
 .list-follow h3{
   margin-left: 20px !important;
