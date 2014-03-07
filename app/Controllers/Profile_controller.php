@@ -340,6 +340,5 @@ function _displayObjectives($f3){
   function _addObjective($f3,$obj_id){
     $checkObjectives_=$f3->set('addObjective',$this->model->addObjective(array('user_id'=>$f3->get('SESSION.id'),'obj_id'=>$obj_id)));
   }
-  
-}
+
 ?>
