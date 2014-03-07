@@ -58,8 +58,6 @@ class Profile_controller extends Controller{
  //-----Profil----- 
   	function updateProfile($f3){
 		
-		var_dump($_SESSION);
-		var_dump($_FILES);
 	    $this->tpl['sync']='profile_update.html';
 	    	switch($f3->get('VERB')){
 	     	   case 'POST':
@@ -308,7 +306,7 @@ function _displayObjectives($f3){
   }
 
   function _checkObjectives($f3,$obj_id){
-    $checkObjectives_=$f3->set('checkObjectives',$this->model->checkObjectives(array('obj_id'=>$obj_id,'obj_count'=>$f3->get('obj_count'))));
+    $checkObjectives_=$f3->set('checkObjectives',$this->model->checkObjectives(array('obj_user_id'=>$obj_id,'obj_state'=>$f3->get('obj_state'))));
 
     if(!$checkObjectives_){
 
@@ -316,20 +314,20 @@ function _displayObjectives($f3){
 
     } else {
 
-        $obj_id=$checkObjectives_->obj_id;
+        $obj_user_id=$checkObjectives_->obj_user_id;
 
         $hasObjective=false;
         $objectives_array=$this->_getObjectives($f3);
 
         for ($i=0; $i < count($objectives_array); $i++) { 
-         if($objectives_array[$i]==$obj_id){
+         if($objectives_array[$i]==$obj_user_id){
           $hasObjective=true;
          }
         }
 
         if (!$hasObjective) {
 
-          $this->_addObjective($f3,$obj_id);
+          $this->_addObjective($f3,$obj_user_id);
 
         } 
         

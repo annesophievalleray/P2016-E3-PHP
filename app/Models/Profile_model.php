@@ -180,7 +180,7 @@ class Profile_model extends Model{
   }
   
   function checkObjectives($params){
-  	return $this->getMapper('objectives_user')->load(array('cat_id = ? and nb_visites <= ?',$params['cat_id'],$params['cat_count']));
+  	return $this->getMapper('objectives_user')->load(array('obj_user_id = ? and obj_state = ?',$params['obj_user_id'],$params['obj_state']));
   }
   
   function addObjective($params){
