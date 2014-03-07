@@ -113,7 +113,7 @@ class Profile_controller extends Controller{
 					'user_id'=>$f3->get('SESSION.user_id'),
 					'password'=>$f3->get('POST.password'),
 					'email'=>$f3->get('POST.email'),
-					'avatar'=>$f3->get($f3->get('UPLOADS').$_FILES['file']['name']),
+					'avatar'=>$f3->get($f3->get('UPLOADS').$f3->get('SESSION.user_id').$_FILES['file']['name']),
 					'location'=>$f3->get('POST.location'),
 					'date_birth'=>$f3->get('POST.date_birth')
 				);
@@ -121,7 +121,7 @@ class Profile_controller extends Controller{
 				if($_FILES['file']['error']==0){
 					$avatar = \Web::instance()->receive(function($file){
 						$f3 = \Base::instance();
-						$params['avatar']=$f3->get($f3->get('UPLOADS').$_FILES['file']['name']);
+						$params['avatar']=$f3->get($f3->get('UPLOADS').$f3->get('SESSION.user_id').$_FILES['file']['name']);
 					}, true, true);
 				}
 				

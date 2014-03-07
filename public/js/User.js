@@ -61,7 +61,7 @@ var User = {
 					nb_fle=dataUser.nb_followers;
 					nb_fli=dataUser.nb_following;
 					nb_posts=dataUser.nb_posts;
-					//console.log(nb_posts);
+					
 					User.params.SESSIONid=dataUser.user_id;
 					$(User.params.divNbFollowers).html(nb_fle);
 					$(User.params.divNbFollowing).html(nb_fli);
@@ -79,7 +79,6 @@ var User = {
 				data:"all="+allBadges
 			})
 			.success(function(badges){
-				//badgesUser=JSON.parse(badges);
 				
 				$(User.params.divBadges).html(badges);
 		
