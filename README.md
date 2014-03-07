@@ -7,3 +7,8 @@ Chaque jour, nous parcourons des milliers de pages sur le web. Toutes ces pages 
 Nabu apporte à votre navigation des repères que vous placez pour indiquez les moments qui vous ont marqué, afin de cibler vos intérêts, et de découvrir des contenus qui seraient liés à vos habitudes de navigation. Additionnellement, il est possible de trouver ses amis et de leur recommander du contenu, consulter les badges qu'ils ont acquis, et les objectifs qu'ils se sont fixés !
 
 Lien démonstration : http://projects.annesophievalleray.com/Nabu
+
+============
+
+Extension Chrome Nabu : https://chrome.google.com/webstore/detail/nabu/glpindicadlbemdfbllljmkkcikfhlgd
+Lien Github de l'extension : https://github.com/brainra/nabu_plugin
