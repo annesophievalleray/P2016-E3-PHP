@@ -18,8 +18,6 @@ class Profile_controller extends Controller{
 	$this->_getFeedUser($f3);
 	$this->_getFollowers($f3);
 	$this->_getFollowing($f3);
-	//$this->displayBadges($f3);
-	//$this->_dmd_follow($f3);
 	$this->tpl['async']='profile.html';
   }
 //------UserDatas----
@@ -56,29 +54,84 @@ class Profile_controller extends Controller{
 		 	$f3->set('getFeedUser',$this->model->getFeedUser(array('user_id'=>$f3->get('PARAMS.id'))));
 		
 	}
-  
-    /*function searchUsers($f3){
-		 //$this->redirection=false;
-    $f3->set('users',$this->model->searchUsers(array('keywords'=>$f3->get('POST.name'))));
-	//echo $f3->get('users');
-	$this->tpl['async']='partials/users.html';
-  }*/
+
  //-----Profil----- 
-  	function profileUpdate($f3){
-<<<<<<< HEAD
-		$profileUpdate_=$f3->set('profileUpdate',$this->model->profileUpdate(array('')));
-=======
-		$profileUpdate_=$f3->set();
->>>>>>> 37fd342dc86905d807f788315664c57b822feb6f
-		$this->tpl['async']='profile_update.html';
+  	function updateProfile($f3){
+		
+		var_dump($_SESSION);
+		var_dump($_FILES);
+	    $this->tpl['sync']='profile_update.html';
+	    	switch($f3->get('VERB')){
+	     	   case 'POST':
+	              print_r($f3->get('POST'));
+	              print_r($_FILES);
+	     	   break;
+		   }
+		
+		$error = array();
+		
+		foreach($f3->get('POST') as $key => $value){
+			if($f3->exists('POST'.$key))
+				$f3->clean($f3->get('POST'.$key));
+			else
+				array_push($error, 'Vous n\'avez pas renseigné le champ : '.$key);
+		} // end foreach
+		
+		if(count($error)==0){
+					
+			/*if (isset($_FILES["file"])) {
+			    $tmpFile = $_FILES["file"]["tmp_name"];
+			    $fileName = ... // determine secure name for uploaded file
+ 
+		        list($width, $height) = getimagesize($tmpFile);
+			    // check if the file is really an image
+				if ($width == null && $height == null) {
+		        header("Location: index.php");
+		        return;
+			    }
+			    
+				// resize if necessary
+				if ($width >= 400 && $height >= 400) {
+					$image = new Imagick($tmpFile);
+				    $image->thumbnailImage(400, 400);
+					$image->writeImage($fileName);
+				} else { move_uploaded_file($tmpFile, $fileName); }
+			}*/
+			
+				/*$tmpFile = $_FILES['file']['tmp_name'];
+				$fileName = "newAvatar.jpg";
+				
+				$width = width($tmpFile);
+				$height = height($tmpFile);
+				
+				if($width >= 115 && $height >=115){
+					$image = new Image($tmpFile);
+					$image->crop()
+				}*/
+			
+			if($f3->get('password')==$f3->get('password2')){
+				$params=array(
+					'user_id'=>$f3->get('SESSION.user_id'),
+					'password'=>$f3->get('POST.password'),
+					'email'=>$f3->get('POST.email'),
+					'avatar'=>$f3->get($f3->get('UPLOADS').$_FILES['file']['name']),
+					'location'=>$f3->get('POST.location'),
+					'date_birth'=>$f3->get('POST.date_birth')
+				);
+				
+				if($_FILES['file']['error']==0){
+					$avatar = \Web::instance()->receive(function($file){
+						$f3 = \Base::instance();
+						$params['avatar']=$f3->get($f3->get('UPLOADS').$_FILES['file']['name']);
+					}, true, true);
+				}
+				
+				$this->model->profileUpdate($params);
+				$f3->reroute("/");
+			}
+		}
 	}
 //----Follow----
-	/*function _dmd_follow($f3){
-		$dmd_follow_=$f3->set('dmd_follow',$this->model->dmd_follow(array('user_id'=>$f3->get('SESSION.id'))));
-		
-		//echo $dmd_follow_;
-		
-	}*/
 	function getStateFollow($f3){
 	$getStateFollow_=$f3->set('getStateFollow',$this->model->getStateFollow(array('follower_id'=>$f3->get('SESSION.id'),'following_id'=>$f3->get('PARAMS.following_id'))));
 	
@@ -93,35 +146,12 @@ class Profile_controller extends Controller{
 		$this->tpl['async']='partials/users.html';
 		
 	}
-	
-  	/*function unfollow($f3){
-		$unfollow_=$f3->set('unfollow',$this->model->unfollow(array('follower_id'=>$f3->get('PARAMS.follower'),'following_id'=>$f3->get('PARAMS.following'))));
-		
-		
-		$this->tpl['async']='partials/users.html';
-		
-	}*/
 
   	function followSuggest($f3){
 		$followSuggest_=$f3->set('followSuggest',$this->model->followSuggest(array('user_id'=>$f3->get('SESSION.id'))));
 		echo $followSuggest_->count();
-		
-		
-		//$this->tpl['async']='partials/suggestions.json';
-		
 	}
 
-//SERT A RIEN	
-	function back_follow($f3){
-		$back_follow_=$f3->set('back_follow',$this->model->back_follow(array('state'=>$f3->get('PARAMS.state'),'follow_id'=>$f3->get('PARAMS.follow_id'))));
-		
-	}
-//___________
-	
-//----Articles----
-  	function addArticle($f3){
-		
-	}
 //POSTER
 
 	function insertPost($f3){
@@ -138,39 +168,17 @@ class Profile_controller extends Controller{
 	 if($getBadges_) { 
       return $bdg_str=$getBadges_->bdg_id;
 	  
-	 }
-	 
-      //return $badges_array = explode(',',$bdg_str);
-      
+	 }  
   }
-  	
+ 
 function _displayBadges($f3){
-   // $displayBadges_=$f3->set('displayBadges',$this->model->displayBadges(array('id'=>$f3->get('PARAMS.id'))));
-	
-    //if($displayBadges_) {
-
-      /*echo 'Chaine des badges : '.$bdg_str=$displayBadges_->bdg_id.'<br>';
-
-      $nb_badges=substr_count($bdg_str, ',');
-      echo 'Nb de badges : '.$nb_badges.'<br>';
-
-      $badges_array = explode(',',$bdg_str);
-      $f3->set('badges_array',$badges_array);
-
-      for ($i=0; $i < count($badges_array)-1; $i++) { 
-        echo 'Badge '.($i+1).' : '.$badges_array[$i].' - ';
-        
-        
-        echo $this->getBadgesName($badges_array[$i],$f3);
-      }*/
-	
 	 $bdg_str=$this->_getBadges($f3);
 	 
-	if($bdg_str!=""){ 
+	if($bdg_str!=""){
 	 
-	if(substr_count($bdg_str, ',')<=2)
-	  	$f3->set('nb_badges',(substr_count($bdg_str, ',')));
-	else
+	if(substr_count($bdg_str, ',')<=2){
+		$f3->set('nb_badges',(substr_count($bdg_str, ',')));
+	} else {
 		$f3->set('nb_badges',3);
 		
 	  $f3->set('badges_array',explode(',',$bdg_str));
@@ -180,20 +188,12 @@ function _displayBadges($f3){
 	  
 	  for ($i=0; $i<=count($f3->get('badges_array'))-2; $i++) { 
        		$badges_name[]=$this->getBadgesName($badges_array[$i],$f3);
-			//echo $badges_name[$i];
-      }
-	  
+		}}
 	  $f3->set('badges_name',$badges_name);
-	  
-	  //echo"daccc!!";
-	  
-	   $this->tpl['async']='partials/apercuBadges.html';
+	  $this->tpl['async']='partials/apercuBadges.html';
 
     }
-	
-	
-
- 
+	}
   }
 
   function getBadgesName($badge_id,$f3){
@@ -203,10 +203,8 @@ function _displayBadges($f3){
       return $bdg_name;
     }
   }
-//ajout d'une visite au post
+
   function addVisit($f3){
-    //$f3->set('user_id',$f3->get('PARAMS.id'));
-    //$f3->set('category',$f3->get('PARAMS.keyword'));
 	$f3->set('category',$f3->get('POST.post_cat'));
 	
     $f3->set('addVisit',$this->model->addVisit(array('keyword'=>$f3->get('category'),'user_id'=>$f3->get('SESSION.id'))));
@@ -265,8 +263,6 @@ function _displayBadges($f3){
     //echo "update";
 	
   }
-	
-}
 
 /*===========================
 		OBJECTIVES
@@ -274,35 +270,31 @@ function _displayBadges($f3){
 
 	
 function _displayObjectives($f3){
-    $displayObjectives_=$f3->set('displayObjectives',$this->model->displayObjectives(array('id'=>$f3->get('SESSION.id'))));
+    $displayObjectives_=$f3->set('displayObjectives',$this->model->displayObjectives(array('objective_user_id'=>$f3->get('SESSION.id'))));
 	
     if($displayObjectives_) {
 
       echo 'Les objectifs : '.$obj_str=$displayObjectives_->obj_id.'<br>';
 
-      $nb_badges=substr_count($obj_str, ',');
-      echo "Nombre d'objectifs : ".$nb_objectives.'<br>';
+      $nb_obj=substr_count($obj_str, ',');
+      echo "Nombre d'objectifs : ".$nb_obj.'<br>';
 
       $objectives_array = explode(',',$obj_str);
-<<<<<<< HEAD
-      $f3->set('objectives_array',$objectives_array);
-=======
-      $f3->set('objectives_array',$objectivs_array);
->>>>>>> 37fd342dc86905d807f788315664c57b822feb6f
 
+      $f3->set('objectives_array',$objectives_array);
+	  
       for ($i=0; $i < count($objectives_array)-1; $i++) { 
         echo 'Objectif '.($i+1).' : '.$objectives_array[$i].' - ';
-        
         
         echo $this->getObjectivesName($objectives_array[$i],$f3);
       }
     }
 }
 
-  function _getCatId($f3){
-    $getCatId_=$f3->set('getCatId',$this->model->getCatId(array('keyword'=>$f3->get('category'))));
-    if($getCatId_){
-      $cat_id=$getCatId_->cat_id;
+  function _getObjCatId($f3){
+    $getObjCatId_=$f3->set('getObjCatId',$this->model->getObjCatId(array('keyword'=>$f3->get('category'))));
+    if($getObjCatId_){
+      $cat_id=$getObjCatId_->cat_id;
       $this->_checkObjectives($f3,$cat_id);
     }
   }
@@ -317,13 +309,13 @@ function _displayObjectives($f3){
 
   function _checkObjectives($f3,$obj_id){
     $checkObjectives_=$f3->set('checkObjectives',$this->model->checkObjectives(array('cat_id'=>$cat_id,'cat_count'=>$f3->get('cat_count'))));
-<<<<<<< HEAD
+
 	//À modifier, URGENT..
     if(!$checkObjectives_){
-=======
 
-    if(!$checkBadges_){
->>>>>>> 37fd342dc86905d807f788315664c57b822feb6f
+
+    if(!$checkObjectives_){
+
       echo "<br><br>pas d'objectifs";
 	  //return quelque chose
     } else {
@@ -340,11 +332,9 @@ function _displayObjectives($f3){
         }
 
         if (!$hasObjective) {
-<<<<<<< HEAD
+
           $this->_addObjective($f3,$obj_id);
-=======
-          $this->_addObjective($f3,$bdg_id);
->>>>>>> 37fd342dc86905d807f788315664c57b822feb6f
+
         } 
         
       }
@@ -355,6 +345,5 @@ function _displayObjectives($f3){
     $checkObjectives_=$f3->set('addObjective',$this->model->addObjective(array('user_id'=>$f3->get('SESSION.id'),'obj_id'=>$obj_id)));
   }
   
-	
-
+}
 ?>

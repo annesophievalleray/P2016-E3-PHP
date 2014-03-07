@@ -37,9 +37,10 @@ class Home_controller extends Controller{
 				'login'=>$auth->login);
 			$f3->set('SESSION',$user);
 			$id=$f3->get('SESSION.id');
+			$path='../../public/img/users/'.$id;
+			mkdir($path, 0777);
 			$f3->reroute('/dashboard/'.$id);
-			
-			
+
 		/*session_start();
 		$_SESSION['login']=$login;
 		echo $_SESSION['id']=$id;*/
@@ -75,7 +76,7 @@ class Home_controller extends Controller{
 		session_start();
 		$_SESSION['id']="moi";
 		echo $_SESSION['id'];
-		$this->tpl['sync']='profile.htm';
+		$this->tpl['sync']='profile.html';
 
   }
   

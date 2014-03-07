@@ -30,7 +30,7 @@ class Profile_model extends Model{
 
 
    function getFeedUser($params){
-    return $this->getMapper('posts')->find(array('post_user_id = ?',$params['user_id']),array('order'=>'post_date DESC'));
+    return $this->getMapper('posts')->find(array('post_user_id = ?',$params['user_id']),array('order'=>'post_id DESC'));
   } 
   
   
@@ -39,9 +39,12 @@ class Profile_model extends Model{
   }
   
   // Édition / MÀJ du profil de l'utilisateur (html : profile_update.html)
-  function profileUpdate($params){
-	
-			
+  function updateProfile($params){
+	  $map = $this->getMapper('user')->load(array('user_id=?',$params['user_id']));
+	  foreach($params as $key => $param){
+		  $map->$key=$param;
+	  }
+	  $map->save();
   }
 	
   	function follow($params){
@@ -169,7 +172,7 @@ class Profile_model extends Model{
   }
 
   function displayObjectives($params){
-  	return $this->getMapper('user')->load(array('user_id = ?',$params['id']));
+  	return $this->getMapper('objectives_user')->load(array('obj_user_id = ?',$params['obj_user_id']));
   }
   
   function getObjectives($params){
@@ -184,9 +187,13 @@ class Profile_model extends Model{
 	  $user=$this->getMapper('user');
   }
   
-  function getObjectiveName($params){
+  function getObjectivesName($params){
   	return $this->getMapper('objectives_user')->load(array('obj_id = ?',$params['objective_id']));
   }
+  
+  function getObjCatId($params){
+  	return $category=$this->getMapper('objective')->load(array('obj_cat = ?',$params['keyword']));
+   }
 
 }
 

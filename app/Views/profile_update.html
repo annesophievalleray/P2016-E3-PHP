@@ -14,31 +14,25 @@
     <?php if(isset($error)): ?> 
     <div class="error"><?php echo $error; ?></div>
     <?php endif;?>  
-    <form action="updateProfile/" id="profileUpdate" method="post" enctype="multipart/form-data">
+    <form action="updateProfile/" id="updateProfile" method="post" enctype="multipart/form-data">
 	  <label for="avatar">Avatar</label>
 	  <input type="file" name="avatar" id="avatar"/>
 	  <label for="date_birth">Date de naissance</label>
 	  <input type="date" name="date_birth" id="date_birth">
 	  <label for="password">Mot de passe</label>
-<<<<<<< HEAD
       <input type="password" name="password" id="password" placeholder="mot de passe">
+	  <label for="password2">Confirmer le mot de passe</label>
+      <input type="password" name="password2" id="password2" placeholder="mot de passe">
 	  <label for="location">Lieu</label>
 	  <input type="text" name="location" id="location" placeholder="lieu">
 	  <label for="email">Email</label>
 	  <input type="email" name="email" id="email" placeholder="email">
-=======
-      <input type="password" name="password" id="password">
-	  <label for="location">Lieu</label>
-	  <input type="text" name="location" id="location">
-	  <label for="email">Email</label>
-	  <input type="email" name="email" id="email">
->>>>>>> 37fd342dc86905d807f788315664c57b822feb6f
 	  <input type="submit" value="Enregistrer"/>
     </form>
   
 	<script src="http://code.jquery.com/jquery-1.10.2.min.js"></script>
 	<script type="text/javascript">
-    $("#profileUpdate").on('submit',function(e){
+    $("#updateProfile").on('submit',function(e){
     	e.preventDefault();
     	var files=$('#avatar')[0].files[0];
     	var form=$(this).serialize();
@@ -47,7 +41,7 @@
  		datas.append('form',form);
  	 	$.ajax({url:"updateProfile/",type:'POST',data:datas,processData:false,contentType:false})
 		.success(function(){
-		console.log('datas envoyees'); 
+		console.log('succes envoi'); 
 	});
 	</script>
 </body>

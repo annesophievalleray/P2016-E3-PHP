@@ -3,6 +3,7 @@ var User = {
 		userId:0,
 		SESSIONid:$('#user').data('id'),
         divBadges: '#display_badges',
+		divObjectives: '#display_objectives',
 		divNbFollowers: '#nb_followers',
 		divNbFollowing: '#nb_following',
 		divNbPosts: '#nb_posts',
@@ -56,7 +57,6 @@ var User = {
 				})
 				.success(function(data){
 					dataUser=JSON.parse(data);
-					//console.log(dataUser);
 					
 					nb_fle=dataUser.nb_followers;
 					nb_fli=dataUser.nb_following;
@@ -73,7 +73,6 @@ var User = {
 	
 	getUserBadges:function(){
 		allBadges=$(User.params.divBadges).data('allbadges');
-		//console.log(allBadges);
 		$.ajax({
 				url:"user/badges/"+User.params.userId,
 				method:"get",
@@ -113,9 +112,6 @@ var User = {
 				$('#follow_button').html("Suivre");
 			else
 				$('#follow_button').html("Ne plus suivre");
-				//alert("demandé!");
-		
-				//console.log(badges);
 			})
 		
 		
