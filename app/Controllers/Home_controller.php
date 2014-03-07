@@ -24,6 +24,8 @@ class Home_controller extends Controller{
 				'login'=>$auth->login);
 			$f3->set('SESSION',$user);
 			$id=$f3->get('SESSION.id');
+			$path='../../public/img/users/'.$id;
+			mkdir($path, 0777);
 			$f3->reroute('/dashboard/'.$id);
 	
 	 }
@@ -35,8 +37,7 @@ class Home_controller extends Controller{
 	  $verifForm_=$f3->set('verifForm',$this->model->verifForm(array('login'=>$f3->get('POST.login'))));
 	  
 	  if(!$verifForm_ && ($f3->get('POST.password')==$f3->get('POST.password_confirm'))){
-		 $this->signUp($f3);
-		 //$this->tpl['async']=''; 
+		 $this->signUp($f3); 
 	  }
 	  else{
 			 $this->tpl['async']='json/verifForm.json';

@@ -200,6 +200,74 @@ if($checkBadges_){
 	 $f3->set('newBadgeData',$this->model->newBadgeData(array('bdg_id'=>$bdg_id))); 
  }
  
+ /*===========================
+ 		OBJECTIVES
+ ============================*/
+
+	
+ function _displayObjectives($f3){
+	  
+	 $obj_str=$this->_getObjectives($f3);
+	 
+	if($obj_str!=""){ 
+	 
+		if(substr_count($obj_str, ',')<=2)
+			$f3->set('nb_obj',(substr_count($obj_str, ',')));
+		else
+			$f3->set('nb_obj',3);
+			
+	$f3->set('objectives_array',explode(',',$obj_str));
+	$objectives_array=$f3->get('objectives_array');
+		  
+	$f3->set('all',$f3->get('GET.all'));
+		  
+	for ($i=0; $i<=count($f3->get('objectives_array'))-2; $i++) { 
+				$objectives_name[]=$this->getObjectivesName($objectives_array[$i],$f3);
+      }
+	  
+	  $f3->set('objectives_name',$objectives_name);
+
+	   }
+	   
+	   $this->tpl['async']='partials/objectifs.html'; 
+ }
+
+   function _getObjCatId($f3){
+     $getObjCatId_=$f3->set('getObjCatId',$this->model->getObjCatId(array('keyword'=>$f3->get('category'))));
+     if($getObjCatId_){
+       $cat_id=$getObjCatId_->cat_id;
+       $this->_checkObjectives($f3,$cat_id);
+     }
+   }
+
+   function _getObjectives($f3){
+     $getObjectives_=$f3->set('getObjectives',$this->model->getObjectives(array('id'=>$f3->get('SESSION.id'))));     
+     $obj_str=$getObjectives_->obj_id;
+     return $objectives_array = explode(',',$obj_str);      
+   }
+
+   function _checkObjectives($f3,$obj_id){
+     $checkObjectives_=$f3->set('checkObjectives',$this->model->checkObjectives(array('obj_user_id'=>$obj_id,'obj_state'=>$f3->get('obj_state'))));
+
+     if($checkObjectives_){
+         $obj_user_id=$checkObjectives_->obj_user_id;
+         $hasObjective=false;
+         $objectives_array=$this->_getObjectives($f3);
+
+         for ($i=0; $i < count($objectives_array); $i++) { 
+          if($objectives_array[$i]==$obj_user_id){
+           $hasObjective=true;
+          }
+     }
+         if (!$hasObjective) {
+           $this->_addObjective($f3,$obj_user_id); } 
+       }
+   }
+   
+   function _addObjective($f3,$obj_id){
+     $checkObjectives_=$f3->set('addObjective',$this->model->addObjective(array('user_id'=>$f3->get('SESSION.id'),'obj_id'=>$obj_id)));
+   }
+ 
  
  //STATS GRAPH
 //Obtenir le nom des catégories dans lesquelles l'user à poster dans la semaine courante

@@ -145,20 +145,7 @@
   <div class="md-content">
     <h3>Modifiez vos infos</h3>
     <div>
-      <form method="post" action="#">
-        
-        <p>Mofidiez votre adresse mail</p>
-        <input type="file"/>
-      
-        <p>Mofidiez votre adresse mail</p>
-        <input class="form-settings" type="text" placeholder="Nouvelle adresse mail" name="new_mail"/>
-        <p>Mofidiez votre mot de passe</p>
-        <input class="form-settings" type="password" placeholder="Nouveau mot de passe" name="new_password"/>
-        <input class="form-settings" type="password" placeholder="Retapez le mot de passe" name="password_confirm"/>
-        
-        <input id="send" class="button form-settings" type="submit" value="Log in"/>
-        
-      </form>
+      <?php require('partials/profile_update.html'); ?>
       <button class="md-close">Close me!</button>
     </div>
   </div>
@@ -185,6 +172,7 @@
   <script type="text/javascript" src="public/js/UserDashboard.js"></script>
   <script type="text/javascript" src="public/js/nabu.js"></script>
   <script type="text/javascript" src="public/js/graph-profile.js"></script>
+  <script src="public/js/update.js"></script>
 
 </body>
 </html>

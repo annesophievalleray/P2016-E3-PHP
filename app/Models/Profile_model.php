@@ -40,11 +40,16 @@ class Profile_model extends Model{
     return $this->getMapper('user')->find('login like "%'.$params['keywords'].'%"');
   }
   
-  	function editProfil($f3){
-		
-		
-		
-	}
+  // Édition / MÀJ du profil de l'utilisateur (html : profile_update.html)
+  function updateProfile($params){
+	  $map = $this->getMapper('user')->load(array('user_id=?',$params['user_id']));
+	  foreach($params as $key => $param){
+		  $map->$key=$param;
+	  }
+	  $map->save();
+  }
+
+
 //FOLLOW
 // Suivre si on ne suit pas et inversement si le follow n'est pas dans la table follow on l'insert sinon on update
   	function follow($params){
@@ -192,8 +197,30 @@ function insertPost(){
 	function catWeek($params){
 		return $this->getMapper('post_cat')->find(array('post_user_id = ? AND WEEK(post_date,1)= WEEK(NOW(),1)',$params['user_id']),array('group'=>'cat_name'));
 	}
-
+	
+    function displayObjectives($params){
+    	return $this->getMapper('objectives_user')->load(array('obj_user_id = ?',$params['obj_user_id']));
+    }
   
+    function getObjectives($params){
+    	return $this->getMapper('user')->load(array('user_id = ?',$params['id']));
+    }
+  
+    function checkObjectives($params){
+    	return $this->getMapper('objectives_user')->load(array('obj_user_id = ? and obj_state = ?',$params['obj_user_id'],$params['obj_state']));
+    }
+  
+    function addObjective($params){
+  	  $user=$this->getMapper('user');
+    }
+  
+    function getObjectivesName($params){
+    	return $this->getMapper('objectives_user')->load(array('obj_id = ?',$params['objective_id']));
+    }
+  
+    function getObjCatId($params){
+    	return $category=$this->getMapper('objective')->load(array('obj_cat = ?',$params['keyword']));
+     }
 
 }
 

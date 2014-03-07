@@ -1,0 +1,17 @@
+<?php 
+if(isset($objectives_name) && $all==0):
+for($i=count($objectives_array)-2; $i>=(count($badges_array)-$nb_badges-1); $i--){
+?>
+<img class="badges" src="public/img/badges/<?php echo $badges_array[$i];?>.png" alt="<?php echo $badges_name[$i];?>"/>
+
+<?php 
+} 
+endif; 
+if(isset($objectives_name)&& $all==1):
+for($j=count($badges_array)-2; $j>=0; $j--){
+?>
+<div class="bdg-wrap"><img class="badges" src="public/img/badges/<?php echo $badges_array[$j];?>.png" data-badges="<?php echo count($badges_array)-1;?>" alt="<?php echo $badges_name[$j];?>"/><br><?php echo $badges_name[$j];?></div>
+<?php 
+} 
+endif;
+?>
