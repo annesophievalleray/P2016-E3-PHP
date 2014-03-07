@@ -1,8 +1,7 @@
-
 <?php
-		if(isset($getOldPosts)):
+		if(isset($getNewPosts)):
 			$posts_tab=array();
-			foreach($getOldPosts as $publi):
+			foreach($getNewPosts as $publi):
 			    $post = array(
                 	'post_id' => $publi->post_id,
                     'post_user_id' => $publi->post_user_id,
@@ -16,5 +15,4 @@
 			echo json_encode($posts_tab);
 		endif;
 ?>
-
 

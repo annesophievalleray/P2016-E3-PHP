@@ -9,26 +9,30 @@ class Home_model extends Model{
   function home(){
     
   }
+  
   function signIn($params){
     return $this->getMapper('user')->load(array('login = ? AND password = ?',$params['login'],$params['password']));
   }
   
-  
-  //test
-  
-  function testUpdate(){
-	  $table=$this->getMapper('test');
-	  
-	  $result=$table->load(array('id_users = ?', 1));
-	  $result->art++;
-	 $result->update();
-	 
-	 return "ok";
-	  
-	  
+  function verifForm($params){
+	  return $this->getMapper('user')->load(array('login = ?',$params['login'])); 
   }
+  
+  function signUp($params){
+	
+	  		$insertUser_=$this->getMapper('user');
+			$insertUser_->copyfrom('POST');
+			$insertUser_->save();
+	if(isset($params['password']))
+	return $this->getMapper('user')->load(array('login = ? AND password = ?',$params['login'],$params['password']));
+			
+			
+  }
+  
 
 
   
+
+
 }
 ?>

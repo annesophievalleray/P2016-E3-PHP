@@ -10,7 +10,9 @@ if($getUserData):
  "user_badges":"<?php echo $getUserData->bdg_id ?>",
  "nb_followers":"<?php echo $getUserData->nb_followers ?>",
  "nb_following":"<?php echo $getUserData->nb_following ?>",
- "nb_posts":"<?php echo $getUserData->nb_posts ?>"
+ "nb_posts":"<?php echo $getUserData->nb_posts ?>",
+ "nb_badges":"<?php echo $count ?>"
+ 
 }
 <?php  
 endif;

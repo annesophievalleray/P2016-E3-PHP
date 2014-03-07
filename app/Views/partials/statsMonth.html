@@ -1,0 +1,10 @@
+<?php 
+if(isset($graphDashboard)):
+	foreach ($graphDashboard as $post):
+?>
+<li class="data-activity cat<?php echo $post->id_cat ?>" data-value="<?php echo((($post->sum_cat)/$count)*100)?>"><?php echo $post->name_cat ?></li>	
+<?php 
+	endforeach; 
+endif;
+?>
+

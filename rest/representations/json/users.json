@@ -1,14 +1,30 @@
 {
 "header":[],
 "body":[
-<?php foreach($users as $user):?>
+<?php 
+if($users){
+foreach($users as $user):?>
 {
-	"firstname":"<?php echo $user->firstname;?>",
-	"lastname":"<?php echo $user->lastname;?>",
-	"id":"<?php echo $user->id;?>",
-	"url":"<?php echo 'http://localhost/Nabu/nabu/api/users'.$user->id;?>"
+	"id":"<?php echo $user->user_id;?>",
+	"login":"<?php echo $user->login;?>",
+	"email":"<?php echo $user->email;?>",
+	"avatar":"<?php echo $user->avatar;?>",
+	"location":"<?php echo $user->avatar;?>",
+	"dateBirth":"<?php echo $user->date_birth;?>",
+	"url":"<?php echo 'http://projects.annesophievalleray.com/Nabu/api/users/'.$user->id;?>"
 }
-<?php endforeach;?>
+<?php } endforeach;?>
+<?php 
+if($usersPosts){
+foreach($usersPosts as $post):?>
+{
+	"post_id":"<?php echo $post->post_id;?>",
+	"post_url":"<?php echo $post->post_url;?>",
+	"post_desc":"<?php echo $post->post_desc;?>",
+	"post_cat":"<?php echo $post->post_cat;?>",
+	"url":"<?php echo 'http://projects.annesophievalleray.com/Nabu/api/usersPosts/'.$post->user_id;?>"
+}
+<?php  } endforeach;?>
 ]
 
 }

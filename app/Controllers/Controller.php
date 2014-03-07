@@ -8,7 +8,7 @@ protected $redirection=true;
 public function __construct(){
 	//print_r($f3->hive());
 	$f3=\Base::instance();
-	if($f3->get('PATTERN')!='/'&& !$f3->get('SESSION.id')){
+	if($f3->get('PATTERN')!='/' && $f3->get('PATTERN')!='/user/signup' && $f3->get('PATTERN')!='/user/signin' && $f3->get('PATTERN')!='/iframe' && !$f3->get('SESSION.id')){
 		$f3->reroute('/');
 	};
 	

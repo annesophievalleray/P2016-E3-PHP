@@ -1,0 +1,19 @@
+<?php 
+if(isset($getFollowers)):
+foreach($getFollowers as $publi): 
+?>
+<li><a href="<?php echo $publi->user_id; ?>"><img src="../partials/public/img/PP_large_2.png" class="avatar-30" alt="avatar <?php echo $publi->login; ?>"><?php echo $publi->login; ?></a></li>
+<?php 
+endforeach; 
+endif;
+?>
+
+<?php 
+if(isset($getFollowing)):
+foreach($getFollowing as $publi): 
+?>
+<li><a href="<?php echo $publi->user_id; ?>"><img src="../partials/public/img/PP_large_2.png" class="avatar-30" alt="avatar <?php echo $publi->login; ?>"><?php echo $publi->login; ?></a></li>
+<?php 
+endforeach; 
+endif;
+?>

@@ -5,6 +5,8 @@ class Profile_model extends Model{
   function __construct(){
     parent::__construct();
   }
+ 
+  //Les mapper nom_view sont des views en BDD
   
    function getUserData($params){
     return $this->getMapper('user')->load(array('user_id = ?',$params['id']));
@@ -43,10 +45,11 @@ class Profile_model extends Model{
 		
 		
 	}
+//FOLLOW
+// Suivre si on ne suit pas et inversement si le follow n'est pas dans la table follow on l'insert sinon on update
   	function follow($params){
 		$follower_id=$params['follower_id'];
 		$following_id=$params['following_id'];
-	//return $db->exec(array('INSERT INTO follow (follower_id, following_id) VALUES (?,?)',$params['follower_id'], $params['following_id']));
 	
 	  	$followed=$this->getMapper('follow');
 	$result=$followed->load(array('follower_id = ? AND following_id=?',$follower_id, $following_id));
@@ -64,54 +67,55 @@ class Profile_model extends Model{
 			
 		$result->update();
 		
-		}
+		}	
+	}
+//Incrémenter ou décrémenter selon si on follow/unfollow pour le follower et le following	
+	 function updateFollowNumbers($params){
+		$follower_id=$params['follower_id'];
+		$following_id=$params['following_id'];
+		$state=$params['state'];
 		
+	 $follower=$this->getMapper('user');
+	$result=$follower->load(array('user_id = ?',$following_id));
+	if($state==1)
+		$result->nb_followers++;
+	else
+		$result->nb_followers--;
+	$result->update();
+
+	$following=$this->getMapper('user');
+	$result2=$following->load(array('user_id = ?',$follower_id));
+	if($state==1)
+		$result2->nb_following++;
+	else
+		$result2->nb_following--;
+	$result2->update();
+			
+
 		
 	}
-	
+//Obtenir le statut du follow entre l'user en session et l'user du profil visité	
   	function getStateFollow($params){
 		$follower_id=$params['follower_id'];
 		$following_id=$params['following_id'];
-	//return $db->exec(array('INSERT INTO follow (follower_id, following_id) VALUES (?,?)',$params['follower_id'], $params['following_id']));
+		
 	return $this->getMapper('follow')->load(array('follower_id = ? AND following_id=? AND state=1',$follower_id, $following_id));
 
 		
 		
 	}
-	 /*function unfollow($f3){
-	return $db->exec(array('DELETE FROM follow WHERE following_id=? AND follower_id=? AND state=1',$params['follower_id'], $params['following_id']));
+	
+function followSuggest($f3){
+	return $this->getMapper('follow')->find(array('follower_id = ? AND state=1',$params['user_id']));
 		
 	}
-	
-	function dmd_follow($params){
-		//return $db->exec(array('SELECT * FROM user INNER JOIN follow ON user_id=follower_id WHERE following_id=? AND state=0',$params['user_id']));
-		
-		//return $this->getMapper('follow_view')->find(array('following_id = ? AND state=0',$params['user_id']));
-	
-		}
-	function back_follow($params){
-		$follow=$this->getMapper('follow');
-		$resultload=$follow->load(array('id = ?',$params['follow_id']));
-		$resultload->state=$params['state'];
-		$resultload->update();
-		
-	}*/
-	
-	function followSuggest($f3){
-		
-		return $this->getMapper('follow')->find(array('follower_id = ? AND state=1',$params['user_id']));
-		
-	}
-	
-	
-  	function addArticle($f3){
-		
-	}	
-	
-	function insertPost(){
+
+function insertPost(){
 		$insertPost_=$this->getMapper('posts');
 			$insertPost_->copyfrom('POST');
 			$insertPost_->save();
+			
+			return 1;
 	  }
 	
 	//BADGES
@@ -166,6 +170,28 @@ class Profile_model extends Model{
 	$resultload->bdg_id.=$params['bdg_id'].',';
   	$resultload->update();
   }
+  
+   function newBadgeData($params){
+  	return $this->getMapper('badges')->load(array('bdg_id = ?',$params['bdg_id']));
+  }
+  
+ // STATS GRAPH
+  //Utilisation de VIRTUALS FIELD
+  function graphProfile($params){
+	
+	$postStat=$this->getMapper('post_cat');
+	$postStat->sum_cat = 'SUM(post_cat)/post_cat';
+	$postStat->name_cat = 'cat_name';
+	$postStat->id_cat = 'cat_id';
+	$postStat->day_cat = 'WEEKDAY(post_date)';
+	return $postStat->find(array('post_user_id = ? AND WEEK(post_date,1)= WEEK(NOW(),1) AND cat_id=?',$params['user_id'],$params['cat_id']),array('group'=>'day_cat'),array('order'=>'day_cat'));
+
+	
+		}
+		
+	function catWeek($params){
+		return $this->getMapper('post_cat')->find(array('post_user_id = ? AND WEEK(post_date,1)= WEEK(NOW(),1)',$params['user_id']),array('group'=>'cat_name'));
+	}
 
   
 

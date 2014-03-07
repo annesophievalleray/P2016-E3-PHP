@@ -1,7 +1,9 @@
 <!DOCTYPE html>
 <head>
+    <?php header('X-Frame-Options: GOFORIT'); ?>
 	<meta charset="utf-8">
 	<base href="<?php echo $BASE; ?>/" />
+
 	<title>Nabu</title>
 	<meta name="description" content="">
 	<meta name="viewport" content="width=device-width">
@@ -14,9 +16,9 @@
 
 <body>
 <div class="iframe">  
-
+<?php if(isset($SESSION['id'])){ ?>
       <div id="infos">
-          <a href="dashboard/<?php echo $SESSION['id']; ?>"><img src="public/img/temporary_logo.png" alt="Nabu"></a> Connecté sous <span class="user-name" id="user" data-id="<?php echo $SESSION['id']; ?>"><?php echo $SESSION['login']; ?></span>
+          <a href="dashboard/<?php echo $SESSION['id']; ?>"><img src="public/img/temporary_logo.png" alt="Nabu"></a> Connecté sous <p class="user-name" id="user" data-id="<?php echo $SESSION['id']; ?>"><?php echo $SESSION['login']; ?></p>
       </div>
  
           
@@ -41,7 +43,12 @@
           </form>
        </div>
        </div><!-- END NEW POST -->
-
+	<?php }
+    else{ ?>
+    <div id="infos"> 
+          Connecte toi sur <a href="http://projects.annesophievalleray.com/Nabu/"><img src="public/img/temporary_logo.png" alt="Nabu"></a>
+     </div>
+    <?php } ?> 
 </div>
 
 

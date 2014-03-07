@@ -1,0 +1,13 @@
+<?php 
+if(isset($newBadgeData)){
+?>
+{ "state": "<?php echo 1; ?>",
+  "bdg_name": "<?php echo $newBadgeData->bdg_name; ?>",
+  "bdg_desc": "<?php echo $newBadgeData->bdg_desc; ?>"}
+<?php  
+}
+else{
+?>
+{ "state": "<?php echo 0; ?>"}
+<?php } 
+?>

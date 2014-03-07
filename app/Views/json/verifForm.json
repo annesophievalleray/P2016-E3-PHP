@@ -1,0 +1,11 @@
+<?php 
+if($verifForm){
+?>
+{ "erreur": "<?php echo -1; ?>"}
+<?php  
+}
+else{
+?>
+{ "erreur": "<?php echo -2; ?>"}
+<?php } 
+?>

@@ -6,86 +6,94 @@ class Dashboard_controller extends Controller{
 	  date_default_timezone_set('CET');
     $this->tpl=array('sync'=>'dashboard.html');
   }
+ //----Extension Chrome--------- 
+  function getExtension($f3){
+	  $this->tpl['sync']='extension.html';
+	  $this->_getCategories($f3);
+  }
   
-  function unix_timestamp($date){
-	$date = str_replace(array(' ', ':'), '-', $date);
-	$c    = explode('-', $date);
-	$c    = array_pad($c, 6, 0);
-	array_walk($c, 'intval');
-	
-	return mktime($c[3], $c[4], $c[5], $c[1], $c[2], $c[0]);
-}
-  
+ //----Obtenir une première fois des données du Dashboard----- 
     function getDashboard($f3){
-		$f3->set('SESSION.postid', 0);
-		//echo $f3->get('post_id');
-		//$login=$f3->get('SESSION.login');
-		$this->_getFeed($f3);
-		$this->_followSuggest($f3);
+		$this->_getFollowList($f3);
 		$this->_getCategories($f3);
 		$this->_getSuggestArticles($f3);
+		$this->_graphDashboard($f3);
+
 
 		
 	}
-	
+//-----Obtenir catégories du select du formulaire de post------	
 	function _getCategories($f3){
 		$getCategories_=$f3->set('getCategories',$this->model->getCategories());
 		
 	}
-	
+//------Rehcerche Utilisateurs---------	
 	function searchUsers($f3){
-		 //$this->redirection=false;
     $f3->set('users',$this->model->searchUsers(array('keywords'=>$f3->get('POST.name'))));
-	//echo $f3->get('users');
 	$this->tpl['async']='partials/users.html';
   }
-  
-  	function _followSuggest($f3){
-		$followSuggest_=$f3->set('followSuggest',$this->model->followSuggest(array('user_id'=>$f3->get('SESSION.id'))));
-		echo 'nombre follow :'.count($followSuggest_).'</br>';
+ 
+ //-----Obtenir liste des following d'un user sous forme d'un String puis lancer followSuggest----- 
+  function _getFollowList($f3){
+	  $getFollowList_=$f3->set('getFollowList',$this->model->getFollowList(array('user_id'=>$f3->get('SESSION.id'))));
+	 if($getFollowList_){ 
+	  foreach($getFollowList_ as $follow){
+		 $followTabId[]=$follow->following_id;
+	  }
+	 $followStringId=implode(",", $followTabId);
+
+		$this->_followSuggest($f3,$followStringId);
+	 }	  
+  }
+
+//----Obtenir une suggestion de following que l'user ne suit pas déjà-----------  
+  	function _followSuggest($f3,$followStringId){
+		$followSuggest_=$f3->set('followSuggest',$this->model->followSuggest(array('followString'=>$f3->get('SESSION.id'),'followStringId'=>$followStringId)));
 		
-		$id1=rand(1,count($followSuggest_));
-		/*do{
-		$id2=rand(1,count($followSuggest_));
-		}while($id1==$id2);*/
+		$map_follow_ok=array();
 		
-		echo 'nombre 1 :'.$id1.'</br>';
-		//echo 'nombre 2 :'.$id2.'</br>';
+		$followTab=explode(",",$followStringId);
 		
 		foreach($followSuggest_ as $follow){
-			
-			//if($follow->
-			
+				if(in_array($follow->following_id, $followTab)==false){
+					$map_follow_ok[]=$follow;
+				}
 		}
 		
-		
-		//$this->tpl['async']='partials/suggestions.json';
-		
+	if(count($map_follow_ok)<1){
+		$f3->set('noSuggest',"Pas de suggestions");
+		}	
+	else{
+		//Mélange du tableau de manière aléatoire
+		shuffle($map_follow_ok);
+		$f3->set('followSuggestRand',$map_follow_ok);
 	}
-  
-	
-	
-	function _getFeed($f3){
-    	$f3->set('getFeed',$this->model->getFeed(array('user_id'=>$f3->get('SESSION.id'))));
-	
-		//$this->tpl['async']='partials/feed_old.html';
-	
-	}
-	
 
+		$this->tpl['async']='partials/followSuggest.html';
+		
+	}
+	
+//------Obtenir les (10 premiers :au chargement de la page) posts de l'user et de ses following-------
 	
 	function _getNewPosts($f3){
-		$f3->set('getNewPosts',$this->model->getNewPosts(array('user_id'=>$f3->get('SESSION.id'),'recentId'=>$f3->get('GET.recentId'))));
+		$f3->set('getNewPosts',$this->model->getNewPosts(array('user_id'=>$f3->get('SESSION.id'),'recentId'=>$f3->get('GET.recentId'),'limit'=>$f3->get('GET.limit'))));
+		
+		
+		$this->tpl['async']='partials/feed_new.html';
+		
+	}
+//-----Obtenir des post plus anciens que ceux afficher: SCROLL INFINI-------
+	function _getOldPosts($f3){
+		$f3->set('getOldPosts',$this->model->getOldPosts(array('user_id'=>$f3->get('SESSION.id'),'oldId'=>$f3->get('GET.oldId'))));
 		
 		$this->tpl['async']='partials/feed_old.html';
 		
-		//echo $f3->get('MAJ');
-		
 	}
-	
+//-------Suggestion d'articles non postés par l'user---------	
 	function _getSuggestArticles($f3){
 	
 	$getSuggestArticles_=$f3->set('getSuggestArticles',$this->model->getSuggestArticles(array('user_id'=>$f3->get('SESSION.id'))));
+	$map_art=array();
 	
 	foreach ($getSuggestArticles_ as $article){
 		$map_art[]=$article;
@@ -94,6 +102,7 @@ class Dashboard_controller extends Controller{
 		$f3->set('noSuggest',"Pas de suggestions");
 		}	
 	else{
+		//Mélange du tableau
 		shuffle($map_art);
 		$f3->set('articlesSuggestRand',$map_art);
 	}
@@ -101,6 +110,21 @@ class Dashboard_controller extends Controller{
 	$this->tpl['async']='partials/articles.html';
 		
 	}
+	
+	//STATS
+//--------Obtenir la navigation de l'user pendant le mois courant et par catégories------	
+function _graphDashboard($f3){
+		
+	$graphDashboard_=$f3->set('graphDashboard',$this->model->graphDashboard(array('user_id'=>$f3->get('PARAMS.id'))));
+	
+	$count=0;
+		foreach ($graphDashboard_ as $post){
+			$count+=$post->sum_cat;
+		}
+	$f3->set('count',$count);
+	$this->tpl['async']='partials/count.html';
+
+		}
 	
 }
 

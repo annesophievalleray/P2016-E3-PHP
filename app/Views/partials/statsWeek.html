@@ -1,0 +1,11 @@
+<?php
+$tab_stats=array(0,0,0,0,0,0,0);
+
+		if(isset($graphProfile)):
+			$posts_tab=array();
+			foreach($graphProfile as $publi):
+            	$tab_stats[$publi->day_cat]=$publi->sum_cat;
+				endforeach;
+			echo json_encode($tab_stats);
+		endif;
+?>

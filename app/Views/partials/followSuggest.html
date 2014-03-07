@@ -1,0 +1,26 @@
+<?php
+$nb_suggest=1;
+if(isset($noSuggest)){?>
+	<div class="suggestion-article"><?php echo $noSuggest;?>
+ 	</div>
+<?php
+}	
+else if(isset($followSuggestRand)){
+		foreach($followSuggestRand as $publi):
+        	if ($nb_suggest>2 || (count($followSuggestRand)==1 && $nb_suggest==2)){
+            	break;
+            }
+?>
+		<div class="suggestion-user-wrapper">
+          <div>
+       		<a href="user/<?php echo $publi->following_id; ?>">
+	       		<img src="public/img/PP_large_2.png" alt="" class="name avatar-45">
+	       		<?php echo $publi->login; ?><br>
+	       	</a>
+       	</div>
+</div>
+<?php 
+		$nb_suggest++;
+	endforeach; 
+}
+?>

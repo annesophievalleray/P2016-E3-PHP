@@ -2,7 +2,7 @@
 if(isset($getFeedUser)):
 foreach($getFeedUser as $publi): 
 ?>
-<div class="post-item">
+<div class="post-item" data-postuserid="<?php echo $publi->post_id; ?>">
 <p><a href="<?php echo $publi->post_url; ?>"><img src="//www.apercite.fr/api/apercite/120x90/yes/<?php echo $publi->post_url; ?>" alt="" width="120" height="90" class="apercu"></a>
   <?php echo $publi->post_desc; ?> <br>
   <a href="<?php echo $publi->post_url; ?>" class="post-link"><?php echo $publi->post_url; ?></a>

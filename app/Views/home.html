@@ -3,19 +3,17 @@
 <head>
 	<title>Nabu - Home</title>
 	<meta charset="utf-8" />
+    <base href="<?php echo $BASE; ?>/" />
 	<link rel="stylesheet" type="text/css" href="public/stylesheet/simplegrid.css" />
 	<link rel="stylesheet" type="text/css" href="public/stylesheet/home.css" />
 	<link rel="stylesheet" type="text/css" href="public/stylesheet/component.css" />
-	<link rel="shortcut icon" href="public/img/favico.ico" />
-	<script src="public/js/modernizr.custom.js"></script>
-	<script type="text/javascript" src="http://ajax.googleapis.com/ajax/libs/jquery/1.8/jquery.min.js"></script>
-	<script src="public/js/main.js"></script>
+
 </head>
 
 <body>
 
 	<header>
-		<h1><img src="public/img/logo_nabu.svg"/></h1>
+    	<h1><img src="public/img/logo_nabu.svg"/></h1>
 		<a class="md-trigger" data-modal="modal-login">Se connecter</a>
 	</header>
 	
@@ -125,16 +123,16 @@
 			<div class="md-content">
 				<h3>Inscrivez-vous</h3>
 				<div>
-					<form method="post" action="#">
-						<input class="name" type="text" placeholder="Login" name="login"/>
-						<input class="pw" type="password" placeholder="Mot de passe" name="password"/>
-						<input class="pw" type="password" placeholder="Retapez le mot de passe" name="password_confirm"/>
+					<form method="post" action="user/signup">
+						<input class="name form-settings" type="text" placeholder="Login" name="login" required/>
+						<input class="pw form-settings" type="password" placeholder="Mot de passe" id="password" name="password" required/>
+						<input class="pw form-settings" type="password" placeholder="Retapez le mot de passe" id="password_verif" name="password_confirm" required/>
 						<!-- <li><a href="#">Forgot your password?</a></li> -->
-						<input id="send" class="button" type="submit" value="Log in"/>
-						<div style="display:none;" id="erreur"><p>Tous les champs ne sont pas remplis</p></div>
-						<div style="display:none;" id="different_passwords"><p>Les mots de passe ne sont pas identiques</p></div>
-
+						<input id="send" class="button form-settings" type="submit" value="Log in"/>
 					</form>
+                    
+                     	<div style="display:none;" id="erreur"><p>Login indisponible</p></div>
+ 						<div style="display:none;" id="different_passwords"><p>Les mots de passe ne sont pas identiques</p></div>
 					<button class="md-close">Close me!</button>
 				</div>
 			</div>
@@ -144,12 +142,14 @@
 			<div class="md-content">
 				<h3>Identifiez-vous</h3>
 				<div>
-					<form method="post" action="#">
-						<input class="name" type="text" placeholder="Login" name="login"/>
-						<input class="pw" type="password" placeholder="Mot de passe" name="password"/>
+					<form method="post" id="form_auth" action="user/signin">
+						<input class="name form-settings" type="text" placeholder="Login" name="login"/>
+						<input class="pw form-settings" type="password" placeholder="Mot de passe" name="password"/>
 						<!-- <li><a href="#">Forgot your password?</a></li> -->
-						<input class="button" type="submit" value="Log in"/>
+						<input class="button form-settings" type="submit" value="Log in"/>
 					</form>
+                    <div style="display:none;" id="erreur_auth"><p>Erreur d'authentification</p></div>
+                    
 					<button class="md-close">Close me!</button>
 				</div>
 			</div>
@@ -163,6 +163,9 @@
 	// this is important for IEs
 	var polyfilter_scriptpath = '/js/';
 </script>
+<script src="public/js/modernizr.custom.js"></script>
+<script type="text/javascript" src="http://ajax.googleapis.com/ajax/libs/jquery/1.8/jquery.min.js"></script>
+<script src="public/js/main.js"></script>
 <script src="public/js/cssParser.js"></script>
 <script src="public/js/css-filters-polyfill.js"></script>
 <script src="public/js/classie.js"></script>
