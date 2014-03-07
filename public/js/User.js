@@ -3,6 +3,7 @@ var User = {
 		userId:0,
 		SESSIONid:$('#user').data('id'),
         divBadges: '#display_badges',
+		divObjectives: '#display_objectives',
 		divNbFollowers: '#nb_followers',
 		divNbFollowing: '#nb_following',
 		divNbPosts: '#nb_posts',
@@ -148,6 +149,19 @@ var User = {
 				//console.log(badges);
 			})
 		
+	},
+	
+	getUserObjectives:function(){
+		allObjectives=$(User.params.divObjectives).data('allobjectives');
+		
+		$.ajax({
+				url:"user/objectives/"+User.params.userId,
+				method:"get",
+				data:"all="+allObjectives
+			})
+			.success(function(objectives){
+				$(User.params.divObjectives).html(objectives);
+			})
 	},
 	
 	follow:function(){

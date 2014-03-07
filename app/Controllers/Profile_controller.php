@@ -37,9 +37,80 @@ class Profile_controller extends Controller{
 	}
   
  //-----Profil----- 
-  	function editProfil($f3){
+function updateProfile($f3){
+	
+    $this->tpl['sync']='profile_update.html';
+    	switch($f3->get('VERB')){
+     	   case 'POST':
+              print_r($f3->get('POST'));
+              print_r($_FILES);
+     	   break;
+	   }
+	
+	$error = array();
+	
+	foreach($f3->get('POST') as $key => $value){
+		if($f3->exists('POST'.$key))
+			$f3->clean($f3->get('POST'.$key));
+		else
+			array_push($error, 'Vous n\'avez pas renseigné le champ : '.$key);
+	} // end foreach
+	
+	if(count($error)==0){
+				
+		/*if (isset($_FILES["file"])) {
+		    $tmpFile = $_FILES["file"]["tmp_name"];
+		    $fileName = ... // determine secure name for uploaded file
+
+	        list($width, $height) = getimagesize($tmpFile);
+		    // check if the file is really an image
+			if ($width == null && $height == null) {
+	        header("Location: index.php");
+	        return;
+		    }
+		    
+			// resize if necessary
+			if ($width >= 400 && $height >= 400) {
+				$image = new Imagick($tmpFile);
+			    $image->thumbnailImage(400, 400);
+				$image->writeImage($fileName);
+			} else { move_uploaded_file($tmpFile, $fileName); }
 		
+		================  autre methode ===================
+		
+		$tmpFile = $_FILES['file']['tmp_name'];
+			$fileName = "newAvatar.jpg";
+			
+			$width = width($tmpFile);
+			$height = height($tmpFile);
+			
+			if($width >= 115 && $height >=115){
+				$image = new Image($tmpFile);
+				$image->crop()
+			}*/
+		
+		if($f3->get('password')==$f3->get('password2')){
+			$params=array(
+				'user_id'=>$f3->get('SESSION.user_id'),
+				'password'=>$f3->get('POST.password'),
+				'email'=>$f3->get('POST.email'),
+				'avatar'=>$f3->get($f3->get('UPLOADS').$f3->get('SESSION.user_id').$_FILES['file']['name']),
+				'location'=>$f3->get('POST.location'),
+				'date_birth'=>$f3->get('POST.date_birth')
+			);
+			
+			if($_FILES['file']['error']==0){
+				$avatar = \Web::instance()->receive(function($file){
+					$f3 = \Base::instance();
+					$params['avatar']=$f3->get($f3->get('UPLOADS').$f3->get('SESSION.user_id').$_FILES['file']['name']);
+				}, true, true);
+			}
+			
+			$this->model->profileUpdate($params);
+			$f3->reroute("/");
+		}
 	}
+}
 //----Follow----
 //---Obtenir les followers de l'user du profil visité-----
 	function _getFollowers($f3){
