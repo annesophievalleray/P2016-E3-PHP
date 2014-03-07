@@ -10,9 +10,9 @@
   <link rel="stylesheet" type="text/css" href="public/stylesheet/style.css">
   <link rel="stylesheet" type="text/css" href="public/stylesheet/simplegrid.css" />
   
-  /****CSS pour popup****/
+  <!----CSS pour popup---->
   <link rel="stylesheet" type="text/css" href="public/stylesheet/component.css" />
-  /**********************/
+  <!----**************---->
 
   <script src="public/js/Chart.js"></script>
   
@@ -65,7 +65,7 @@
   <div id="right"><!-- RIGHT PART -->
     <div class="grid grid-pad" id="top-content"><!-- GRID LOGO/SEARCH/MENU -->
       <div class="col-7-12" id="logo"><!-- LOGO AND SEARCHBAR -->
-          <h1><a href="dashboard/<?php echo $SESSION['id']; ?>"><img src="public/img/temporary_logo.png" alt="Nabu"></a></h1>
+          <h1><a href="dashboard/<?php echo $SESSION['id']; ?>"><img src="public/img/logo_nabu.svg" alt="Nabu"></a></h1>
           <div id="search">
             <form action="users/search" method="post">
             <input type="text" name="name" autocomplete="off" placeholder="Rechercher un ami"><div><img src="public/img/icons/loupe.svg"  class="icon-search" alt="Rechercher"></div>
@@ -74,7 +74,7 @@
           </div>
       </div><!-- END LOGO AND SEARCHBAR -->
       <div class="col-3-12" id="menu"><!-- MENU -->
-        <p><a href="#"><img src="public/img/icons/user.svg" class="icon-menu" alt="Profil"></a> <a class="md-trigger" data-modal="modal-settings" href="#"><img src="public/img/icons/settings.svg" class="icon-menu" alt="Paramètres"></a><a href="user/signout"><img src="public/img/icons/power.svg" class="icon-menu" alt="Déconnexion"></a></p>
+        <p><a href="#"><img src="public/img/icons/user.svg" class="icon-menu" alt="Profil"></a> <a class="md-trigger" data-modal="modal-settings"><img src="public/img/icons/settings.svg" class="icon-menu" alt="Paramètres"></a><a href="user/signout"><img src="public/img/icons/power.svg" class="icon-menu" alt="Déconnexion"></a></p>
       </div><!-- END MENU -->
     </div><!-- END GRID LOGO/SEARCH/MENU -->
 
@@ -146,7 +146,7 @@
       
 </div>
 
-/*******popup settings : html popup + scripts *********/
+<!--popup settings : html popup + scripts -->
 
 
 <div class="md-modal md-effect-10" id="modal-settings">
@@ -159,10 +159,10 @@
 				<input type="file"/>
 			
 				<p>Mofidiez votre adresse mail</p>
-				<input class="name" type="text" placeholder="Nouvelle adresse mail" name="new_mail"/>
+				<input class="form-settings" type="text" placeholder="Nouvelle adresse mail" name="new_mail"/>
 				<p>Mofidiez votre mot de passe</p>
-				<input class="pw" type="password" placeholder="Nouveau mot de passe" name="new_password"/>
-				<input class="pw" type="password" placeholder="Retapez le mot de passe" name="password_confirm"/>
+				<input class="form-settings" type="password" placeholder="Nouveau mot de passe" name="new_password"/>
+				<input class="form-settings" type="password" placeholder="Retapez le mot de passe" name="password_confirm"/>
 				
 				<input id="send" class="button" type="submit" value="Log in"/>
 				
@@ -186,7 +186,7 @@
 	<script src="public/js/modernizr.custom.js"></script>
 
 
-/*******************************/
+
 
 
 

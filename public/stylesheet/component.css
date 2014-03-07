@@ -172,7 +172,7 @@ form h4 {
   text-shadow:1px 1px 0px white;
 }
 
-input {
+.form-settings {
 	display: block;
 	width: 95%;
 	margin: 20px auto 20px auto;
