@@ -308,16 +308,12 @@ function _displayObjectives($f3){
   }
 
   function _checkObjectives($f3,$obj_id){
-    $checkObjectives_=$f3->set('checkObjectives',$this->model->checkObjectives(array('cat_id'=>$cat_id,'cat_count'=>$f3->get('cat_count'))));
-
-	//À modifier, URGENT..
-    if(!$checkObjectives_){
-
+    $checkObjectives_=$f3->set('checkObjectives',$this->model->checkObjectives(array('obj_id'=>$obj_id,'obj_count'=>$f3->get('obj_count'))));
 
     if(!$checkObjectives_){
 
-      echo "<br><br>pas d'objectifs";
-	  //return quelque chose
+      echo "<br><br>Pas d'objectifs";
+
     } else {
 
         $obj_id=$checkObjectives_->obj_id;
