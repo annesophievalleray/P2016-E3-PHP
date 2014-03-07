@@ -94,9 +94,10 @@ class Profile_controller extends Controller{
 				    $image->thumbnailImage(400, 400);
 					$image->writeImage($fileName);
 				} else { move_uploaded_file($tmpFile, $fileName); }
-			}*/
 			
-				/*$tmpFile = $_FILES['file']['tmp_name'];
+			================  differentes methodes ===================
+			
+			$tmpFile = $_FILES['file']['tmp_name'];
 				$fileName = "newAvatar.jpg";
 				
 				$width = width($tmpFile);
